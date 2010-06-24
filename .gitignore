@@ -1,0 +1,9 @@
+.log$
+.DS_Store
+*.pyc
+*.db
+settings.py
+CACHE
+uploads
+build
+pip-log.txt

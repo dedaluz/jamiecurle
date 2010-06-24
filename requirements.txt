@@ -1,0 +1,7 @@
+textile
+pygments
+hg+https://jamiecurle@bitbucket.org/andrewgodwin/south/
+BeautifulSoup
+git+http://github.com/mintchaos/django_compressor.git
+Django
+django-debug-toolbar
