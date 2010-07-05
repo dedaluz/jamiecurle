@@ -1,0 +1,13 @@
+{% extends 'blog/blog_base.html' %}
+
+{% block blog_title %}Archive - {% endblock %}
+
+{% block article %}
+	
+	<article>
+		{% for post in posts %}
+			<h1>{{post.title}}</h1>
+			{{post.description}}
+		{% endfor %}
+	</article>
+{% endblock %}

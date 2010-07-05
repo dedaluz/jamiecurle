@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	{% block portfolio_title %}{% endblock %}Jamie Curle's Portfolio.
+{% endblock %}
+
+{% block description %}Jamie Curle's Portfolio.{% endblock %}
+
+{% block keywords %}jamie curle portfolio {% endblock %}
+
+{% block extra_style %}
+	<link rel="stylesheet" href="{{MEDIA_URL}}/css/portfolio.css" type="text/css" media="screen">
+	{% block portfolio_extra_style %}{% endblock %}
+{% endblock %}
+
+{% block body_id %}portfolio{% endblock %}
+
+{% block extra_script %}
+	<script src="{{MEDIA_URL}}/js/portfolio.js" type="text/javascript" charset="utf-8"></script>
+	{% block portfolio_extra_script %}{% endblock %}
+{% endblock %}
