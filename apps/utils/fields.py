@@ -50,7 +50,7 @@ def generate_thumb(img, thumb_size, format):
         ynewsize = (ysize-minsize)/2
         # crop it
         image2 = image.crop((xnewsize, ynewsize, xsize-xnewsize, ysize-ynewsize))
-        # load is necessary after crop                
+        # load is necessary after crop
         image2.load()
         # thumbnail of the cropped image (with ANTIALIAS to make it look better)
         image2.thumbnail(thumb_size, Image.ANTIALIAS)
@@ -64,7 +64,7 @@ def generate_thumb(img, thumb_size, format):
     if format.upper()=='JPG':
         format = 'JPEG'
     
-    image2.save(io, format)
+    image2.save(io, format, quality=85)
     return ContentFile(io.getvalue())
     
 

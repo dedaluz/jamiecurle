@@ -15,10 +15,16 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     letter-spacing: -1px;
 }
-
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+    color: #fff;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
+    background-color: transparent;
+    color: #fff;
+}
 
 article{
-    font-family: "calluna-1","calluna-2",'Helvetica Neue', Georgia, serif;
+    font-family: "calluna-1","calluna-2", Georgia, serif;
     font-size: 18px;
     color: #fff;
 }
@@ -30,3 +36,14 @@ a:hover{
         background-color: #EAB800;
         color: #000;
 }
+
+p.meta{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+p.meta span{
+    display: block;
+    line-height: 16px;
+}
+p.meta span.comments{color: #696969;}

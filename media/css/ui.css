@@ -7,51 +7,59 @@ body{
 body > section{
     width: 950px;
 }
+/* header & Nav hover */
+    header a:hover, nav a:hover{
+        background-color: #1e1e23;
+        color: #fff;
+    }
 /* header */
 header{
-    width:270px;
+    width:110px;
     float: left;
+    padding: 0;
 }
     header a{
          color: #fff;
          font-size: 14px;
+         display: block;
+         text-indent: -20000px;
+         height: 62px;
+         width: 72px;
+         background: transparent url(/img/header.a.bg.png) top left no-repeat;
     }
 /* primary nav */
 nav{
-    width: 680px;
-    float: right;
+    width: 770px;
+    float: left;
     text-align: right;
 }
     nav a{
-       
+        margin : 0;
+        color: #999;
+        line-height: 72px;
+        display: block;
+        float: left;
+        width: 110px;
+        margin-right: 10px;
+        text-align:center;
+    }
+    nav a:hover{
+        background-color: transparent;
     }
     #blog nav a[rel="blog"],
     #portfolio nav a[rel="portfolio"]{
-        background-color: #EAB800;
-        color: #000;
+        color:  #fff;
     }
 /* header and nav links */
-header, body > section > nav{
+header, body >  nav{
     margin: 36px 0;
 }
 header a, body > section > nav a{
     padding: 5px;
 }
 /* content */
-body > section > section {
+body > section {
     clear: both;
     min-height: 300px;
     margin-bottom: 32px;
-}
-
-/*article*/
-body > section > section > article {
-    background-color: #000;
-    padding: 20px;
-    width: 710px;
-    float: right;
-}
-
-article h1{
-
 }

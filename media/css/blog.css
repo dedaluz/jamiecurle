@@ -1,0 +1,26 @@
+#blog.archive article p.meta{
+    margin-top: 36px;
+    width: 150px;
+    float: left;
+}
+
+#blog.archive article div.teaser{
+    width: 690px;
+    padding: 16px 20px;
+    background-color: #18181D;
+    float: left;
+}
+#blog.archive article div.teaser div.snippet{
+    width: 430px;
+    float: left;
+}
+#blog.archive article div.teaser div.snippet p{
+    color: #c4c2c2;
+    line-height: 32px;
+    width: 350px;
+}
+
+#blog.archive article div.teaser img{
+    float: right;
+}
+

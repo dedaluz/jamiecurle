@@ -29,20 +29,19 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	</head>
 	<body id="{% block body_id %}home{% endblock %}" class="{% block body_class %}{% endblock %}">
+		<header>
+			<a href="{% url home %}">Jamie Curle </a>
+		</header>
+		<nav>
+			<a rel="blog" href="{% url blog %}">Blog</a>
+			<a rel="portfolio" href="{% url portfolio %}">Portfolio</a>
+			<a rel="search" href="#">Search</a>
+		</nav>
 		<section>
-			<header>
-				<a href="{% url home %}">Jamie Curle </a>
-			</header>
-			<nav>
-				<a rel="blog" href="{% url blog %}">Blog</a>
-				<a rel="portfolio" href="{% url portfolio %}">Portfolio</a>
-			</nav>
-			<section class="main">
-				{% block aside %}
-				{% endblock %}
-				{% block article %}
-				{% endblock %}
-			</section>
+			{% block aside %}
+			{% endblock %}
+			{% block article %}
+			{% endblock %}
 		</section>
 		<footer>
 			

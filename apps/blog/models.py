@@ -8,6 +8,7 @@ from apps.utils.fields import ImageWithThumbsField
 
 
 class Post(models.Model):
+    IMG_CACHE = False
     HIDDEN = 1
     DRAFT = 2
     PUBLISHED = 3
@@ -34,11 +35,20 @@ class Post(models.Model):
     def get_absolute_url(self):
         return ('blog_post', (), {
             'year' : self.created.year,
-            'month' : self.created.month,
+            'month' : self.created.strftime("%m"),
             'slug' : self.slug
         })
     
-
+    
+    @property
+    def img(self):
+        if not self.IMG_CACHE:
+            try:
+                self.IMG_CACHE = self.photo_set.all()[0]
+            except IndexError:
+                pass
+        return self.IMG_CACHE
+    
 
 class Photo(models.Model):
     post = models.ForeignKey(Post, blank=True, null=True)
@@ -47,12 +57,50 @@ class Photo(models.Model):
     license_url = models.URLField(blank=True, null=True)
     author = models.TextField(max_length=255,blank=True, null=True )
     created = models.DateTimeField(auto_now_add=True)
-    photo = ImageWithThumbsField(upload_to='uploads/photo/%Y/%m/%d', sizes=((800,600), (366,240),(155,100),(100,100), ))
+    photo = ImageWithThumbsField(upload_to='uploads/photo/%Y/%m/%d', sizes=((2000,1000), (800,600), (640,500),(240,160),(155,100),(100,100), ))
     
     def __unicode__(self):
         return u'Photo : %s' % self.pk
     
-
+    @property
+    def t(self):
+        try:
+            return self.photo.url_100x100
+        except AttributeError:
+            return False
+        
+    
+    @property
+    def s(self):
+        try:
+            return self.photo.url_155x100
+        except AttributeError:
+            return False
+    
+    def m(self):
+        try:
+            return self.photo.url_240x160
+        except AttributeError:
+            return False
+    
+    def l(self):
+        try:
+            return self.photo.url_640x500
+        except AttributeError:
+            return False
+    
+    def f(self):
+        try:
+            return self.photo.url_800x600
+        except AttributeError:
+            return False
+    
+    def xl(self):
+        try:
+            return self.photo.url_2000x1000
+        except AttributeError:
+            return False
+    
 #
 #
 # South

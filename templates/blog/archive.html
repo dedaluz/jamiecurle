@@ -1,13 +1,38 @@
 {% extends 'blog/blog_base.html' %}
-
+{% load comments %}
 {% block blog_title %}Archive - {% endblock %}
+
+{% block body_class %}archive{% endblock %}
 
 {% block article %}
 	
-	<article>
+	
 		{% for post in posts %}
-			<h1>{{post.title}}</h1>
-			{{post.description}}
+		{% get_comment_count for post as comment_count %}
+		<article>
+			<p class="meta">
+				<span class="created">{{post.created|date:"jS F Y"}}.</span>
+				<span class="comments">{{comment_count}} comment{{comment_count|pluralize}}.</span>
+			
+			</p>
+			<div class="teaser">
+				<div class="snippet">
+					<h1><a href="{{post.get_absolute_url}}">{{post.title}}</a></h1>
+					<p class="snippet">{{post.description}}</p>
+				</div>
+				{% if post.img %}
+				<div class="image">
+					<a href="{{post.get_absolute_url}}"><img src="{{post.img.m}}" alt="{{post.img.title}}"></a>
+					{% if post.img.authors %}
+					<p class="creative-commons attribution">
+						{{post.img.author}}
+					</p>
+					{% endif %}
+				</div>
+				{% endif%}
+			</div>
+			
+		<article>
 		{% endfor %}
 	</article>
 {% endblock %}
