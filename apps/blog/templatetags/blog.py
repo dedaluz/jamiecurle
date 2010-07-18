@@ -14,6 +14,12 @@ from django.utils.encoding import smart_str, force_unicode
 from django.utils.safestring import mark_safe
 from django.conf import settings
 
+
+@register.filter
+def get_range( value ):
+  return range( value )
+
+
 @register.filter
 def render(content, safe="unsafe"):
     """Render this content for display."""

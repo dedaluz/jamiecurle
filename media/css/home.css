@@ -1,0 +1,17 @@
+body{
+    
+}
+
+header{
+    border-bottom: 1px solid #1D1D1D;
+}
+article{
+    background-color: rgba(255,255,255,0.8);
+}
+article h1{
+    font-size: 100px;
+    color: #fff;
+    line-height: 150px;
+    text-shadow: 5px 5px 0 #000;
+    text-align: center;
+}

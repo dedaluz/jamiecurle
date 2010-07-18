@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
+{% load blog %}
+{% block extra_style %}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/home.css" type="text/css" media="screen">
 
+{% endblock %}
 {% block article %}
-<article>
+{% for i in 20|get_range %}
+<article class="preview">
+	<img src="http://jamiecurle.d.jmcrl.com/uploads/photo/2010/07/09/3969185525_8a32e58e69_o.240x160.jpg">
 </article>
+{% endfor %}
 {% endblock %}
