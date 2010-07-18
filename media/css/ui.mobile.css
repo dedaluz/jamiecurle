@@ -1,0 +1,11 @@
+body{
+
+}
+nav.primary{
+    width: 700px;
+    text-align: center;
+}
+nav.primary a{
+    display: inline;
+    line-height: 56px;
+}

@@ -1,0 +1,64 @@
+body{
+    background-color: #000;
+    padding: 14px;
+    font-family: Georgia;
+    font-size: 14px;
+    line-height: 21px;
+}
+header{
+    line-height: 42px;
+    margin: -14px 0 0 0;
+    padding: 0;
+}
+    header a{
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding-left: 14px;
+    }
+
+nav.primary, nav.secondary{
+    float: left;
+    margin: 0 14px 14px 0;
+    width: 154px;
+    clear: left;
+    font-weight: 500;
+}
+    nav.primary{
+        background-color: #F8301C;
+    }
+    nav.secondary{
+        background-color: #0A64FF;
+    }
+        nav.primary a, nav.secondary a{
+            display: block;
+            padding: 0 14px;
+            font-weight: 300;
+            text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+            
+        }
+        nav a:hover{
+            background-color: rgba(0,0,0,0.1);
+        }
+        nav.primary a{
+            color: #530B03;
+            line-height: 42px;
+            font-size: 18px;
+        }
+        
+        nav.secondary a{
+            line-height: 28px;
+            font-size: 14px;
+            color: #000;
+        }
+
+section{
+    float: left;
+    width:784px;
+    min-height: 800px;
+}
+
+section article{
+    font-weight: 500;
+    font-size: 18px;
+}

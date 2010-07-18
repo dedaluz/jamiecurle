@@ -1,0 +1,7 @@
+body{
+    
+    background: url({{MEDIA_URL}}/img/body.bg.screen.png), url({{post.img.xl}});
+    background-position: top center;
+    background-repeat: repeat-x, no-repeat;
+
+}

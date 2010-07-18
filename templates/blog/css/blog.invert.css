@@ -1,0 +1,19 @@
+header a{
+     background-image:url({{MEDIA_URL}}/img/header.a.bg.invert.png);
+}
+header a:hover{
+    background-color: #fff;
+}
+nav a{
+    color: #3e3e3e;
+    text-shadow: 1px 1px 1px #fff;
+}
+nav a:hover{
+        color: #000;
+}
+#blog nav a[rel="blog"]{
+    color: #000;
+}
+p.meta span.created{
+    color: #000;
+}

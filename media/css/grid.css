@@ -20,43 +20,49 @@
  
 /* columns */
 .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12, .c13, .c14, .c15, .c16, .c17, .c18, .c19, .c20, .c21, .c22, .c23, .c24 {
-    float:left;margin-right:10px;
+    float:left;margin-right:14px;
 }
 /* widths 
->>> for i in range(1,25):
-...     print '.c%s, .h%s, fieldset.c%s button, fieldset.c%s a.button{width:%spx}' % (i,i,i,i, (40*i)-10)
+WIDTH=42;
+COL=14;
+LINE_HEIGHT = 21;
+for i in range(1,25): print '.c%s, .h%s, fieldset.c%s button, fieldset.c%s a.button{width:%spx}' % (i,i,i,i, (WIDTH*i)-COL)
 
 */
-.c1, .h1, fieldset.c1 button, fieldset.c1 a.button{width:30px}
+.c1, .h1, fieldset.c1 button, fieldset.c1 a.button{width:28px}
 .c2, .h2, fieldset.c2 button, fieldset.c2 a.button{width:70px}
-.c3, .h3, fieldset.c3 button, fieldset.c3 a.button{width:110px}
-.c4, .h4, fieldset.c4 button, fieldset.c4 a.button{width:150px}
-.c5, .h5, fieldset.c5 button, fieldset.c5 a.button{width:190px}
-.c6, .h6, fieldset.c6 button, fieldset.c6 a.button{width:230px}
-.c7, .h7, fieldset.c7 button, fieldset.c7 a.button{width:270px}
-.c8, .h8, fieldset.c8 button, fieldset.c8 a.button{width:310px}
-.c9, .h9, fieldset.c9 button, fieldset.c9 a.button{width:350px}
-.c10, .h10, fieldset.c10 button, fieldset.c10 a.button{width:390px}
-.c11, .h11, fieldset.c11 button, fieldset.c11 a.button{width:430px}
-.c12, .h12, fieldset.c12 button, fieldset.c12 a.button{width:470px}
-.c13, .h13, fieldset.c13 button, fieldset.c13 a.button{width:510px}
-.c14, .h14, fieldset.c14 button, fieldset.c14 a.button{width:550px}
-.c15, .h15, fieldset.c15 button, fieldset.c15 a.button{width:590px}
-.c16, .h16, fieldset.c16 button, fieldset.c16 a.button{width:630px}
-.c17, .h17, fieldset.c17 button, fieldset.c17 a.button{width:670px}
-.c18, .h18, fieldset.c18 button, fieldset.c18 a.button{width:710px}
-.c19, .h19, fieldset.c19 button, fieldset.c19 a.button{width:750px}
-.c20, .h20, fieldset.c20 button, fieldset.c20 a.button{width:790px}
-.c21, .h21, fieldset.c21 button, fieldset.c21 a.button{width:830px}
-.c22, .h22, fieldset.c22 button, fieldset.c22 a.button{width:870px}
-.c23, .h23, fieldset.c23 button, fieldset.c23 a.button{width:910px}
-.c24, .h24, fieldset.c24 button, fieldset.c24 a.button{width:950px}
+.c3, .h3, fieldset.c3 button, fieldset.c3 a.button{width:112px}
+.c4, .h4, fieldset.c4 button, fieldset.c4 a.button{width:154px}
+.c5, .h5, fieldset.c5 button, fieldset.c5 a.button{width:196px}
+.c6, .h6, fieldset.c6 button, fieldset.c6 a.button{width:238px}
+.c7, .h7, fieldset.c7 button, fieldset.c7 a.button{width:280px}
+.c8, .h8, fieldset.c8 button, fieldset.c8 a.button{width:322px}
+.c9, .h9, fieldset.c9 button, fieldset.c9 a.button{width:364px}
+.c10, .h10, fieldset.c10 button, fieldset.c10 a.button{width:406px}
+.c11, .h11, fieldset.c11 button, fieldset.c11 a.button{width:448px}
+.c12, .h12, fieldset.c12 button, fieldset.c12 a.button{width:490px}
+.c13, .h13, fieldset.c13 button, fieldset.c13 a.button{width:532px}
+.c14, .h14, fieldset.c14 button, fieldset.c14 a.button{width:574px}
+.c15, .h15, fieldset.c15 button, fieldset.c15 a.button{width:616px}
+.c16, .h16, fieldset.c16 button, fieldset.c16 a.button{width:658px}
+.c17, .h17, fieldset.c17 button, fieldset.c17 a.button{width:700px}
+.c18, .h18, fieldset.c18 button, fieldset.c18 a.button{width:742px}
+.c19, .h19, fieldset.c19 button, fieldset.c19 a.button{width:784px}
+.c20, .h20, fieldset.c20 button, fieldset.c20 a.button{width:826px}
+.c21, .h21, fieldset.c21 button, fieldset.c21 a.button{width:868px}
+.c22, .h22, fieldset.c22 button, fieldset.c22 a.button{width:910px}
+.c23, .h23, fieldset.c23 button, fieldset.c23 a.button{width:952px}
+.c24, .h24, fieldset.c24 button, fieldset.c24 a.button{width:994px}
+
 
 
 
 /* widths for inputs allowing for padding and borders 
 >>> for i in range(1,25):
 ...     print ".i%s input[type='text'], .i%s input[type='password'], .i%s textarea, {width:%spx}" % (i, i, i, ( (40)*i)-26)
+
+for i in range(1,25):
+    print ".i%s input[type='text'], .i%s input[type='password'], .i%s textarea, {width:%spx}" % (i, i, i, ( (WIDTH)*i)-(COL*2))
 
 */
 .i1 input[type='text'], .i1 input[type='password'], .i1 textarea{width:14px}
