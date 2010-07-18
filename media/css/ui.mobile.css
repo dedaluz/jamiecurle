@@ -1,11 +1,13 @@
-body{
+header form{
+    display: block;
+    clear: left;
+    background-color:#2D2D2D;
+    border-top: 1px solid #353535;
+    width: 296px;
+    margin: 0;
+    padding: 10px 14px 11px;
+}
 
-}
-nav.primary{
-    width: 700px;
-    text-align: center;
-}
-nav.primary a{
-    display: inline;
-    line-height: 56px;
+header form input{
+    width: 205px;
 }

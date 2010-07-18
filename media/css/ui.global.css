@@ -1,64 +1,79 @@
 body{
-    background-color: #000;
+    background-color: #fff;
     padding: 14px;
-    font-family: Georgia;
     font-size: 14px;
     line-height: 21px;
+    font-family: 'Helvetica Neue';
 }
 header{
-    line-height: 42px;
-    margin: -14px 0 0 0;
+    line-height: 84px;
+    margin: -14px -14px 14px -14px;
     padding: 0;
+    background: #1e1e1e;
+    height: 84px;
+    
 }
     header a{
-        color: #fff;
-        text-transform: uppercase;
+        color: #a9a9a9;
         font-size: 12px;
-        padding-left: 14px;
-    }
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        margin : 0 7px;
+        padding: 0 7px;
+        display: block;
+        float: left;
 
-nav.primary, nav.secondary{
-    float: left;
-    margin: 0 14px 14px 0;
-    width: 154px;
-    clear: left;
-    font-weight: 500;
-}
-    nav.primary{
-        background-color: #F8301C;
     }
-    nav.secondary{
-        background-color: #0A64FF;
+    
+    header nav a:hover{
+        color: #E4E4E4;
     }
-        nav.primary a, nav.secondary a{
-            display: block;
-            padding: 0 14px;
-            font-weight: 300;
-            text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
-            
-        }
-        nav a:hover{
-            background-color: rgba(0,0,0,0.1);
-        }
-        nav.primary a{
-            color: #530B03;
-            line-height: 42px;
-            font-size: 18px;
-        }
+    
+    header form{
+        float: right;
+        padding-top: 21px;
+        margin-right: 28px;
+    }
+    header input{
+        border: 0 none;
+        line-height: 28px;
+        font-size: 14px;
+        width: 196px;
+        font-weight: 800;
+        font-family: 'Helvetica Neue';
+        display:block;
+        padding: 4px;
+        float:left;
+        color: #fff;
+        background-color: #6C6C6C;
+        -webkit-border-radius: 2px;
+        outline: none;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
         
-        nav.secondary a{
-            line-height: 28px;
-            font-size: 14px;
-            color: #000;
+    }
+    header input::-webkit-input-placeholder{
+        color: #CBCBCB;
+    }
+    header button{
+        -webkit-border-radius: 2px;
+        display:block;
+        float:left;
+        border: 0 none;
+        background-color: #CBCBCB;
+        font-size: 16px;
+        font-family: 'Helvetica Neue';
+        font-weight: 800;
+        text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+        text-transform: lowercase;
+        color: #161616;
+        padding: 4px 14px;
+        line-height: 28px;
+        cursor: pointer;
+        margin-left: -3px;
+    }
+        header button:hover{
+            background-color: #2F2F2F;
+            text-shadow: 1px 1px 2px rgba(0,0,0,,0.5);
         }
-
-section{
-    float: left;
-    width:784px;
-    min-height: 800px;
-}
-
-section article{
-    font-weight: 500;
-    font-size: 18px;
-}
