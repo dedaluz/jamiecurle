@@ -36,7 +36,10 @@ a:hover{
         background-color: #EAB800;
         color: #000;
 }
-
+p{
+    line-height: 24px;
+    margin-bottom: 24px;
+}
 p.meta{
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 12px;
@@ -45,5 +48,7 @@ p.meta{
 p.meta span{
     display: block;
     line-height: 16px;
+    font-weight: 900;
 }
+p.meta span.created{color: #fff;}
 p.meta span.comments{color: #696969;}

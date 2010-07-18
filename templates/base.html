@@ -19,10 +19,11 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		<meta name="description" content="{% block description %}My name is Jamie Curle{% endblock %}">
 		<meta name="keywords" content="{% block keywords %}Jamie Curle{% endblock %}">
 		{% compress css %}
-		<link rel="stylesheet" href="{{MEDIA_URL}}/css/reset.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="{{MEDIA_URL}}/css/grid.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="{{MEDIA_URL}}/css/typography.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="{{MEDIA_URL}}/css/ui.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/reset.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/grid.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/typography.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/ui.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/syntax.css" type="text/css" media="screen">
 		{% block extra_style %}{% endblock %}
 		{% endcompress %}
 		<script type="text/javascript" src="http://use.typekit.com/rll1nei.js"></script>
@@ -45,7 +46,9 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		</section>
 		<footer>
 			
-		</footer>{% compress js %}{% block extra_script %}{% endblock %}
-		<script src="{{MEDIA_URL}}/js/jquery.js"></script>
+		</footer>{% compress js %}
+		<script src="{{MEDIA_URL}}js/jquery.js"></script>
+		{% block extra_script %}{% endblock %}
+		
 {% endcompress %}	</body>
 </html>{% endif %}

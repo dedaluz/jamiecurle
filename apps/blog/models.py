@@ -1,11 +1,31 @@
 from django.db import models
 from south.modelsinspector import add_introspection_rules
 from apps.utils.fields import ImageWithThumbsField
+from django.conf import settings
 
 # Create your models here.
 
+class StyleSheet(models.Model):
+    path = models.FilePathField(path="%s/templates/blog/css" % settings.APP_ROOT, recursive=True)
+    
+    def __unicode__(self):
+        return u'%s' % self.path
+    
+    @property
+    def template(self):
+        return self.path.replace('%s/templates/' % settings.APP_ROOT, '')
+    
 
-
+class Script(models.Model):
+    path = models.FilePathField(path="%s/templates/blog/js" % settings.APP_ROOT, recursive=True)
+    
+    def __unicode__(self):
+        return u'%s' % self.path
+    
+    @property
+    def template(self):
+        return self.path.replace('%s/templates/' % settings.APP_ROOT, '')
+    
 
 class Post(models.Model):
     IMG_CACHE = False
@@ -22,6 +42,8 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
     description = models.TextField()
+    stylesheets = models.ManyToManyField(StyleSheet, blank=True, null=True,)
+    scripts = models.ManyToManyField(Script, blank=True, null=True)
     content = models.TextField()
     status = models.SmallIntegerField(default=DRAFT, choices=STATUS_CHOICES)
     featured = models.BooleanField(default=False)
@@ -55,9 +77,9 @@ class Photo(models.Model):
     title = models.CharField(max_length=255, blank=True, null=True)
     description = models.TextField(blank=True)
     license_url = models.URLField(blank=True, null=True)
-    author = models.TextField(max_length=255,blank=True, null=True )
+    author = models.CharField(max_length=255,blank=True, null=True )
     created = models.DateTimeField(auto_now_add=True)
-    photo = ImageWithThumbsField(upload_to='uploads/photo/%Y/%m/%d', sizes=((2000,1000), (800,600), (640,500),(240,160),(155,100),(100,100), ))
+    photo = ImageWithThumbsField(upload_to='uploads/photo/%Y/%m/%d', sizes=((2560,1440), (800,600), (640,500),(240,160),(155,100),(100,100), ))
     
     def __unicode__(self):
         return u'Photo : %s' % self.pk
@@ -97,7 +119,7 @@ class Photo(models.Model):
     
     def xl(self):
         try:
-            return self.photo.url_2000x1000
+            return self.photo.url_2560x1440
         except AttributeError:
             return False
     

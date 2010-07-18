@@ -1,13 +1,15 @@
-#blog.archive article p.meta{
+
+
+#blog.archive article p.meta, #blog.post p.meta{
     margin-top: 36px;
     width: 150px;
     float: left;
 }
-
-#blog.archive article div.teaser{
+#blog.archive article div.teaser, #blog.post article, #blog.post aside.comments, aside.prev, aside.next{
     width: 690px;
     padding: 16px 20px;
-    background-color: #18181D;
+    margin-bottom: 16px;
+    background-color: rgba(24, 24, 29, 0.9);
     float: left;
 }
 #blog.archive article div.teaser div.snippet{
@@ -18,9 +20,14 @@
     color: #c4c2c2;
     line-height: 32px;
     width: 350px;
+    text-shadow: 1px 1px 1px #000;
 }
 
 #blog.archive article div.teaser img{
     float: right;
 }
 
+#blog.post article p{
+    line-height: 24px;
+    text-shadow: 1px 1px 1px #000;
+}

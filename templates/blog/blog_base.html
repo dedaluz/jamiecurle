@@ -1,21 +1,27 @@
 {% extends 'base.html' %}
-
+{% load compress %}
 {% block title %}
 	{% block blog_title %}{% endblock %}Jamie Curle's Blog.
+{% endblock %}
+
+{% block extra_style %}
+	{% compress css %}
+	<link rel="stylesheet" href="{{MEDIA_URL}}css/blog.css" type="text/css" media="screen">
+	{% block blog_extra_style %}{% endblock %}
+	{% endcompress %}
 {% endblock %}
 
 {% block description %}Jamie Curle's Blog.{% endblock %}
 
 {% block keywords %}jamie curle blog {% endblock %}
 
-{% block extra_style %}
-	<link rel="stylesheet" href="{{MEDIA_URL}}/css/blog.css" type="text/css" media="screen">
-	{% block blog_extra_style %}{% endblock %}
+{% block article %}
+	{% block blog_article %}{% endblock %}
 {% endblock %}
 
 {% block body_id %}blog{% endblock %}
 
 {% block extra_script %}
-	<script src="{{MEDIA_URL}}/js/blog.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{MEDIA_URL}}js/blog.js" type="text/javascript" charset="utf-8"></script>
 	{% block blog_extra_script %}{% endblock %}
 {% endblock %}
