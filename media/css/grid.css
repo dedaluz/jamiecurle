@@ -1,100 +1,27 @@
-/* holders */
-.h1,.h2,.h3,.h4,.h5,.h6,.h7,.h8,.h9,.h10,.h11,.h12,.h13,.h14,.h15,.h16,.h17,.h18,.h19,.h20,.h21,.h22,.h23,.h24 {
-     margin: 0 auto;
-     display: block;
+div#grid-vert,div#grid-horizontal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
-.clearfix:after, .container:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-  overflow:hidden;
+div#grid-vert{
+    background: transparent url(/img/grid-vertical.png) top left repeat;
+    opacity: 0.4;
 }
-.clearfix{display: block;}
- 
-/* Regular clearing
-   apply to column that should drop below previous ones. */
- 
-.clear { clear:both; }
- 
-/* columns */
-.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12, .c13, .c14, .c15, .c16, .c17, .c18, .c19, .c20, .c21, .c22, .c23, .c24 {
-    float:left;margin-right:14px;
+div#grid-horizontal{
+    background: transparent url(/img/grid-horizontal.png) top left repeat;
+    opacity: 0.4;
 }
-/* widths 
-WIDTH=42;
-COL=14;
-LINE_HEIGHT = 21;
-for i in range(1,25): print '.c%s, .h%s, fieldset.c%s button, fieldset.c%s a.button{width:%spx}' % (i,i,i,i, (WIDTH*i)-COL)
 
-*/
-.c1, .h1, fieldset.c1 button, fieldset.c1 a.button{width:28px}
-.c2, .h2, fieldset.c2 button, fieldset.c2 a.button{width:70px}
-.c3, .h3, fieldset.c3 button, fieldset.c3 a.button{width:112px}
-.c4, .h4, fieldset.c4 button, fieldset.c4 a.button{width:154px}
-.c5, .h5, fieldset.c5 button, fieldset.c5 a.button{width:196px}
-.c6, .h6, fieldset.c6 button, fieldset.c6 a.button{width:238px}
-.c7, .h7, fieldset.c7 button, fieldset.c7 a.button{width:280px}
-.c8, .h8, fieldset.c8 button, fieldset.c8 a.button{width:322px}
-.c9, .h9, fieldset.c9 button, fieldset.c9 a.button{width:364px}
-.c10, .h10, fieldset.c10 button, fieldset.c10 a.button{width:406px}
-.c11, .h11, fieldset.c11 button, fieldset.c11 a.button{width:448px}
-.c12, .h12, fieldset.c12 button, fieldset.c12 a.button{width:490px}
-.c13, .h13, fieldset.c13 button, fieldset.c13 a.button{width:532px}
-.c14, .h14, fieldset.c14 button, fieldset.c14 a.button{width:574px}
-.c15, .h15, fieldset.c15 button, fieldset.c15 a.button{width:616px}
-.c16, .h16, fieldset.c16 button, fieldset.c16 a.button{width:658px}
-.c17, .h17, fieldset.c17 button, fieldset.c17 a.button{width:700px}
-.c18, .h18, fieldset.c18 button, fieldset.c18 a.button{width:742px}
-.c19, .h19, fieldset.c19 button, fieldset.c19 a.button{width:784px}
-.c20, .h20, fieldset.c20 button, fieldset.c20 a.button{width:826px}
-.c21, .h21, fieldset.c21 button, fieldset.c21 a.button{width:868px}
-.c22, .h22, fieldset.c22 button, fieldset.c22 a.button{width:910px}
-.c23, .h23, fieldset.c23 button, fieldset.c23 a.button{width:952px}
-.c24, .h24, fieldset.c24 button, fieldset.c24 a.button{width:994px}
-
-
-
-
-/* widths for inputs allowing for padding and borders 
->>> for i in range(1,25):
-...     print ".i%s input[type='text'], .i%s input[type='password'], .i%s textarea, {width:%spx}" % (i, i, i, ( (40)*i)-26)
-
-for i in range(1,25):
-    print ".i%s input[type='text'], .i%s input[type='password'], .i%s textarea, {width:%spx}" % (i, i, i, ( (WIDTH)*i)-(COL*2))
-
-*/
-.i1 input[type='text'], .i1 input[type='password'], .i1 textarea{width:14px}
-.i2 input[type='text'], .i2 input[type='password'], .i2 textarea{width:54px}
-.i3 input[type='text'], .i3 input[type='password'], .i3 textarea{width:94px}
-.i4 input[type='text'], .i4 input[type='password'], .i4 textarea{width:134px}
-.i5 input[type='text'], .i5 input[type='password'], .i5 textarea{width:174px}
-.i6 input[type='text'], .i6 input[type='password'], .i6 textarea{width:214px}
-.i7 input[type='text'], .i7 input[type='password'], .i7 textarea{width:254px}
-.i8 input[type='text'], .i8 input[type='password'], .i8 textarea{width:294px}
-.i9 input[type='text'], .i9 input[type='password'], .i9 textarea{width:334px}
-.i10 input[type='text'], .i10 input[type='password'], .i10 textarea{width:374px}
-.i11 input[type='text'], .i11 input[type='password'], .i11 textarea{width:414px}
-.i12 input[type='text'], .i12 input[type='password'], .i12 textarea{width:454px}
-.i13 input[type='text'], .i13 input[type='password'], .i13 textarea{width:494px}
-.i14 input[type='text'], .i14 input[type='password'], .i14 textarea{width:534px}
-.i15 input[type='text'], .i15 input[type='password'], .i15 textarea{width:574px}
-.i16 input[type='text'], .i16 input[type='password'], .i16 textarea{width:614px}
-.i17 input[type='text'], .i17 input[type='password'], .i17 textarea{width:654px}
-.i18 input[type='text'], .i18 input[type='password'], .i18 textarea{width:694px}
-.i19 input[type='text'], .i19 input[type='password'], .i19 textarea{width:734px}
-.i20 input[type='text'], .i20 input[type='password'], .i20 textarea{width:774px}
-.i21 input[type='text'], .i21 input[type='password'], .i21 textarea{width:814px}
-.i22 input[type='text'], .i22 input[type='password'], .i22 textarea{width:854px}
-.i23 input[type='text'], .i23 input[type='password'], .i23 textarea{width:894px}
-.i24 input[type='text'], .i24 input[type='password'], .i24 textarea{width:934px}
-
-/* padding*/
-
-.p10{padding-left: 10px;}
-/* last removes the margin */
-.last{margin-right: 0;}
-
-hr {background:#ddd;color:#ddd;clear:both;float:none;width:100%;height:1px;margin: 16px 0;border:none;}
-.hide{display: none;}
+div#grid-toggle{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    padding: 15px;
+    height: 20px;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #EBCA02;
+    cursor: pointer;
+    z-index: 30000;
+}

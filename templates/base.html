@@ -23,12 +23,16 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/reset.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/typography.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/ui.global.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/grid.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/syntax.css" type="text/css" media="screen">
 			<link rel="stylesheet" href="{{MEDIA_URL}}css/ui.mobile.css" type="text/css" media="screen and (width: 320px)">
 		{% block extra_style %}{% endblock %}
 		{% endcompress %}
 	</head>
 	<body id="{% block body_id %}home{% endblock %}" class="grid {% block body_class %}{% endblock %}">
+	<div id="grid-toggle">Grid On</div>
+	<div id="grid-vert"></div>
+	<div id="grid-horizontal"></div>
 		<header>
 			<nav>
 				<a rel="home" href="/">Home</a>
@@ -48,7 +52,7 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 			
 		</footer>{% compress js %}
 		<script src="{{MEDIA_URL}}js/jquery.js"></script>
+		<script src="{{MEDIA_URL}}js/grid.js"></script>
 		{% block extra_script %}{% endblock %}
-		
 {% endcompress %}	</body>
 </html>{% endif %}
