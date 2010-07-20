@@ -89,30 +89,76 @@ jQuery.cookie = function (key, value, options) {
 };
 
 $(function(){
-    var COOKIE_NAME = 'grid';
+    var GRID_STATE = 'grid';
+    var GRID_HOPACITY = 'hopacity'
+    var GRID_VOPACITY = 'vopacity'
+    var GRID_DEFAULT_OPACITY = 0.8
     var options = { path: '/', expires: 10 };
     
     function hide_grid(){
-        $('#grid-vert, #grid-horizontal').hide();
-        $('#grid-toggle').text('grid off');
-        $.cookie(COOKIE_NAME, 'hide', options);
+        $('#grid-vertical, #grid-horizontal').hide();
+        $('#grid-toggle a').text('grid off');
+        $.cookie(GRID_STATE, 'hide', options);
     }
     
     function show_grid(){
-    	$('#grid-toggle').text('grid on');
-    	$('#grid-vert, #grid-horizontal').show();
-    	$.cookie(COOKIE_NAME, 'show', options);
+    	$('#grid-toggle a').text('grid on');
+    	$('#grid-vertical, #grid-horizontal').show();
+    	$.cookie(GRID_STATE, 'show', options);
     }
     
-    if($.cookie(COOKIE_NAME) == 'hide'){
-        hide_grid()
+    function do_width(){
+        $('#grid-vertical, #grid-horizontal').width($(document).width() - 20)
     }
     
-    $('#grid-toggle').click(function(){
-        if($.cookie(COOKIE_NAME) == 'hide'){
+    function do_height(){
+        $('#grid-vertical, #grid-horizontal').height($(document).height())
+    }
+    // height and width
+    do_height();
+    do_width();
+    
+    // if hidden when load
+    if($.cookie(GRID_STATE) == 'hide'){
+        hide_grid();
+    }
+    // now do the opacities
+    
+    if($.cookie(GRID_HOPACITY)){
+        $('div#grid-horizontal').css({'opacity' : $.cookie(GRID_HOPACITY)})
+        $('#grid-toggle input#opacity_horizontal').val($.cookie(GRID_HOPACITY))
+    }else{
+        $('div#grid-horizontal').css({'opacity' : GRID_DEFAULT_OPACITY})
+    }
+    if($.cookie(GRID_VOPACITY)){
+        $('div#grid-vertical').css({'opacity' : $.cookie(GRID_VOPACITY)})
+        $('#grid-toggle input#opacity_vertical').val($.cookie(GRID_VOPACITY))
+    }else{
+        $('div#grid-vertical').css({'opacity' : GRID_DEFAULT_OPACITY})
+        
+    }
+    // grid toggle on click
+    $('#grid-toggle a').click(function(){
+        if($.cookie(GRID_STATE) == 'hide'){
             show_grid()
         }else{
             hide_grid()
         }
+    });
+    // opacity changes
+    $('#grid-toggle input#opacity_horizontal').change(function(){
+        var opacity = $(this).val()
+        $.cookie(GRID_HOPACITY, opacity, options);
+        $('div#grid-horizontal').css({'opacity' : opacity})
     })
+    $('#grid-toggle input#opacity_vertical').change(function(){
+        var opacity = $(this).val()
+        $.cookie(GRID_VOPACITY, opacity, options);
+        $('div#grid-vertical').css({'opacity' : opacity})
+    })
+    
+    $(window).resize(function(){
+        do_height();
+        do_width();
+    });
 })

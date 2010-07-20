@@ -30,8 +30,15 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		{% endcompress %}
 	</head>
 	<body id="{% block body_id %}home{% endblock %}" class="grid {% block body_class %}{% endblock %}">
-	<div id="grid-toggle">Grid On</div>
-	<div id="grid-vert"></div>
+	<div id="grid-toggle"><a href="#">Grid On</a>
+		<div id="toggle-options">
+			<label for="opacity_horizontal">Horizontal Opacity </label>
+			<input id="opacity_horizontal" type="range" min="0" max="1"step="0.1" value="0.5">
+			<label for="opacity_vertical">Vertical Opacity </label>
+			<input id="opacity_vertical" type="range" min="0" max="1"step="0.01" value="0.5">
+		</div>
+	</div>
+	<div id="grid-vertical"></div>
 	<div id="grid-horizontal"></div>
 		<header>
 			<nav>

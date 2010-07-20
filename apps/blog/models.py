@@ -79,7 +79,7 @@ class Photo(models.Model):
     license_url = models.URLField(blank=True, null=True)
     author = models.CharField(max_length=255,blank=True, null=True )
     created = models.DateTimeField(auto_now_add=True)
-    photo = ImageWithThumbsField(upload_to='uploads/photo/%Y/%m/%d', sizes=((2560,1440), (800,600), (640,500),(240,160),(155,100),(100,100), ))
+    photo = ImageWithThumbsField(upload_to='uploads/photo/%Y/%m/%d', sizes=settings.PHOTO_SIZES)
     
     def __unicode__(self):
         return u'Photo : %s' % self.pk

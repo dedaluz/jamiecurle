@@ -1,9 +1,7 @@
-div#grid-vert,div#grid-horizontal{
-    width: 100%;
-    height: 100%;
+div#grid-vertical,div#grid-horizontal{
     position: absolute;
 }
-div#grid-vert{
+div#grid-vertical{
     background: transparent url(/img/grid-vertical.png) top left repeat;
     opacity: 0.4;
 }
@@ -17,11 +15,20 @@ div#grid-toggle{
     bottom: 0;
     right: 0;
     width: 100px;
-    padding: 15px;
-    height: 20px;
+    padding: 12px 10px;
+    height: auto
     text-transform: uppercase;
-    background-color: #000;
+    background-color: #fff;
     color: #EBCA02;
     cursor: pointer;
     z-index: 30000;
+}
+div#grid-toggle label{
+    font-size: 10px;
+    font-family:georgia;
+    font-style: italic;
+    color: #555;
+}
+div#grid-toggle input{
+    width: 100px;
 }
