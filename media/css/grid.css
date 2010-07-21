@@ -4,10 +4,12 @@ div#grid-vertical,div#grid-horizontal{
 div#grid-vertical{
     background: transparent url(/img/grid-vertical.png) top left repeat;
     opacity: 0.4;
+    z-index: 29998;
 }
 div#grid-horizontal{
     background: transparent url(/img/grid-horizontal.png) top left repeat;
     opacity: 0.4;
+    z-index: 29998;
 }
 
 div#grid-toggle{

@@ -1,3 +1,6 @@
+body{
+    padding: 15px;
+}
 header form{
     display: block;
     clear: left;
@@ -10,4 +13,7 @@ header form{
 
 header form input{
     width: 205px;
+}
+div#grid-vertical,div#grid-horizontal,div#grid-toggle{
+    display: none !important;
 }

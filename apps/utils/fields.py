@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 from datetime import datetime
 from PIL import Image
+import ImageOps
 import cStringIO
 from django.conf import settings
 from django.db.models import ImageField
@@ -12,6 +13,25 @@ from django.core.files.base import ContentFile
 # upload path callable
 def upload_path(instance, filename):
     return  "uploads/%s/%s/%s" % ('%s' % datetime.today().strftime("%Y/%m/%d"), instance.__class__.__name__.lower(), filename ) 
+
+
+#def crop(instance, path, width, height):
+def thumb_crop(img, thumb_size, format):
+    img.seek(0) # see http://code.djangoproject.com/ticket/8222 for details
+    image = Image.open(img)
+    # Convert to RGB if necessary
+    if image.mode not in ('L', 'RGB', 'RGBA'):
+        image = image.convert('RGB')
+    # a nice convenient function
+    image2 = ImageOps.fit(image, size=thumb_size, centering=(0.5,0.5), method=Image.ANTIALIAS)
+    #img.save( path, 'JPEG' , quality=90)
+    io = cStringIO.StringIO()
+    # PNG and GIF are the same, JPG is JPEG
+    if format.upper()=='JPG':
+        format = 'JPEG'
+    
+    image2.save(io, format, quality=85)
+    return ContentFile(io.getvalue())
 
 #
 #
@@ -98,8 +118,9 @@ class ImageWithThumbsFieldFile(ImageFieldFile):
                 thumb_name = '%s.%sx%s.%s' % (split[0],w,h,split[1])
                 
                 # you can use another thumbnailing function if you like
-                thumb_content = generate_thumb(content, size, split[1])
+                #thumb_content = generate_thumb(content, size, split[1])
                 
+                thumb_content = thumb_crop(content, size, split[1])
                 thumb_name_ = self.storage.save(thumb_name, thumb_content)
                 
                 if not thumb_name == thumb_name_:

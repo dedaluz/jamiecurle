@@ -1,19 +1,39 @@
 {% extends 'base.html' %}
-{% load blog %}
+{% load webdesign blog %}
 {% block extra_style %}
 <link rel="stylesheet" href="{{MEDIA_URL}}css/home.css" type="text/css" media="screen">
+<style type="text/css" media="screen">
 
+</style>
 {% endblock %}
 {% block article %}
-<p id="about">
-	I'm Jamie Curle &mdash; designer, developer, drummer, 
-	chilli grower & I'm on a quest to harvest 
-	joy and be ultra.
-<p>
+<article id="about" class="preview">
+	<a href="#">
+		<img src="{{MEDIA_URL}}home/jamie-curle.jpg" alt="Jamie Curle">
+		<h2>Hello, I'm Jamie Curle.</h2>
+		<p>
+			I'm a designer, developer, drummer, 
+			chilli grower & I'm on a quest to harvest 
+			joy and be ultra. 
+		</p>
+	</a>
+</article>
 
-{% for i in 20|get_range %}
+<article id="featured-blog-post" class="preview">
+	<a href="{{featured.get_absolute_url}}">
+		<img src="{{featured.img.l}}" alt="{{featured.img.title}}">
+		<h2>{{featured.title}}</h2>
+		<p>{{featured.description}}.</p>
+	</a>
+</article>
+
+{% for post in posts %}
 <article class="preview">
-	<img src="http://jamiecurle.d.jmcrl.com/uploads/photo/2010/07/09/3969185525_8a32e58e69_o.240x160.jpg">
+	<a href="{{post.get_absolute_url}}">
+		<img src="{{post.img.l}}" alt="{{post.img.title}}">
+		<h2>{{post.title}}</h2>
+		<p>{{post.description}}.</p>
+	</a>
 </article>
 {% endfor %}
 {% endblock %}

@@ -7,9 +7,10 @@ body{
 }
 header{
     line-height: 48px;
-    height: 48px;
     padding: 0;
-    background-color: #2B2B2B;
+    margin-bottom: 24px;
+    clear: both;
+    height: 72px;
 }
     header a{
         color: #a9a9a9;
@@ -17,20 +18,56 @@ header{
         font-weight: 600;
         text-transform: uppercase;
         text-align: center;
-        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-        margin : 0 5px;
-        padding: 0 5pxpx;
+        text-shadow: 1px 1px 1px rgba(0,0,0,1);
+        background-color: #1C1C1C;
         display: block;
+        line-height: 72px;
+        width: auto;
+        padding: 0 10px;
         float: left;
     }
-    
     header nav a:hover{
         color: #E4E4E4;
     }
     
-article.preview{
-    width: 290px;
+article{
     margin: 0 10px 24px 0;
     float: left;
-    height: 144px;
+    background-color: #282828;
+    padding: 12px 10px;
+    
 }
+
+article.preview{
+    z-index: 1000;
+    width: 270px;
+    margin-right: 60px;
+    position: relative;
+}
+    article.preview img{
+        margin: -12px 0 0 -10px;
+    }
+    article.preview div{
+        position: absolute;
+        background-color: #1E1E1E;
+        bottom : 0;
+        left: 0;
+        padding: 12px 10px;
+        height: 96px;
+        padding-bottom: 24px;
+    }
+    article.preview h2{
+        color: #70BD00;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: -1px;
+    }
+    article.preview p{
+        font-family: georgia;
+        font-size: 14px;
+        color: #999;
+        font-weight: 400;
+        letter-spacing: 0px;
+        font-style: italic;
+    }
