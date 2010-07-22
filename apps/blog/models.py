@@ -107,7 +107,7 @@ class Photo(models.Model):
     
     def l(self):
         try:
-            return self.photo.url_290x248
+            return self.photo.url_290x240
         except AttributeError:
             return False
     

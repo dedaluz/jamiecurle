@@ -37,3 +37,11 @@
 </article>
 {% endfor %}
 {% endblock %}
+{% block extra_script %}
+<script src="{{MEDIA_URL}}js/jquery/matching.heights.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+$(function(){
+    $('article.preview p').sameheight(); 
+});
+</script>
+{% endblock %}
