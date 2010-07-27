@@ -6,6 +6,8 @@ class PhotoInline(admin.StackedInline):
     
 class PostAdmin(admin.ModelAdmin):
     inlines = [PhotoInline,]
+    list_display = ['title', 'description', 'status', 'featured', 'created']
+    prepopulated_fields = {"slug": ("title",)}
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(StyleSheet)

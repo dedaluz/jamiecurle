@@ -50,6 +50,9 @@ class Post(models.Model):
     comments = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     
+    class Meta:
+        ordering = ['featured', '-created']
+    
     def __unicode__(self):
         return u'%s' % self.pk
     
@@ -99,24 +102,28 @@ class Photo(models.Model):
         except AttributeError:
             return False
     
+    @property
     def m(self):
         try:
             return self.photo.url_240x160
         except AttributeError:
             return False
     
+    @property
     def l(self):
         try:
             return self.photo.url_290x240
         except AttributeError:
             return False
     
+    @property
     def f(self):
         try:
             return self.photo.url_800x600
         except AttributeError:
             return False
     
+    @property
     def xl(self):
         try:
             return self.photo.url_2560x1440

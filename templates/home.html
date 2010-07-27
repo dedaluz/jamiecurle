@@ -7,7 +7,7 @@
 </style>
 {% endblock %}
 {% block article %}
-<article id="about" class="preview">
+<article id="about" class="preview info">
 	<a href="#">
 		<img src="{{MEDIA_URL}}home/jamie-curle.jpg" alt="Jamie Curle">
 		<h2>Hello, I'm Jamie Curle.</h2>
@@ -19,29 +19,44 @@
 	</a>
 </article>
 
-<article id="featured-blog-post" class="preview">
+<article id="featured-blog-post" class="preview blog">
 	<a href="{{featured.get_absolute_url}}">
 		<img src="{{featured.img.l}}" alt="{{featured.img.title}}">
 		<h2>{{featured.title}}</h2>
-		<p>{{featured.description}}.</p>
+		<p>{{featured.description|truncatewords:15}}.</p>
 	</a>
 </article>
 
 {% for post in posts %}
-<article class="preview">
+<article class="preview blog">
 	<a href="{{post.get_absolute_url}}">
 		<img src="{{post.img.l}}" alt="{{post.img.title}}">
 		<h2>{{post.title}}</h2>
-		<p>{{post.description}}.</p>
+		<p>{{post.description|truncatewords:15}}.</p>
 	</a>
 </article>
 {% endfor %}
+{% for book in books %}
+<article class="preview books">
+	<a href="{{book.get_absolute_url}}">
+		<img src="{{book.l}}" alt="{{book.title}}">	
+		<h2>{{book.title}}</h2>
+		<p>{{book.description|truncatewords:15}}.</p>
+	</a>
+</article>
+{% endfor %}
+
+
 {% endblock %}
 {% block extra_script %}
 <script src="{{MEDIA_URL}}js/jquery/matching.heights.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
 $(function(){
-    $('article.preview p').sameheight(); 
+    $('article.preview').sameheight(); 
+	$('article.preview').each(function(){
+		var callout = '<span class="callout">' + $(this).attr('class').split(' ').slice(-1) + '</span>';
+		$(this).find('a').html(callout+$(this).find('a').html())
+	})
 });
 </script>
 {% endblock %}

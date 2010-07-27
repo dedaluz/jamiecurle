@@ -1,0 +1,35 @@
+# encoding: utf-8
+import datetime
+from south.db import db
+from south.v2 import SchemaMigration
+from django.db import models
+
+class Migration(SchemaMigration):
+
+    def forwards(self, orm):
+        
+        # Adding field 'Book.purchased'
+        db.add_column('books_book', 'purchased', self.gf('django.db.models.fields.DateTimeField')(default=datetime.datetime(2010, 7, 26, 8, 37, 28, 82409)), keep_default=False)
+
+
+    def backwards(self, orm):
+        
+        # Deleting field 'Book.purchased'
+        db.delete_column('books_book', 'purchased')
+
+
+    models = {
+        'books.book': {
+            'Meta': {'object_name': 'Book'},
+            'description': ('django.db.models.fields.TextField', [], {}),
+            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'isbn': ('django.db.models.fields.CharField', [], {'max_length': '255', 'null': 'True', 'blank': 'True'}),
+            'photo': ('apps.utils.fields.ImageWithThumbsField', [], {'blank': 'False'}),
+            'purchased': ('django.db.models.fields.DateTimeField', [], {}),
+            'slug': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '255'}),
+            'status': ('django.db.models.fields.SmallIntegerField', [], {}),
+            'title': ('django.db.models.fields.CharField', [], {'max_length': '255'})
+        }
+    }
+
+    complete_apps = ['books']
