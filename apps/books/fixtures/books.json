@@ -8,6 +8,7 @@
       "description": "This book is a classic in the web field. I gave this copy to a client when I got the revised edition. If you have to read one book on the topic of web design / development read this one.", 
       "title": "Don't Make Me Think", 
       "photo": "uploads/books/2010/07/27/krug.jpeg", 
+      "tags": "usability,design,user-experience", 
       "purchased": "2002-10-28", 
       "slug": "dont-make-me-think"
     }
@@ -21,6 +22,7 @@
       "description": "The examples are probably a little bit outdated now, but the reasoning remains intact. I've used this book more for ammunition when protecting a sites design from a bad design decision. On that ground it's worth it's weight in gold.", 
       "title": "Homepage Usability: 50 Websites Deconstructed", 
       "photo": "uploads/books/2010/07/27/cover_us_big.jpg", 
+      "tags": "usability,design", 
       "purchased": "2002-10-28", 
       "slug": "homepage-usability-50-websites-deconstructed"
     }
@@ -34,6 +36,7 @@
       "description": "Thick plot with a strange twist. Perhaps not, but I still use this book for reference. Even though it's quite old the technologies hadn't changed that much until the advent of html5.", 
       "title": "HTML & XHTML ( Definitive Guide )", 
       "photo": "uploads/books/2010/07/27/xhtml.jpg", 
+      "tags": "development,html", 
       "purchased": "2002-09-06", 
       "slug": "html-xhtml-definitive-guide"
     }
@@ -47,6 +50,7 @@
       "description": "I read this everyday for about a year and then referred to it everyday for the next three. It's became embedded in my head.", 
       "title": "CSS: The Definitive Guide", 
       "photo": "uploads/books/2010/07/27/cssguide.jpg", 
+      "tags": " development,css", 
       "purchased": "2002-09-03", 
       "slug": "css-definitive-guide"
     }
@@ -60,6 +64,7 @@
       "description": "At uni we were taught Director. It was 'the' tool back then as CD-ROMs were something that people still wanted. I never did really 'get' lingo and this book got demoted into obscurity in 2nd year when Flash MX came out with video support.", 
       "title": "Lingo in a Nutshell", 
       "photo": "uploads/books/2010/07/26/lrg-1.jpg", 
+      "tags": " development,lingo,director", 
       "purchased": "2002-03-22", 
       "slug": "lingo-nutshell"
     }
@@ -73,6 +78,7 @@
       "description": "It helped my foundations in director, but dry rot had already set in from the top as flash became more and more powerful. ", 
       "title": "Director 8 Demystified", 
       "photo": "uploads/books/2010/07/27/director-8-demystified.jpeg", 
+      "tags": " development,director", 
       "purchased": "2002-03-22", 
       "slug": "director-8-demystified"
     }
@@ -86,6 +92,7 @@
       "description": "This was my bible. Initially I toyed with Director as this is what we were taught at UNI, but around the same time flash 5 was beginning to mature.  I found Actionscript much more palatable then Lingo", 
       "title": "Actionscript - The definitive guide", 
       "photo": "uploads/books/2010/07/26/lrg.jpg", 
+      "tags": " development,actionscript", 
       "purchased": "2002-01-11", 
       "slug": "actionscript-definitive-guide"
     }
@@ -99,6 +106,7 @@
       "description": "A lecturer at the time (Joel Mills) pointed out to me how verbose perl was compared to this 'php' thing. So that afternoon I went and bought this book. This book was my introduction to php, I used it almost everyday right up until 2005 when I could practically recite it.  The writing style in this book is great and clear. If you have to go back in time to learn php, use this book.", 
       "title": "Teach yourself php in 24 hours", 
       "photo": "uploads/books/2010/07/27/php.24.jpg", 
+      "tags": " development,php", 
       "purchased": "2000-10-27", 
       "slug": "teach-yourself-php-24-hours"
     }
@@ -112,6 +120,7 @@
       "description": "My first 'web development' tech book. I needed a site that I'd designed to 'do' something. Back in the day before php had surged in usage I used perl, though probably very badly.", 
       "title": "Perl Cookbook", 
       "photo": "uploads/books/2010/07/27/perl.jpg", 
+      "tags": " development,perl", 
       "purchased": "2000-10-06", 
       "slug": "perl-cookbook"
     }
@@ -125,6 +134,7 @@
       "description": "Its no secret that Jazz is my favourite style of drumming, so it made sense to get a book by one of the Jazz drumming legends. When I got it i didn't fully pay attention to it, which lead to many bad habits. Some of which I'm still working out now.", 
       "title": "Gene Krupa Drum Method", 
       "photo": "uploads/books/2010/07/27/gkdmbook.jpg", 
+      "tags": " drums,technical", 
       "purchased": "1996-04-07", 
       "slug": "gene-krupa-drum-method"
     }
@@ -138,6 +148,7 @@
       "description": "I never got to the end of this book before it went MIA following the rehersal room move, but it taught me several independence exercises that I still do this day.", 
       "title": "Complete Modern Drum Set", 
       "photo": "uploads/books/2010/07/27/modern.drumset.jpg", 
+      "tags": " drums,technical,groove", 
       "purchased": "1996-02-08", 
       "slug": "complete-modern-drum-set"
     }

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load webdesign blog %}
+{% block extra_style %}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/home.css" type="text/css" media="screen">
+<style type="text/css" media="screen">
+
+</style>
+{% endblock %}
+{% block article %}
+
+
+{% for item in taggeditems %}
+<article class="preview {{item.category}}">
+	<a href="{{item.url}}">
+		<img src="{{item.l}}" alt="{{item.title}}">
+		<h2>{{item.title}}</h2>
+		<p>{{item.description|truncatewords:15}}.</p>
+	</a>
+</article>
+{% endfor %}
+
+
+
+{% endblock %}
+{% block extra_script %}
+<script src="{{MEDIA_URL}}js/jquery/matching.heights.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+$(function(){
+    $('article.preview').sameheight(); 
+	$('article.preview').each(function(){
+		var callout = '<span class="callout">' + $(this).attr('class').split(' ').slice(-1) + '</span>';
+		$(this).find('a').html(callout+$(this).find('a').html())
+	})
+});
+</script>
+{% endblock %}

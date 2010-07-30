@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+import tagging
 from apps.utils.fields import ImageWithThumbsField
 # Create your models here.
 
@@ -21,6 +22,7 @@ class Book(models.Model):
     photo = ImageWithThumbsField(upload_to='uploads/books/%Y/%m/%d', sizes=settings.PHOTO_SIZES)
     status = models.SmallIntegerField(choices = STATUS_CHOICES)
     purchased = models.DateField()
+    tags = tagging.fields.TagField()
     
     class Meta:
         ordering = ['-purchased']
@@ -79,3 +81,4 @@ class Book(models.Model):
             return self.photo.url_2560x1440
         except AttributeError:
             return False
+    

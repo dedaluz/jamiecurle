@@ -1,31 +1,12 @@
 from django.db import models
-from south.modelsinspector import add_introspection_rules
-from apps.utils.fields import ImageWithThumbsField
 from django.conf import settings
+from south.modelsinspector import add_introspection_rules
+from tagging.fields import TagField
+from apps.utils.fields import ImageWithThumbsField
+from apps.assets.models import Img, Css, Js
 
 # Create your models here.
 
-class StyleSheet(models.Model):
-    path = models.FilePathField(path="%s/templates/blog/css" % settings.APP_ROOT, recursive=True)
-    
-    def __unicode__(self):
-        return u'%s' % self.path
-    
-    @property
-    def template(self):
-        return self.path.replace('%s/templates/' % settings.APP_ROOT, '')
-    
-
-class Script(models.Model):
-    path = models.FilePathField(path="%s/templates/blog/js" % settings.APP_ROOT, recursive=True)
-    
-    def __unicode__(self):
-        return u'%s' % self.path
-    
-    @property
-    def template(self):
-        return self.path.replace('%s/templates/' % settings.APP_ROOT, '')
-    
 
 class Post(models.Model):
     IMG_CACHE = False
@@ -42,13 +23,16 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
     description = models.TextField()
-    stylesheets = models.ManyToManyField(StyleSheet, blank=True, null=True,)
-    scripts = models.ManyToManyField(Script, blank=True, null=True)
+    stylesheets = models.ManyToManyField(Css, blank=True, null=True,)
+    scripts = models.ManyToManyField(Js, blank=True, null=True)
+    images = models.ManyToManyField(Img, blank=True, null=True)
     content = models.TextField()
     status = models.SmallIntegerField(default=DRAFT, choices=STATUS_CHOICES)
     featured = models.BooleanField(default=False)
     comments = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
+    
+    tags = TagField()
     
     class Meta:
         ordering = ['featured', '-created']
@@ -69,28 +53,15 @@ class Post(models.Model):
     def img(self):
         if not self.IMG_CACHE:
             try:
-                self.IMG_CACHE = self.photo_set.all()[0]
+                self.IMG_CACHE = self.images.all()[0]
             except IndexError:
                 pass
         return self.IMG_CACHE
     
-
-class Photo(models.Model):
-    post = models.ForeignKey(Post, blank=True, null=True)
-    title = models.CharField(max_length=255, blank=True, null=True)
-    description = models.TextField(blank=True)
-    license_url = models.URLField(blank=True, null=True)
-    author = models.CharField(max_length=255,blank=True, null=True )
-    created = models.DateTimeField(auto_now_add=True)
-    photo = ImageWithThumbsField(upload_to='uploads/photo/%Y/%m/%d', sizes=settings.PHOTO_SIZES)
-    
-    def __unicode__(self):
-        return u'Photo : %s' % self.pk
-    
     @property
     def t(self):
         try:
-            return self.photo.url_100x100
+            return self.img.src.url_100x100
         except AttributeError:
             return False
         
@@ -98,39 +69,39 @@ class Photo(models.Model):
     @property
     def s(self):
         try:
-            return self.photo.url_155x100
+            return self.img.src.url_155x100
         except AttributeError:
             return False
     
     @property
     def m(self):
         try:
-            return self.photo.url_240x160
+            return self.img.src.url_240x160
         except AttributeError:
             return False
     
     @property
     def l(self):
         try:
-            return self.photo.url_290x240
+            return self.img.src.url_290x240
         except AttributeError:
             return False
     
     @property
     def f(self):
         try:
-            return self.photo.url_800x600
+            return self.img.src.url_800x600
         except AttributeError:
             return False
     
     @property
     def xl(self):
         try:
-            return self.photo.url_2560x1440
+            return self.img.src.url_2560x1440
         except AttributeError:
             return False
     
-#
+
 #
 # South
 rules = [

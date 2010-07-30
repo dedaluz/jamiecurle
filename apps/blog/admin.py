@@ -1,14 +1,8 @@
 from django.contrib import admin
-from models import Post, Photo, Script, StyleSheet
+from models import Post
 
-class PhotoInline(admin.StackedInline):
-    model = Photo
-    
 class PostAdmin(admin.ModelAdmin):
-    inlines = [PhotoInline,]
-    list_display = ['title', 'description', 'status', 'featured', 'created']
+    list_display = ['title', 'description', 'status', 'featured', 'created', 'tags']
     prepopulated_fields = {"slug": ("title",)}
-
+    
 admin.site.register(Post, PostAdmin)
-admin.site.register(StyleSheet)
-admin.site.register(Script)
