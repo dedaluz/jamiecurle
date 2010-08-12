@@ -11,6 +11,7 @@
     padding: 16px 20px;
     margin:  0 0 16px 150px ;
     float: left;
+    background: rgba(0,0,0,0.4);
 }
     
 p a.dsq-brlink{
@@ -18,8 +19,16 @@ p a.dsq-brlink{
     clear: left;
     margin-left: 150px;
 }
-
-#dsq-content .dsq-moderator .dsq-comment-header{
-    background-image: none;
-    background-color: #009BAF;
+#dsq-content div.dsq-comment-header{
+    background: rgba(0,0,0,0.7) none;
+    color: #999;
 }
+    #dsq-content .dsq-comment-message{
+        color: #ccc;
+        text-shadow: 0 0 2px #000;
+    }
+#dsq-content .dsq-moderator div.dsq-comment-header{
+    background: rgba(40,90,20,0.7) none;
+    color: #ccc;
+}
+
