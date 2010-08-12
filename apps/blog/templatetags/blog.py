@@ -41,8 +41,8 @@ def render(content, safe="unsafe"):
     soup = BeautifulSoup(markeddown)
     empty_code_blocks, index = soup.findAll(u'code', u'removed'), 0
     formatter = HtmlFormatter(cssclass=u'source')
-    print len(code_blocks)
-    print len(empty_code_blocks), index
+    #print len(code_blocks)
+    #print len(empty_code_blocks), index
     for block in code_blocks:
         if block.has_key(u'class'):
             # <code class='python'>python code</code>

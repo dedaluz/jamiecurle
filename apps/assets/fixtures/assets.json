@@ -1,0 +1,191 @@
+[
+  {
+    "pk": 1, 
+    "model": "assets.img", 
+    "fields": {
+      "src": "uploads/image/2010/07/30/3969185525_8a32e58e69_o.640x500.jpg", 
+      "description": "Nice red naga", 
+      "created": "2010-07-30 07:37:16", 
+      "author": "Nice Person", 
+      "license_url": "http://flickr.com", 
+      "title": "Naga"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "assets.img", 
+    "fields": {
+      "src": "uploads/image/2010/08/03/516547378_95358551f9_o.jpg", 
+      "description": "", 
+      "created": "2010-08-03 08:13:17", 
+      "author": "", 
+      "license_url": "", 
+      "title": "Blur"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "assets.img", 
+    "fields": {
+      "src": "uploads/image/2010/08/06/modern.drumset.jpg", 
+      "description": "", 
+      "created": "2010-08-06 19:42:34", 
+      "author": "", 
+      "license_url": "", 
+      "title": "Modern Drumset"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "assets.img", 
+    "fields": {
+      "src": "uploads/image/2010/08/06/krug.jpeg", 
+      "description": "", 
+      "created": "2010-08-06 20:13:27", 
+      "author": "", 
+      "license_url": "", 
+      "title": "Don't Make Me Think Cover"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "assets.img", 
+    "fields": {
+      "src": "uploads/image/2010/08/06/cover_us_big.jpg", 
+      "description": "", 
+      "created": "2010-08-06 20:13:50", 
+      "author": "", 
+      "license_url": "", 
+      "title": "Homepage Usability"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "assets.img", 
+    "fields": {
+      "src": "uploads/image/2010/08/06/xhtml.jpg", 
+      "description": "", 
+      "created": "2010-08-06 20:14:32", 
+      "author": "", 
+      "license_url": "", 
+      "title": "HTML & XHTML ( Definitive Guide )"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "assets.img", 
+    "fields": {
+      "src": "uploads/image/2010/08/06/cssguide.jpg", 
+      "description": "", 
+      "created": "2010-08-06 20:15:13", 
+      "author": "", 
+      "license_url": "", 
+      "title": "CSS: The Definitive Guide"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "assets.img", 
+    "fields": {
+      "src": "uploads/image/2010/08/06/lrg-1.jpg", 
+      "description": "", 
+      "created": "2010-08-06 20:16:01", 
+      "author": "", 
+      "license_url": "", 
+      "title": "lingo in a Nutshell"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "assets.img", 
+    "fields": {
+      "src": "uploads/image/2010/08/06/director-8-demystified.jpeg", 
+      "description": "", 
+      "created": "2010-08-06 20:18:16", 
+      "author": "", 
+      "license_url": "", 
+      "title": "Director 8 Demystified"
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "assets.img", 
+    "fields": {
+      "src": "uploads/image/2010/08/06/lrg.jpg", 
+      "description": "", 
+      "created": "2010-08-06 20:18:48", 
+      "author": "", 
+      "license_url": "", 
+      "title": "Actionscript - The definitive guide"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "assets.img", 
+    "fields": {
+      "src": "uploads/image/2010/08/06/php.24.jpg", 
+      "description": "", 
+      "created": "2010-08-06 20:19:15", 
+      "author": "", 
+      "license_url": "", 
+      "title": "teach yourself php in 24 hours"
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "assets.img", 
+    "fields": {
+      "src": "uploads/image/2010/08/06/perl.jpg", 
+      "description": "", 
+      "created": "2010-08-06 20:19:30", 
+      "author": "", 
+      "license_url": "", 
+      "title": "perl Cookbook"
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "assets.img", 
+    "fields": {
+      "src": "uploads/image/2010/08/06/gkdmbook.jpg", 
+      "description": "", 
+      "created": "2010-08-06 20:19:48", 
+      "author": "", 
+      "license_url": "", 
+      "title": "Gene Krupa Drum Method"
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "assets.img", 
+    "fields": {
+      "src": "uploads/image/2010/08/06/jamiecurle.jpg", 
+      "description": "", 
+      "created": "2010-08-06 20:43:08", 
+      "author": "", 
+      "license_url": "", 
+      "title": "Jamie Curle"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "assets.css", 
+    "fields": {
+      "path": "/Users/jcurle/Sites/jamiecurle/templates/assets/css/chillis_july_2009.css"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "assets.css", 
+    "fields": {
+      "path": "/Users/jcurle/Sites/jamiecurle/templates/assets/css/invert_nav.css"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "assets.js", 
+    "fields": {
+      "path": "/Users/jcurle/Sites/jamiecurle/templates/assets/js/chilli.js"
+    }
+  }
+]

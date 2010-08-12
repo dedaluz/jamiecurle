@@ -6,6 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'$^', home, name='home'),
+    (r'^info', include('apps.info.urls')),
     (r'^tags', include('apps.tags.urls')),
     (r'^blog', include('apps.blog.urls')),
     (r'^books', include('apps.books.urls')),

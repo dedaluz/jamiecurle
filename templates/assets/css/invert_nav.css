@@ -1,0 +1,17 @@
+    header a{
+        color: #343434;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: 1px 1px 1px rgba(255,255,255,1);
+        background-color: #E0E0E0;
+        display: block;
+        line-height: 72px;
+        width: auto;
+        padding: 0 10px;
+        float: left;
+    }
+    header nav a:hover{
+        color: #333;
+    }

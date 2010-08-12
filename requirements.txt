@@ -6,3 +6,4 @@ git+http://github.com/mintchaos/django_compressor.git
 Django
 django-debug-toolbar
 django-tagging
+django-disqus

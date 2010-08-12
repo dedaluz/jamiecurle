@@ -15,7 +15,7 @@ class Img(models.Model):
     src = ImageWithThumbsField(upload_to='uploads/image/%Y/%m/%d', sizes=settings.PHOTO_SIZES)
     
     def __unicode__(self):
-        return u'src : %s' % self.pk
+        return u'%s: %s' % (self.title, self.src.path.split('/').pop())
     
     @property
     def t(self):
@@ -44,6 +44,7 @@ class Img(models.Model):
         try:
             return self.src.url_290x240
         except AttributeError:
+            print 'npwt'
             return False
     
     @property
@@ -83,3 +84,15 @@ class Js(models.Model):
     def template(self):
         return self.path.replace('%s/templates/' % settings.APP_ROOT, '')
     
+
+rules = [
+    (
+        (ImageWithThumbsField, ),
+        [],
+        {
+            "blank": ["blank", {"default": True}],
+            "max_length": ["max_length", {"default": 100}],
+        },
+    ),
+]
+add_introspection_rules(rules, ["^apps\.utils\.fields",])

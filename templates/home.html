@@ -7,31 +7,31 @@
 </style>
 {% endblock %}
 {% block article %}
-<article id="about" class="preview info">
-	<a href="#">
-		<img src="{{MEDIA_URL}}home/jamie-curle.jpg" alt="Jamie Curle">
-		<h2>Hello, I'm Jamie Curle.</h2>
-		<p>
-			I'm a designer, developer, drummer, 
-			chilli grower & I'm on a quest to harvest 
-			joy and be ultra. 
-		</p>
-	</a>
-</article>
+
 
 <article id="featured-blog-post" class="preview blog">
 	<a href="{{featured.get_absolute_url}}">
 		<img src="{{featured.img.l}}" alt="{{featured.img.title}}">
-		<h2>{{featured.title}}</h2>
+		<h2>{{featured.title}}-- {{featured.hello}} --</h2>
 		<p>{{featured.description|truncatewords:15}}.</p>
 	</a>
 </article>
+
+{% for page in pages %}
+<article class="preview info">
+	<a href="{{page.get_absolute_url}}">
+		<img src="{{page.img.l}}" alt="{{page.img.title}}">
+		<h2>{{page.title}} </h2>
+		<p>{{page.description|truncatewords:15}}.</p>
+	</a>
+</article>
+{% endfor %}
 
 {% for post in posts %}
 <article class="preview blog">
 	<a href="{{post.get_absolute_url}}">
 		<img src="{{post.img.l}}" alt="{{post.img.title}}">
-		<h2>{{post.title}}</h2>
+		<h2>{{post.title}} </h2>
 		<p>{{post.description|truncatewords:15}}.</p>
 	</a>
 </article>

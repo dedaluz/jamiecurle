@@ -1,21 +1,23 @@
 {% extends 'blog/blog_base.html' %}
-{% load comments blog webdesign markup %}
+{% load blog webdesign markup disqus_tags %}
+
 {% block blog_title %}{{post.title}} {% endblock %}
 {% block blog_extra_style %}
 	{% render_asset post css %}
 {% endblock %}
 {% block body_class %}post{% endblock %}
 {% block blog_article %}
-{% get_comment_count for post as comment_count %}
 <p class="meta">
 	<span class="created">{{post.created|date:"jS F Y"}}.</span>
-	<span class="comments">{{comment_count}} comment{{comment_count|pluralize}}.</span>
+	<span class="comments"></span>
 </p>
 <div class="content">
 	<article>
 		{{post.content|render}}
 	</article>
 </div>
+{% disqus_dev %}
+{% disqus_show_comments %}
 {% endblock %}
 
 

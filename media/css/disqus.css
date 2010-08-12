@@ -1,0 +1,25 @@
+#disqus_thread{
+    clear: both;
+    color: #616161;
+}
+
+#dsq-content-stub{
+    margin-left: 150px;
+}
+#dsq-content{
+    width: 690px;
+    padding: 16px 20px;
+    margin:  0 0 16px 150px ;
+    float: left;
+}
+    
+p a.dsq-brlink{
+    display: block;
+    clear: left;
+    margin-left: 150px;
+}
+
+#dsq-content .dsq-moderator .dsq-comment-header{
+    background-image: none;
+    background-color: #009BAF;
+}
