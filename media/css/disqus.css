@@ -4,31 +4,48 @@
 }
 
 #dsq-content-stub{
-    margin-left: 150px;
+
 }
-#dsq-content{
-    width: 690px;
-    padding: 16px 20px;
-    margin:  0 0 16px 150px ;
-    float: left;
-    background: rgba(0,0,0,0.4);
+#dsq-content #dsq-new-post h3, h3#jc-comment-title{
+    font-size: 22px;
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0,0,0,0.5);
+    color: #999;
+    font-weight: 300;
 }
+
     
 p a.dsq-brlink{
     display: block;
     clear: left;
-    margin-left: 150px;
 }
+
+
+
 #dsq-content div.dsq-comment-header{
-    background: rgba(0,0,0,0.7) none;
-    color: #999;
+    background: rgba(0,0,0,0.4) none;
+    color: #666;
 }
     #dsq-content .dsq-comment-message{
-        color: #ccc;
+        color: #999;
         text-shadow: 0 0 2px #000;
     }
 #dsq-content .dsq-moderator div.dsq-comment-header{
-    background: rgba(40,90,20,0.7) none;
+    background: rgba(0,0,0,0.6) none;
     color: #ccc;
 }
 
+#dsq-content .dsq-comment-message{
+    margin-left: 40px;
+}
+
+#dsq-content button.dsq-button, #dsq-content button.dsq-button-small{
+    background: #333 none;
+    border: 0 none;
+    padding: 3px;
+    color: #666;
+}
+#dsq-content button.dsq-button:hover, #dsq-content button.dsq-button-small:hover{
+    color: #fff;
+    background: #666 none;
+}

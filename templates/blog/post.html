@@ -7,18 +7,19 @@
 {% endblock %}
 {% block body_class %}post{% endblock %}
 {% block blog_article %}
-<p class="meta">
-	<span class="created">{{post.created|date:"jS F Y"}}.</span>
+
+<article>
+	<time>{{post.created|date:"jS F Y"}}.</time>
 	<span class="comments"></span>
-</p>
-<div class="content">
-	<article>
-		{{post.content|render}}
-	</article>
-</div>
+	{{post.content|render}}
+</article>
+
+<aside class="comments">
 {% disqus_dev %}
+<h3 id="jc-comment-title">Comments</h3>
 {% disqus_show_comments %}
 {% endblock %}
+</aside>
 
 
 {% block blog_extra_script %}

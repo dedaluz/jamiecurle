@@ -6,7 +6,7 @@
     float: left;
 }
 #blog.archive article div.teaser, #blog.post article, #blog.post aside.comments, aside.prev, aside.next{
-    width: 690px;
+    width: 700px;
     padding: 16px 20px;
     margin-bottom: 16px;
     background-color: rgba(24, 24, 29, 0.9);
