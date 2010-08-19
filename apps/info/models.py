@@ -30,5 +30,6 @@ class Page(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return ('info_page', (self.slug,))
+    
 
 assets.register(Page)

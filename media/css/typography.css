@@ -1,14 +1,22 @@
 a{
     text-decoration: none;
-    color: #DFB600;
+    color: #559F00;
 }
 a:hover{
-    color: #FFCF00;
+    color: #559F00;
 }
 h1,h2{
     padding: 12px 0;
     line-height: 24px;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: -1px;
 }
-p{
-    padding: 0 0 24px 0;
+h1{font-size: 36px;}
+h2{font-size: 24px;}
+h3{font-size: 18px;}
+
+time{
+    font-family:georgia;
+    color: #666;
 }

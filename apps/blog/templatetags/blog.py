@@ -23,7 +23,6 @@ def get_range( value ):
 @register.filter
 def render(content, safe="unsafe"):
     """Render this content for display."""
-
     # First, pull out all the <code></code> blocks, to keep them away
     # from Markdown (and preserve whitespace).
     soup = BeautifulSoup(unicode(content))

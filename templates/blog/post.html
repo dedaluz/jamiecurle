@@ -1,5 +1,5 @@
 {% extends 'blog/blog_base.html' %}
-{% load blog webdesign markup disqus_tags %}
+{% load blog webdesign markup disqus_tags utils %}
 
 {% block blog_title %}{{post.title}} {% endblock %}
 {% block blog_extra_style %}
@@ -9,9 +9,16 @@
 {% block blog_article %}
 
 <article>
-	<time>{{post.created|date:"jS F Y"}}.</time>
-	<span class="comments"></span>
-	{{post.content|render}}
+	<header>
+		<h1>{{post.title}}</h1>
+		<p>
+			{{post.description}}
+		</p>
+		<time>{{post.created|date:"jS F Y"}}.</time>
+	</header>
+	{% super_render post.content post %}
+	{{content|render}}
+	
 </article>
 
 <aside class="comments">

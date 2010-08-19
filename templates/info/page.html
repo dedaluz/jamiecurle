@@ -2,6 +2,15 @@
 {% load comments blog webdesign markup %}
 {% block title %}{{page.title}} {% endblock %}
 
-{% block content %}
-{{page.content}}
+{% block article %}
+<article>
+	<header>
+		<h1>{{page.title}}</h1>
+		<p>
+			{{page.description}}
+		</p>
+		<time>{{page.created|date:"jS F Y"}}.</time>
+	</header>
+	{{page.content|render}}
+</article>
 {% endblock %}

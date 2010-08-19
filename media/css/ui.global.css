@@ -6,16 +6,16 @@ body{
     font-family: 'Helvetica Neue';
 }
 
-
-header{
+/* header */
+body > header{
     line-height: 48px;
     padding: 0;
     margin-bottom: 24px;
     clear: both;
     height: 72px;
 }
-    header a{
-        color: #a9a9a9;
+    body > header a{
+        color: #559F00;
         font-size: 11px;
         font-weight: 600;
         text-transform: uppercase;
@@ -28,27 +28,52 @@ header{
         padding: 0 10px;
         float: left;
     }
-    header nav a:hover{
+    body >  header nav a:hover{
         color: #E4E4E4;
     }
-    
+/* article */
 article{
-    padding: 11px 10px 0 10px;
+    padding: 11px 10px 24px 10px;
     margin-bottom: 24px;
     float: left;
-    background-color: #282828;
+    width: 780px;
+    background-color: rgba(24, 24, 29, 0.9);
     
 }
-
-
+    article header{
+        border-bottom: 1px solid #575757;
+        margin-bottom: 24px;
+    }
+    article header p{
+        font-size: 20px;
+        line-height: 24px;
+        color: #fff;
+        font-weight: 200;
+    }
+    article header time{
+        display: block;
+        font-size: 11px;
+        line-height: 24px;
+        padding-bottom: 12px;
+    }
+    
+article img{
+    margin: 24px 0 42px -10px;
+}
+    
+article p{
+    color: #999;
+    text-shadow: 0 0 2px #000;
+}
+/* preview article */
 article.preview{
     z-index: 1000;
     width: 270px;
     margin-right: 10px;
+    margin-left: 0px;
     position: relative;
     opacity: 0.9;
 }
-
     article span.callout {
         color: #fff;
         text-transform: uppercase;
@@ -60,7 +85,6 @@ article.preview{
         background-color: #0C0C0C;
         opacity: 0.1;
     }
-
     article.preview:hover{
         opacity: 1;
         z-index: 20000;
@@ -72,22 +96,18 @@ article.preview{
         margin: -12px 0 -5px -10px;
         padding: 0;
     }
-
     article.preview h2{
         color: #70BD00;
-        font-weight: 400;
-        letter-spacing: -1px;
     }
     article.preview p{
         font-family: georgia;
         font-size: 14px;
-        color: #999;
         font-weight: 400;
         font-style: italic;
     }
 
-
+/* comments */
 aside.comments{
     clear : left;
-    background: #fff;
+    background: #efefee;
 }
