@@ -6,13 +6,13 @@ from apps.utils.fields import ImageWithThumbsField
 
 # Create your models here.
 
+
 class Img(models.Model):
     title = models.CharField(max_length=255, blank=True, null=True)
-    description = models.TextField(blank=True)
-    license_url = models.URLField(blank=True, null=True)
-    author = models.CharField(max_length=255,blank=True, null=True )
     created = models.DateTimeField(auto_now_add=True)
     src = ImageWithThumbsField(upload_to='uploads/image/%Y/%m/%d', sizes=settings.PHOTO_SIZES)
+    order = models.PositiveSmallIntegerField(default=10)
+    
     
     def __unicode__(self):
         return u'%s: %s' % (self.title, self.src.path.split('/').pop())
@@ -63,8 +63,12 @@ class Img(models.Model):
     
 #
 
+
+
+
 class Css(models.Model):
     path = models.FilePathField(path="%s/templates/assets/css" % settings.APP_ROOT, recursive=True)
+    order = models.PositiveSmallIntegerField(default=10)
     
     def __unicode__(self):
         return u'%s' % self.path
@@ -76,6 +80,7 @@ class Css(models.Model):
 
 class Js(models.Model):
     path = models.FilePathField(path="%s/templates/assets/js" % settings.APP_ROOT, recursive=True)
+    order = models.PositiveSmallIntegerField(default=10)
     
     def __unicode__(self):
         return u'%s' % self.path

@@ -26,7 +26,7 @@ class AlreadyRegistered(Exception):
     pass
 
 def register(model, img_attr='images', img_related_name="image_set", js_attr='scripts', js_related_name="js_set", css_attr="stylesheets", css_related_name="css_set",):
-    from django.db.models import FieldDoesNotExist, ManyToManyField
+    from django.db.models import FieldDoesNotExist, ManyToManyField, ForeignKey
     from models import Js, Css, Img
     # add to registry
     if model in registry:
@@ -43,7 +43,10 @@ def register(model, img_attr='images', img_related_name="image_set", js_attr='sc
             opts.get_field(attr[0])
         except FieldDoesNotExist:
             # make the related names
-            ManyToManyField(attr[1], blank=True, null=True).contribute_to_class(model, attr[0])
+            #print model, attr[0], attr[1]
+            #ForeignKey(attr[1], blank=True, null=True).contribute_to_class(model, attr[0])
+            ForeignKey(model, blank=True, null=True).contribute_to_class(attr[1], attr[0])
+            #ManyToManyField(attr[1], blank=True, null=True).contribute_to_class(model, attr[0])
     #
     # now add the shortcuts for images
     model.IMG_CACHE = False
@@ -54,7 +57,7 @@ def register(model, img_attr='images', img_related_name="image_set", js_attr='sc
     def img(self):
         if not self.IMG_CACHE:
             try:
-                self.IMG_CACHE = self.images.all()[0]
+                self.IMG_CACHE = self.image_set.all()[0]
             except IndexError:
                 return self.BLANK_IMAGE
         return self.IMG_CACHE
