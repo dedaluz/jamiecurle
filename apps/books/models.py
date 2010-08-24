@@ -1,7 +1,9 @@
 from django.db import models
 from django.conf import settings
+from django.contrib.contenttypes import generic
 import tagging
 from apps import assets
+from apps.assets.models import Img, Css, Js
 # Create your models here.
 
 class Book(models.Model):
@@ -23,6 +25,9 @@ class Book(models.Model):
     status = models.SmallIntegerField(choices = STATUS_CHOICES)
     purchased = models.DateField()
     tags = tagging.fields.TagField()
+    images = generic.GenericRelation(Img)
+    stylesheets = generic.GenericRelation(Css)
+    scripts = generic.GenericRelation(Js)
     
     class Meta:
         ordering = ['-purchased']

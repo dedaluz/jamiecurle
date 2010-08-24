@@ -29,7 +29,6 @@ def render(content, safe="unsafe"):
     code_blocks = soup.findAll(u'code')
     for block in code_blocks:
         block.replaceWith(u'<code class="removed"></code>')
-
     # Run the post through markdown.
     if safe == u"unsafe":
         safe_mode = False
@@ -85,7 +84,6 @@ class RenderAssetNode(template.Node):
             'post' : post,
             'MEDIA_URL' : settings.MEDIA_URL
             })
-        
         assets = post.stylesheets.all() if self.asset_type == 'css' else post.scripts.all()
 
         

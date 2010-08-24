@@ -1,5 +1,7 @@
 from django.db import models
 from django.conf import settings
+from django.contrib.contenttypes.models import ContentType
+from django.contrib.contenttypes import generic
 from south.modelsinspector import add_introspection_rules
 from tagging.fields import TagField
 from apps.utils.fields import ImageWithThumbsField
@@ -7,12 +9,18 @@ from apps.utils.fields import ImageWithThumbsField
 # Create your models here.
 
 
+
 class Img(models.Model):
+    content_type = models.ForeignKey(ContentType)
+    object_id = models.PositiveIntegerField()
+    content_object = generic.GenericForeignKey("content_type", "object_id")
     title = models.CharField(max_length=255, blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True)
     src = ImageWithThumbsField(upload_to='uploads/image/%Y/%m/%d', sizes=settings.PHOTO_SIZES)
     order = models.PositiveSmallIntegerField(default=10)
     
+    class Meta:
+        ordering = ['order']
     
     def __unicode__(self):
         return u'%s: %s' % (self.title, self.src.path.split('/').pop())
@@ -61,13 +69,18 @@ class Img(models.Model):
         except AttributeError:
             return False
     
-#
 
 
-
+class Attribution(models.Model):
+    img = models.OneToOneField(Img)
+    license_url = models.URLField(blank=True, null=True)
+    author = models.CharField(max_length=255,blank=True, null=True )
 
 class Css(models.Model):
-    path = models.FilePathField(path="%s/templates/assets/css" % settings.APP_ROOT, recursive=True)
+    content_type = models.ForeignKey(ContentType)
+    object_id = models.PositiveIntegerField()
+    content_object = generic.GenericForeignKey("content_type", "object_id")
+    path = models.FilePathField(path="%s/templates/assets/css" % settings.APP_ROOT, recursive=True, blank=True, null=True)
     order = models.PositiveSmallIntegerField(default=10)
     
     def __unicode__(self):
@@ -79,7 +92,10 @@ class Css(models.Model):
     
 
 class Js(models.Model):
-    path = models.FilePathField(path="%s/templates/assets/js" % settings.APP_ROOT, recursive=True)
+    content_type = models.ForeignKey(ContentType)
+    object_id = models.PositiveIntegerField()
+    content_object = generic.GenericForeignKey("content_type", "object_id")
+    path = models.FilePathField(path="%s/templates/assets/js" % settings.APP_ROOT, recursive=True, blank=True, null=True)
     order = models.PositiveSmallIntegerField(default=10)
     
     def __unicode__(self):

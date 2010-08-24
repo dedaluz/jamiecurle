@@ -1,7 +1,8 @@
 from django.db import models
+from django.contrib.contenttypes import generic
 from apps import assets
 from tagging.fields import TagField
-
+from apps.assets.models import Img, Css, Js
 class Page(models.Model):
     IMG_CACHE = False
     HIDDEN = 1
@@ -23,6 +24,9 @@ class Page(models.Model):
     featured = models.BooleanField(default=False)
     comments = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
+    images = generic.GenericRelation(Img)
+    stylesheets = generic.GenericRelation(Css)
+    scripts = generic.GenericRelation(Js)
     
     def __unicode__(self):
         return u'%s' % self.pk

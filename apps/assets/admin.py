@@ -1,13 +1,15 @@
 from django.contrib import admin
+
+from django.contrib.contenttypes import generic
 from models import Img, Css, Js
 
-class ImgInline(admin.TabularInline):
+class ImgInline(generic.GenericTabularInline):
     model = Img
 
-class CssInline(admin.TabularInline):
+class CssInline(generic.GenericTabularInline):
     model = Css
 
-class JsInline(admin.TabularInline):
+class JsInline(generic.GenericTabularInline):
     model = Js
 
 admin.site.register(Img)
