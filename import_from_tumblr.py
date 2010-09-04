@@ -21,6 +21,9 @@ for post in posts:
     else:
         print 'new' + post['type']
     """
+    
+print types.items()
+"""return
 attrs = []
 for t in types:
     for k in types[t].keys():
@@ -33,3 +36,4 @@ for a in attrs:
 
 #simplejson.load(fp)
 #fp.close()
+"""

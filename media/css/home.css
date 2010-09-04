@@ -1,3 +1,10 @@
 body > header {
 margin-left: 0px;
 }
+aside{
+    float: left;
+    border: 1px solid red;
+    width: 290px;
+    min-height: 790px;
+    margin-right:10px;
+}

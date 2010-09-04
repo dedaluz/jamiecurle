@@ -38,16 +38,24 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 			<input id="opacity_horizontal" type="range" min="0" max="1"step="0.1" value="0.5">
 			<label for="opacity_vertical">Vertical Opacity </label>
 			<input id="opacity_vertical" type="range" min="0" max="1"step="0.01" value="0.5">
-		</div>
+		</div >
 	</div>
 	<div id="grid-vertical"></div>
 	<div id="grid-horizontal"></div>
 		<header>
-			<nav>
+			<nav class="{% block nav_class %}{% endblock %}">
 				<a rel="home" href="/">Home</a>
-				<a rel="search" href="#">About</a>
+				<a rel="Info" href="{% url info %}">Info</a>
 				<a rel="blog" href="{% url blog %}">Blog</a>
-				<a rel="portfolio" href="{% url portfolio %}">Portfolio</a>
+				<form action="{% url haystack_search %}" method="get">
+					<input type="text" name="q" {% if request.GET.q %}value="{{request.GET.q}}"{% endif %}placeholder="I'm looking for">
+					<ul>
+						<li>only search in these areas</li>
+						<li><label for="id_models_0"><input type="checkbox" name="models" value="info.page" id="id_models_0" /> Info</label></li>
+						<li><label for="id_models_1"><input type="checkbox" name="models" value="blog.post" id="id_models_1" /> Blog</label></li>
+					</ul>
+					<button type="submit">Search</button>
+				</form>
 			</nav>
 		</header>
 
@@ -61,7 +69,9 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 			
 		</footer>{% compress js %}
 		<script src="{{MEDIA_URL}}js/jquery.js"></script>
+		<script src="{{MEDIA_URL}}js/nav.js"></script>
 		<script src="{{MEDIA_URL}}js/grid.js"></script>
+		<script src="{{MEDIA_URL}}js/search.js"></script>
 		{% block extra_script %}{% endblock %}
 {% endcompress %}	</body>
 </html>{% endif %}

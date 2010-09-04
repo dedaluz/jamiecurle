@@ -1,0 +1,137 @@
+Structure of the tumblr models and tings
+photo 
+	{
+		'photo-caption': '<p>Ripening is starting to take a hold on this years chilli crop.</p>\n<p>Still no sign on the habanero&#8217;s, orange bhuts or amazons yet, but I suspect it&#8217;ll be october before these ripen.</p>', 
+		'photo-url-75': 'http://30.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto1_75sq.jpg', 
+		'height': '1936', 
+		'id': 1002551854, 
+		'reblog-key': 'laesVxIw', 
+		'photo-url-1280': 'http://tumblr.jamiecurle.com/photo/1280/1002551854/1/tumblr_l7ne29Wq0D1qzzbtt', 
+		'photo-url-100': 'http://24.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto1_100.jpg', 
+		'width': '2592', 
+		'type': 'photo', 
+		'format': 'html', 
+		'url-with-slug': 'http://tumblr.jamiecurle.com/post/1002551854/ripening-is-starting-to-take-a-hold-on-this-years', 
+		'photos': [
+			{
+				'caption': 'Ripe Cherry Bombs', 
+				'offset': 'o1',
+				'width': '2592',
+				'height': '1936',
+				'photo-url-75': 'http://30.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto1_75sq.jpg',
+				'photo-url-100': 'http://24.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto1_100.jpg'
+				'photo-url-250': 'http://24.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto1_250.jpg',
+				'photo-url-400': 'http://25.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto1_400.jpg',
+				'photo-url-500': 'http://24.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto1_500.jpg',
+				'photo-url-1280': 'http://tumblr.jamiecurle.com/photo/1280/1002551854/1/tumblr_l7ne29Wq0D1qzzbtt',
+			}, 
+			{
+				'photo-url-1280': 'http://tumblr.jamiecurle.com/photo/1280/1002551854/2/tumblr_l7ne29Wq0D1qzzbtt', 
+				'photo-url-75': 'http://25.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto2_75sq.jpg', 
+				'width': '1936', 'photo-url-500': 'http://30.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto2_500.jpg', 
+				'photo-url-400': 'http://30.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto2_400.jpg', 
+				'height': '2592', 'caption': 'Dorset Nagas starting to ripen', 
+				'offset': 'o2', 
+				'photo-url-250': 'http://24.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto2_250.jpg', 
+				'photo-url-100': 'http://24.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto2_100.jpg'
+			}, 
+			{
+				'photo-url-1280': 'http://tumblr.jamiecurle.com/photo/1280/1002551854/3/tumblr_l7ne29Wq0D1qzzbtt', 
+				'photo-url-75': 'http://28.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto3_75sq.jpg', 
+				'width': '2592', 
+				'photo-url-500': 'http://30.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto3_500.jpg', 
+				'photo-url-400': 'http://30.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto3_400.jpg', 
+				'height': '1936', 
+				'caption': 'So are the etnas', 
+				'offset': 'o3', 
+				'photo-url-250': 'http://28.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto3_250.jpg', 
+				'photo-url-100': 'http://27.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto3_100.jpg'
+			}
+		], 
+		'unix-timestamp': 1282638320, 
+		'date': 'Tue, 24 Aug 2010 09:25:20', 
+		'slug': 'ripening-is-starting-to-take-a-hold-on-this-years', 
+		'from-feed-id': 0, 
+		'photo-url-400': 'http://25.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto1_400.jpg', 
+		'date-gmt': '2010-08-24 08:25:20 GMT', 
+		'url': 'http://tumblr.jamiecurle.com/post/1002551854', 
+		'photo-url-500': 'http://24.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto1_500.jpg', 
+		'photo-url-250': 'http://24.media.tumblr.com/tumblr_l7ne29Wq0D1qzzbtto1_250.jpg', 
+		'mobile': 0, 
+		'feed-item': '', 
+		'bookmarklet': 0
+	} 
+video
+	{
+		'from-feed-id': 0, 
+		'video-caption': u'<p>In my humble opinion 99.99% of tv adverts are shit. \xa0This is one\xa0example of the 0.01% that are not shit.</p>\n<p><a href="http://www.youtube.com/watch?v=obdd31Q9PqA&amp;feature=related">Warhawk Matt Scott in Nike &#8216;No Excuses&#8217; Commercial</a> (via <a href="http://youtube.com/user/jasinskija08">jasinskija08</a>)</p>', 
+		'date-gmt': '2010-08-13 17:14:17 GMT', 
+		'url': 'http://tumblr.jamiecurle.com/post/948061655', 
+		'url-with-slug': 'http://tumblr.jamiecurle.com/post/948061655/in-my-humble-opinion-99-99-of-tv-adverts-are', 
+		'format': 'html', 
+		'video-player': '<object width="400" height="325"><param name="movie" value="http://www.youtube.com/v/obdd31Q9PqA&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1"></param><param name="wmode" value="transparent"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/obdd31Q9PqA&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1" type="application/x-shockwave-flash" width="400" height="325" allowFullScreen="true" wmode="transparent"></embed></object>', 
+		'slug': 'in-my-humble-opinion-99-99-of-tv-adverts-are', 
+		'video-source': '<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/obdd31Q9PqA?fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/obdd31Q9PqA?fs=1" type="application/x-shockwave-flash" width="425" height="344" allowscriptaccess="always" allowfullscreen="true"></embed></object>', 
+		'mobile': 0, 
+		'feed-item': '', 
+		'unix-timestamp': 1281719657, 
+		'date': 'Fri, 13 Aug 2010 18:14:17',
+		'bookmarklet': 1, 
+		'type': 'video', 
+		'id': 948061655, 
+		'reblog-key': 'VsCuQe2b'
+	}
+regular
+	{
+		'from-feed-id': 0, 
+		'regular-body': u'<p>Wow, just placed a seed order (company shall remain nameless for the time being) and it was lucky they had paypal as an option because the other method was to use credit card. Sounds pretty normal, but they weren&#8217;t using https:// at all. \xa0</p>\n<p>Is this 2010 or 1999?</p>\n\n<p>Crikey.</p>', 
+		'date-gmt': '2010-08-22 12:41:59 GMT', 
+		'url': 'http://tumblr.jamiecurle.com/post/992564994', 
+		'url-with-slug': 'http://tumblr.jamiecurle.com/post/992564994/no-https-and-you-want-my-credit-card-details', 
+		'format': 'html', 
+		'regular-title': 'no https, and you want my credit card details?', 
+		'slug': 'no-https-and-you-want-my-credit-card-details', 
+		'mobile': 0, 
+		'feed-item': '', 
+		'unix-timestamp': 1282480919, 
+		'date': 'Sun, 22 Aug 2010 13:41:59', 
+		'bookmarklet': 0, 
+		'type': 'regular', 
+		'id': 992564994, 
+		'reblog-key': 'XX0bxGBp'
+	} 
+Link 
+	{
+		'link-url': 'http://ericholscher.com/blog/2010/aug/16/lessons-learned-dash-easy-django-deployment/',
+		'from-feed-id': 0,
+		'date-gmt':'2010-08-17 10:30:46 GMT', 
+		'url': 'http://tumblr.jamiecurle.com/post/966678840', 
+		'url-with-slug': 'http://tumblr.jamiecurle.com/post/966678840/lessons-learned-from-the-dash-easy-django-deployment', 
+		'format': 'html', 
+		'slug': 'lessons-learned-from-the-dash-easy-django-deployment', 
+		'mobile': 0, 'link-description': '<p>Holy schmat this is easy.</p>', 
+		'feed-item': '', 
+		'unix-timestamp': 1282041046, 
+		'date': 'Tue, 17 Aug 2010 11:30:46', 
+		'bookmarklet': 1, 
+		'link-text': 'Lessons Learned From The Dash: Easy Django Deployment | Surfing in Kansas', 'type': 'link', 'id': 966678840, 'reblog-key': 'k2NMGusM'
+}
+Quote
+	{
+		'from-feed-id': 0, 
+		'quote-source': u'REALLY LONG HTML STRING', 
+		'date-gmt': '2009-04-29 10:02:24 GMT', 
+		'url': 'http://tumblr.jamiecurle.com/post/101405286', 
+		'url-with-slug': 'http://tumblr.jamiecurle.com/post/101405286/abstract-three-studies-were-conducted-to', 
+		'format': 'html', 
+		'slug': 'abstract-three-studies-were-conducted-to', 
+		'mobile': 0, 
+		'feed-item': '', 
+		'unix-timestamp': 1240999344, 
+		'date': 'Wed, 29 Apr 2009 11:02:24', 
+		'bookmarklet': 0, 
+		'type': 'quote', 
+		'id': 101405286, 
+		'quote-text': 'LONG BUT NOT SO LONG STRING.', 
+		'reblog-key': 'ump7Iduo'
+	}

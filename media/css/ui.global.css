@@ -28,9 +28,80 @@ body > header{
         padding: 0 10px;
         float: left;
     }
+    body >  header nav{
+        height: 72px;
+        background-color: #1C1C1C;
+        width: 800px;
+    }
     body >  header nav a:hover{
         color: #E4E4E4;
     }
+    
+    
+    body > header nav form{
+        float : right;
+        position: relative;
+        width: 290px;
+        background-color: #141414;
+        height: 72px;
+    }
+    body > header nav form input[type="text"]{
+        width: 190px;
+        border: 1px solid #fff;
+        padding: 4px;
+        font-weight: 800;
+        background-color: #fff;
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 18px;
+        margin-right: -4px;
+        font-family: 'Helvetica Neue';
+    }
+    body > header nav form input[type="text"]:focus{
+        outline: none;
+    }
+    body > header nav form button{
+        line-height: 21px;
+        width: 77px;
+        margin:  20px 0 0 0px;
+        background-color: #FFBF00;
+        border: 1px solid #FFBF00;
+        color: #A86D00;
+        text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+        vertical-align: top;
+        font-weight: 800;
+        font-family: 'Helvetica Neue';
+        cursor: pointer;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    body > header nav form button:hover{
+        background-color: #FFBF00;
+        border: 1px solid #FFBF00;
+        color: #6A4F00;
+    }
+    body > header nav form ul{
+        position: absolute;
+        display: none;
+        background-color: #151515;
+        width: 260px;
+        padding: 0 10px 21px 10px;
+        z-index: 30000;
+        color: #fff;
+        
+    }
+        body > header nav form ul li{
+            font-family:georgia;
+            color: #999;
+            font-size: 12px;
+            line-height: 28px;
+        }
+            body > header nav form ul li label{
+                font-family: 'Helvetica Neue';
+                color: #ccc;
+                font-size: 12px;
+            }
 /* article */
 article{
     padding: 11px 10px 24px 10px;
@@ -85,12 +156,15 @@ article.preview{
         background-color: #0C0C0C;
         opacity: 0.1;
     }
+    article.preview time{
+        font-size: 11px;
+    }
     article.preview:hover{
         opacity: 1;
         z-index: 20000;
     }
     article.preview:hover span{
-        opacity: 0.4;
+        opacity: 0.8;
     }
     article.preview img{
         margin: -12px 0 -5px -10px;

@@ -5,7 +5,6 @@ from textile import textile
 from BeautifulSoup import BeautifulSoup
 
 
-
 class ContentNode(template.Node):
     
     def __init__(self, t, c):
