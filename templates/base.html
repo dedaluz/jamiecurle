@@ -47,13 +47,8 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 				<a rel="home" href="/">Home</a>
 				<a rel="Info" href="{% url info %}">Info</a>
 				<a rel="blog" href="{% url blog %}">Blog</a>
-				<form action="{% url haystack_search %}" method="get">
+				<form action="{% url search %}" method="get">
 					<input type="text" name="q" {% if request.GET.q %}value="{{request.GET.q}}"{% endif %}placeholder="I'm looking for">
-					<ul>
-						<li>only search in these areas</li>
-						<li><label for="id_models_0"><input type="checkbox" name="models" value="info.page" id="id_models_0" /> Info</label></li>
-						<li><label for="id_models_1"><input type="checkbox" name="models" value="blog.post" id="id_models_1" /> Blog</label></li>
-					</ul>
 					<button type="submit">Search</button>
 				</form>
 			</nav>

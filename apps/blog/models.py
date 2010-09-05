@@ -31,6 +31,7 @@ class Post(models.Model):
     tags = TagField()
     
     class Meta:
+        verbose_name = 'blog'
         ordering = ['featured', '-created']
     
     def __unicode__(self):

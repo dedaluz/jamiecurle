@@ -1,15 +1,22 @@
 {% extends 'base.html' %}
 
+{% block nav_class %}grid{% endblock %}
+
 {% block article %}
     <h2>Search</h2>
 
+{{results}}
         {% if query %}
-            <h3>Results</h3>
-
             {% for result in page.object_list %}
-                <p>
-                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.title }}</a>
-                </p>
+
+				<article class="preview {{result.verbose_name}}">
+					<a href="{{result.object.get_absolute_url}}">
+						<img src="{{result.object.img.l}}" alt="{{result.object.img.title}}">
+						<h2>{{result.object.title}}</h2>
+						<time>{{result.object.created|date:"jS F Y"}}.</time>
+						<p>{{result.object.description|truncatewords:15}}.</p>
+					</a>
+				</article>
             {% empty %}
                 <p>No results found.</p>
             {% endfor %}
@@ -24,5 +31,16 @@
         {% else %}
             {# Show some example queries to run, maybe query syntax, something else? #}
         {% endif %}
-    </form>
+{% endblock %}
+{% block extra_script %}
+<script src="{{MEDIA_URL}}js/jquery/matching.heights.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+$(function(){
+    $('article.preview').sameheight(); 
+	$('article.preview').each(function(){
+		var callout = '<span class="callout">' + $(this).attr('class').split(' ').slice(-1) + '</span>';
+		$(this).find('a').html(callout+$(this).find('a').html())
+	})
+});
+</script>
 {% endblock %}

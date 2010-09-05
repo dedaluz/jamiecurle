@@ -8,4 +8,4 @@ django-debug-toolbar
 django-tagging
 django-disqus
 django-haystack
-whoosh
+pysolr

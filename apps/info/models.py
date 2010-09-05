@@ -28,6 +28,9 @@ class Page(models.Model):
     stylesheets = generic.GenericRelation(Css)
     scripts = generic.GenericRelation(Js)
     
+    class Meta:
+        verbose_name="info"
+    
     def __unicode__(self):
         return u'%s' % self.pk
     

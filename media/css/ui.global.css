@@ -42,7 +42,7 @@ body > header{
         float : right;
         position: relative;
         width: 290px;
-        background-color: #141414;
+        background-color: #1C1C1C;
         height: 72px;
     }
     body > header nav form input[type="text"]{
