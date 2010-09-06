@@ -39,6 +39,8 @@ class SearchView(object):
         self.query = self.get_query()
         self.results = self.get_results()
         
+        print self.results.spelling_suggestion()
+        #print dir(self.results)
         return self.create_response()
     
     def build_form(self):
@@ -108,6 +110,7 @@ class SearchView(object):
             'form': self.form,
             'page': page,
             'paginator': paginator,
+            'results' : self.results
         }
         context.update(self.extra_context())
         

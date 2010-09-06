@@ -4,8 +4,13 @@
 
 {% block article %}
     <h2>Search</h2>
-
-{{results}}
+	{% if results.spelling_suggestion %}
+	<p>
+		Did you mean <a href="{% url search %}?q={{results.spelling_suggestion}}">{{results.spelling_suggestion}}</a>?
+	</p>
+	
+	<hr >
+	{% endif %}
         {% if query %}
             {% for result in page.object_list %}
 

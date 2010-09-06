@@ -15,6 +15,14 @@ $.fn.sameheight = function(options){
         }
     });
     return this.each(function(){
-        $(this).height(tallest)
-    })
+        $(this).height(tallest);
+    });
+}
+
+$.fn.localnavheight = function(options){
+    var defaults = { };  
+    var options = $.extend(defaults, options);
+    return this.each(function(){
+        $(this).height(tallest);
+    });
 }

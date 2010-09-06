@@ -1,19 +1,31 @@
 {% extends 'blog/blog_base.html' %}
 {% block blog_title %}Archive - {% endblock %}
-
 {% block body_class %}archive{% endblock %}
-{% block nav_class %}grid{% endblock %}
+{% block nav_class %}grid-local{% endblock %}
 {% block article %}
-{% for post in posts %}
-<article class="preview blog">
-	<a href="{{post.get_absolute_url}}">
-		<img src="{{post.img.l}}" alt="{{post.img.title}}">
-		<h2>{{post.title}} </h2>
-		<time>{{post.created|date:"jS F Y"}}.</time>
-		<p>{{post.description|truncatewords:15}}.</p>
-	</a>
-</article>
-{% endfor %}
+<nav class="local">
+	<h3>Archive</h3>
+	<ul>
+		<li><a href="#">Local Nav</a></li>
+		<li><a href="#">Local Nav</a></li>
+		<li><a href="#">Local Nav</a></li>
+		<li><a href="#">Local Nav</a></li>
+		<li><a href="#">Local Nav</a></li>
+		<li><a href="#">Local Nav</a></li>
+		<li><a href="#">Local Nav</a></li>
+		<li><a href="#">Local Nav</a></li>
+	</ul>
+</nav>
+	{% for post in posts %}
+	<article class="preview blog">
+		<a href="{{post.get_absolute_url}}">
+			<img src="{{post.img.l}}" alt="{{post.img.title}}">
+			<h2>{{post.title}} </h2>
+			<time>{{post.created|date:"jS F Y"}}.</time>
+			<p>{{post.description|truncatewords:15}}.</p>
+		</a>
+	</article>
+	{% endfor %}
 {% endblock %}
 
 {% block extra_script %}
@@ -21,6 +33,7 @@
 <script type="text/javascript" charset="utf-8">
 $(function(){
     $('article.preview').sameheight(); 
+	//$('nav.local').localnavheight(); 
 	$('article.preview').each(function(){
 		var callout = '<span class="callout">' + $(this).attr('class').split(' ').slice(-1) + '</span>';
 		$(this).find('a').html(callout+$(this).find('a').html())
