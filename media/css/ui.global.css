@@ -215,6 +215,9 @@ nav.local{
         text-shadow: 1px 1px 1px rgba(0,0,0,1);
         background-color: #1C1C1C;
     }
+    nav.local a:hover{
+        color: #fff;
+    }
 div.content{
     float: left;
     width: auto;
