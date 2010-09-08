@@ -3,29 +3,66 @@
 {% block body_class %}archive{% endblock %}
 {% block nav_class %}grid{% endblock %}
 {% block article %}
-<nav class="local">
-	<h3>Archive</h3>
+
+{% for post in posts %}
+<article class="preview blog">
+	<a href="{{post.get_absolute_url}}">
+		<img src="{{post.img.l}}" alt="{{post.img.title}}">
+		<h2>{{post.title}} </h2>
+		<time>{{post.created|date:"jS F Y"}}.</time>
+		<p>{{post.description|truncatewords:15}}.</p>
+	</a>
+</article>
+{% endfor %}
+
+<nav class="archive">
+	<h1>Archive</h1>
 	<ul>
-		<li><a href="#">Local Nav</a></li>
-		<li><a href="#">Local Nav</a></li>
-		<li><a href="#">Local Nav</a></li>
-		<li><a href="#">Local Nav</a></li>
-		<li><a href="#">Local Nav</a></li>
-		<li><a href="#">Local Nav</a></li>
-		<li><a href="#">Local Nav</a></li>
-		<li><a href="#">Local Nav</a></li>
+		<li class="sep">
+			<a href="#"><span class="year">2010</span> <span class="month">September</span></a>
+		</li>
+		
+		<li class="aug">
+			<a href="#"><span class="year">2010</span> <span class="month">August</span></a>
+		</li>
+		
+		<li class="jul">
+			<a href="#"><span class="year">2010</span> <span class="month">July</span></a>
+		</li>
+		
+		<li class="jun">
+			<a href="#"><span class="year">2010</span> <span class="month">June</span></a>
+		</li>
+		
+		<li class="may">
+			<a href="#"><span class="year">2010</span> <span class="month">May</span></a>
+		</li>
+		<li class="apr">
+			<a href="#"><span class="year">2010</span> <span class="month">April</span></a>
+		</li>
+		<li class="mar">
+			<a href="#"><span class="year">2010</span> <span class="month">March</span></a>
+		</li>
+		<li class="feb">
+			<a href="#"><span class="year">2010</span> <span class="month">February</span></a>
+		</li>
+		<li class="jan">
+			<a href="#"><span class="year">2010</span> <span class="month">January</span></a>
+		</li>
+		<li class="dec">
+			<a href="#"><span class="year">2009</span> <span class="month">December</span></a>
+		</li>
+		<li class="nov">
+			<a href="#"><span class="year">2009</span> <span class="month">November</span></a>
+		</li>
+		<li class="oct">
+			<a href="#"><span class="year">2009</span> <span class="month">October</span></a>
+		</li>
+
 	</ul>
 </nav>
-	{% for post in posts %}
-	<article class="preview blog">
-		<a href="{{post.get_absolute_url}}">
-			<img src="{{post.img.l}}" alt="{{post.img.title}}">
-			<h2>{{post.title}} </h2>
-			<time>{{post.created|date:"jS F Y"}}.</time>
-			<p>{{post.description|truncatewords:15}}.</p>
-		</a>
-	</article>
-	{% endfor %}
+	
+	
 {% endblock %}
 
 {% block extra_script %}

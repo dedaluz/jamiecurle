@@ -1,4 +1,74 @@
-#blog section{
-    background-color: #000;
-    height: 300px;
+nav.archive{
+    clear: both;
 }
+    nav.archive h1{
+        color: #262626;
+        font-size: 70px;
+        line-height: 70px;
+        font-weight: 600;
+        letter-spacing: -5px;
+    }
+    
+    nav.archive a{
+        width: 120px;
+        padding: 12px 10px;
+        float: left;
+        display: block;
+        height: 48px;
+        margin-right: 10px;
+        margin-bottom: 24px;
+        color: rgba(255,255,255,0.8);
+        position: relative;
+    }
+    nav.archive span.year{
+        position: absolute;
+        right: 10px;
+        font-size: 48px;
+        color: rgba(255,255,255,0.06);
+        font-weight: 800;
+        letter-spacing: -3px;
+    }
+    nav.archive span.month{
+        font-weight: 800;
+    }
+    nav.archive li.jan a{
+        background-color:#082B3D;
+    }
+    nav.archive li.feb a{
+        background-color:#0B3050;
+    }
+    nav.archive li.mar a{
+        background-color:#0B454A;
+    }
+    nav.archive li.apr a{
+        background-color:#15550F;
+    }
+    nav.archive li.may a{
+        background-color:#464A06;
+    }
+    nav.archive li.jun a{
+        background-color:#513E0A;
+    }
+    nav.archive li.jul a{
+        background-color:#570C0B;
+    }
+    nav.archive li.aug a{
+        background-color:#5A0B10;
+    }
+    nav.archive li.sep a{
+        background-color:#555406;
+    }
+    nav.archive li.oct a{
+        background-color:#3C4D00;
+    }
+    nav.archive li.nov a{
+        background-color:#0F4D1E;
+    }
+    nav.archive li.dec a{
+        background-color:#0A444C;
+    }
+    
+    nav.archive li a:hover{
+        color: #559F00 !important;
+        background-color: #151518 !important;
+    }
