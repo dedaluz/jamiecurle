@@ -6,8 +6,11 @@ from models import Post
 
 def archive(request):
     posts = Post.objects.all()
+    featured = posts.filter(featured=True)[0]
+    posts = posts.exclude(pk__in=[featured.pk])
     return render_to_response('blog/archive.html', RequestContext(request, {
         'posts' : posts,
+        'featured':featured
     }))
 
 def year(request, year):

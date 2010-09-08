@@ -1,13 +1,31 @@
-nav.archive{
-    clear: both;
-}
-    nav.archive h1{
-        color: #262626;
+    #blog h1{
+        color: #242424;
+        text-shadow: 1px 1px 1px #1C1C1C;
         font-size: 70px;
         line-height: 70px;
         font-weight: 600;
         letter-spacing: -5px;
+        margin-bottom: -12px;
+        padding-bottom: 0;
+        clear: both;
     }
+    
+article.featured{
+    height: 360px;
+}    
+#blog article.featured h1{
+    color: #fff;
+}
+#blog article.featured p{
+    margin-top: 48px;
+    color: #fff;
+    font-size: 24px;
+    line-height: 24px;
+}
+nav.archive{
+    clear: both;
+}
+
     
     nav.archive a{
         width: 120px;
@@ -16,59 +34,29 @@ nav.archive{
         display: block;
         height: 48px;
         margin-right: 10px;
-        margin-bottom: 24px;
+        margin-bottom: 12px;
         color: rgba(255,255,255,0.8);
         position: relative;
+        font-size: 14px;
+        text-shadow: 1px 1px 1px #000;
     }
     nav.archive span.year{
-        position: absolute;
-        right: 10px;
-        font-size: 48px;
-        color: rgba(255,255,255,0.06);
-        font-weight: 800;
-        letter-spacing: -3px;
+        font-weight: 100;
     }
     nav.archive span.month{
         font-weight: 800;
     }
-    nav.archive li.jan a{
-        background-color:#082B3D;
+    nav.archive span.summary{
+        clear: left;
+        display: block;
+        font-family: georgia;
+        color: #4F4F4F;
     }
-    nav.archive li.feb a{
-        background-color:#0B3050;
+    nav.archive li a{
+        color: #555254 ;
+        background-color: #242424;
     }
-    nav.archive li.mar a{
-        background-color:#0B454A;
-    }
-    nav.archive li.apr a{
-        background-color:#15550F;
-    }
-    nav.archive li.may a{
-        background-color:#464A06;
-    }
-    nav.archive li.jun a{
-        background-color:#513E0A;
-    }
-    nav.archive li.jul a{
-        background-color:#570C0B;
-    }
-    nav.archive li.aug a{
-        background-color:#5A0B10;
-    }
-    nav.archive li.sep a{
-        background-color:#555406;
-    }
-    nav.archive li.oct a{
-        background-color:#3C4D00;
-    }
-    nav.archive li.nov a{
-        background-color:#0F4D1E;
-    }
-    nav.archive li.dec a{
-        background-color:#0A444C;
-    }
-    
     nav.archive li a:hover{
-        color: #559F00 !important;
-        background-color: #151518 !important;
+        color: #559F00;
+        background-color:#09090A;
     }

@@ -3,8 +3,10 @@ $(function(){
     
     var block = 300;
     $('body > header nav.grid').width( (block * Math.floor($(window).width() / 300)) -10);
+    $('body#blog article.featured').width( (block * Math.floor($(window).width() / 300)) - 30);
     $(window).resize(function(){
         $('body > header nav.grid').width( (block * Math.floor($(window).width() / 300)) -10);
+        $('body#blog article.featured').width( (block * Math.floor($(window).width() / 300)) - 30);
     });
     /* aligns with grid & local nav */
     //console.log((block * parseInt( $(window).width() / 300)) - 10)
