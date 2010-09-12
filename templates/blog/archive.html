@@ -1,16 +1,20 @@
 {% extends 'blog/blog_base.html' %}
+{% load blog %}
 {% block blog_title %}Archive - {% endblock %}
 {% block body_class %}archive{% endblock %}
 {% block nav_class %}grid{% endblock %}
 {% block article %}
 
+{% if featured %}
 <article class="featured" style="background: transparent url({{featured.img.xl}}) center">
-<h1>{{featured.title}}</h1>
-<p>
-{{featured.description}}	
-</p>
+	<a href="{{featured.get_absolute_url}}">
+		<h1>{{featured.title}}</h1>
+		<p>
+			{{featured.description}}
+		</p>
+		</a>
 </article>
-<h1>Latest</h1>
+{% endif %}
 {% for post in posts %}
 
 <article class="preview blog">
@@ -24,50 +28,8 @@
 {% endfor %}
 
 <nav class="archive">
-	<h1>Archive</h1>
-	<ul>
-		<li class="sep">
-			<a href="{% url blog_month 2010 '09' %}"><span class="year">2010</span> <span class="month">September</span><span class="summary">3 posts<span></a>
-		</li>
-		
-		<li class="aug">
-			<a href="{% url blog_month 2010 '08' %}"><span class="year">2010</span> <span class="month">August</span><span class="summary">10 posts<span></a>
-		</li>
-		
-		<li class="jul">
-			<a href="{% url blog_month 2010 '07' %}"><span class="year">2010</span> <span class="month">July</span><span class="summary">10 posts<span></a>
-		</li>
-		
-		<li class="jun">
-			<a href="{% url blog_month 2010 '06' %}"><span class="year">2010</span> <span class="month">June</span><span class="summary">10 posts<span></a>
-		</li>
-		
-		<li class="may">
-			<a href="{% url blog_month 2010 '05' %}"><span class="year">2010</span> <span class="month">May</span><span class="summary">3 posts<span></a>
-		</li>
-		<li class="apr">
-			<a href="{% url blog_month 2010 '04' %}"><span class="year">2010</span> <span class="month">April</span><span class="summary">3 posts<span></a>
-		</li>
-		<li class="mar">
-			<a href="{% url blog_month 2010 '03' %}"><span class="year">2010</span> <span class="month">March</span><span class="summary">10 posts<span></a>
-		</li>
-		<li class="feb">
-			<a href="{% url blog_month 2010 '02' %}"><span class="year">2010</span> <span class="month">February</span><span class="summary">1 post<span></a>
-		</li>
-		<li class="jan">
-			<a href="{% url blog_month 2010 '01' %}"><span class="year">2010</span> <span class="month">January</span><span class="summary">1 post<span></a>
-		</li>
-		<li class="dec">
-			<a href="{% url blog_month 2009 '12' %}"><span class="year">2009</span> <span class="month">December</span><span class="summary">10 posts<span></a>
-		</li>
-		<li class="nov">
-			<a href="{% url blog_month 2009 '11' %}"><span class="year">2009</span> <span class="month">November</span><span class="summary">3 posts<span></a>
-		</li>
-		<li class="oct">
-			<a href="{% url blog_month 2009 '10' %}"><span class="year">2009</span> <span class="month">October</span></a>
-		</li>
+	{% blog_archive_nav %}
 
-	</ul>
 </nav>
 	
 	

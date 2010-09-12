@@ -19,6 +19,7 @@ class Page(models.Model):
     description = models.TextField()
     content = models.TextField()
     tags = TagField()
+    children = models.ForeignKey('self', blank=True, null=True)
     status = models.SmallIntegerField(default=DRAFT, choices=STATUS_CHOICES)
     sticky = models.BooleanField(default=False)
     featured = models.BooleanField(default=False)

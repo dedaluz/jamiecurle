@@ -5,18 +5,6 @@ from textile import textile
 from BeautifulSoup import BeautifulSoup
 from apps.utils.forms import JCHighlightedModelSearchForm
 
-"""
-MEH - 
-
-@register.inclusion_tag('search/_form.html', takes_context=True)
-def searchform(context):
-    print context
-    this was just horrible
-    form = JCHighlightedModelSearchForm(context.dicts[3].values()[0].GET)
-    return {
-        'form' : form,
-    }
-"""
 
 class ContentNode(template.Node):
     

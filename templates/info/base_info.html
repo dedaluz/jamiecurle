@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load compress %}
+{% block title %}
+	{% block info_title %}{% endblock %}Jamie Curle's Blog.
+{% endblock %}
+
+{% block extra_style %}
+	{% compress css %}
+	<link rel="stylesheet" href="{{MEDIA_URL}}css/info.css" type="text/css" media="screen">
+	{% block info_extra_style %}{% endblock %}
+	{% endcompress %}
+{% endblock %}
+
+{% block description %}Jamie Curle's Blog.{% endblock %}
+
+{% block keywords %}info{% endblock %}
+
+{% block article %}
+	<nav class="local">
+		<ul>
+			<li><a href="#">adsasd</a></li>
+		</ul>
+	</ul>
+	{% block info_article %}{% endblock %}
+{% endblock %}
+
+{% block body_id %}info{% endblock %}
+
+{% block extra_script %}
+	<script src="{{MEDIA_URL}}js/blog.js" type="text/javascript" charset="utf-8"></script>
+	{% block info_extra_script %}{% endblock %}
+{% endblock %}

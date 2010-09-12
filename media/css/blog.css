@@ -1,5 +1,5 @@
-    #blog h1{
-        color: #242424;
+    #blog.archive h1{
+        color: #6D6D6D;
         text-shadow: 1px 1px 1px #1C1C1C;
         font-size: 70px;
         line-height: 70px;
@@ -12,6 +12,11 @@
     
 article.featured{
     height: 360px;
+}    
+article.featured a{
+    height: 100%;
+    width:100%;
+    display: block;
 }    
 #blog article.featured h1{
     color: #fff;

@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
-from views import archive, year, month, post
+from views import archive, month, post
 admin.autodiscover()
 
 urlpatterns = patterns('',
