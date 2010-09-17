@@ -38,9 +38,6 @@ class SearchView(object):
         self.form = self.build_form()
         self.query = self.get_query()
         self.results = self.get_results()
-        
-        print self.results.spelling_suggestion()
-        #print dir(self.results)
         return self.create_response()
     
     def build_form(self):

@@ -21,7 +21,7 @@ class Migration(SchemaMigration):
         db.add_column('info_page', 'comments', self.gf('django.db.models.fields.BooleanField')(default=True, blank=True), keep_default=False)
 
         # Adding field 'Page.created'
-        db.add_column('info_page', 'created', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, default='info', blank=True), keep_default=False)
+        db.add_column('info_page', 'created', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, default=datetime.datetime.now(), blank=True), keep_default=False)
 
 
     def backwards(self, orm):

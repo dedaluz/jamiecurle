@@ -13,7 +13,6 @@
 	{% endif %}
         {% if query %}
             {% for result in page.object_list %}
-
 				<article class="preview {{result.verbose_name}}">
 					<a href="{{result.object.get_absolute_url}}">
 						<img src="{{result.object.img.l}}" alt="{{result.object.img.title}}">

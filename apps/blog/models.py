@@ -18,7 +18,7 @@ class Post(models.Model):
     
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
-    body_class = models.SlugField()
+    body_class = models.SlugField(required=False)
     description = models.TextField()
     content = models.TextField()
     status = models.SmallIntegerField(default=DRAFT, choices=STATUS_CHOICES)

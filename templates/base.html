@@ -24,15 +24,22 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/reset.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/typography.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/ui.global.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="{{MEDIA_URL}}css/grid.css" type="text/css" media="screen">
+		
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/syntax.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/disqus.css" type="text/css" media="screen">
-			<link rel="stylesheet" href="{{MEDIA_URL}}css/ui.mobile.css" type="text/css" media="screen and (width: 320px)">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/ui.mobile.css" type="text/css" media="screen and (width: 320px)">
+		<!--[if lt IE 9]>
+		<script type="text/javascript">
+		// For discussion and comments, see: http://remysharp.com/2009/01/07/html5-enabling-script/
+		(function(){if(!/*@cc_on!@*/0)return;var e = "abbr,article,aside,audio,bb,canvas,datagrid,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(',');for(var i=0;i<e.length;i++){document.createElement(e[i])}})()
+		</script>
+		<![endif]-->
 		{% block extra_style %}{% endblock %}
 		{% endcompress %}
 	</head>
 	<body id="{% block body_id %}home{% endblock %}" class="grid {% block body_class %}{% endblock %}">
-	<div id="grid-toggle"><a href="#">Grid On</a>
+	<!-- div id="grid-toggle"><a href="#">Grid On</a>
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/grid.css" type="text/css" media="screen">
 		<div id="toggle-options">
 			<label for="opacity_horizontal">Horizontal Opacity </label>
 			<input id="opacity_horizontal" type="range" min="0" max="1"step="0.1" value="0.5">
@@ -41,7 +48,7 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		</div>
 	</div>
 	<div id="grid-vertical"></div>
-	<div id="grid-horizontal"></div>
+	<div id="grid-horizontal"></div -->
 		<header>
 			<nav class="{% block nav_class %}{% endblock %}">
 				<a rel="home" href="/">Home</a>
@@ -65,7 +72,7 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		</footer>{% compress js %}
 		<script src="{{MEDIA_URL}}js/jquery.js"></script>
 		<script src="{{MEDIA_URL}}js/nav.js"></script>
-		<script src="{{MEDIA_URL}}js/grid.js"></script>
+		<!-- script src="{{MEDIA_URL}}js/grid.js" --></script>
 		<script src="{{MEDIA_URL}}js/search.js"></script>
 		{% block extra_script %}{% endblock %}
 {% endcompress %}	</body>
