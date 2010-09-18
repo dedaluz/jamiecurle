@@ -9,4 +9,4 @@ django-tagging
 django-disqus
 xapian-haystack
 django-haystack
-pysolr
+python-memcached

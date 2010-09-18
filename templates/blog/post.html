@@ -1,5 +1,5 @@
 {% extends 'blog/blog_base.html' %}
-{% load blog markup disqus_tags utils %}
+{% load disqus_tags assets %}
 
 {% block blog_title %}{{post.title}} {% endblock %}
 {% block blog_extra_style %}
@@ -16,8 +16,7 @@
 		</p>
 		<time>{{post.created|date:"jS F Y"}}.</time>
 	</header>
-	{% super_render post.content post %}
-	{{content|render}}
+	{% render_field post.content %}
 </article>
 
 <aside class="comments">

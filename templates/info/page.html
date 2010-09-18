@@ -1,7 +1,9 @@
 {% extends 'info/base_info.html' %}
-{% load comments blog webdesign markup %}
+{% load assets %}
 {% block title %}{{page.title}} {% endblock %}
-
+{% block info_extra_style %}
+	{% render_asset page css %}
+{% endblock %}
 {% block article %}
 <article>
 	<header>
@@ -11,6 +13,6 @@
 		</p>
 		<time>{{page.created|date:"jS F Y"}}.</time>
 	</header>
-	{{page.content|render}}
+	{% render_field page.content %}
 </article>
 {% endblock %}
