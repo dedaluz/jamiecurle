@@ -1,0 +1,3 @@
+body{
+  background-image: {{obj.img.0.xl}};
+}
