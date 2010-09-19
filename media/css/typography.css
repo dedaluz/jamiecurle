@@ -13,8 +13,8 @@ h1,h2,h3{
     letter-spacing: -1px;
 }
 h1{font-size: 36px;}
-h2{font-size: 24px;}
-h3{font-size: 18px;}
+h2{font-size: 30px;}
+h3{font-size: 24px;}
 
 time{
     font-family:georgia;
@@ -22,4 +22,12 @@ time{
 }
 p{
     margin-bottom: 24px;
+}
+article p{
+    color: #999;
+}
+article ul{
+    list-style-type: square;
+    color: #999;
+    padding-left: 50px;
 }

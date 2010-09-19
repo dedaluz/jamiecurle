@@ -8,6 +8,8 @@ from models import Page
 def page(request, slug=None):
     if slug is None:
         slug = 'hello-im-jamie-curle'
+        page = get_object_or_404(Page, slug=slug)
+        return HttpResponseRedirect(page.get_absolute_url())
     #  get page
     page = get_object_or_404(Page, slug=slug)
     # return
