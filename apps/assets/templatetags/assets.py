@@ -26,7 +26,7 @@ class FieldRender(template.Node):
         # now we have the object see if it's in the cache
         key = '%s_%s_%s' % (self.obj, self.t, obj.pk)
         cached = cache.get(key)
-        if cache.get(key) is not None:
+        if 'no-cache' not in context.get('request').GET.keys() and cache.get(key) is not None:
             return mark_safe(cached)
         # it's not in the cache so make it
         t = template.Template(getattr(obj, self.t))
@@ -63,7 +63,9 @@ class FieldRender(template.Node):
             index = index + 1
         soup = re.sub('{{MEDIA_URL}}', settings.MEDIA_URL, unicode(soup))
         # set the cache
-        cache.set(key, soup, 300)
+        if 'no-cache' not in context.get('request').GET.keys():
+            cache.set(key, soup, 300)
+        
         return mark_safe(soup)
         
 @register.tag
@@ -115,52 +117,4 @@ def render_asset(parser, token):
     bits = token.contents.split()
     return RenderAssetNode(bits[1], bits[2])
     
-
-@register.filter
-def render(content, safe="unsafe"):
-    """Render this content for display."""
-    # First, pull out all the <code></code> blocks, to keep them away
-    # from Markdown (and preserve whitespace).
-    soup = BeautifulSoup(unicode(content))
-    code_blocks = soup.findAll(u'code')
-    for block in code_blocks:
-        block.replaceWith(u'<code class="removed"></code>')
-    # Run the post through markdown.
-    if safe == u"unsafe":
-        safe_mode = False
-    else:
-        safe_mode = True
-    markeddown = mark_safe(force_unicode(textile(smart_str(unicode(soup)), encoding='utf-8', output='utf-8')))
-    # Replace the pulled code blocks with syntax-highlighted versions.
-    soup = BeautifulSoup(markeddown)
-    empty_code_blocks, index = soup.findAll(u'code', u'removed'), 0
-    formatter = HtmlFormatter(cssclass=u'source')
-    #print len(code_blocks)
-    #print len(empty_code_blocks), index
-    for block in code_blocks:
-        if block.has_key(u'class'):
-            # <code class='python'>python code</code>
-            language = block[u'class']
-        else:
-            # <code>plain text, whitespace-preserved</code>
-            language = u'text'
-        try:
-            lexer = get_lexer_by_name(language, stripnl=True, encoding=u'UTF-8')
-        except ValueError, e:
-            try:
-                # Guess a lexer by the contents of the block.
-                lexer = guess_lexer(block.renderContents())
-            except ValueError, e:
-                # Just make it plain text.
-                lexer = get_lexer_by_name(u'text', stripnl=True, encoding=u'UTF-8')
-       
-        empty_code_blocks[index].replaceWith(highlight(block.renderContents(), lexer, formatter))
-        index = index + 1
-    
-    soup = re.sub('{{MEDIA_URL}}', settings.MEDIA_URL, unicode(soup))
-    return mark_safe(soup)
-
-
-
-
 
