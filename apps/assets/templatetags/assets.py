@@ -31,6 +31,9 @@ class FieldRender(template.Node):
         # it's not in the cache so make it
         t = template.Template(getattr(obj, self.t))
         content  = t.render(context)
+        #
+        #
+        # now do the
         soup = BeautifulSoup(unicode(content))
         code_blocks = soup.findAll(u'code')
         for block in code_blocks:

@@ -222,6 +222,12 @@ div.content{
     float: left;
     width: auto;
 }
-
-/* lists */
-
+div.gallery {
+    margin-left: 30px;
+}
+div.gallery a{
+    display: block;
+    float: left;
+    margin-right: 10px;
+    width: 240px;
+}
