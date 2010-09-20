@@ -30,6 +30,7 @@ class FieldRender(template.Node):
             return mark_safe(cached)
         # it's not in the cache so make it
         t = template.Template(getattr(obj, self.t))
+        print context.get('post')
         content  = t.render(context)
         #
         #

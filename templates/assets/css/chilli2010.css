@@ -1,3 +1,3 @@
 body{
-  background-image: {{obj.img.0.xl}};
+  background-image: url({{post.images.all.0.xl}});
 }
