@@ -28,6 +28,9 @@ def month(request, year, month):
 
 def post(request,  year, month, slug):
     post = get_object_or_404(Post, slug=slug)
-    return render_to_response('blog/post.html', RequestContext(request, {
+    template = 'blog/post.html'
+    if post.html:
+        template = post.html
+    return render_to_response(template, RequestContext(request, {
         'post' : post
     }))

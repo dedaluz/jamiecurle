@@ -37,7 +37,7 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		{% block extra_style %}{% endblock %}
 		{% endcompress %}
 	</head>
-	<body id="{% block body_id %}home{% endblock %}" class="grid {% block body_class %}{% endblock %}">
+	<body id="{% block body_id %}home{% endblock %}" class="grid {% block body_class %}{% endblock %}">{% block body%}
 	<!-- div id="grid-toggle"><a href="#">Grid On</a>
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/grid.css" type="text/css" media="screen">
 		<div id="toggle-options">
@@ -85,5 +85,5 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		})
 		</script>
 		{% block extra_script %}{% endblock %}
-{% endcompress %}	</body>
+{% endcompress %}{% endblock %}</body>
 </html>{% endif %}
