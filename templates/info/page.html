@@ -7,7 +7,7 @@
 {% block article %}
 <article>
 	<header>
-		{% tags_for_object post as tags %}
+		{% tags_for_object page as tags %}
 		{% for tag in tags %}
 			{% if forloop.first %}
 			<p class="tags">tags
@@ -22,12 +22,6 @@
 			{{page.description}}
 		</p>
 		<time>{{page.created|date:"jS F Y"}}.</time>
-		<p class="tags">
-			{% tags_for_model info.page as tags %}
-			{% for tag in tags %}
-			<a href="/tags/{{tag}}" rel="tag">{{tag}}</a>
-			{% endfor %}
-		</p>
 	</header>
 	{% render_field page.content %}
 </article>
