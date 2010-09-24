@@ -8,6 +8,7 @@ from django.db.models.query import QuerySet
 from tagging.models import Tag, TaggedItem
 from apps.books.models import Book
 from apps.blog.models import Post
+from apps.info.models import Page
 from models import TagProxy
 
 def tags(request, rawtags):
@@ -35,6 +36,23 @@ def tags(request, rawtags):
         )
     
     for obj in TaggedItem.objects.get_intersection_by_model(Post, tags):
+        taggeditems.append(
+            TagProxy(
+                title = obj.title,
+                description = obj.description,
+                category = 'blog',
+                t = obj.t,
+                s = obj.s,
+                m = obj.m,
+                l = obj.l,
+                f = obj.f,
+                xl = obj.xl,
+                date = obj.created,
+                url = obj.get_absolute_url
+            )
+        )
+        
+    for obj in TaggedItem.objects.get_intersection_by_model(Page, tags):
         taggeditems.append(
             TagProxy(
                 title = obj.title,

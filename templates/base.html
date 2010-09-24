@@ -38,7 +38,7 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		{% endcompress %}
 	</head>
 	<body id="{% block body_id %}home{% endblock %}" class="grid {% block body_class %}{% endblock %}">{% block body%}
-	<!-- div id="grid-toggle"><a href="#">Grid On</a>
+	{% if GRID %}<div id="grid-toggle"><a href="#">Grid On</a>
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/grid.css" type="text/css" media="screen">
 		<div id="toggle-options">
 			<label for="opacity_horizontal">Horizontal Opacity </label>
@@ -48,7 +48,7 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		</div>
 	</div>
 	<div id="grid-vertical"></div>
-	<div id="grid-horizontal"></div -->
+	<div id="grid-horizontal"></div>{% endif %}
 		<header>
 			<nav class="{% block nav_class %}{% endblock %}">
 				<a rel="home" href="/">Home</a>
@@ -72,7 +72,7 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		</footer>{% compress js %}
 		<script src="{{MEDIA_URL}}js/jquery.js"></script>
 		<script src="{{MEDIA_URL}}js/nav.js"></script>
-		<!-- script src="{{MEDIA_URL}}js/grid.js" --></script>
+		{% if GRID %}<script src="{{MEDIA_URL}}js/grid.js"></script>{% endif %}
 		<script src="{{MEDIA_URL}}js/search.js"></script>
 		<script src="{{MEDIA_URL}}vendor/fancybox/jquery.fancybox-1.3.1.js"></script>
 		<script type="text/javascript">

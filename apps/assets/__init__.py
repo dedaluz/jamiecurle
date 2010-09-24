@@ -11,9 +11,9 @@ registry = []
 
 
 class BlankImage():
-    t = '%s/img/blank.100.100.png' % settings.MEDIA_URL
-    s = '%s/img/blank.155.100.png' % settings.MEDIA_URL
-    m = '%s/img/blank.240.160.png' % settings.MEDIA_URL
+    t = '%s/img/blank.90.96.png' % settings.MEDIA_URL
+    s = '%s/img/blank.140.96.png' % settings.MEDIA_URL
+    m = '%s/img/blank.240.168.png' % settings.MEDIA_URL
     l = '%s/img/blank.290.240.png' % settings.MEDIA_URL
     f = '%s/img/blank.800.600.png' % settings.MEDIA_URL
     xl = '%s/img/blank.2560.1440.png' % settings.MEDIA_URL
@@ -57,63 +57,12 @@ def register(model):
     # img shortcut
     @property
     def img(self):
-        if not self.IMG_CACHE:
+        if self.IMG_CACHE == False:
             try:
                 self.IMG_CACHE = self.images.all()[0]
             except IndexError:
                 return self.BLANK_IMAGE
         return self.IMG_CACHE
-    
-    # sizes of that image
-    @property
-    def t(self):
-        try:
-            return self.img.src.url_100x100
-        except AttributeError:
-            return False
-        
-    
-    @property
-    def s(self):
-        try:
-            return self.img.src.url_155x100
-        except AttributeError:
-            return False
-    
-    @property
-    def m(self):
-        try:
-            return self.img.src.url_240x160
-        except AttributeError:
-            return False
-    
-    @property
-    def l(self):
-        try:
-            return self.img.src.url_290x240
-        except AttributeError:
-            return False
-    
-    @property
-    def f(self):
-        try:
-            return self.img.src.url_800x600
-        except AttributeError:
-            return False
-    
-    @property
-    def xl(self):
-        try:
-            return self.img.src.url_2560x1440
-        except AttributeError:
-            return False
-    
 
     model.add_to_class('img', img)
-    model.add_to_class('t', t)
-    model.add_to_class('s', s)
-    model.add_to_class('m', m)
-    model.add_to_class('l', l)
-    model.add_to_class('f', f)
-    model.add_to_class('xl', xl)
 

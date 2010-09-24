@@ -1,5 +1,5 @@
 {% extends 'info/base_info.html' %}
-{% load assets %}
+{% load assets tagging_tags %}
 {% block title %}{{page.title}} {% endblock %}
 {% block info_extra_style %}
 	{% render_asset page css %}
@@ -7,11 +7,27 @@
 {% block article %}
 <article>
 	<header>
+		{% tags_for_object post as tags %}
+		{% for tag in tags %}
+			{% if forloop.first %}
+			<p class="tags">tags
+			{% endif %}
+			<a href="/tags/{{tag}}" rel="tag">{{tag}}</a>
+			{% if forloop.last %}
+			</p>
+			{% endif %}
+		{% endfor %}
 		<h1>{{page.title}}</h1>
 		<p>
 			{{page.description}}
 		</p>
 		<time>{{page.created|date:"jS F Y"}}.</time>
+		<p class="tags">
+			{% tags_for_model info.page as tags %}
+			{% for tag in tags %}
+			<a href="/tags/{{tag}}" rel="tag">{{tag}}</a>
+			{% endfor %}
+		</p>
 	</header>
 	{% render_field page.content %}
 </article>

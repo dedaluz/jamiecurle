@@ -30,13 +30,14 @@ class Post(models.Model):
     stylesheets = generic.GenericRelation(Css)
     scripts = generic.GenericRelation(Js)
     tags = TagField()
+    related  = models.ManyToManyField('self', blank=True, null=True)
     
     class Meta:
         verbose_name = 'blog'
         ordering = ['featured', '-created']
     
     def __unicode__(self):
-        return u'%s' % self.pk
+        return u'%s' % self.title
     
     @models.permalink
     def get_absolute_url(self):

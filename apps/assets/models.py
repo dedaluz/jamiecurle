@@ -23,12 +23,14 @@ class Img(models.Model):
         ordering = ['order']
     
     def __unicode__(self):
-        return u'%s: %s' % (self.title, self.src.path.split('/').pop())
-    
+        try:
+            return u'%s: %s' % (self.title, self.src.path.split('/').pop())
+        except ValueError:
+            return u'%s' % self.title
     @property
     def t(self):
         try:
-            return self.src.url_100x100
+            return self.src.url_90x96
         except AttributeError:
             return False
         
@@ -36,14 +38,14 @@ class Img(models.Model):
     @property
     def s(self):
         try:
-            return self.src.url_155x100
+            return self.src.url_140x96
         except AttributeError:
             return False
     
     @property
     def m(self):
         try:
-            return self.src.url_240x160
+            return self.src.url_240x168
         except AttributeError:
             return False
     
