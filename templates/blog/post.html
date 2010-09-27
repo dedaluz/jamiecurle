@@ -35,6 +35,7 @@
 {% for related in post.related.all %}
 	{% if forloop.first %}
 	<aside class="related">
+	<h1>Related</h1>
 	{% endif %}
 	<div>
 		<a href="{{related.get_absolute_url}}">

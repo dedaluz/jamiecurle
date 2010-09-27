@@ -1,14 +1,4 @@
-    #blog.archive h1{
-        color: #6D6D6D;
-        text-shadow: 1px 1px 1px #1C1C1C;
-        font-size: 70px;
-        line-height: 70px;
-        font-weight: 600;
-        letter-spacing: -5px;
-        margin-bottom: -12px;
-        padding-bottom: 0;
-        clear: both;
-    }
+
     
 article.featured{
     height: 360px;
