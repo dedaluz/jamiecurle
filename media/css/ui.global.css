@@ -239,7 +239,9 @@ div.gallery a{
     margin-right: 10px;
     width: 240px;
 }
-
+div.gallery.large a{
+    width: 290px;
+}
 /* tags */
 p.tags{
     text-transform: uppercase;
