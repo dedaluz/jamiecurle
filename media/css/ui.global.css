@@ -239,6 +239,9 @@ div.gallery a{
     margin-right: 10px;
     width: 240px;
 }
+div.gallery.large{
+    padding-left: 70px;
+}
 div.gallery.large a{
     width: 290px;
 }
