@@ -49,6 +49,7 @@
 {% endfor %}
 
 <aside class="comments">
+{% if DISCUS_DEV %}{% disqus_dev %}{% endif %}
 {% disqus_show_comments %}
 </aside>
 {% endblock %}
