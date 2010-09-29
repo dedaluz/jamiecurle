@@ -1,1 +1,15 @@
-<h3>Gribba Da</h3>
+{% load disqus_tags tagging_tags assets %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fifty One Seeds</title>
+	{% block blog_extra_style %}
+		{% render_asset post css %}
+	{% endblock %}
+	<script type="text/javascript" src="http://use.typekit.com/rll1nei.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	</head>
+	<body>
+		<h1>Fifty One Seeds</h1>
+	</body>
+</html>
