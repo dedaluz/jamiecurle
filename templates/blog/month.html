@@ -20,8 +20,8 @@
 <article class="preview blog">
 	<a href="{{post.get_absolute_url}}">
 		<img src="{{post.img.l}}" alt="{{post.img.title}}">
-		<h2>{{post.title}} </h2>
-		<time>{{post.created|date:"jS F Y"}}.</time>
+		<h1>{{post.title}} </h1>
+		<time datetime="{{post.created|date:"Y-m-dTH-i-s"}}" pubdate>{{post.created|date:"jS F Y"}}.</time>
 		<p>{{post.description|truncatewords:15}}.</p>
 	</a>
 </article>

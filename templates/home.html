@@ -10,8 +10,8 @@
 	<article id="featured-blog-post" class="preview blog">
 		<a href="{{featured.get_absolute_url}}">
 			<img src="{{featured.img.l}}" alt="{{featured.img.title}}">
-			<h2>{{featured.title}}</h2>
-			<time>{{featured.created|date:"jS F Y"}}.</time>
+			<h1>{{featured.title}}</h1>
+			<time datetime="{{featured.created|date:"Y-m-dTH-i-s"}}" pubdate>{{featured.created|date:"jS F Y"}}.</time>
 			<p>{{featured.description|truncatewords:15}}.</p>
 		</a>
 	</article>
@@ -20,8 +20,8 @@
 	<article class="preview info">
 		<a href="{{page.get_absolute_url}}">
 			<img src="{{page.img.l}}" alt="{{page.img.title}}">
-			<h2>{{page.title}} </h2>
-			<time>{{page.created|date:"jS F Y"}}.</time>
+			<h1>{{page.title}} </h1>
+			<time datetime="{{page.created|date:"Y-m-dTH-i-s"}}" pubdate>{{page.created|date:"jS F Y"}}.</time>
 			<p>{{page.description|truncatewords:15}}.</p>
 		</a>
 	</article>
@@ -31,8 +31,8 @@
 	<article class="preview blog">
 		<a href="{{post.get_absolute_url}}">
 			<img src="{{post.img.l}}" alt="{{post.img.title}}">
-			<h2>{{post.title}} </h2>
-			<time>{{post.created|date:"jS F Y"}}.</time>
+			<h1>{{post.title}} </h1>
+			<time datetime="{{post.created|date:"Y-m-dTH-i-s"}}" pubdate>{{post.created|date:"jS F Y"}}.</time>
 			<p>{{post.description|truncatewords:15}}.</p>
 		</a>
 	</article>

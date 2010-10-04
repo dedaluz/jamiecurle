@@ -10,12 +10,14 @@ article.featured a{
 }    
 #blog article.featured h1{
     color: #fff;
+    font-size: 72px;
+    text-shadow: 1px 1px 1px #000;
 }
 #blog article.featured p{
-    margin-top: 48px;
+    margin-top: 24px;
     color: #fff;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 36px;
+    line-height: 48px;
 }
 nav.archive{
     clear: both;

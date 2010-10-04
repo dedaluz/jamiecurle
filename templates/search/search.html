@@ -16,8 +16,8 @@
 				<article class="preview {{result.verbose_name}}">
 					<a href="{{result.object.get_absolute_url}}">
 						<img src="{{result.object.img.l}}" alt="{{result.object.img.title}}">
-						<h2>{{result.object.title}}</h2>
-						<time>{{result.object.created|date:"jS F Y"}}.</time>
+						<h1>{{result.object.title}}</h1>
+						<time datetime="{{result.created|date:"Y-m-dTH-i-s"}}" pubdate>{{result.created|date:"jS F Y"}}.</time>
 						<p>{{result.object.description|truncatewords:15}}.</p>
 					</a>
 				</article>

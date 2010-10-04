@@ -27,7 +27,7 @@
 		<p>
 			{{post.description}}
 		</p>
-		<time>{{post.created|date:"jS F Y"}}.</time>
+		<time datetime="{{post.created|date:"Y-m-dTH-i-s"}}" pubdate>{{post.created|date:"jS F Y"}}.</time>
 	</header>
 	{% render_field post.content %}
 </article>

@@ -21,7 +21,7 @@
 		<p>
 			{{page.description}}
 		</p>
-		<time>{{page.created|date:"jS F Y"}}.</time>
+		<time datetime="{{page.created|date:"Y-m-dTH-i-s"}}" pubdate>{{page.created|date:"jS F Y"}}.</time>
 	</header>
 	{% render_field page.content %}
 </article>

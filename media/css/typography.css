@@ -25,6 +25,7 @@ p{
 }
 article p{
     color: #999;
+    text-align: justify;
 }
 article ol, article ul{
     color: #999;
