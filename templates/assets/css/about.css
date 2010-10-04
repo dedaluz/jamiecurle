@@ -1,5 +1,5 @@
 body{
-    background-image : url({{page.img.t}});
+    background-image : url({{page.images.all.1.t}});
 }
 
 article{

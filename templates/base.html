@@ -1,5 +1,5 @@
 {% load compress %}{% if request.is_ajax %}{% block ajax_content %}{% endblock %}{% else%}<!DOCTYPE html>
-<html>
+<html lang="en">
 <!--
 Since you're looking under the hood you may also like to know that this site is powered by Django1.2 running on python2.6. 
 
@@ -16,6 +16,7 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		<meta charset="utf-8">
 		<title>{% block title %}Jamie Curle{% endblock %}</title>
 		<link rel="shortcut icon" href="{{MEDIA_URL}}/img/favicon.png">
+		<link rel="author" href="/info/hello-im-jamie-curle.html">
 		<link rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
 		<link rel="alternate" type="application/rss+xml" title="Jamie Curle Blog Rss Feed" href="{% url blog_feed %}">
 		<meta name="description" content="{% block description %}My name is Jamie Curle{% endblock %}">

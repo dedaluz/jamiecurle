@@ -184,8 +184,10 @@ article.preview{
         margin: -12px 0 -5px -10px;
         padding: 0;
     }
-    article.preview h2{
+    article.preview h1{
         color: #70BD00;
+        font-size: 30px;
+        margin-bottom: 0px;
     }
     article.preview p{
         font-family: georgia;
