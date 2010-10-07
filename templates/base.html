@@ -21,7 +21,7 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		<link rel="alternate" type="application/rss+xml" title="Jamie Curle Blog Rss Feed" href="{% url blog_feed %}">
 		<meta name="description" content="{% block description %}My name is Jamie Curle{% endblock %}">
 		<meta name="keywords" content="{% block keywords %}Jamie Curle{% endblock %}">
-		<meta name="viewport" content="width=320" />
+		<meta name="viewport" content="width=320" >
 		{% compress css %}
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/reset.css" type="text/css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/typography.css" type="text/css" media="screen">
@@ -38,6 +38,21 @@ Unless otherwise stated everything is released under a Creative Commons Attribut
 		<![endif]-->
 		{% block extra_style %}{% endblock %}
 		{% endcompress %}
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-18964988-1']);
+		  _gaq.push(['_setDomainName', 'none']);
+		  _gaq.push(['_setAllowLinker', true]);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
 	</head>
 	<body id="{% block body_id %}home{% endblock %}" class="grid {% block body_class %}{% endblock %}">{% block body%}
 	{% if GRID %}<div id="grid-toggle"><a href="#">Grid On</a>
