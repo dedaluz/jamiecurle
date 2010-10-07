@@ -11,7 +11,10 @@ article.featured a{
 #blog article.featured h1{
     color: #fff;
     font-size: 72px;
+    font-weight: 800;
     text-shadow: 1px 1px 1px #000;
+    display: block-inline;
+    background-color: rgba(0,0,0.0.2) !important;
 }
 #blog article.featured p{
     margin-top: 24px;
