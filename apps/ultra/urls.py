@@ -4,6 +4,6 @@ from views import workout
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^\.html$', workout, name='info'),
+    url(r'^\.html$', workout, name='ultra'),
     #url(r'^/(?P<slug>[-\w]+)\.html$', page, name='info_page'),
 )
