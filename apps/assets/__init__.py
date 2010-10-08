@@ -57,6 +57,21 @@ def register(model):
     # img shortcut
     @property
     def img(self):
+        # if there is a poster then use the blank image class to return a poster
+        if getattr(self, 'poster_t', False) and getattr(self, 'poster_s', False) and getattr(self, 'poster_m', False) \
+            and getattr(self, 'poster_l', False)  and getattr(self, 'poster_f', False) and getattr(self, 'poster_xl', False):
+            
+            p = BlankImage()
+            p.t = getattr(self, 'poster_t').url
+            p.s = getattr(self, 'poster_s').url
+            p.m = getattr(self, 'poster_m').url
+            p.l = getattr(self, 'poster_l').url
+            p.f = getattr(self, 'poster_f').url
+            p.xl = getattr(self, 'poster_xl').url
+            p.title = getattr(self, 'title') or getattr(self, 'name')
+            return p
+        #
+        # there was no poster image
         if self.IMG_CACHE == False:
             try:
                 self.IMG_CACHE = self.images.all()[0]
