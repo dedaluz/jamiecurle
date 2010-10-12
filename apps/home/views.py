@@ -8,8 +8,12 @@ from apps.info.models import Page
 
 def home(request):
     posts = Post.objects.filter(status=Post.PUBLISHED)
-    featured = Post.objects.filter(featured=True)[0]
-    posts = posts.exclude(pk__in=[featured.pk])
+    try:
+        featured = Post.objects.filter(featured=True)[0]
+        posts = posts.exclude(pk__in=[featured.pk])
+    except IndexError:
+        pass
+    
     books = Book.objects.all()
     pages = Page.objects.filter(status=Page.PUBLISHED)
     return render_to_response('home.html', RequestContext(request, {
