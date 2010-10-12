@@ -7,7 +7,7 @@
 {% block nav_class %}grid{% endblock %}
 
 {% block article %}
-	<article id="featured-blog-post" class="preview blog">
+	{% if feartured %}<article id="featured-blog-post" class="preview blog">
 		<a href="{{featured.get_absolute_url}}">
 			<img src="{{featured.img.l}}" alt="{{featured.img.title}}">
 			<h1>{{featured.title}}</h1>
@@ -15,7 +15,7 @@
 			<p>{{featured.description|truncatewords:15}}.</p>
 		</a>
 	</article>
-
+	{% endif %}
 	{% for page in pages %}
 	<article class="preview info">
 		<a href="{{page.get_absolute_url}}">

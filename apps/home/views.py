@@ -8,6 +8,7 @@ from apps.info.models import Page
 
 def home(request):
     posts = Post.objects.filter(status=Post.PUBLISHED)
+    featured = None
     try:
         featured = Post.objects.filter(featured=True)[0]
         posts = posts.exclude(pk__in=[featured.pk])
