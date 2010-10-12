@@ -25,7 +25,7 @@ class Post(models.Model):
     status = models.SmallIntegerField(default=DRAFT, choices=STATUS_CHOICES)
     featured = models.BooleanField(default=False)
     comments = models.BooleanField(default=True)
-    created = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField()
     images = generic.GenericRelation(Img)
     stylesheets = generic.GenericRelation(Css)
     scripts = generic.GenericRelation(Js)
