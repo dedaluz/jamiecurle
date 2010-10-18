@@ -10,9 +10,12 @@ header form{
     margin: 0;
     padding: 10px 14px 11px;
 }
-
+header form{
+    width: 262px !important;
+}
 header form input{
-    width: 205px;
+    margin: 14px 0 0 0 !important;
+    width: 166px !important;
 }
 div#grid-vertical,div#grid-horizontal,div#grid-toggle{
     display: none !important;

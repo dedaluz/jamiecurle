@@ -42,7 +42,7 @@ class Post(models.Model):
     
     class Meta:
         verbose_name = 'blog'
-        ordering = ['featured', '-created']
+        ordering = ['-created']
     
     def __unicode__(self):
         return u'%s' % self.title

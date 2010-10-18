@@ -27,6 +27,7 @@ class Img(models.Model):
             return u'%s: %s' % (self.title, self.src.path.split('/').pop())
         except ValueError:
             return u'%s' % self.title
+    
     @property
     def t(self):
         try:
