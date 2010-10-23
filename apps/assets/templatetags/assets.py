@@ -36,7 +36,7 @@ class FieldRender(template.Node):
         #
         #
         # set up soup
-        soup = BeautifulStoneSoup(unicode(content), selfClosingTags=self_closing_tags)
+        soup = BeautifulSoup(unicode(content))
         #
         #
         # now we've got formatted syntax that is going to get mangled by markdown so lets save it
@@ -54,7 +54,7 @@ class FieldRender(template.Node):
         markeddown = mark_safe(force_unicode(textile(smart_str(unicode(soup)), encoding='utf-8', output='utf-8')))
         
         # Replace the pulled code blocks with syntax-highlighted versions.
-        soup = BeautifulStoneSoup(markeddown, selfClosingTags=self_closing_tags)
+        soup = BeautifulSoup(markeddown)
         empty_code_blocks, index = soup.findAll(u'code', u'removed'), 0
         formatter = HtmlFormatter(cssclass=u'source')
         
@@ -67,14 +67,14 @@ class FieldRender(template.Node):
                 # <code>plain text, whitespace-preserved</code>
                 language = u'text'
             try:
-                lexer = get_lexer_by_name(language, stripnl=True, encoding=u'UTF-8')
+                lexer = get_lexer_by_name(language, stripnl=False, encoding=u'UTF-8')
             except ValueError, e:
                 try:
                     # Guess a lexer by the contents of the block.
                     lexer = guess_lexer(block.renderContents())
                 except ValueError, e:
                     # Just make it plain text.
-                    lexer = get_lexer_by_name(u'text', stripnl=True, encoding=u'UTF-8')
+                    lexer = get_lexer_by_name(u'text', stripnl=False, encoding=u'UTF-8')
             empty_code_blocks[index].replaceWith(highlight(block.renderContents(), lexer, formatter))
             index = index + 1
         

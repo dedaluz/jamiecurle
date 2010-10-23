@@ -1,6 +1,7 @@
 from pygments import highlight
 from pygments.formatters import HtmlFormatter
 from pygments.lexers import get_lexer_by_name, guess_lexer, LEXERS
+from pygments.filters import VisibleWhitespaceFilter
 from django.db import models
 from django.conf import settings
 from django.contrib.contenttypes.models import ContentType
@@ -29,7 +30,7 @@ class CodeSnippet(models.Model):
     
     def display(self):
         formatter = HtmlFormatter(cssclass=u'source')
-        lexer = get_lexer_by_name(self.language, stripnl=True, encoding=u'UTF-8')
+        lexer = get_lexer_by_name(self.language, stripnl=False, stripall=False, encoding='utf-8')
         return mark_safe(highlight(self.code, lexer, formatter) )
     
 class Img(models.Model):

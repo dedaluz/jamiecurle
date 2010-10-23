@@ -1,4 +1,4 @@
-{% spaceless %}
+
 {% for month,count in nav %}
 	{% if forloop.first %}<ul>{% endif %}
 <li class="{{month|date:'b'}}">
@@ -6,4 +6,3 @@
 </li>
 	{% if forloop.last %}</ul>{% endif %}
 {% endfor %}
-{% endspaceless%}
