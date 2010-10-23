@@ -2,6 +2,7 @@ textile
 pygments
 hg+https://jamiecurle@bitbucket.org/andrewgodwin/south/
 BeautifulSoup
+lxml
 git+http://github.com/mintchaos/django_compressor.git
 Django
 django-debug-toolbar

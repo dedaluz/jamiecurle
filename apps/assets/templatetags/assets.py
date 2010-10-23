@@ -7,11 +7,10 @@ from django.conf import settings
 from django.core.cache import cache
 register = template.Library()
 from textile import textile
-from BeautifulSoup import BeautifulSoup
+from BeautifulSoup import BeautifulSoup, BeautifulStoneSoup
 from pygments import highlight
 from pygments.formatters import HtmlFormatter
-from pygments.lexers import get_lexer_by_name, guess_lexer
-
+from pygments.lexers import get_lexer_by_name, guess_lexer, LEXERS
 
 
 class FieldRender(template.Node):
@@ -19,8 +18,11 @@ class FieldRender(template.Node):
     def __init__(self, obj_and_field):
         self.obj = template.Variable(obj_and_field.split('.')[0])
         self.t = obj_and_field.split('.')[1]
-        
+    
+    
     def render(self, context):
+        # at some stage in the future I want to ditch beautiful soup
+        self_closing_tags = ['true']
         # try the cache first
         obj = self.obj.resolve(context)
         # now we have the object see if it's in the cache
@@ -33,19 +35,30 @@ class FieldRender(template.Node):
         content  = t.render(context)
         #
         #
-        # now do the
-        soup = BeautifulSoup(unicode(content))
+        # set up soup
+        soup = BeautifulStoneSoup(unicode(content), selfClosingTags=self_closing_tags)
+        #
+        #
+        # now we've got formatted syntax that is going to get mangled by markdown so lets save it
+        rendered_blocks = soup.findAll(u'div', u'source')
+        for block in rendered_blocks:
+            # here's one I prepared earlier
+            block.replaceWith(u'<div class="bluepeter">HI</code>')
+        # on with the other
+        #
+        #
         code_blocks = soup.findAll(u'code')
         for block in code_blocks:
             block.replaceWith(u'<code class="removed"></code>')
         # Run the content through textile.
         markeddown = mark_safe(force_unicode(textile(smart_str(unicode(soup)), encoding='utf-8', output='utf-8')))
+        
         # Replace the pulled code blocks with syntax-highlighted versions.
-        soup = BeautifulSoup(markeddown)
+        soup = BeautifulStoneSoup(markeddown, selfClosingTags=self_closing_tags)
         empty_code_blocks, index = soup.findAll(u'code', u'removed'), 0
         formatter = HtmlFormatter(cssclass=u'source')
-        #print len(code_blocks)
-        #print len(empty_code_blocks), index
+        
+        
         for block in code_blocks:
             if block.has_key(u'class'):
                 # <code class='python'>python code</code>
@@ -64,6 +77,15 @@ class FieldRender(template.Node):
                     lexer = get_lexer_by_name(u'text', stripnl=True, encoding=u'UTF-8')
             empty_code_blocks[index].replaceWith(highlight(block.renderContents(), lexer, formatter))
             index = index + 1
+        
+        #
+        #
+        # replace the pre-rendered code blocks
+        for i, code_block in enumerate(soup.findAll(u'div', u'bluepeter')):
+            code_block.replaceWith(rendered_blocks[i])
+        #
+        #
+        # finally do the media url
         soup = re.sub('{{MEDIA_URL}}', settings.MEDIA_URL, unicode(soup))
         # set the cache
         if 'no-cache' not in context.get('request').GET.keys():

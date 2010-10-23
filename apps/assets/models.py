@@ -1,15 +1,37 @@
+from pygments import highlight
+from pygments.formatters import HtmlFormatter
+from pygments.lexers import get_lexer_by_name, guess_lexer, LEXERS
 from django.db import models
 from django.conf import settings
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes import generic
+from django.utils.encoding import smart_str, force_unicode
+from django.utils.safestring import mark_safe
 from south.modelsinspector import add_introspection_rules
 from tagging.fields import TagField
 from apps.utils.fields import ImageWithThumbsField
 
 # Create your models here.
 
-
-
+class CodeSnippet(models.Model):
+    content_type = models.ForeignKey(ContentType)
+    object_id = models.PositiveIntegerField()
+    content_object = generic.GenericForeignKey("content_type", "object_id")
+    title = models.CharField(max_length=255, blank=True, null=True)
+    created = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(max_length=255)
+    code = models.TextField()
+    language = models.CharField(max_length=255)
+    order = models.PositiveSmallIntegerField(default=10)
+    
+    class Meta:
+        ordering = ['order']
+    
+    def display(self):
+        formatter = HtmlFormatter(cssclass=u'source')
+        lexer = get_lexer_by_name(self.language, stripnl=True, encoding=u'UTF-8')
+        return mark_safe(highlight(self.code, lexer, formatter) )
+    
 class Img(models.Model):
     content_type = models.ForeignKey(ContentType)
     object_id = models.PositiveIntegerField()
@@ -72,7 +94,6 @@ class Img(models.Model):
         except AttributeError:
             return False
     
-
 
 class Attribution(models.Model):
     img = models.OneToOneField(Img)

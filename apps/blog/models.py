@@ -3,7 +3,7 @@ from django.conf import settings
 from django.contrib.contenttypes import generic
 from tagging.fields import TagField
 from apps import assets
-from apps.assets.models import Img, Css, Js
+from apps.assets.models import Img, Css, Js, CodeSnippet
 
 class Post(models.Model):
     HIDDEN = 1
@@ -29,6 +29,7 @@ class Post(models.Model):
     images = generic.GenericRelation(Img)
     stylesheets = generic.GenericRelation(Css)
     scripts = generic.GenericRelation(Js)
+    codesnippets = generic.GenericRelation(CodeSnippet)
     tags = TagField()
     related  = models.ManyToManyField('self', blank=True, null=True)
     #
