@@ -19,7 +19,6 @@ class FieldRender(template.Node):
         self.obj = template.Variable(obj_and_field.split('.')[0])
         self.t = obj_and_field.split('.')[1]
     
-    
     def render(self, context):
         # at some stage in the future I want to ditch beautiful soup
         self_closing_tags = ['true']
