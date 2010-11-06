@@ -35,3 +35,15 @@ article ol, article ul{
 article ul{
     list-style-type: square;
 }
+
+blockquote {
+font-family: georgia, serif;
+padding: 24px 14px 12px 14px;
+margin-bottom: 24px;
+background-color: #3e3e3e;
+}
+blockquote p{
+  color: #fff !important;
+  font-size: 24px;
+  line-height: 36px;
+}
