@@ -1,44 +1,51 @@
 from django.db import models
+from datetime import datetime
 
 
-class KettlebellWorkout(models.Model):
-    description = models.TextField()
-    created = models.DateTimeField(auto_now_add=True)
-    
-
-class Exercise(models.Model):
+class Movement(models.Model):
     name = models.CharField(max_length=255)
     
     def __unicode__(self):
-        return u'%s' % self.name
+        return '%s' % self.name
     
+
+class WorkoutTemplate(models.Model):
+    name = models.CharField(max_length=255)
+    notes = models.TextField(blank=True, null=True)
+    start = models.DateField(default=datetime.now)
+    finish = models.DateField(default=datetime.now)
+    
+    def __unicode__(self):
+        return u'%s %s-%s' % (self.name, self.start.strftime('%b'), self.finish.strftime('%b %Y'))
+    
+
+class SetTemplate(models.Model):
+    template = models.ForeignKey(WorkoutTemplate)
+    movement = models.ForeignKey(Movement)
+    total = models.PositiveSmallIntegerField(blank=True, null=True)
+    reps = models.PositiveSmallIntegerField()
+    
+    def __unicode__(self):
+        return '%s x %s' % (self.reps, self.movement.name)
+    
+
 
 class Workout(models.Model):
-    WORKOUT_A = 1
-    WORKOUT_B = 2
-    WORKOUT_CHOICES = (
-        (WORKOUT_A, 'A'),
-        (WORKOUT_B, 'B'),
-    )
-    type = models.PositiveSmallIntegerField(choices = WORKOUT_CHOICES)
-    notes = models.TextField(blank=True)
-    created = models.DateTimeField()
+    workouttemplate = models.ForeignKey(WorkoutTemplate)
+    notes = models.TextField(blank=True, null=True)
+    completed = models.DateField(default=datetime.now)
     
     def __unicode__(self):
-        return u'Workout %s (%s)' % ( self.get_type_display(), self.created)
+        return u'%s %s-%s' % (self.workouttemplate.name)
     
-
-class BarbellSets(models.Model):
-    exercise = models.ForeignKey(Exercise)
-    workout = models.ForeignKey(Workout)
-    total = models.PositiveSmallIntegerField()
+    
+class Set(models.Model):
+    movement = models.ForeignKey(Movement)
+    total = models.PositiveSmallIntegerField(blank=True, null=True)
     reps = models.PositiveSmallIntegerField()
-    weight = models.DecimalField(max_digits=5, decimal_places=2)
-    notes = models.TextField(blank=True)
-    created = models.DateTimeField(auto_now_add=True)
     
     def __unicode__(self):
-        return u'%s - %s x %s @%s kg' % (self.exercise.name, self.total, self.reps, self.weight)
+        return '%s x %s' % (self.reps, self.movement.name)
     
-    
+#class CompletedWorkout(models.Model):
     

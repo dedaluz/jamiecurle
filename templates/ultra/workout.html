@@ -3,8 +3,20 @@
 	<head>
 		<title>Ultra Logger</title>
 		<meta name="viewport" content="width=320">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/ultra.css">
 	</head>
 	<body>
-		{{form}}
+		<form action="" method="post">
+			{% csrf_token %}
+		<fieldset>
+		{{workoutform}}
+		</fieldset>
+		{% for setform in setforms %}
+		<fieldset>
+		{{setform}}
+		</fieldset>
+		{% endfor %}
+		<input type="submit">
+		</form>
 	</body>
 </html>

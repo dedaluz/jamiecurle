@@ -1,13 +1,12 @@
 from django.contrib import admin
-from models import KettlebellWorkout, Exercise, Workout, BarbellSets
+from models import SetTemplate, WorkoutTemplate, Movement
 
-class BarbellSetsInline(admin.TabularInline):
-    model = BarbellSets
+class SetTemplateInline(admin.TabularInline):
+    model = SetTemplate
+    
+class WorkoutTemplateAdmin(admin.ModelAdmin):
+    inlines = [SetTemplateInline]
 
-class WorkoutAdmin(admin.ModelAdmin):
-    inlines = [BarbellSetsInline]
-
-admin.site.register(KettlebellWorkout)
-admin.site.register(Exercise)
-admin.site.register(Workout, WorkoutAdmin)
-admin.site.register(BarbellSets)
+admin.site.register(Movement)
+admin.site.register(SetTemplate)
+admin.site.register(WorkoutTemplate,  WorkoutTemplateAdmin)
