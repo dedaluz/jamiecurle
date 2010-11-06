@@ -65,3 +65,6 @@ nav.archive{
         background-color:#09090A;
     }
 
+#blog.post header h1{
+  line-height: 48px;
+}
