@@ -15,7 +15,7 @@ urlpatterns = patterns('',
     (r'^tags', include('apps.tags.urls')),
     (r'^blog', include('apps.blog.urls')),
     (r'^books', include('apps.books.urls')),
-    (r'^ultra', include('apps.ultra.urls')),
+    #(r'^ultra', include('apps.ultra.urls')),
     (r'^portfolio', include('apps.portfolio.urls')),
     (r'^admin/', include(admin.site.urls)),
 )
