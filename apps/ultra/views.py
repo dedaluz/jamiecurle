@@ -10,6 +10,7 @@ def workout(request):
     
     if request.method == 'POST':
         workoutform = WorkoutForm(request.POST)
+        print request.POST
         #setform = SetForm(request.POST)
     if request.method == 'GET':
         #
