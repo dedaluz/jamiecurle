@@ -31,7 +31,7 @@ class Migration(SchemaMigration):
         db.delete_column('ultra_exercise', 'name')
 
         # Adding field 'Exercise.workout'
-        db.add_column('ultra_exercise', 'workout', self.gf('django.db.models.fields.related.ForeignKey')(default='A', to=orm['ultra.Workout']), keep_default=False)
+        db.add_column('ultra_exercise', 'workout', self.gf('django.db.models.fields.related.ForeignKey')(default=1, to=orm['ultra.Workout']), keep_default=False)
 
         # Adding field 'Exercise.movement'
         db.add_column('ultra_exercise', 'movement', self.gf('django.db.models.fields.related.ForeignKey')(default=1, to=orm['ultra.Movement']), keep_default=False)
