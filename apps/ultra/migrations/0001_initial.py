@@ -8,88 +8,105 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         
-        # Adding model 'KettlebellWorkout'
-        db.create_table('ultra_kettlebellworkout', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('description', self.gf('django.db.models.fields.TextField')()),
-            ('created', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
-        ))
-        db.send_create_signal('ultra', ['KettlebellWorkout'])
-
-        # Adding model 'Exercise'
-        db.create_table('ultra_exercise', (
+        # Adding model 'Movement'
+        db.create_table('ultra_movement', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('name', self.gf('django.db.models.fields.CharField')(max_length=255)),
         ))
-        db.send_create_signal('ultra', ['Exercise'])
+        db.send_create_signal('ultra', ['Movement'])
+
+        # Adding model 'WorkoutTemplate'
+        db.create_table('ultra_workouttemplate', (
+            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('name', self.gf('django.db.models.fields.CharField')(max_length=255)),
+            ('notes', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
+            ('start', self.gf('django.db.models.fields.DateField')(default=datetime.datetime.now)),
+            ('finish', self.gf('django.db.models.fields.DateField')(default=datetime.datetime.now)),
+        ))
+        db.send_create_signal('ultra', ['WorkoutTemplate'])
+
+        # Adding model 'SetTemplate'
+        db.create_table('ultra_settemplate', (
+            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('template', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['ultra.WorkoutTemplate'])),
+            ('movement', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['ultra.Movement'])),
+            ('total', self.gf('django.db.models.fields.PositiveSmallIntegerField')(null=True, blank=True)),
+            ('reps', self.gf('django.db.models.fields.PositiveSmallIntegerField')()),
+        ))
+        db.send_create_signal('ultra', ['SetTemplate'])
 
         # Adding model 'Workout'
         db.create_table('ultra_workout', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('type', self.gf('django.db.models.fields.PositiveSmallIntegerField')()),
-            ('notes', self.gf('django.db.models.fields.TextField')(blank=True)),
-            ('created', self.gf('django.db.models.fields.DateTimeField')()),
+            ('workouttemplate', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['ultra.WorkoutTemplate'])),
+            ('notes', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
+            ('completed', self.gf('django.db.models.fields.DateField')(default=datetime.datetime.now)),
         ))
         db.send_create_signal('ultra', ['Workout'])
 
-        # Adding model 'BarbellSets'
-        db.create_table('ultra_barbellsets', (
+        # Adding model 'Set'
+        db.create_table('ultra_set', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('exercise', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['ultra.Exercise'])),
-            ('workout', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['ultra.Workout'])),
-            ('total', self.gf('django.db.models.fields.PositiveSmallIntegerField')()),
+            ('movement', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['ultra.Movement'])),
+            ('total', self.gf('django.db.models.fields.PositiveSmallIntegerField')(null=True, blank=True)),
             ('reps', self.gf('django.db.models.fields.PositiveSmallIntegerField')()),
-            ('weight', self.gf('django.db.models.fields.DecimalField')(max_digits=5, decimal_places=2)),
-            ('notes', self.gf('django.db.models.fields.TextField')(blank=True)),
-            ('created', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
         ))
-        db.send_create_signal('ultra', ['BarbellSets'])
+        db.send_create_signal('ultra', ['Set'])
 
 
     def backwards(self, orm):
         
-        # Deleting model 'KettlebellWorkout'
-        db.delete_table('ultra_kettlebellworkout')
+        # Deleting model 'Movement'
+        db.delete_table('ultra_movement')
 
-        # Deleting model 'Exercise'
-        db.delete_table('ultra_exercise')
+        # Deleting model 'WorkoutTemplate'
+        db.delete_table('ultra_workouttemplate')
+
+        # Deleting model 'SetTemplate'
+        db.delete_table('ultra_settemplate')
 
         # Deleting model 'Workout'
         db.delete_table('ultra_workout')
 
-        # Deleting model 'BarbellSets'
-        db.delete_table('ultra_barbellsets')
+        # Deleting model 'Set'
+        db.delete_table('ultra_set')
 
 
     models = {
-        'ultra.barbellsets': {
-            'Meta': {'object_name': 'BarbellSets'},
-            'created': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
-            'exercise': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['ultra.Exercise']"}),
-            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'notes': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
-            'reps': ('django.db.models.fields.PositiveSmallIntegerField', [], {}),
-            'total': ('django.db.models.fields.PositiveSmallIntegerField', [], {}),
-            'weight': ('django.db.models.fields.DecimalField', [], {'max_digits': '5', 'decimal_places': '2'}),
-            'workout': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['ultra.Workout']"})
-        },
-        'ultra.exercise': {
-            'Meta': {'object_name': 'Exercise'},
+        'ultra.movement': {
+            'Meta': {'object_name': 'Movement'},
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '255'})
         },
-        'ultra.kettlebellworkout': {
-            'Meta': {'object_name': 'KettlebellWorkout'},
-            'created': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
-            'description': ('django.db.models.fields.TextField', [], {}),
-            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'})
+        'ultra.set': {
+            'Meta': {'object_name': 'Set'},
+            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'movement': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['ultra.Movement']"}),
+            'reps': ('django.db.models.fields.PositiveSmallIntegerField', [], {}),
+            'total': ('django.db.models.fields.PositiveSmallIntegerField', [], {'null': 'True', 'blank': 'True'})
+        },
+        'ultra.settemplate': {
+            'Meta': {'object_name': 'SetTemplate'},
+            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'movement': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['ultra.Movement']"}),
+            'reps': ('django.db.models.fields.PositiveSmallIntegerField', [], {}),
+            'template': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['ultra.WorkoutTemplate']"}),
+            'total': ('django.db.models.fields.PositiveSmallIntegerField', [], {'null': 'True', 'blank': 'True'})
         },
         'ultra.workout': {
             'Meta': {'object_name': 'Workout'},
-            'created': ('django.db.models.fields.DateTimeField', [], {}),
+            'completed': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime.now'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'notes': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
-            'type': ('django.db.models.fields.PositiveSmallIntegerField', [], {})
+            'notes': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
+            'workouttemplate': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['ultra.WorkoutTemplate']"})
+        },
+        'ultra.workouttemplate': {
+            'Meta': {'object_name': 'WorkoutTemplate'},
+            'finish': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime.now'}),
+            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'name': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
+            'notes': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
+            'start': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime.now'})
         }
     }
 
