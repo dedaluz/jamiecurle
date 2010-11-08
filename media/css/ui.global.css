@@ -306,8 +306,8 @@ aside.related div a:hover h6{
 footer div.creative-commons{
     margin-top: 24px;
     margin-bottom: 48px;
-    width: 810px;
     padding: 12px;
     font-size: 11px;
     color: #999;
+    clear: both;
 }
