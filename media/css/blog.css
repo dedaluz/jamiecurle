@@ -77,7 +77,12 @@ p.attention{
     text-shadow: 0 0 0 transparent;
     padding: 12px;
 }
+div.bibliography {
+ margin-top: 23px;
+ border-top: 1px solid #3e3e3e;
+}
 
-div.bibliography li{
+div.bibliography li, div.bibliography li a{
  font-size: 11px !important;
+ font-style: italic;
 }

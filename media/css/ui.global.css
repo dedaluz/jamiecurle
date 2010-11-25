@@ -311,3 +311,6 @@ footer div.creative-commons{
     color: #999;
     clear: both;
 }
+article li{
+ margin-bottom: 12px;
+}
