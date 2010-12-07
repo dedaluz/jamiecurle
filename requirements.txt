@@ -11,3 +11,5 @@ django-disqus
 xapian-haystack
 django-haystack
 python-memcached
+johnny-cache
+

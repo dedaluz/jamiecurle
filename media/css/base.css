@@ -1,0 +1,49 @@
+body > nav{
+    min-height: 80px;
+    background-color: #f90;
+}
+
+body > section{
+    min-height: 400px;
+    background-color: #f09;
+}
+body > h2 {
+    background-color: #D29C00;
+    min-height: 80px;
+}
+section > article{
+    width: 76%;
+    background-color: #90f;
+    min-height: 400px;
+    padding: 0 2%;
+    float: left;
+}
+section > nav{
+    width: 16%;
+    background-color: #900;
+    min-height: 400px;
+    padding: 0 2%;
+    float: left;
+
+}
+footer{
+    min-height: 400px;
+    background-color: #0f9;
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px){
+    
+    body > nav {
+        width: 26%;
+        padding: 0 2%;
+        float: left;
+    }
+    body > section  > article{
+        width: 66%;
+        padding: 0 2%;
+    }
+    section > nav{
+        clear: both;
+        width: 96%;
+    }
+}
