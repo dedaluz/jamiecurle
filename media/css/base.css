@@ -33,17 +33,15 @@ footer{
 
 @media screen and (min-width: 400px) and (max-width: 800px){
     
-    body > nav {
-        width: 26%;
-        padding: 0 2%;
-        float: left;
-    }
+
     body > section  > article{
-        width: 66%;
+        width: 96%;
         padding: 0 2%;
     }
     section > nav{
         clear: both;
         width: 96%;
+        min-height: 100px;
+        -webkit-column-width: 50%;
     }
 }
