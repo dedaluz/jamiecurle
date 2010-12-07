@@ -1,8 +1,0 @@
-body{
-    background-image : url({{page.images.all.1.t}});
-}
-
-article{
-    background-color: #000;
-    background-color: rgba(0,0,0,0.9);
-}

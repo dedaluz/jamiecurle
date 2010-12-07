@@ -1,8 +1,0 @@
-
-{% for month,count in nav %}
-	{% if forloop.first %}<ul>{% endif %}
-<li class="{{month|date:'b'}}">
-	<a href="{% url blog_month month.year month|date:'m' %}"><span class="year">{{month.year}}</span> <span class="month">{{month|date:"F"}}</span><span class="summary">{{count}} post{{count|pluralize}}<span></a>
-</li>
-	{% if forloop.last %}</ul>{% endif %}
-{% endfor %}
