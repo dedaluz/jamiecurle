@@ -1,9 +1,4 @@
-.log$
-.DS_Store
-*.pyc
-*.db
-settings.py
-CACHE
-uploads
-build
-pip-log.txt
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
