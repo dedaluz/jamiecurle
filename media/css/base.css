@@ -1,0 +1,47 @@
+body > nav{
+    min-height: 80px;
+    background-color: #f90;
+}
+
+body > section{
+    min-height: 400px;
+    background-color: #f09;
+}
+body > h2 {
+    background-color: #D29C00;
+    min-height: 80px;
+}
+section > article{
+    width: 76%;
+    background-color: #90f;
+    min-height: 400px;
+    padding: 0 2%;
+    float: left;
+}
+section > nav{
+    width: 16%;
+    background-color: #900;
+    min-height: 400px;
+    padding: 0 2%;
+    float: left;
+
+}
+footer{
+    min-height: 400px;
+    background-color: #0f9;
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px){
+    
+
+    body > section  > article{
+        width: 96%;
+        padding: 0 2%;
+    }
+    section > nav{
+        clear: both;
+        width: 96%;
+        min-height: 100px;
+        -webkit-column-width: 50%;
+    }
+}
