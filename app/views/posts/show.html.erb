@@ -1,0 +1,11 @@
+<article>
+	<header>	
+		<h1><%= @post.title %> </h1
+	</header>
+	<div class="meta">
+		<time><%= @post.created_at.strftime("%d %B %Y") %></time>
+	</div>
+	<div class="body">
+		<%=sanitize @post.body %>
+	</div>
+</article>

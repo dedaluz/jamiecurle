@@ -1,0 +1,133 @@
+body{
+    background: #fdfdfd url(/images/body.bg.png) top left repeat ;
+    font-family: "adobe-garamond-pro-1","adobe-garamond-pro-2", "Times New Roman", Serif;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0;
+    padding: 0 20px;
+    color: #2A2A2A;
+    text-shadow: 0 0 2px #fff;
+}
+
+body > header h1{
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 55px;
+}
+
+h1,h2, h3, h4, h5, h6{
+    font-weight: 500;
+    margin: 9px 0;
+    padding: 0;
+    color: #2A2A2A;
+}
+
+h1{
+    font-size: 48px;
+}
+
+    body > header h1 a{
+        display: block;
+        background-color: #E00303;
+        color: #fff;
+        text-decoration: none;
+            text-shadow: none;
+    }
+    body > header h1 a:hover{
+        background-color: #BC0000;
+    }
+
+/* clearfixes */
+
+article header:after, div.content:after, footer:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+
+    
+
+footer{
+    min-height: 400px;
+    padding: 10px;
+    background-color: #1F1F1F;
+    margin: 0 -20px;
+}
+
+article{
+    width: 90%;
+    min-width: 700px;
+    max-width: 1200px;
+}
+article header {
+    position: relative;
+    border-bottom: 1px solid #999;
+}
+
+    article  time{
+        font-family: "Helvetica Neue", Helvetica, Arial, "Sans Serif";
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #7A7777;
+    }
+    article header h1{
+        width: 68%;
+        float: right;
+    }
+article div{
+    padding: 36px 1%;
+    float: left;
+}
+
+article .meta{
+    width: 28%;
+}
+
+
+article .body{
+    width: 68%;
+    border-top: 1px solid #fff;
+    float: right;
+}
+
+article .body img{
+    max-width: 100%;
+}
+
+@media screen and (max-width: 720px) {
+    
+    article{
+        width: 100%;
+        min-width: 320px;
+    }
+    article header{
+        padding: 0;
+    }
+     article header h1{
+         float: none;
+         width: 100%;
+         text-align: center;
+     }
+    article div{
+        float: none;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #999;
+    }
+    
+    article .meta{
+        width: 100%;
+    }
+    
+    article .body{
+        width: 100%;
+    }
+
+}
