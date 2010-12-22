@@ -1,7 +1,5 @@
 class PostsController < ApplicationController
   
- 
-  
   # GET /posts
   # GET /posts.xml
   def index
@@ -18,10 +16,10 @@ class PostsController < ApplicationController
   # GET /posts/1.xml
   def show
     @post = Post.find(params[:id])
-
+    
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @post }
+      #format.xml  { render :xml => @post }
     end
   end
 
@@ -38,8 +36,14 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-    
+    # get the post
     @post = Post.find(params[:id])
+    # if it's xhr return the appropiate
+    if request.xhr?
+        render :text => @post.body
+    end
+    
+
   end
 
   # POST /posts
@@ -61,7 +65,7 @@ class PostsController < ApplicationController
   # PUT /posts/1
   # PUT /posts/1.xml
   def update
-    @post = Post.find(params[:id])
+
 
     respond_to do |format|
       if @post.update_attributes(params[:post])

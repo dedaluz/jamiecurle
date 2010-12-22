@@ -2,14 +2,14 @@
 <html lang="en">
 	<head>
 			<meta charset="utf-8">
-			<title></title>
-  			<%= javascript_include_tag :defaults %>
+			<title> Jamie Curle : <%= yield :title %></title>
 			<link rel="stylesheet" href="/stylesheets/jamiecurle.css" media="screen">
 			<%= csrf_meta_tag %>
+			<%= yield :stylesheet %>
 			<script type="text/javascript" src="http://use.typekit.com/rll1nei.js"></script>
 			<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	</head>
-	<body>
+	<body id="post">
 		<header>
 			<h1><a href="/">JC</a></h1>
 			
@@ -25,5 +25,11 @@
 		
 		<footer>
 		</footer>
+		
+		<%= javascript_include_tag :defaults %>
+		<% if session[:user_id] %>
+		<script type="text/javascript" src="/javascripts/jquery.jeditable.min.js"></script>
+		<% end %>
+		<%= yield :scripts %>
 	</body>
 </html>

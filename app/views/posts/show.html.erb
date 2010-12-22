@@ -1,11 +1,24 @@
-<article>
+
+<% content_for :title do %> <%= @post.title %> <% end %>
+
+
+
+<article class="editable">
 	<header>	
-		<h1><%= @post.title %> </h1
+		<h1 id="title-<%= @post.id %>"><%= @post.title %> </h1
 	</header>
 	<div class="meta">
 		<time><%= @post.created_at.strftime("%d %B %Y") %></time>
 	</div>
-	<div class="body">
-		<%=sanitize @post.body %>
+	<div class="body" id="body-<%= @post.id %>">
+		<%= raw format_text @post.body %>
 	</div>
 </article>
+
+
+
+<% content_for :scripts do %>
+	<% if session[:user_id] %>
+	<script type="text/javascript" src="/javascripts/admin.post.js"></script>
+	<% end %>
+<% end %>

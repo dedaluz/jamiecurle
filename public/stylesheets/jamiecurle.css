@@ -1,3 +1,5 @@
+article, header, footer, aside{display: block;}
+
 body{
     background: #fdfdfd url(/images/body.bg.png) top left repeat ;
     font-family: "adobe-garamond-pro-1","adobe-garamond-pro-2", "Times New Roman", Serif;
