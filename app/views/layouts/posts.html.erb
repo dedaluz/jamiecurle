@@ -3,7 +3,7 @@
 	<head>
 			<meta charset="utf-8">
 			<title></title>
-			<link rel="stylesheet" href="/stylesheets/jamiecurle.css" media="screen">
+  			<%= javascript_include_tag :defaults %>
 			<link rel="stylesheet" href="/stylesheets/jamiecurle.css" media="screen">
 			<%= csrf_meta_tag %>
 			<script type="text/javascript" src="http://use.typekit.com/rll1nei.js"></script>
@@ -14,7 +14,7 @@
 			<h1><a href="/">JC</a></h1>
 			
 			<% if session[:user_id] %>
-				<%= button_to 'Logout', logout_path, :method => :delete %>
+				<%= link_to 'Logout', logout_path, :confirm => "sure bonny lad?",  :method => :delete %>
 			<% end %>
 		</header>
 		
