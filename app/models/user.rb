@@ -11,16 +11,19 @@ class User < ActiveRecord::Base
   validate :password_must_be_present
   
   
-  def User.authenticate(name, password)
-    if user = find_by_name(name)
-      if user.hashed_password == encrypt_password(passwordm user.salt)
+  def User.authenticate(email, password)
+    if user = find_by_email(email)
+      if user.hashed_password == encrypt_password(password, user.salt)
         user
       end
     end
   end
+  
   def User.encrypt_password(password, salt)
     Digest::SHA2.hexdigest(password + 'Dj4ng0' + salt)
   end
+  
+  
   #virtual attribute - like @property
   def password=(password)
     @password = password

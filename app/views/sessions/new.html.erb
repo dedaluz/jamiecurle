@@ -1,9 +1,14 @@
+<% if flash[:alert] %>
+<p id="notice" ><%= flash[:alert] %></p>
+<% end %>
+
+
 <%= form_tag do %>
 <fieldset>
 <legend>Please Log In</legend>
 <div>
-<label for="name" >Name:</label>
-<%= text_field_tag :name, params[:name] %>
+<label for="name" >Email:</label>
+<%= text_field_tag :email, params[:email] %>
 </div>
 <div>
 <label for="password" >Password:</label>
