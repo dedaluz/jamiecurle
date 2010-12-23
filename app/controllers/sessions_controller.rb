@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
   skip_before_filter :authorize
   def new
+    if session[:user_id]
+      redirect_to posts_url
+    end
   end
 
   def create

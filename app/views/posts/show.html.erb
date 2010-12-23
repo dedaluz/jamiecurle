@@ -4,8 +4,9 @@
 
 
 <article class="editable">
-	<header>	
-		<h1 id="title-<%= @post.id %>"><%= @post.title %> </h1
+	<header>
+		<h1 id="title-<%= @post.id %>"><%= @post.title %> </h1>
+		<%= link_to 'edit', edit_post_path(@post) %>
 	</header>
 	<div class="meta">
 		<time><%= @post.created_at.strftime("%d %B %Y") %></time>

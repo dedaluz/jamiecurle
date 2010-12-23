@@ -38,12 +38,6 @@ class PostsController < ApplicationController
   def edit
     # get the post
     @post = Post.find(params[:id])
-    # if it's xhr return the appropiate
-    if request.xhr?
-        render :text => @post.body
-    end
-    
-
   end
 
   # POST /posts
@@ -65,8 +59,7 @@ class PostsController < ApplicationController
   # PUT /posts/1
   # PUT /posts/1.xml
   def update
-
-
+    @post = Post.find(params[:id])
     respond_to do |format|
       if @post.update_attributes(params[:post])
         format.html { redirect_to(@post, :notice => 'Post was successfully updated.') }

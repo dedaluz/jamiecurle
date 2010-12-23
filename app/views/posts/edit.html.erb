@@ -1,6 +1,25 @@
-<h1>Editing post</h1>
+<% content_for :title do %> <%= @post.title %> <% end %>
 
-<%= render 'form' %>
+<% content_for :stylesheets do %>
+	<link rel="stylesheet" href="/stylesheets/jamiecurle.edit.css" media="screen">
+<% end %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<%= form_for(@post) do |f| %>
+	<fieldset>
+		<%= f.text_field :title %>
+	</fieldset>
+		
+	<fieldset>
+		<%= f.text_area :body %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.submit %>
+	</fieldset>
+
+
+<% end %>
+
+
+
+
