@@ -133,3 +133,15 @@ article .body img{
     }
 
 }
+
+
+.syntax {
+  display: block;
+  text-shadow: none !important;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 3px;
+}
+pre{
+white-space: pre-wrap;  
+}

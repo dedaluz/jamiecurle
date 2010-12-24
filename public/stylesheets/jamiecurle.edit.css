@@ -3,6 +3,9 @@ input, textarea{
     font-size: 18px;
     width: 100%;
 }
+input[type="submit"]{
+  width: auto;
+}
 
 fieldset{
   border: 0;
