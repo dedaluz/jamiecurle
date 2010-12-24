@@ -9,7 +9,7 @@
 		<%= f.text_field :title %>
 	</fieldset>
 		
-	<fieldset>
+	<fieldset class="editor">
 		<%= f.text_area :body %>
 	</fieldset>
 
@@ -22,4 +22,6 @@
 
 
 
-
+<% content_for :scripts do %>
+	<script type="text/javascript" src="/javascripts/admin.js"></script>
+<% end %>
