@@ -2,6 +2,7 @@
 
 <% content_for :stylesheets do %>
 	<link rel="stylesheet" href="/stylesheets/jamiecurle.edit.css" media="screen">
+	<link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" media="screen">
 <% end %>
 
 <%= form_for(@post) do |f| %>
@@ -24,4 +25,5 @@
 
 <% content_for :scripts do %>
 	<script type="text/javascript" src="/javascripts/admin.js"></script>
+	<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.js"></script>
 <% end %>

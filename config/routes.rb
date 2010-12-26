@@ -1,4 +1,6 @@
 Jamiecurle::Application.routes.draw do
+  resources :blog_images
+
   #
   #
   #

@@ -26,7 +26,11 @@ jQuery.fn.editor = function(options){
     /*
      Insert magic christmas inspired code here.
     */
-    console.log(textarea.val()[currentPosition])
+
+    $.fancybox({
+      href : '/blog_images/new'
+      
+    })
 
     var before = textarea.val().substring(0, currentPosition)
     var after = textarea.val().substring(currentPosition, textarea.val().length)
