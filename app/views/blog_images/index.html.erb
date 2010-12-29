@@ -12,7 +12,7 @@
 
 <% @post.blog_images.each do |blog_image| %>
   <tr>
-	<td><%= blog_image.post_id %></td>
+	<td><%= blog_image.post.title %></td>
 	<td><%= blog_image.src %></td>
     <td><%= blog_image.img %></td>
     <td><%= link_to 'Show', post_blog_image_path(@post, blog_image) %></td>
