@@ -9,6 +9,9 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'highlight', :require => 'simplabs/highlight'
 gem 'rdiscount'
 gem 'mini_magick'
+gem 'remotipart'
+gem 'jquery-rails', '>= 0.2.6'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

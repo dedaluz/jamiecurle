@@ -2,24 +2,26 @@
 
 <table>
   <tr>
-    <th>Src</th>
+    <th>Post</th>
+	<th>Src</th>
     <th>Img</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @blog_images.each do |blog_image| %>
+<% @post.blog_images.each do |blog_image| %>
   <tr>
-    <td><%= blog_image.src %></td>
+	<td><%= blog_image.post_id %></td>
+	<td><%= blog_image.src %></td>
     <td><%= blog_image.img %></td>
-    <td><%= link_to 'Show', blog_image %></td>
-    <td><%= link_to 'Edit', edit_blog_image_path(blog_image) %></td>
-    <td><%= link_to 'Destroy', blog_image, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', post_blog_image_path(@post, blog_image) %></td>
+    <td><%= link_to 'Edit', edit_post_blog_image_path(@post, blog_image) %></td>
+    <td><%= link_to 'Destroy', post_blog_image_path(@post, blog_image), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Blog image', new_blog_image_path %>
+<%= link_to 'New Blog image', new_post_blog_image_path(@post) %>

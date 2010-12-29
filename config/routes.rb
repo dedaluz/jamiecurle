@@ -1,5 +1,4 @@
 Jamiecurle::Application.routes.draw do
-  resources :blog_images
 
   #
   #
@@ -15,7 +14,12 @@ Jamiecurle::Application.routes.draw do
   #
   #
   resources :users
-  resources :posts
+  
+  
+  resources :posts do 
+    resources :blog_images
+  end
+  
   #
   # This is the root
   #

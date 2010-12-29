@@ -1,0 +1,9 @@
+<%= form_for [@post, @blog_image], :html => { :multipart => true }, :remote => true do |f| %>
+  <div class="field">
+    <%= f.label :src %>
+    <%= f.file_field :src %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

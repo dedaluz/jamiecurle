@@ -5,9 +5,12 @@
 	<link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" media="screen">
 <% end %>
 
+
+
 <%= form_for(@post) do |f| %>
 	<fieldset>
 		<%= f.text_field :title %>
+		
 	</fieldset>
 		
 	<fieldset class="editor">
@@ -15,15 +18,15 @@
 	</fieldset>
 
 	<fieldset>
+		<input type="hidden" id="post_id" name="post_id" value="<%= @post.id %>">
 		<%= f.submit %>
 	</fieldset>
-
-
 <% end %>
 
 
 
 <% content_for :scripts do %>
+<%= javascript_include_tag 'jquery', 'rails', 'jquery.form', 'jquery.remotipart' %>
 	<script type="text/javascript" src="/javascripts/admin.js"></script>
 	<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.js"></script>
 <% end %>

@@ -20,18 +20,17 @@ jQuery.fn.getCursorPosition = function() {
 
 
 jQuery.fn.editor = function(options){
-  // create out "UI" elmeent
-  var textarea;
-  var img = $('<a>', {'href':'#'}).click(function(event){
-    /*
-     Insert magic christmas inspired code here.
-    */
-
+    var textarea;
+    // create our "UI" elmeent
+    var img = $('<a>', {'href':'#'}).click(function(event){
+    // load up the fancybox
     $.fancybox({
-      href : '/blog_images/new'
-      
-    })
-
+      href : '/posts/'+ $('#post_id').val() +'/blog_images/new' ,
+      width: 400,
+      height: 200,
+      autoDimensions : false,
+    });
+    // now insert the return 
     var before = textarea.val().substring(0, currentPosition)
     var after = textarea.val().substring(currentPosition, textarea.val().length)
     
@@ -39,7 +38,7 @@ jQuery.fn.editor = function(options){
     
     
     event.preventDefault();
-  }).text('blkoop')
+  }).text('+ Image')
   
   var currentPosition = 0;
 
