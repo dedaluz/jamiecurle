@@ -2,12 +2,25 @@ class BlogImage < ActiveRecord::Base
   belongs_to :post
   
   validates :src, :presence => true
-  validate :title, :presence => true
+  validates :title, :presence => true
   
   attr_reader :uploaded_file
   
   before_create :process_upload
+  before_destroy :unlink_files
   
+  
+  def unlink_files
+    files  = ["#{RAILS_ROOT}#{self.original}", "#{RAILS_ROOT}#{self.thumb}", "#{RAILS_ROOT}#{self.src}"]
+    
+    files.each do |f|
+      begin
+        File.unlink(f)
+      rescue
+      end
+    end
+  
+  end
   def process_upload
     # set up some sensiable filenames
     @filename = sanitize_filename(self.src.original_filename)
@@ -32,18 +45,14 @@ class BlogImage < ActiveRecord::Base
     thumbnail = MiniMagick::Image.open(self.original_path)
     thumbnail = resize_and_crop(thumbnail, 200)
     thumbnail.write(self.thumb_path)
-    write_attribute(:thumb, "/files/#{self.post.id}/thumb_#{@filename}")
+    write_attribute(:thumb, "/files/#{self.post.id}/thumb_#{@src_title_filename}")
   end
-  
-  
   def original_path
       File.expand_path("#{RAILS_ROOT}/public/files/#{self.post.id}/#{@filename}")
   end
-
   def src_path
       File.expand_path("#{RAILS_ROOT}/public/files/#{self.post.id}/#{@src_title_filename}")
   end
-
   def thumb_path
       File.expand_path("#{RAILS_ROOT}/public/files/#{self.post.id}/thumb_#{@src_title_filename}")
   end
