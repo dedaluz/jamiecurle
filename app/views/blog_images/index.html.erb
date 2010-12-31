@@ -4,7 +4,7 @@
   <tr>
     <th>Post</th>
 	<th>Src</th>
-    <th>Img</th>
+    <th>thumb</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,7 +14,7 @@
   <tr>
 	<td><%= blog_image.post.title %></td>
 	<td><%= blog_image.src %></td>
-    <td><%= blog_image.img %></td>
+    <td><img src="<%= blog_image.thumb %>"></td>
     <td><%= link_to 'Show', post_blog_image_path(@post, blog_image) %></td>
     <td><%= link_to 'Edit', edit_post_blog_image_path(@post, blog_image) %></td>
     <td><%= link_to 'Destroy', post_blog_image_path(@post, blog_image), :confirm => 'Are you sure?', :method => :delete %></td>

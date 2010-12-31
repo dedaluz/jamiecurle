@@ -90,7 +90,7 @@ class BlogImagesController < ApplicationController
     @blog_image.destroy
 
     respond_to do |format|
-      format.html { redirect_to(blog_images_url) }
+      format.html { redirect_to(post_blog_images_url) }
       format.xml  { head :ok }
     end
   end

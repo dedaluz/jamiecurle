@@ -10,14 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101229073117) do
+ActiveRecord::Schema.define(:version => 20101230092121) do
 
   create_table "blog_images", :force => true do |t|
     t.string   "src"
-    t.string   "img"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "post_id"
+    t.string   "original"
+    t.string   "thumb"
+    t.string   "title"
   end
 
   add_index "blog_images", ["post_id"], :name => "index_blog_images_on_post_id"
