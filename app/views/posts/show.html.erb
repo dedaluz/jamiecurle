@@ -17,6 +17,7 @@
 		<% end %>
 	</div>
 	<div class="body" id="body-<%= @post.id %>">
+		<p class="description"><%= @post.description %></p>
 		<% cache('post_#{@post.id}') do %>
 		<%= raw prettify @post.body %>
 		<% end %>

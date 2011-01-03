@@ -75,11 +75,17 @@ article header {
         font-weight: 500;
         color: #7A7777;
         display: block;
+        margin-bottom: 25px;
     }
     article header h1{
         width: 68%;
         float: right;
     }
+    
+article p.description{
+  font-weight: 900;
+  font-size: 120%;
+}
 article div{
     padding: 36px 1%;
     float: left;
@@ -98,40 +104,71 @@ article .body{
 
 article .body img{
     max-width: 100%;
+    float: left;
 }
 
 
 /* footer */
 footer{
     text-align: left;
-    width: 100%;
-    background-color: rgba(0,0,0,0.3);
+    padding: 10px;
+    margin: 0 -20px;
+    background-color: rgba(0,0,0,0.1);
 }
-footer div{
- 
+footer #about-me img{
+    margin: 2%;
+    border: 1px solid #999;
+    padding: 1%;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 1px;
+    max-width: 24%;
+    float:left;
 }
-
-pre{
-white-space: pre-wrap;  
+footer #about-me div{
+  float : left;
+  width: 48%;
+  margin: 2% 2% 0 2%;
+  min-width: 230px;
+  padding: 0;
+  font-style: italic;
+}
+footer #about-me div h1{
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0;
+  font-style: normal;
+  padding: 0;
+}
+footer #creative-commons{
+    clear: left;
+    font-size: 80%;
+    background-color: rgba(0,0,0,0.4);
+    text-shadow: none;
+    margin: 0 -10px;
+    padding: 10px;
+    color: #ccc;
+}
+footer #creative-commons a{
+  color: #B0C9CC;
 }
 /* tags */
 a.tag{
-  font-family: 'Helvetica Neue';
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 10px;
-  font-weight: 600;
-  display: block-inline;
-  float: left;
-  clear: left;
-  line-height: 14px;
-  margin-bottom: 4px;
-  background: #E2E1E1 url(/images/tag.png) 4px 2px no-repeat;
-  background-color: rgba(0,0,0,0.1);
-  color: #9B9797;
-  padding: 4px 10px 4px 25px;
-  width: auto;
-  border-radius: 3px;
+    font-family: 'Helvetica Neue';
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+    display: block-inline;
+    float: left;
+    clear: left;
+    line-height: 14px;
+    margin-bottom: 4px;
+    background: #E2E1E1 url(/images/tag.png) 4px 2px no-repeat;
+    background-color: rgba(0,0,0,0.1);
+    color: #9B9797;
+    padding: 4px 10px 4px 25px;
+    width: auto;
+    border-radius: 3px;
 }
 a.tag:hover{
   color:#797474;
@@ -173,7 +210,9 @@ div#adminbar ul li a:hover{
 /*
 code
 */
-
+pre{
+  white-space: pre-wrap;  
+}
 .syntax {
   display: block;
   font-family: Monaco, Courier;
@@ -201,10 +240,9 @@ code
          width: 100%;
          text-align: center;
      }
-    article div{
+    .content article div{
         float: none;
         border-top: 1px solid #fff;
-        border-bottom: 1px solid #999;
     }
     
     article .meta{
@@ -235,16 +273,4 @@ code
       font-family: Monaco, Courier;
       font-size: 11px;
     }
-}
-
-
-@media screen and (min-width: 1600px) {
-  
-  footer{
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 380px;
-    padding: 10px;
-  }
 }
