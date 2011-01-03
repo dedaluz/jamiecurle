@@ -78,5 +78,7 @@ class BlogImage < ActiveRecord::Base
       # replace all none alphanumeric, underscore or perioids with underscore
       filename.gsub(/[^\w\.\_]/,'_')
       # todo make, sure names are unique, if not make them unique
+      #
+      #
     end
 end

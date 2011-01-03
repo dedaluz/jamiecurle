@@ -11,7 +11,9 @@ gem 'rdiscount'
 gem 'mini_magick'
 gem 'remotipart'
 gem 'jquery-rails', '>= 0.2.6'
-
+gem 'mysql2'
+gem 'acts-as-taggable-on'
+gem 'memcache-client'
 # Use unicorn as the web server
 # gem 'unicorn'
 

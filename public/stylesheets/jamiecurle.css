@@ -9,6 +9,7 @@ body{
     padding: 0 20px;
     color: #2A2A2A;
     text-shadow: 0 0 2px #fff;
+    height: 100%;
 }
 
 body > header h1{
@@ -29,6 +30,7 @@ h1,h2, h3, h4, h5, h6{
 
 h1{
     font-size: 48px;
+    line-height: 48px;
 }
 
     body > header h1 a{
@@ -36,7 +38,7 @@ h1{
         background-color: #E00303;
         color: #fff;
         text-decoration: none;
-            text-shadow: none;
+        text-shadow: none;
     }
     body > header h1 a:hover{
         background-color: #BC0000;
@@ -54,14 +56,7 @@ article header:after, div.content:after, footer:after{
 }
 
 
-    
 
-footer{
-    min-height: 400px;
-    padding: 10px;
-    background-color: #1F1F1F;
-    margin: 0 -20px;
-}
 
 article{
     width: 90%;
@@ -79,6 +74,7 @@ article header {
         text-transform: uppercase;
         font-weight: 500;
         color: #7A7777;
+        display: block;
     }
     article header h1{
         width: 68%;
@@ -104,6 +100,93 @@ article .body img{
     max-width: 100%;
 }
 
+
+/* footer */
+footer{
+    text-align: left;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+footer div{
+ 
+}
+
+pre{
+white-space: pre-wrap;  
+}
+/* tags */
+a.tag{
+  font-family: 'Helvetica Neue';
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 600;
+  display: block-inline;
+  float: left;
+  clear: left;
+  line-height: 14px;
+  margin-bottom: 4px;
+  background: #E2E1E1 url(/images/tag.png) 4px 2px no-repeat;
+  background-color: rgba(0,0,0,0.1);
+  color: #9B9797;
+  padding: 4px 10px 4px 25px;
+  width: auto;
+  border-radius: 3px;
+}
+a.tag:hover{
+  color:#797474;
+  background-color: #D7D7D7;
+}
+/* admin */
+div#adminbar{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: #dedede;
+}
+div#adminbar ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+div#adminbar ul li{
+  float: left;
+}
+div#adminbar ul li a{
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  float: left;
+  color: #dedede;
+  text-shadow: none;
+  text-decoration: none;
+  padding: 0 5px;
+  background-color: rgba(0,0,0,0.4);
+
+}
+div#adminbar ul li a:hover{
+  background-color: rgba(0,0,0,0.6);
+}
+
+
+
+/*
+code
+*/
+
+.syntax {
+  display: block;
+  font-family: Monaco, Courier;
+  font-size: 14px;
+  text-shadow: none !important;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 3px;
+  word-wrap: break-word  !important;
+}
+
+
+
 @media screen and (max-width: 720px) {
     
     article{
@@ -126,22 +209,42 @@ article .body img{
     
     article .meta{
         width: 100%;
+        padding: 10px 0;
+    }
+    article .meta:after{
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+    article .meta time{
+       float: left;
     }
     
+    article .meta a.tag{
+      float: left;
+      margin-left: 10px;
+      clear: none;
+    }
     article .body{
         width: 100%;
     }
-
+    code.syntax{
+      font-family: Monaco, Courier;
+      font-size: 11px;
+    }
 }
 
 
-.syntax {
-  display: block;
-  text-shadow: none !important;
-  font-size: 14px;
-  padding: 10px;
-  border-radius: 3px;
-}
-pre{
-white-space: pre-wrap;  
+@media screen and (min-width: 1600px) {
+  
+  footer{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 380px;
+    padding: 10px;
+  }
 }

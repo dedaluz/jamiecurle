@@ -6,22 +6,7 @@
 <% end %>
 
 
-
-<%= form_for(@post) do |f| %>
-	<fieldset>
-		<%= f.text_field :title %>
-		
-	</fieldset>
-		
-	<fieldset class="editor">
-		<%= f.text_area :body %>
-	</fieldset>
-
-	<fieldset>
-		<input type="hidden" id="post_id" name="post_id" value="<%= @post.id %>">
-		<%= f.submit %>
-	</fieldset>
-<% end %>
+<%= render 'form' %>
 
 
 

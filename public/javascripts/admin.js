@@ -44,7 +44,7 @@
     writeImageMarkDown = function(event, xhr){
       var r = window.editor_response;
       if(r.status == 'success'){
-        var markdown = "![" + r.title + "](" + r.src + ")\n\n";
+        var markdown = "\n![" + r.title + "](" + r.src + ")";
         var cursorPos = getCursorPosition();
         var before = textarea.val().substring(0, cursorPos);
         var after = textarea.val().substring(cursorPos, textarea.val().length);

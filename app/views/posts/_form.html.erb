@@ -2,7 +2,6 @@
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
       <ul>
       <% @post.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -10,16 +9,33 @@
       </ul>
     </div>
   <% end %>
+	<fieldset>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</fieldset>
+	<fieldset>
+		<%= f.label :description %>
+		<%= f.text_field :description %>
+	</fieldset>
+	<fieldset class="editor">
+		<%= f.text_area :body %>
+	</fieldset>
+	<fieldset>
+		<%= f.label :created_at %>
+		<%= f.text_field :created_at %>
+	</fieldset>
+	<fieldset>
+		<%= f.label :tag_list %>
+		<%= f.text_field :tag_list %>
+	</fieldset>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<fieldset>
+		<%= f.label :published %>
+		<%= f.check_box :published %>
+	</fieldset>
+
+	<fieldset>
+		<input type="hidden" id="post_id" name="post_id" value="<%= @post.id %>">
+		<%= f.submit %>
+	</fieldset>
 <% end %>
