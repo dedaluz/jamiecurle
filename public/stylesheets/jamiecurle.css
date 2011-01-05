@@ -1,52 +1,56 @@
+/* fix older compatibilities */
 article, header, footer, aside{display: block;}
-
+/* style the elements */
 body{
     background: #fdfdfd url(/images/body.bg.png) top left repeat ;
-    font-family: "adobe-garamond-pro-1","adobe-garamond-pro-2", "Times New Roman", Serif;
+    font-family: "chaparral-pro-1","chaparral-pro-2","adobe-garamond-pro-1","adobe-garamond-pro-2", "Times New Roman", Serif;
     font-size: 18px;
     line-height: 25px;
     margin: 0;
     padding: 0 20px;
     color: #2A2A2A;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: 0 0 1px #fff;
     height: 100%;
 }
-
-body > header h1{
-    margin: 0;
-    padding: 0;
-    width: 50px;
-    text-align: center;
-    font-size: 30px;
-    line-height: 55px;
-}
-
 h1,h2, h3, h4, h5, h6{
-    font-weight: 500;
+    font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2";
+    font-weight: 600;
     margin: 9px 0;
     padding: 0;
     color: #2A2A2A;
 }
-
+p{
+  margin-bottom: 25px;
+}
 h1{
     font-size: 48px;
     line-height: 48px;
 }
-
-    body > header h1 a{
-        display: block;
-        background-color: #E00303;
-        color: #fff;
-        text-decoration: none;
-        text-shadow: none;
-    }
-    body > header h1 a:hover{
-        background-color: #BC0000;
-    }
-
+/* header*/
+body > header h1{
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 55px;
+  position: fixed;
+  z-index: 1000;
+}
+  body > header h1 a{
+      display: block;
+      background-color: #E00303;
+      color: #fff;
+      font-weight: 300;
+      text-decoration: none;
+      text-shadow: none;
+  }
+  body > header h1 a:hover{
+      background-color: #BC0000;
+  }
 /* clearfixes */
-
-article header:after, div.content:after, footer:after{
+.content article header:after, div.content:after, footer:after, 
+footer #about-me:after, footer #social:after, .content article:after{
     visibility: hidden;
     display: block;
     font-size: 0;
@@ -54,60 +58,65 @@ article header:after, div.content:after, footer:after{
     clear: both;
     height: 0;
 }
-
-
-
-
-article{
+/* content */
+.content article{
     width: 90%;
     min-width: 700px;
     max-width: 1200px;
 }
-article header {
-    position: relative;
-    border-bottom: 1px solid #999;
-}
-
-    article  time{
-        font-family: "Helvetica Neue", Helvetica, Arial, "Sans Serif";
+    .content article header {
+        position: relative;
+        padding: 0;
+    }
+    .content article .time{
+        font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", "Helvetica Neue", Helvetica, Arial, "Sans Serif";
         font-size: 14px;
-        text-transform: uppercase;
         font-weight: 500;
         color: #7A7777;
-        display: block;
-        margin-bottom: 25px;
+        margin-bottom: 0px;
+        text-indent: 0;
     }
-    article header h1{
+    .content article time{
+        font-weight: 800;
+    }
+    .content article p{
+      text-indent: 10px;
+    }
+    .content article header h1{
         width: 68%;
         float: right;
+        border-bottom: 1px solid #999;
+        padding-bottom: 25px;
+        margin-bottom: 0;
     }
-    
-article p.description{
-  font-weight: 900;
-  font-size: 120%;
-}
-article div{
-    padding: 36px 1%;
-    float: left;
-}
-
-article .meta{
-    width: 28%;
-}
-
-
-article .body{
-    width: 68%;
-    border-top: 1px solid #fff;
-    float: right;
-}
-
-article .body img{
-    max-width: 100%;
-    float: left;
-}
-
-
+    .content article p.description{
+      font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2";
+      font-weight: 300;
+      font-size: 120%;
+      text-indent: 0;
+      margin-top: 0;
+    }
+    .content article div{
+        padding: 25px 0;
+        float: left;
+    }
+    .content article .meta{
+        width: 28%;
+        margin : 0;
+        padding: 0;
+        max-width: 360px;
+        position: fixed;
+    }
+    .content article .body{
+        width: 68%;
+        border-top: 1px solid #fff;
+        float: right;
+    }
+    .content article .body img{
+        max-width: 100%;
+        float: left;
+        margin-bottom: 25px;
+    }
 /* footer */
 footer{
     text-align: left;
@@ -115,42 +124,84 @@ footer{
     margin: 0 -20px;
     background-color: rgba(0,0,0,0.1);
 }
-footer #about-me img{
-    margin: 2%;
-    border: 1px solid #999;
-    padding: 1%;
-    background-color: rgba(255,255,255,0.4);
-    border-radius: 1px;
-    max-width: 24%;
-    float:left;
-}
-footer #about-me div{
-  float : left;
-  width: 48%;
-  margin: 2% 2% 0 2%;
-  min-width: 230px;
-  padding: 0;
-  font-style: italic;
-}
-footer #about-me div h1{
-  font-size: 25px;
-  line-height: 25px;
-  margin: 0;
-  font-style: normal;
-  padding: 0;
-}
-footer #creative-commons{
-    clear: left;
-    font-size: 80%;
-    background-color: rgba(0,0,0,0.4);
-    text-shadow: none;
-    margin: 0 -10px;
-    padding: 10px;
-    color: #ccc;
-}
-footer #creative-commons a{
-  color: #B0C9CC;
-}
+  footer h1{
+    font-size: 28px;
+  }
+  footer #about-me{
+    width: 60%;
+    margin-right: 1%;
+    float: left;
+    min-width: 300px;
+    color: #979797;
+  }
+    footer #about-me p{
+      padding-top: 0;
+    }
+    footer #about-me img{
+        margin: 2%;
+        margin-top: 25px;
+        border: 1px solid #999;
+        padding: 1%;
+        background-color: rgba(255,255,255,0.4);
+        border-radius: 1px;
+        max-width: 24%;
+        float:left;
+    }
+    footer #about-me div{
+      float : left;
+      width: 64%;
+      margin: 2% 2% 0 2%;
+      min-width: 230px;
+      padding: 0;
+      font-style: italic;
+    }
+    footer #about-me div h1{
+      font-size: 25px;
+      line-height: 25px;
+      margin: 0;
+      font-style: normal;
+      padding: 0;
+    }
+  footer #social{
+    width: 27%;
+    float: left;
+    margin-left: 2%;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+    footer #social a{
+      float: left;
+      clear: none;
+      margin-left: 10px;
+      padding-left: 25px;
+      background-image: url(/images/tag.icons.png);
+    }
+    footer #social a.tag:hover{
+      background-color: #919191;
+      color:#EDEDED;
+      text-shadow: 1px 1px 1px #3e3e3e;
+    }
+    footer #social a.tag.twitter{ background-position: 3px -31px; }
+    footer #social a.tag.twitter:hover{ background-position: 3px 2px; }
+    footer #social a.tag.flickr{ background-position: 3px -86px; }
+    footer #social a.tag.flickr:hover{ background-position: 3px -53px; }
+    footer #social a.tag.lastfm{ background-position: 3px -137px; }
+    footer #social a.tag.lastfm:hover{ background-position: 3px -110px; }
+    footer #social a.tag.tumblr{ background-position: 3px -187px; }
+    footer #social a.tag.tumblr:hover{ background-position: 3px -162px; }
+  footer #creative-commons{
+      clear: left;
+      font-size: 80%;
+      background-color: rgba(0,0,0,0.4);
+      text-shadow: none;
+      margin: 0 -10px;
+      padding: 10px;
+      color: #ccc;
+      margin-bottom: -10px;
+  }
+    footer #creative-commons a{
+    color: #B0C9CC;
+  }
 /* tags */
 a.tag{
     font-family: 'Helvetica Neue';
@@ -158,15 +209,13 @@ a.tag{
     text-decoration: none;
     font-size: 10px;
     font-weight: 600;
-    display: block-inline;
-    float: left;
-    clear: left;
+    display: inline-block;
     line-height: 14px;
     margin-bottom: 4px;
     background: #E2E1E1 url(/images/tag.png) 4px 2px no-repeat;
     background-color: rgba(0,0,0,0.1);
     color: #9B9797;
-    padding: 4px 10px 4px 25px;
+    padding: 4px 15px 4px 25px;
     width: auto;
     border-radius: 3px;
 }
@@ -204,14 +253,11 @@ div#adminbar ul li a{
 div#adminbar ul li a:hover{
   background-color: rgba(0,0,0,0.6);
 }
-
-
-
 /*
 code
 */
 pre{
-  white-space: pre-wrap;  
+  white-space: pre-wrap;
 }
 .syntax {
   display: block;
@@ -220,36 +266,40 @@ pre{
   text-shadow: none !important;
   font-size: 14px;
   padding: 10px;
-  border-radius: 3px;
+  background: #1C2022;
+
+  color: #d0d0d0;
+  border-radius: 5px;
   word-wrap: break-word  !important;
 }
-
-
-
+/* smaller windows*/
 @media screen and (max-width: 720px) {
-    
-    article{
+  body > header h1{
+    position: relative;
+  }
+    .content article{
         width: 100%;
         min-width: 320px;
     }
-    article header{
+    .content article header{
         padding: 0;
     }
-     article header h1{
+    .content article header h1{
          float: none;
          width: 100%;
          text-align: center;
-     }
+    }
     .content article div{
         float: none;
         border-top: 1px solid #fff;
     }
-    
-    article .meta{
+    .content article .meta{
         width: 100%;
-        padding: 10px 0;
+        padding: 10px 0 0 0;
+        position: relative;
+        max-width: 100%;
     }
-    article .meta:after{
+    .content article .meta:after{
         visibility: hidden;
         display: block;
         font-size: 0;
@@ -257,20 +307,88 @@ pre{
         clear: both;
         height: 0;
     }
-    article .meta time{
-       float: left;
-    }
-    
-    article .meta a.tag{
+    .content article .meta .time{
       float: left;
-      margin-left: 10px;
-      clear: none;
+      margin: 0;
+      padding: 0 0 10px;
+      float: left;
     }
-    article .body{
+    .content article .body{
         width: 100%;
+        border-top: 1px solid #A8A8A8;
     }
     code.syntax{
       font-family: Monaco, Courier;
       font-size: 11px;
     }
+    footer #about-me{
+      width: 100%;
+    }
+    footer #social{
+      width: 98%%;
+    }
+}
+/* iphone, possibly andriod? */
+@media screen and (max-device-width: 480px){
+  body{
+     padding: 0 10px;
+  }
+  h1 {font-size: 28px;}
+  h2 {font-size: 26px;}
+  h3 {font-size: 24px;}
+  h4 {font-size: 22px;}
+  h5 {font-size: 20px;}
+  h6 {font-size: 18px;}
+  .content article{
+    padding-left: 0;
+  }
+  footer{
+    padding: 0;
+    margin: 0 -10px;
+  }
+  footer #about-me p{
+    padding: 0 10px;
+    margin-bottom: 0;
+  }
+  footer #about-me img{
+    width: 45%;
+    float: left;
+    margin: 25px 10px 0 10px;
+  }
+  footer #social{
+      margin-top: 25px;
+      padding: 0 ;
+  }
+  footer #creative-commons{
+    margin: 0 0 -25px 0;
+    padding: 0 10px;
+  }
+}
+/* landscape */
+@media screen and (orientation:landscape) and (max-device-width: 480px){
+  .content article{
+    width: 460px;
+    min-width: 460px;
+    max-width: 460px;
+  }
+  footer{
+    margin: 0 -10px;
+  }
+  footer #creative-commons{
+    width: 460px;
+  }
+}
+/* portrait  */
+@media screen and (orientation:portrait) and (max-device-width: 480px){
+  .content article{
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+  }
+  footer{
+    width: 320px;
+  }
+  footer #creative-commons{
+    width: 300px;
+  }
 }

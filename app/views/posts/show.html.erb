@@ -6,21 +6,23 @@
 <% end %>
 
 
-<article>
+<article id="jamiecurle_com-post-<%= @post.id %>">
 	<header>
-		<h1 id="title-<%= @post.id %>"><%= @post.title %> </h1>
+		<h1><%= @post.title %> </h1>
 	</header>
 	<div class="meta">
-		<time><%= @post.created_at.strftime("%d %B %Y") %></time>
-		<% @post.tags.each do |tag| %>
-		<a href="/tags/<%= tag.name %>" class="tag"><%= tag.name %></a>
-		<% end %>
+		<p class="time">
+			Posted on 
+			<time><%= @post.created_at.strftime("%d %B %Y") %></time>
+			and tagged with
+			<% @post.tags.each do |tag| %>
+			<a href="/tags/<%= tag.name %>" class="tag"><span><%= tag.name %></span></a>
+			<% end %>
+		</p>
 	</div>
-	<div class="body" id="body-<%= @post.id %>">
+	<div class="body">
 		<p class="description"><%= @post.description %></p>
-		<% cache('post_#{@post.id}') do %>
-		<%= raw prettify @post.body %>
-		<% end %>
+		<%= raw prettify_post_content @post %>
 	</div>
 </article>
 

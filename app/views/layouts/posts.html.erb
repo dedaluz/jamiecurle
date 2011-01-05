@@ -5,7 +5,7 @@
 		<title> Jamie Curle : <%= yield :title %></title>
 		<link rel="stylesheet" href="/stylesheets/jamiecurle.css" media="screen">
 		<link rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
-		<meta name="viewport" content="initial-scale=1.0">
+		<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0;" />
 		<%= csrf_meta_tag %>
 		<%= yield :stylesheets %>
 		<script type="text/javascript" src="http://use.typekit.com/rll1nei.js"></script>
@@ -28,18 +28,26 @@
 		<footer>
 			<article id="about-me">
 				<img src="/images/jamiecurle.jpg" alt="Photograph of Jamie Curle">
-				<div>
-					<h1>About Me</h1>
-					<p>
-						I'm a developer, designer and working towards being an educator. I apply the 
-						creative process to explore web technologies and harvest joy from the user 
-						experience. In my spare time I grow chillies, play the drums and work on my 
-						olympic snatch. You can <a href="http://twitter.com/jamiecurle" title="Jamie Curle Twitter">contact me on twitter</a>
-					</p>
-				</div>
+				<p>
+					I'm a developer / designer working towards being an creative educator. I play 
+					with the creative process, exploring web technologies and try to harvest joy from the user 
+					experience. In my spare time I <a href="/tags/botany">grow chillies</a>, play the drums and work on my 
+					olympic snatch. You can <a href="http://twitter.com/jamiecurle" title="Jamie Curle Twitter">contact me on twitter</a>
+				</p>
 			</article>
+			<div id="social">
+					<a class="tag twitter" href="http://twitter.com/jamiecurle">Twitter</a></li>
+					<a class="tag flickr" href="http://flickr.com/photos/mr_curle/">Flickr</a>
+					<a class="tag lastfm" href="http://www.last.fm/user/jamiecurle">Last.fm</a>
+					<a class="tag tumblr" href="http://tumblr.jamiecurle.com">Tumblr</a>
+			</div>
 			<div id="creative-commons">
-				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jamiecurle.com</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://jamiecurle.com" property="cc:attributionName" rel="cc:attributionURL">Jamie Curle</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.				
+				<p>
+					<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jamiecurle.com</span> by 
+					<a xmlns:cc="http://creativecommons.org/ns#" href="http://jamiecurle.com" property="cc:attributionName" rel="cc:attributionURL">Jamie Curle</a> 
+					is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+					Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+				</p>
 			</div>
 		</footer>
 	</body>
