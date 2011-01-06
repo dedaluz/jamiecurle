@@ -16,17 +16,14 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.xml
   def show
+    #
+    #
+    # if not logged in, don't show unpublished blogs
     if session[:user_id]
       @post = Post.find(params[:id])
     else
       @post = Post.find(params[:id], :conditions => "published = true")
     end
-    
-    respond_to do |format|
-      format.html # show.html.erb
-      #format.xml  { render :xml => @post }
-    end
-
   end
 
   # GET /posts/new

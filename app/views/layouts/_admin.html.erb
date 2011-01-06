@@ -1,5 +1,4 @@
 <div id="adminbar">
 <ul>
-	<% if @post %><li><%= link_to 'edit this', edit_post_path(@post) %> </li><% end %>
 	<li><%= link_to 'logout', logout_path, :confirm => "sure bonny lad?",  :method => :delete %></li>
 </div>

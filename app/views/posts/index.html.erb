@@ -1,8 +1,8 @@
 
 <% content_for :title do %> Blogs <% end %>
-
+<% content_for :bodyclass do %>index<% end %>
 <ol>
 <% @posts.each do |post| %>
-  <li><%= link_to post.title, post %></li>
+  <li><%= link_to post.title, post %>	<img src="<%= post.poster.thumb %>"></li>
 <% end %>
 </ol>

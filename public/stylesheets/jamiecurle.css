@@ -3,7 +3,7 @@ article, header, footer, aside{display: block;}
 /* style the elements */
 body{
     background: #fdfdfd url(/images/body.bg.png) top left repeat ;
-    font-family: "chaparral-pro-1","chaparral-pro-2","adobe-garamond-pro-1","adobe-garamond-pro-2", "Times New Roman", Serif;
+    font-family: "chaparral-pro-1","chaparral-pro-2","Georgia", "Times New Roman", Serif;
     font-size: 18px;
     line-height: 25px;
     margin: 0;
@@ -26,6 +26,19 @@ h1{
     font-size: 48px;
     line-height: 48px;
 }
+a{
+  color: #0044DE;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dotted #0039C4;
+  -webkit-transition: all .3s ease-in-out;
+  background-color: rgba(0,0,0,0);
+  padding: 0 2px;
+}
+a:hover{
+  background-color: rgba(0,0,0,0.1);
+
+}
 /* header*/
 body > header h1{
   margin: 0;
@@ -37,6 +50,9 @@ body > header h1{
   position: fixed;
   z-index: 1000;
 }
+  #post.index > header h1{
+    position: relative;
+  }
   body > header h1 a{
       display: block;
       background-color: #E00303;
@@ -44,13 +60,17 @@ body > header h1{
       font-weight: 300;
       text-decoration: none;
       text-shadow: none;
+      border-bottom: 0 none;
+      -webkit-transition: all .1s ease-in-out;
   }
   body > header h1 a:hover{
-      background-color: #BC0000;
+    color: #fff;
+    background-color: #BC0000;
   }
 /* clearfixes */
 .content article header:after, div.content:after, footer:after, 
-footer #about-me:after, footer #social:after, .content article:after{
+footer #about-me:after, footer #social:after, .content article:after,
+.content aside.related div:after{
     visibility: hidden;
     display: block;
     font-size: 0;
@@ -59,16 +79,16 @@ footer #about-me:after, footer #social:after, .content article:after{
     height: 0;
 }
 /* content */
-.content article{
+.content > article{
     width: 90%;
     min-width: 700px;
     max-width: 1200px;
 }
-    .content article header {
+    .content > article header {
         position: relative;
         padding: 0;
     }
-    .content article .time{
+    .content > article .time{
         font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", "Helvetica Neue", Helvetica, Arial, "Sans Serif";
         font-size: 14px;
         font-weight: 500;
@@ -76,46 +96,83 @@ footer #about-me:after, footer #social:after, .content article:after{
         margin-bottom: 0px;
         text-indent: 0;
     }
-    .content article time{
+    .content > article time{
         font-weight: 800;
     }
-    .content article p{
+    .content > article p{
       text-indent: 10px;
     }
-    .content article header h1{
+    .content > article header h1{
         width: 68%;
         float: right;
         border-bottom: 1px solid #999;
         padding-bottom: 25px;
         margin-bottom: 0;
     }
-    .content article p.description{
+    .content > article p.description{
       font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2";
       font-weight: 300;
       font-size: 120%;
       text-indent: 0;
       margin-top: 0;
     }
-    .content article div{
+    .content > article div{
         padding: 25px 0;
         float: left;
     }
-    .content article .meta{
-        width: 28%;
+    .content > article .meta{
+        width: 24%;
         margin : 0;
-        padding: 0;
+        padding: 0 3% 0 0;
         max-width: 360px;
         position: fixed;
     }
-    .content article .body{
+    .content > article .body{
         width: 68%;
         border-top: 1px solid #fff;
         float: right;
     }
-    .content article .body img{
+    .content > article .body img{
         max-width: 100%;
         float: left;
         margin-bottom: 25px;
+    }
+    .content aside.related{
+      width: 90%;
+      min-width: 700px;
+      max-width: 1200px;
+      margin-bottom: 25px;
+    }
+    .content aside.related div{
+      margin-left: 30%;
+    }
+    .content aside.related h2{
+      color: #cdcdcd;
+      margin-bottom: 25px;
+    }
+    .content aside.related article{
+      margin-bottom: 10px;
+    }
+    .content aside.related a{
+      display: block;
+      opacity: 0.3;
+      text-decoration: none;
+      border-radius: 3px;
+      color: #333;
+      background-color: #999;
+      -webkit-transition: all .2s ease-in-out;
+      border-bottom: 0 none;
+    }
+    .content aside.related a:hover{
+      color: #eee;
+      opacity: 1;
+      text-shadow: 0 0 2px #333;
+    }
+    .content aside.related img{
+      width: 40px;
+      height: 40px;
+      margin: 0 10px 0 0;
+      vertical-align: middle;
     }
 /* footer */
 footer{
@@ -200,8 +257,9 @@ footer{
       margin-bottom: -10px;
   }
     footer #creative-commons a{
-    color: #B0C9CC;
-  }
+      color: #B0C9CC;
+      border-bottom: 0 none;
+    }
 /* tags */
 a.tag{
     font-family: 'Helvetica Neue';
@@ -217,7 +275,10 @@ a.tag{
     color: #9B9797;
     padding: 4px 15px 4px 25px;
     width: auto;
+    margin-right: 10px;
     border-radius: 3px;
+    -webkit-transition: all .3s ease-in-out;
+    border-bottom:0 none;
 }
 a.tag:hover{
   color:#797474;
@@ -317,6 +378,13 @@ pre{
         width: 100%;
         border-top: 1px solid #A8A8A8;
     }
+    .content aside.related{
+      width: 100%;
+      min-width: 320px;
+    }
+    .content aside.related div{
+      margin: 0;
+    }  
     code.syntax{
       font-family: Monaco, Courier;
       font-size: 11px;
@@ -366,7 +434,7 @@ pre{
 }
 /* landscape */
 @media screen and (orientation:landscape) and (max-device-width: 480px){
-  .content article{
+  .content article,.content aside.related, .content aside.related a{
     width: 460px;
     min-width: 460px;
     max-width: 460px;
@@ -380,11 +448,12 @@ pre{
 }
 /* portrait  */
 @media screen and (orientation:portrait) and (max-device-width: 480px){
-  .content article{
+  .content article, .content aside.related, .content aside.related a{
     width: 300px;
     min-width: 300px;
     max-width: 300px;
   }
+
   footer{
     width: 320px;
   }

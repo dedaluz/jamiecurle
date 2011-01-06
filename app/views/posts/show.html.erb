@@ -26,6 +26,18 @@
 	</div>
 </article>
 
+<aside class="related">
+	<div>
+		<h2>Possibly Related</h2>
+		<% @post.find_related_tags.each do |rel| %>
+		<article>
+			<a href="<%= url_for(rel) %>"><img src="<%= rel.poster.thumb %>"><%= rel.title %></a>
+		</article>
+		<% end %>
+	</div>
+</aside>
+
+
 
 
 <% content_for :scripts do %>

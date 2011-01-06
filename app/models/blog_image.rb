@@ -1,6 +1,6 @@
 class BlogImage < ActiveRecord::Base
   belongs_to :post
-  
+
   validates :src, :presence => true
   validates :title, :presence => true
   

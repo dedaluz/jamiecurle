@@ -54,6 +54,8 @@ class BlogImagesController < ApplicationController
     @blog_image = BlogImage.new(params[:blog_image])
     @post = Post.find(params[:post_id])
     @blog_image.post_id = @post.id
+    # delete the count cached for the blog post
+    CACHE.delete("jc_post_blog_images_count_#{@post.id}")
     
     respond_to do |format|
       if @blog_image.save

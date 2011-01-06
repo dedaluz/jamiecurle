@@ -11,10 +11,9 @@
 		<script type="text/javascript" src="http://use.typekit.com/rll1nei.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	</head>
-	<body id="post">
+	<body id="post" class="<%= yield :bodyclass %>">
 		<header>
 			<h1><a href="/">JC</a></h1>
-			<% if session[:user_id] %><%= render 'layouts/admin' %><% end %>
 		</header>
 		
 		<div class="content">
@@ -29,10 +28,15 @@
 			<article id="about-me">
 				<img src="/images/jamiecurle.jpg" alt="Photograph of Jamie Curle">
 				<p>
-					I'm a developer / designer working towards being an creative educator. I play 
-					with the creative process, exploring web technologies and try to harvest joy from the user 
-					experience. In my spare time I <a href="/tags/botany">grow chillies</a>, play the drums and work on my 
-					olympic snatch. You can <a href="http://twitter.com/jamiecurle" title="Jamie Curle Twitter">contact me on twitter</a>
+					I'm a <a href="/tags/development/">developer</a> / 
+					<a href="/tags/design/">designer</a> working towards being 
+					a <a href="/tags/design/">creative educator</a>. I play 
+					with the creative process, exploring web technologies and try to harvest 
+					<a href="/tags/joy/">joy</a> from the 
+					<a href="/tags/design/">user experience</a>. In my spare time I 
+					<a href="/tags/botany">grow chillies</a>, play the drums and 
+					<a href="/tags/training">train</a>
+					You can <a href="http://twitter.com/jamiecurle" title="Jamie Curle Twitter">contact me on twitter</a>
 				</p>
 			</article>
 			<div id="social">
