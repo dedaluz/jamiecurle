@@ -1,15 +1,15 @@
 <div class="post">
 <%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-      <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<% if @post.errors.any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+		<ul>
+			<% @post.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
 	<fieldset>
 		<%= f.label :title %>
 		<%= f.text_field :title %>
@@ -41,8 +41,8 @@
 <% end %>
 </div>
 
-<div class="blog_images">
-	<% @post.blog_images.each do |img| %><%= img.id %>
-		<img src="<%= img.thumb %>" alt="<%= img.title %>" width="100" height="100">
+<div id="blog_images" class="<%= @post.url %>">
+	<% @post.blog_images.each do |img| %>
+	<div class="<% if @post.blog_image_id == img.id %>poster<% end %>"><a href="#blog_images" rel="img-<%=img.id%>"> <img src="<%= img.thumb %>" alt="<%= img.title %>" width="100" height="100"></a></div>
 	<% end %>
 </div>

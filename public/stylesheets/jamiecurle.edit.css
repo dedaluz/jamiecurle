@@ -21,3 +21,28 @@ form{
 footer{
   display: none;
 }
+
+#blog_images div{
+  float: left;
+  padding: 0;
+}
+#blog_images img{
+  margin: 0;
+  padding: 0;
+}
+#blog_images a{
+  color: transparent;
+  border: 0 none;
+  opacity: 0.3;
+  display: block;
+  padding: 0 !important;
+  margin: 5px;
+  height: 105px;
+}
+
+#blog_images a.poster{
+  opacity: 1;
+  margin: 0;
+  border: 5px solid #f90;
+  background-color: transparent;
+}

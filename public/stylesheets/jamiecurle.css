@@ -2,7 +2,7 @@
 article, header, footer, aside{display: block;}
 /* style the elements */
 body{
-    background: #fdfdfd url(/images/body.bg.png) top left repeat ;
+    background: #fdfdfd url(/images/body.bg.png) top left repeat fixed;
     font-family: "chaparral-pro-1","chaparral-pro-2","Georgia", "Times New Roman", Serif;
     font-size: 18px;
     line-height: 25px;
@@ -13,7 +13,7 @@ body{
     height: 100%;
 }
 h1,h2, h3, h4, h5, h6{
-    font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2";
+    font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", "Helvetica Neue", Helvetica, Arial;
     font-weight: 600;
     margin: 9px 0;
     padding: 0;
@@ -61,6 +61,7 @@ body > header h1{
       text-decoration: none;
       text-shadow: none;
       border-bottom: 0 none;
+      -moz-transition: all .1s ease-in-out;
       -webkit-transition: all .1s ease-in-out;
   }
   body > header h1 a:hover{
@@ -155,18 +156,18 @@ footer #about-me:after, footer #social:after, .content article:after,
     }
     .content aside.related a{
       display: block;
-      opacity: 0.3;
+      opacity: 0.6;
       text-decoration: none;
       border-radius: 3px;
-      color: #333;
-      background-color: #999;
+      color: #666;
+      background-color: #AAA;
       -webkit-transition: all .2s ease-in-out;
       border-bottom: 0 none;
     }
     .content aside.related a:hover{
       color: #eee;
       opacity: 1;
-      text-shadow: 0 0 2px #333;
+      text-shadow: 0 0 2px #999;
     }
     .content aside.related img{
       width: 40px;
@@ -328,7 +329,6 @@ pre{
   font-size: 14px;
   padding: 10px;
   background: #1C2022;
-
   color: #d0d0d0;
   border-radius: 5px;
   word-wrap: break-word  !important;

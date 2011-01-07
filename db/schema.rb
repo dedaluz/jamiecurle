@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110106065045) do
+ActiveRecord::Schema.define(:version => 20110107064428) do
 
   create_table "blog_images", :force => true do |t|
     t.string   "src"
@@ -32,10 +32,12 @@ ActiveRecord::Schema.define(:version => 20110106065045) do
     t.text     "description"
     t.boolean  "published"
     t.integer  "blog_image_id"
+    t.string   "url"
   end
 
   add_index "posts", ["blog_image_id"], :name => "index_posts_on_blog_image_id"
   add_index "posts", ["published"], :name => "index_posts_on_published"
+  add_index "posts", ["url"], :name => "index_posts_on_url"
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"

@@ -1,3 +1,4 @@
+/* The editor */
 (function($) {
     /*
      Options
@@ -65,5 +66,33 @@
     });
   }
 })(jQuery);
-
 $('.editor textarea').editor();
+
+/* set poster */
+$('#blog_images a').click(function(event){
+  // get the id of the image
+  var id = $(this).attr('rel').split('-')[1];
+  // get the csrf-token
+  var param = $('meta[name="csrf-token"]').attr('content');
+  // make the url
+  var url = '/posts/' + $(this).parent().parent()[0].className;
+  
+  console.log(url);
+  
+  // send the post
+  $.ajax({
+    type : 'PUT',
+    url : url,
+    data : 'post[blog_image_id]=' + id + '&'
+  })
+  // remove the poster class from all  the other tags
+  $(this).parent().parent().find('div').each(function(){
+    $(this).find('a').removeClass('poster');
+  })
+  // add the poster class
+  $(this).addClass('poster');
+  
+  
+  // prevemt the default
+  event.preventDefault();
+});

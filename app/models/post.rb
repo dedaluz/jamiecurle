@@ -1,7 +1,8 @@
 class Post < ActiveRecord::Base
   has_many :blog_images
-
+  acts_as_url :title, :sync_url=> true
   acts_as_taggable
+  
 
 
   def poster
@@ -32,6 +33,10 @@ class Post < ActiveRecord::Base
   end
   
   def to_param
+    url
+  end
+  
+  def sto_param
     "#{id}-#{title.gsub(/[^a-z0-9]+/i, '-')}"
   end
 end

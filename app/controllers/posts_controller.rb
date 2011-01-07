@@ -4,7 +4,6 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
   def index
-    
     @posts = Post.find(:all, :order => 'created_at DESC')
 
     respond_to do |format|
@@ -20,9 +19,17 @@ class PostsController < ApplicationController
     #
     # if not logged in, don't show unpublished blogs
     if session[:user_id]
-      @post = Post.find(params[:id])
+      @post = Post.find_by_url(params[:id])
+      #@post = Post.find(params[:id])
     else
-      @post = Post.find(params[:id], :conditions => "published = true")
+      @post = Post.find_by_url(params[:id], :conditions => "published = true")
+    end
+    # perhaps this is an old url?
+    if @post.nil?
+      @post = Post.find(params[:id])
+      if !@post.nil?
+        redirect_to post_path(@post), :status=>301 
+      end
     end
   end
 
@@ -30,7 +37,6 @@ class PostsController < ApplicationController
   # GET /posts/new.xml
   def new
     @post = Post.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @post }
@@ -40,7 +46,8 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     # get the post
-    @post = Post.find(params[:id])
+    @post = Post.find_by_url(params[:id])
+    #@post = Post.find_by_url(params[:id])
   end
 
   # POST /posts
@@ -62,7 +69,7 @@ class PostsController < ApplicationController
   # PUT /posts/1
   # PUT /posts/1.xml
   def update
-    @post = Post.find(params[:id])
+    @post = Post.find_by_url(params[:id])
     # delete cache
     CACHE.delete("jc_post_#{@post.id}")
     #
