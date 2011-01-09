@@ -1,0 +1,98 @@
+
+
+/* posts show */
+.content > article{
+    width: 90%;
+    min-width: 700px;
+    max-width: 1200px;
+}
+    .content > article header {
+        position: relative;
+        padding: 0;
+    }
+    .content > article .time{
+        font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", "Helvetica Neue", Helvetica, Arial, "Sans Serif";
+        font-size: 14px;
+        font-weight: 500;
+        color: #7A7777;
+        margin-bottom: 0px;
+        text-indent: 0;
+    }
+    .content > article time{
+        font-weight: 800;
+    }
+    .content > article p{
+      text-indent: 10px;
+    }
+    .content > article header h1{
+        width: 68%;
+        float: right;
+        border-bottom: 1px solid #999;
+        padding-bottom: 25px;
+        margin-bottom: 0;
+    }
+    .content > article p.description{
+      font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2";
+      font-weight: 300;
+      font-size: 120%;
+      text-indent: 0;
+      margin-top: 0;
+    }
+    .content > article div{
+        padding: 25px 0;
+        float: left;
+    }
+    .content > article .meta{
+        width: 24%;
+        margin : 0;
+        padding: 0 3% 0 0;
+        max-width: 360px;
+        position: fixed;
+    }
+    .content > article .body{
+        width: 68%;
+        border-top: 1px solid #fff;
+        float: right;
+    }
+    .content > article .body img{
+        max-width: 100%;
+        float: left;
+        margin-bottom: 25px;
+    }
+    .content aside.related{
+      width: 90%;
+      min-width: 700px;
+      max-width: 1200px;
+      margin-bottom: 25px;
+    }
+    .content aside.related div{
+      margin-left: 30%;
+    }
+    .content aside.related h2{
+      color: #cdcdcd;
+      margin-bottom: 25px;
+    }
+    .content aside.related article{
+      margin-bottom: 10px;
+    }
+    .content aside.related a{
+      display: block;
+      opacity: 0.6;
+      text-decoration: none;
+      border-radius: 3px;
+      color: #666;
+      background-color: #AAA;
+      -webkit-transition: all .2s ease-in-out;
+      border-bottom: 0 none;
+    }
+    .content aside.related a:hover{
+      color: #eee;
+      opacity: 1;
+      text-shadow: 0 0 2px #999;
+    }
+    .content aside.related img{
+      width: 40px;
+      height: 40px;
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+    }

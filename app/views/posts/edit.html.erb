@@ -1,0 +1,19 @@
+<% content_for :title do %> <%= @post.title %> <% end %>
+
+<% content_for :stylesheets do %>
+	<link rel="stylesheet" href="/stylesheets/jamiecurle.edit.css" media="screen">
+	<link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" media="screen">
+<% end %>
+
+
+<%= render 'form' %>
+
+<div>
+	<a href="/posts/<%=@post.url %>" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Destroy</a>
+</div>
+
+<% content_for :scripts do %>
+<%= javascript_include_tag 'jquery', 'rails', 'jquery.form', 'jquery.remotipart' %>
+	<script type="text/javascript" src="/javascripts/admin.js"></script>
+	<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.js"></script>
+<% end %>

@@ -1,0 +1,24 @@
+
+<% content_for :title do %> Posts <% end %>
+<% content_for :bodyclass do %>index<% end %>
+
+
+<div class="posts">
+	<% @posts.each do |post| %>
+	<article> 
+		<div class="image">
+			<a href="<%= url_for post %>"> <img src="<%= post.poster.thumb %>" alt="<%= post.poster.thumb %>"></a>
+		</div>
+		<div class="body">
+			<h1><a href="<%= url_for post %>"><%=post.title%></a></h1>
+			<p><%= post.description %></p>
+			<p class="meta">
+				Posted on 
+				<time><%= post.created_at.strftime("%d %B %Y") %></time>
+				tagged with 
+				<% post.tags.each do |tag| %><a class="tag" href="/tags/<%= tag.name %>"><%= tag.name %></a><% end %>
+			</p>
+		</div>
+	</article>
+	<% end %>
+</div>

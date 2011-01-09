@@ -1,0 +1,27 @@
+<h1>Listing blog_images</h1>
+
+<table>
+  <tr>
+    <th>Post</th>
+	<th>Src</th>
+    <th>thumb</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @post.blog_images.each do |blog_image| %>
+  <tr>
+	<td><%= blog_image.post.title %></td>
+	<td><%= blog_image.src %></td>
+    <td><img src="<%= blog_image.thumb %>"></td>
+    <td><%= link_to 'Show', post_blog_image_path(@post, blog_image) %></td>
+    <td><%= link_to 'Edit', edit_post_blog_image_path(@post, blog_image) %></td>
+    <td><%= link_to 'Destroy', post_blog_image_path(@post, blog_image), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Blog image', new_post_blog_image_path(@post) %>

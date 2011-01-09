@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title> Jamie Curle : <%= yield :title %></title>
+		<link rel="stylesheet" href="/stylesheets/jamiecurle.css" media="screen">
+		<%= csrf_meta_tag %>
+		<script type="text/javascript" src="http://use.typekit.com/rll1nei.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	</head>
+	<body id="post">
+		<header>
+			<h1><a href="/">JC</a></h1>
+			<% if session[:user_id] %><%= render 'layouts/admin' %><% end %>
+		</header>
+		
+		<div class="content">
+			<%=yield %>
+		</div>
+		
+		<%= javascript_include_tag 'jquery', 'rails' %>
+		<%= yield :scripts %>
+	</body>
+</html>

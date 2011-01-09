@@ -1,0 +1,58 @@
+
+<% content_for :title do %> <%= @post.title %> <% end %>
+<% content_for :bodyclass do %> show <% end %>
+<% content_for :stylesheets do %>
+	<link rel="stylesheet" href="/stylesheets/jamiecurle.syntax.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" media="screen">
+<% end %>
+
+
+<article id="jamiecurle_com-post-<%= @post.id %>">
+	<header>
+		<h1><%= @post.title %> </h1>
+	</header>
+	<div class="meta">
+		<p class="time">
+			Posted on 
+			<time><%= @post.created_at.strftime("%d %B %Y") %></time>
+			and tagged with
+			<% @post.tags.each do |tag| %>
+			<a href="/tags/<%= tag.name %>" class="tag"><%= tag.name %></a>
+			<% end %>
+		</p>
+	</div>
+	<div class="body">
+		<p class="description"><%= @post.description %></p>
+		<%= raw prettify_post_content @post %>
+	</div>
+</article>
+
+<aside class="related">
+	<div>
+		<h2>Possibly Related</h2>
+		<% @post.find_related_tags.each do |rel| %>
+		<article>
+			<a href="<%= url_for(rel) %>"><img src="<%= rel.poster.thumb %>"><%= rel.title %></a>
+		</article>
+		<% end %>
+	</div>
+</aside>
+
+
+
+
+<% content_for :scripts do %>
+	<% if session[:user_id] %>
+	<script type="text/javascript" src="/javascripts/admin.js"></script>
+	<% end %>
+	<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('a.fancybox').fancybox({
+			'titlePosition' : 'over',
+			'overlayColor' : '#000',
+			'overlayOpacity' : '0.9'
+		});
+	})
+	</script>
+<% end %>
