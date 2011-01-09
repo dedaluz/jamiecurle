@@ -8,7 +8,9 @@
 
 <%= render 'form' %>
 
-
+<div>
+	<a href="/posts/<%=@post.url %>" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Destroy</a>
+</div>
 
 <% content_for :scripts do %>
 <%= javascript_include_tag 'jquery', 'rails', 'jquery.form', 'jquery.remotipart' %>

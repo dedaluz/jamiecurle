@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
+  
+    before_filter :authorize
+  
+  
   def index
     @users = User.order(:name)
 

@@ -10,8 +10,9 @@
 		<%= yield :stylesheets %>
 		<script type="text/javascript" src="http://use.typekit.com/rll1nei.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	</head>
-	<body id="post" class="<%= yield :bodyclass %>">
+	<body id="posts" class="<%= yield :bodyclass %>">
 		<header>
 			<h1><a href="/">JC</a></h1>
 		</header>
@@ -30,7 +31,7 @@
 				<p>
 					I'm a <a href="/tags/development/">developer</a> / 
 					<a href="/tags/design/">designer</a> working towards being 
-					a <a href="/tags/design/">creative educator</a>. I play 
+					a <a href="/tags/education/">creative educator</a>. I play 
 					with the creative process, exploring web technologies and try to harvest 
 					<a href="/tags/joy/">joy</a> from the 
 					<a href="/tags/design/">user experience</a>. In my spare time I 

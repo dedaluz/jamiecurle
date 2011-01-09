@@ -27,10 +27,10 @@ h1{
     line-height: 48px;
 }
 a{
-  color: #0044DE;
+  color: #E00000;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px dotted #0039C4;
+  border-bottom: 1px dotted #B00000;
   -webkit-transition: all .3s ease-in-out;
   background-color: rgba(0,0,0,0);
   padding: 0 2px;
@@ -50,7 +50,7 @@ body > header h1{
   position: fixed;
   z-index: 1000;
 }
-  #post.index > header h1{
+  #posts.index > header h1{
     position: relative;
   }
   body > header h1 a{
@@ -69,9 +69,16 @@ body > header h1{
     background-color: #BC0000;
   }
 /* clearfixes */
-.content article header:after, div.content:after, footer:after, 
-footer #about-me:after, footer #social:after, .content article:after,
-.content aside.related div:after{
+#posts.show .content article header:after, 
+div.content:after, 
+footer:after, 
+footer #about-me:after, 
+footer #social:after, 
+#posts.show .content article:after,
+#posts.show .content aside.related div:after,
+#posts.index .posts:after,
+#posts.index .content article:after,
+#posts.index .content article a:after{
     visibility: hidden;
     display: block;
     font-size: 0;
@@ -79,102 +86,181 @@ footer #about-me:after, footer #social:after, .content article:after,
     clear: both;
     height: 0;
 }
-/* content */
-.content > article{
+
+/* posts index */
+#posts.index .posts{
+  
+}
+  #posts.index .content article:first-child{
+    border-top: 0 none;
+  }
+  #posts.index .content article:last-child{
+    border-bottom: 0 none;
+  } 
+  #posts.index .content article{
+    padding: 25px 0;
+    border-bottom: 1px solid #858585;
+    border-top: 1px solid #fff;
+    margin-bottom: 1px;
+  }
+  /* image */
+  #posts.index .content article div.image{
+    padding: 4px;
+    width: 20%;
+    background-color: #FBFBFB;
+    min-width: 80px;
+    max-width: 200px;
+    min-height: 80px;
+    max-height: 200px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+  #posts.index .content article div.image img{
+    border: 1px solid #999;
+    padding: 2%;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 1px;
+  }
+  #posts.index .content article div.image a{
+    border-bottom: 0 none;
+  }
+    #posts.index .content article div.image img{
+      max-width: 100%;
+      min-width: 60px;
+      max-height: 100%;
+    }
+    #posts.index .content article div.body, 
+    #posts.index .content article div.image{
+      border-bottom: 0 none;
+      font-weight: 400;
+      -webkit-transition: none;
+    }
+      #posts.index .content article div.image a:hover, 
+      #posts.index .content article div.body a:hover{
+          border-bottom: 0 none;
+        }
+  /* body */
+  #posts.index .content article div.body{
+      float: right;
+      width: 71%;
+  }
+  #posts.index .content article p{
+    font-size: 21px;
+  }
+  /* meta */
+  #posts.index .content article p.meta{
+    font-size: 15px;
+    font-style: italic;
+    color: #999;
+  }
+  #posts.index .content article p.meta a{
+    border-bottom: 0 none;
+  }
+  /* h1 */
+  #posts.index .content article h1{
+    font-size: 28px;
+    line-height: 28px;
+    color: #333;
+    font-weight: 500;
+  }
+
+/* posts show */
+#posts.show .content > article{
     width: 90%;
     min-width: 700px;
     max-width: 1200px;
 }
-    .content > article header {
-        position: relative;
-        padding: 0;
+  #posts.show .content > article header {
+    position: relative;
+    padding: 0;
+  }
+    #posts.show .content > article .time{
+      font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", "Helvetica Neue", Helvetica, Arial, "Sans Serif";
+      font-size: 14px;
+      font-weight: 500;
+      color: #7A7777;
+      margin-bottom: 0px;
+      text-indent: 0;
     }
-    .content > article .time{
-        font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", "Helvetica Neue", Helvetica, Arial, "Sans Serif";
-        font-size: 14px;
-        font-weight: 500;
-        color: #7A7777;
-        margin-bottom: 0px;
-        text-indent: 0;
+    #posts.show .content > article time{
+      font-weight: 800;
     }
-    .content > article time{
-        font-weight: 800;
-    }
-    .content > article p{
+    #posts.show .content > article p{
       text-indent: 10px;
     }
-    .content > article header h1{
-        width: 68%;
-        float: right;
-        border-bottom: 1px solid #999;
-        padding-bottom: 25px;
-        margin-bottom: 0;
+    #posts.show .content > article header h1{
+      width: 68%;
+      float: right;
+      border-bottom: 1px solid #999;
+      padding-bottom: 25px;
+      margin-bottom: 0;
     }
-    .content > article p.description{
+    #posts.show .content > article p.description{
       font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2";
       font-weight: 300;
       font-size: 120%;
       text-indent: 0;
       margin-top: 0;
     }
-    .content > article div{
-        padding: 25px 0;
-        float: left;
+    #posts.show .content > article div{
+      padding: 25px 0;
+      float: left;
     }
-    .content > article .meta{
-        width: 24%;
-        margin : 0;
-        padding: 0 3% 0 0;
-        max-width: 360px;
-        position: fixed;
+    #posts.show .content > article .meta{
+      width: 24%;
+      margin : 0;
+      padding: 0 3% 0 0;
+      max-width: 360px;
+      position: fixed;
     }
-    .content > article .body{
-        width: 68%;
-        border-top: 1px solid #fff;
-        float: right;
+    #posts.show .content > article .body{
+      width: 68%;
+      border-top: 1px solid #fff;
+      float: right;
     }
-    .content > article .body img{
+      #posts.show .content > article .body img{
         max-width: 100%;
         float: left;
         margin-bottom: 25px;
-    }
-    .content aside.related{
-      width: 90%;
-      min-width: 700px;
-      max-width: 1200px;
-      margin-bottom: 25px;
-    }
-    .content aside.related div{
-      margin-left: 30%;
-    }
-    .content aside.related h2{
-      color: #cdcdcd;
-      margin-bottom: 25px;
-    }
-    .content aside.related article{
-      margin-bottom: 10px;
-    }
-    .content aside.related a{
-      display: block;
-      opacity: 0.6;
-      text-decoration: none;
-      border-radius: 3px;
-      color: #666;
-      background-color: #AAA;
-      -webkit-transition: all .2s ease-in-out;
-      border-bottom: 0 none;
-    }
-    .content aside.related a:hover{
-      color: #eee;
-      opacity: 1;
-      text-shadow: 0 0 2px #999;
-    }
-    .content aside.related img{
-      width: 40px;
-      height: 40px;
-      margin: 0 10px 0 0;
-      vertical-align: middle;
-    }
+      }
+  #posts.show .content aside.related{
+    width: 90%;
+    min-width: 700px;
+    max-width: 1200px;
+    margin-bottom: 25px;
+  }
+  #posts.show .content aside.related div{
+    margin-left: 30%;
+  }
+  #posts.show .content aside.related h2{
+    color: #cdcdcd;
+    margin-bottom: 25px;
+  }
+  #posts.show .content aside.related article{
+    margin-bottom: 10px;
+  }
+  #posts.show .content aside.related a{
+    display: block;
+    opacity: 0.6;
+    text-decoration: none;
+    border-radius: 3px;
+    color: #666;
+    background-color: #AAA;
+    -webkit-transition: all .2s ease-in-out;
+    border-bottom: 0 none;
+  }
+  #posts.show .content aside.related a:hover{
+    color: #eee;
+    opacity: 1;
+    text-shadow: 0 0 2px #999;
+  }
+  #posts.show .content aside.related img{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px 0 0;
+    vertical-align: middle;
+  }
 /* footer */
 footer{
     text-align: left;
@@ -202,6 +288,7 @@ footer{
         padding: 1%;
         background-color: rgba(255,255,255,0.4);
         border-radius: 1px;
+        -moz-border-radius: 1px;
         max-width: 24%;
         float:left;
     }
@@ -263,10 +350,10 @@ footer{
     }
 /* tags */
 a.tag{
-    font-family: 'Helvetica Neue';
+    font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", "Helvetica Neue", Helvetica, Arial;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 600;
     display: inline-block;
     line-height: 14px;
@@ -278,6 +365,7 @@ a.tag{
     width: auto;
     margin-right: 10px;
     border-radius: 3px;
+    -moz-border-radius: 3px;
     -webkit-transition: all .3s ease-in-out;
     border-bottom:0 none;
 }
@@ -338,29 +426,30 @@ pre{
   body > header h1{
     position: relative;
   }
-    .content article{
+    /* posts show*/
+    #posts.show .content article{
         width: 100%;
         min-width: 320px;
     }
-    .content article header{
+    #posts.show .content article header{
         padding: 0;
     }
-    .content article header h1{
+    #posts.show .content article header h1{
          float: none;
          width: 100%;
          text-align: center;
     }
-    .content article div{
+    #posts.show .content article div{
         float: none;
         border-top: 1px solid #fff;
     }
-    .content article .meta{
+    #posts.show .content article .meta{
         width: 100%;
         padding: 10px 0 0 0;
         position: relative;
         max-width: 100%;
     }
-    .content article .meta:after{
+    #posts.show .content article .meta:after{
         visibility: hidden;
         display: block;
         font-size: 0;
@@ -368,23 +457,24 @@ pre{
         clear: both;
         height: 0;
     }
-    .content article .meta .time{
+    #posts.show .content article .meta .time{
       float: left;
       margin: 0;
       padding: 0 0 10px;
       float: left;
     }
-    .content article .body{
+    #posts.show .content article .body{
         width: 100%;
         border-top: 1px solid #A8A8A8;
     }
-    .content aside.related{
+    #posts.show .content aside.related{
       width: 100%;
       min-width: 320px;
     }
-    .content aside.related div{
+    #posts.show .content aside.related div{
       margin: 0;
     }  
+    /* global */
     code.syntax{
       font-family: Monaco, Courier;
       font-size: 11px;
@@ -398,6 +488,7 @@ pre{
 }
 /* iphone, possibly andriod? */
 @media screen and (max-device-width: 480px){
+  /* global */
   body{
      padding: 0 10px;
   }
@@ -434,11 +525,20 @@ pre{
 }
 /* landscape */
 @media screen and (orientation:landscape) and (max-device-width: 480px){
-  .content article,.content aside.related, .content aside.related a{
+  /* posts index */
+  #posts.index .content article div.body{
+   float: none;
+   width: 360px;
+  }
+  /* posts show */
+  #posts.show .content article, 
+  #posts.show .content aside.related, 
+  #posts.show .content aside.related a{
     width: 460px;
     min-width: 460px;
     max-width: 460px;
   }
+  /* global */
   footer{
     margin: 0 -10px;
   }
@@ -448,12 +548,20 @@ pre{
 }
 /* portrait  */
 @media screen and (orientation:portrait) and (max-device-width: 480px){
-  .content article, .content aside.related, .content aside.related a{
+  /* posts index */
+  #posts.index .content article div.body{
+   float: none;
+   width: 300px;
+  }
+  /* posts show */
+  #posts.show .content article, 
+  #posts.show .content aside.related, 
+  #posts.show .content aside.related a{
     width: 300px;
     min-width: 300px;
     max-width: 300px;
   }
-
+  /* global */
   footer{
     width: 320px;
   }
