@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
   
-  before_filter :authorize, :only => [:new, :edit]
+  before_filter :authorize, :only => [:new, :edit, :destroy, :update, :create]
   
   protected
   
