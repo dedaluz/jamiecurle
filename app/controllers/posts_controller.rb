@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   
   
+  def feed
+    @posts = Post.find(:all, :order => 'created_at DESC', :limit => 5, :conditions => "published = true")
+  end
+  
   # GET /posts
   # GET /posts.xml
   def index

@@ -6,7 +6,7 @@ module ApplicationHelper
     #
     #
     # try getting from the cache, if there's a hit return that
-    content = CACHE.get("jc_post_#{@post.id}")
+    content = CACHE.get("jc_post_#{post.id}")
     if ! content.nil?
       return content
     end
@@ -32,7 +32,7 @@ module ApplicationHelper
       end
     end
     # set the cache
-    CACHE.set("jc_post_#{@post.id}", output)
+    CACHE.set("jc_post_#{post.id}", output)
     output
   end
 

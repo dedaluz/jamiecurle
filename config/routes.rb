@@ -17,9 +17,18 @@ Jamiecurle::Application.routes.draw do
   
   resources :tags
   
+  
+  #
+  # posts
+  match '/posts/feed', :to => 'posts#feed'
   resources :posts do 
+    
     resources :blog_images
   end
+  
+  #
+  
+  
   #
   # This is the root
   #
