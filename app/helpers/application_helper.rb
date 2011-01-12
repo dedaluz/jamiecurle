@@ -11,10 +11,11 @@ module ApplicationHelper
       return content
     end
     # ok no hit, let's process it
-    text_pieces = post.body.split(/(<code>|<code lang="[A-Za-z0-9_-]+">|<code lang='[A-Za-z0-9_-]+'>|<\/code>)/)
+    output = ''
     in_pre = false
     language = nil
-    output = ''
+    marked_down = markdown(post.body, options => 'strip' )
+    text_pieces = marked_down.split(/(<code>|<code lang="[A-Za-z0-9_-]+">|<code lang='[A-Za-z0-9_-]+'>|<\/code>)/)
     text_pieces.collect do |piece|
       if piece =~ /^<code( lang=(["'])?(.*)\2)?>$/
         language = $3
@@ -26,9 +27,10 @@ module ApplicationHelper
         nil
       elsif in_pre
         lang = language ? language : "ruby"
+        p piece.strip
         output += '<pre><code lang="'+lang+'" class="syntax">' + highlight_code(lang, piece.strip) + '</code></pre>'
       else
-        output += markdown(piece.strip, options => 'strip' )
+        output += piece.strip
       end
     end
     # set the cache
