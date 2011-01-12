@@ -1,3 +1,7 @@
+body > header > h1{
+  position: relative;
+}
+
 input, textarea{
     font-family: "chaparral-pro-1","chaparral-pro-2","Georgia", "Times New Roman", Serif;
     font-size: 18px;

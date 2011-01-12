@@ -389,6 +389,7 @@ div#adminbar ul li{
   float: left;
 }
 div#adminbar ul li a{
+  font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", "Helvetica Neue", Helvetica, Arial;
   display: block;
   font-size: 10px;
   text-transform: uppercase;
@@ -396,8 +397,10 @@ div#adminbar ul li a{
   color: #dedede;
   text-shadow: none;
   text-decoration: none;
-  padding: 0 5px;
+  padding: 0 25px;
   background-color: rgba(0,0,0,0.4);
+  border: 0 none;
+  margin: 0 10px;
 
 }
 div#adminbar ul li a:hover{
@@ -568,4 +571,12 @@ pre{
   footer #creative-commons{
     width: 300px;
   }
+}
+/* flashes */
+div.notice{
+  font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", "Helvetica Neue", Helvetica, Arial;
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid #997831;
+  background-color: #FFFBB3;
 }
