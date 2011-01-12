@@ -81,6 +81,9 @@ class PostsController < ApplicationController
     # delete cache
     CACHE.delete("jc_post_#{@post.id}")
     #
+    
+    p params[:post][:continue]
+    
     respond_to do |format|
       if @post.update_attributes(params[:post])
         format.html { redirect_to(@post, :notice => 'Post was successfully updated.') }
