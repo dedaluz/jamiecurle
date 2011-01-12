@@ -7,8 +7,12 @@ class PostsController < ApplicationController
   
   # GET /posts
   # GET /posts.xml
-  def index
-    @posts = Post.find(:all, :order => 'created_at DESC')
+  def index    
+    #Tumblr.blog = 'tumblr.jamiecurle.com'
+    #@tumbls = Tumblr::Post.all
+    #p @tumbls
+    
+    @posts = Post.find(:all, :order => 'created_at DESC', :conditions => "published = true")
 
     respond_to do |format|
       format.html # index.html.erb

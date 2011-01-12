@@ -5,7 +5,10 @@
 	<link rel="stylesheet" href="/stylesheets/jamiecurle.syntax.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" media="screen">
 <% end %>
-
+<div id="adminbar">
+<ul>
+	<li><%= link_to 'logout', logout_path, :confirm => "sure bonny lad?",  :method => :delete %></li>
+</div>
 
 <article id="jamiecurle_com-post-<%= @post.id %>">
 	<header>
