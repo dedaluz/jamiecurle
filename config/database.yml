@@ -26,5 +26,5 @@ production:
   adapter: mysql2
   database: jamiecurle_rails
   username: jamiecurle
-  password: p9YHGbf678a
+  password: xxxxxxxxx
   host: localhost
