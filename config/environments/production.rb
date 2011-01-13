@@ -59,6 +59,6 @@ Jamiecurle::Application.configure do
   CACHE = MemCache.new memcache_options
   CACHE.servers = 'localhost:11211'
 
-
+  config.action_mailer.default_url_options = { :host => 'jamiecurle.com' }
 
 end

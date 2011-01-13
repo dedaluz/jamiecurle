@@ -16,6 +16,7 @@ gem 'acts-as-taggable-on'
 gem 'memcache-client'
 gem 'stringex'
 gem 'tumblr-api'
+gem 'devise'
 # Use unicorn as the web server
 # gem 'unicorn'
 

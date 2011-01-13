@@ -1,5 +1,7 @@
 Jamiecurle::Application.routes.draw do
 
+  devise_for :users
+  #devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification'}
   #
   #
   #
@@ -25,9 +27,6 @@ Jamiecurle::Application.routes.draw do
     
     resources :blog_images
   end
-  
-  #
-  
   
   #
   # This is the root
