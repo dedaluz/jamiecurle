@@ -11,9 +11,13 @@ class PostsController < ApplicationController
     #Tumblr.blog = 'tumblr.jamiecurle.com'
     #@tumbls = Tumblr::Post.all
     #p @tumbls
+    if session[:user_id]
+      @post = Post.find(:all, :order => 'created_at DESC')
+      #@post = Post.find(params[:id])
+    else
+      @post = Post.find(:all, :order => 'created_at DESC',  :conditions => "published = true")
+    end
     
-    @posts = Post.find(:all, :order => 'created_at DESC', :conditions => "published = true")
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }
