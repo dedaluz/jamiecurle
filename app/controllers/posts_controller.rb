@@ -12,10 +12,10 @@ class PostsController < ApplicationController
     #@tumbls = Tumblr::Post.all
     #p @tumbls
     if session[:user_id]
-      @post = Post.find(:all, :order => 'created_at DESC')
+      @posts = Post.find(:all, :order => 'created_at DESC')
       #@post = Post.find(params[:id])
     else
-      @post = Post.find(:all, :order => 'created_at DESC',  :conditions => "published = true")
+      @posts = Post.find(:all, :order => 'created_at DESC',  :conditions => "published = true")
     end
     
     respond_to do |format|

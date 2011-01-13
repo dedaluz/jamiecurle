@@ -5,12 +5,13 @@
 
 <div class="posts">
 	<% @posts.each do |post| %>
-	<article> 
+	
+	<article class="<%if !post.published? %>draft<% end %>"> 
 		<div class="image">
 			<a href="<%= url_for post %>"> <img src="<%= post.poster.thumb %>" alt="<%= post.poster.thumb %>"></a>
 		</div>
 		<div class="body">
-			<h1><a href="<%= url_for post %>"><%=post.title%></a></h1>
+			<h1><a href="<%= url_for post %>"><%if !post.published? %>Draft : <% end %><%=post.title%></a></h1>
 			<p><%= post.description %></p>
 			<p class="meta">
 				Posted on 

@@ -97,6 +97,9 @@ footer #social:after,
   #posts.index .content article:last-child{
     border-bottom: 0 none;
   } 
+  #posts.index .content article.draft{
+    opacity: 0.4;
+  }
   #posts.index .content article{
     padding: 25px 0;
     border-bottom: 1px solid #858585;

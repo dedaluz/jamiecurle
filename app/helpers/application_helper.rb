@@ -27,7 +27,6 @@ module ApplicationHelper
         nil
       elsif in_pre
         lang = language ? language : "ruby"
-        p piece.strip
         output += '<pre><code lang="'+lang+'" class="syntax">' + highlight_code(lang, piece.strip) + '</code></pre>'
       else
         output += piece.strip
