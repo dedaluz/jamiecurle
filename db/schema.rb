@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110107064428) do
+ActiveRecord::Schema.define(:version => 20110113113303) do
 
   create_table "blog_images", :force => true do |t|
     t.string   "src"
@@ -54,15 +54,6 @@ ActiveRecord::Schema.define(:version => 20110107064428) do
 
   create_table "tags", :force => true do |t|
     t.string "name"
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "hashed_password"
-    t.string   "salt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
 end
