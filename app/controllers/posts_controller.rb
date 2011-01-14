@@ -6,15 +6,9 @@ class PostsController < ApplicationController
   
   # GET /posts
   # GET /posts.xml
-  def index    
-    #Tumblr.blog = 'tumblr.jamiecurle.com'
-    #@tumbls = Tumblr::Post.all
-    #p @tumbls
+  def index
     conditions  = "published = true" unless user_signed_in?
-    
     @posts = Post.find(:all, :order => 'created_at DESC',  :conditions => conditions)
-
-    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }

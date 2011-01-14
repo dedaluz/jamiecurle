@@ -2,7 +2,7 @@
 <% content_for :title do %> Posts <% end %>
 <% content_for :bodyclass do %>index<% end %>
 
-
+<%=user_signed_in?%>
 <div class="posts">
 	<% @posts.each do |post| %>
 	<article class="<%if !post.published? %>draft<% end %>"> 
