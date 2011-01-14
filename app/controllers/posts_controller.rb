@@ -1,5 +1,6 @@
+require 'Tumblr'
+
 class PostsController < ApplicationController
-  
   
   def feed
     @posts = Post.find(:all, :order => 'created_at DESC', :limit => 5, :conditions => "published = true")

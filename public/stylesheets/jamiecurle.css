@@ -9,7 +9,7 @@ body{
     margin: 0;
     padding: 0 20px;
     color: #2A2A2A;
-    text-shadow: 0 0 1px #fff;
+    -webkit-text-shadow: 0 0 1px #fff;
     height: 100%;
 }
 h1,h2, h3, h4, h5, h6{
@@ -28,7 +28,7 @@ h1{
 }
 a{
   color: #E00000;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   border-bottom: 1px dotted #B00000;
   -webkit-transition: all .3s ease-in-out;
@@ -142,7 +142,7 @@ footer #social:after,
       #posts.index .content article div.image a:hover, 
       #posts.index .content article div.body a:hover{
           border-bottom: 0 none;
-        }
+      }
   /* body */
   #posts.index .content article div.body{
       float: right;
@@ -169,6 +169,18 @@ footer #social:after,
   }
 
 /* posts show */
+#posts.show .content .comments{
+    width: 90%;
+    min-width: 700px;
+    max-width: 1200px;
+
+}
+  #posts.show .content .comments #disqus_thread{
+    width: 68%;
+    float: right;
+    border: 1px solid red;
+        font-size: 240% !important;
+  }
 #posts.show .content > article{
     width: 90%;
     min-width: 700px;
@@ -249,12 +261,14 @@ footer #social:after,
     text-decoration: none;
     border-radius: 3px;
     color: #666;
-    background-color: #AAA;
+    background-color: #E5E5E5;
     -webkit-transition: all .2s ease-in-out;
     border-bottom: 0 none;
+    font-weight: 400;
   }
   #posts.show .content aside.related a:hover{
     color: #eee;
+    background-color: #323232;
     opacity: 1;
     text-shadow: 0 0 2px #999;
   }
