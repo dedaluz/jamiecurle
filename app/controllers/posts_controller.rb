@@ -1,5 +1,3 @@
-require 'Tumblr'
-
 class PostsController < ApplicationController
   
   def feed
