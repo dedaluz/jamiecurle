@@ -10,7 +10,9 @@ class PostsController < ApplicationController
     #Tumblr.blog = 'tumblr.jamiecurle.com'
     #@tumbls = Tumblr::Post.all
     #p @tumbls
-    @posts = Post.find(:all, :order => 'created_at DESC',  :conditions => "published = true")
+    conditions  = "published = true" unless user_signed_in?
+    
+    @posts = Post.find(:all, :order => 'created_at DESC',  :conditions => conditions)
 
     
     respond_to do |format|
@@ -23,9 +25,9 @@ class PostsController < ApplicationController
   # GET /posts/1.xml
   def show
     #
-    #
-    # if not logged in, don't show unpublished blogs
-    @post = Post.find_by_url(params[:id], :conditions => "published = true")
+    conditions  = "published = true" unless user_signed_in?
+    
+    @post = Post.find_by_url(params[:id], :conditions => conditions)
     # perhaps this is an old url?
     if @post.nil?
       @post = Post.find(params[:id])
