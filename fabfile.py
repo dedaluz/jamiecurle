@@ -8,4 +8,4 @@ env.user = 'jcurle'
 def deploy():
     local('git commit -a')
     local('git push origin master')
-    run('cd sites/jamiecurle/jamiecurle/; git pull origin master; touch tmp/restart')
+    run('cd sites/jamiecurle/jamiecurle/; git pull origin master; touch tmp/restart.txt')
