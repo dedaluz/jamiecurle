@@ -449,7 +449,7 @@ pre{
     position: relative;
   }
     /* posts show*/
-    #posts.show .content article{
+    #posts.show .content article, #posts.show .content .comments{
         width: 100%;
         min-width: 320px;
     }
@@ -485,7 +485,8 @@ pre{
       padding: 0 0 10px;
       float: left;
     }
-    #posts.show .content article .body{
+    #posts.show .content article .body,
+    #posts.show .content .comments #disqus_thread{
         width: 100%;
         border-top: 1px solid #A8A8A8;
     }
@@ -496,6 +497,8 @@ pre{
     #posts.show .content aside.related div{
       margin: 0;
     }  
+    
+    
     /* global */
     code.syntax{
       font-family: Monaco, Courier;
@@ -553,6 +556,7 @@ pre{
    width: 360px;
   }
   /* posts show */
+  #posts.show .content .comments,
   #posts.show .content article, 
   #posts.show .content aside.related, 
   #posts.show .content aside.related a{
@@ -576,6 +580,7 @@ pre{
    width: 300px;
   }
   /* posts show */
+  #posts.show .content .comments,
   #posts.show .content article, 
   #posts.show .content aside.related, 
   #posts.show .content aside.related a{
