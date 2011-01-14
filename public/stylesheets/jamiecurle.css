@@ -176,10 +176,12 @@ footer #social:after,
 
 }
   #posts.show .content .comments #disqus_thread{
-    width: 68%;
+    width: 64%;
+    padding: 2%;
     float: right;
-    border: 1px solid red;
-        font-size: 240% !important;
+    background-color: rgba(255,255,255,0.6);
+    font-family: "Helvetica Neue", Helvetica, Arial !important;
+    font-size: 140%;
   }
 #posts.show .content > article{
     width: 90%;
