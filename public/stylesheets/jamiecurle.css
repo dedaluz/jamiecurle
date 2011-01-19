@@ -236,8 +236,11 @@ footer #social:after,
       border-top: 1px solid #fff;
       float: right;
     }
-      #posts.show .content > article .body img{
-        max-width: 100%;
+      #posts.show .content > article .body img, 
+      #posts.show .content > article .body object,
+      #posts.show .content > article .body embed{
+        width: 100%;
+        height: 400px;
         float: left;
         margin-bottom: 25px;
       }
@@ -445,6 +448,7 @@ pre{
 }
 /* smaller windows*/
 @media screen and (max-width: 720px) {
+  
   body > header h1{
     position: relative;
   }
@@ -496,9 +500,7 @@ pre{
     }
     #posts.show .content aside.related div{
       margin: 0;
-    }  
-    
-    
+    }      
     /* global */
     code.syntax{
       font-family: Monaco, Courier;
