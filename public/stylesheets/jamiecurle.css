@@ -609,3 +609,4 @@ div.notice{
   border: 2px solid #997831;
   background-color: #FFFBB3;
 }
+span.strike{text-decoration: line-through;}
