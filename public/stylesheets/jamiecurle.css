@@ -240,9 +240,12 @@ footer #social:after,
       #posts.show .content > article .body object,
       #posts.show .content > article .body embed{
         width: 100%;
-        height: 400px;
         float: left;
         margin-bottom: 25px;
+      }
+      #posts.show .content > article .body object,
+      #posts.show .content > article .body embed{
+              height: 400px;
       }
   #posts.show .content aside.related{
     width: 90%;
