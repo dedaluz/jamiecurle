@@ -1,0 +1,13 @@
+<% content_for :title do %> Reflective Journal <% end %>
+<% content_for :bodyclass do %>index<% end %>
+
+<div class="journals">
+	<% @journals.each do |journal| %>
+	<article class="<%if !journal.published? %>draft<% end %>">
+		<time><%= journal.created_at.strftime("%d %b") %> </time>
+		<h1><a href="<%= url_for(journal) %>"><%= journal.title %></a></h1>
+		<p><a href="<%= url_for(journal) %>"><%= journal.description %></a></p>
+	</article>
+	<% end %>
+</div>
+

@@ -12,12 +12,14 @@ body{
     -webkit-text-shadow: 0 0 1px #fff;
     height: 100%;
 }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 h1,h2, h3, h4, h5, h6{
     font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", "Helvetica Neue", Helvetica, Arial;
     font-weight: 600;
     margin: 9px 0;
     padding: 0;
     color: #2A2A2A;
+    border-bottom: 0 none;
 }
 p{
   margin-bottom: 25px;
@@ -30,15 +32,15 @@ a{
   color: #E00000;
   font-weight: 500;
   text-decoration: none;
-  border-bottom: 1px dotted #B00000;
   -webkit-transition: all .3s ease-in-out;
   background-color: rgba(0,0,0,0);
   padding: 0 2px;
 }
 a:hover{
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.04);
 
 }
+
 /* header*/
 body > header h1{
   margin: 0;
@@ -50,7 +52,8 @@ body > header h1{
   position: fixed;
   z-index: 1000;
 }
-  #posts.index > header h1{
+  #posts.index > header h1,
+  #journals > header h1{
     position: relative;
   }
   body > header h1 a{
@@ -78,7 +81,8 @@ footer #social:after,
 #posts.show .content aside.related div:after,
 #posts.index .posts:after,
 #posts.index .content article:after,
-#posts.index .content article a:after{
+#posts.index .content article a:after,
+#journals.index .content article:after{
     visibility: hidden;
     display: block;
     font-size: 0;
@@ -285,6 +289,49 @@ footer #social:after,
     height: 40px;
     margin: 0 10px 0 0;
     vertical-align: middle;
+  }
+
+/* Journals */
+#journals .journals{
+  width: 300px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,0.7);
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0, 0.1);
+}
+#journals .journals h1{
+  font-size: 21px;
+  margin-bottom: 7px;
+  line-height: 25px;
+  padding: 0;
+}
+
+
+  #journals.index .journals p,
+  #journals.show .journals p.description{
+      font-size: 18px;
+      font-style: italic;
+      margin: 0;
+      text-indent: 10px;
+  }
+  #journals.show .journals p{
+    font-size: 16px;
+  }
+#journals article{
+  position: relative;
+  margin-bottom: 25px;
+}
+  #journals article p.description{
+    color: #999;
+  }
+  #journals article time{
+    display: block;
+    position: absolute;
+    left: -60px;
+    color: #ccc;
+    font-size: 14px;
+    font-style: italic;
+    text-shadow: 1px 1px 1px #fff;
   }
 /* footer */
 footer{
@@ -503,7 +550,8 @@ pre{
     }
     #posts.show .content aside.related div{
       margin: 0;
-    }      
+    }
+
     /* global */
     code.syntax{
       font-family: Monaco, Courier;

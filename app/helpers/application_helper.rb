@@ -2,6 +2,7 @@ require 'simplabs/highlight'
 
 module ApplicationHelper
 
+  
   def prettify_post_content(post, options = {})
     #
     #

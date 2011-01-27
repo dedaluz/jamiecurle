@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110113121028) do
+ActiveRecord::Schema.define(:version => 20110127113825) do
 
   create_table "blog_images", :force => true do |t|
     t.string   "src"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(:version => 20110113121028) do
   end
 
   add_index "blog_images", ["post_id"], :name => "index_blog_images_on_post_id"
+
+  create_table "journals", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.text     "content"
+    t.boolean  "published"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "posts", :force => true do |t|
     t.string   "title"

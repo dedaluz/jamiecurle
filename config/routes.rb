@@ -1,5 +1,7 @@
 Jamiecurle::Application.routes.draw do
 
+  resources :journals
+
   devise_for :users
   #devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification'}
   #
