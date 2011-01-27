@@ -1,7 +1,14 @@
 class PostsController < ApplicationController
   
+  
+  
+  
   def feed
-    @posts = Post.find(:all, :order => 'created_at DESC', :limit => 5, :conditions => "published = true")
+    if params[:tag].nil?
+      @posts = Post.find(:all, :order => 'created_at DESC', :limit => 10, :conditions => "published = true")
+    else
+      @posts = Post.tagged_with(params[:tag])
+    end
   end
   
   # GET /posts

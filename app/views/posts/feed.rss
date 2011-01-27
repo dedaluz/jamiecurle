@@ -6,6 +6,7 @@
       <description>Inane Ramblings on a variety of topics.</description>
       <language>en-gb</language>
 <% @posts.each do |post| %>
+	<% if post.published %>
       <item> 
          <title><%= post.title %></title> 
          <link>http://jamiecurle.com/<%= url_for post %></link>
@@ -15,6 +16,7 @@
          <pubDate><%= post.created_at %></pubDate> 
          <guid>http://jamiecurle.com/<%= url_for post %></guid>
       </item> 
+	<% end %>
 <% end %> 
    </channel> 
 </rss>

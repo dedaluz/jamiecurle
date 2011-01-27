@@ -23,8 +23,8 @@ Jamiecurle::Application.routes.draw do
   #
   # posts
   match '/posts/feed', :to => 'posts#feed'
+  match '/posts/feed/:tag', :to => 'posts#feed'
   resources :posts do 
-    
     resources :blog_images
   end
   

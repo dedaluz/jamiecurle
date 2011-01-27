@@ -3,7 +3,8 @@ class Post < ActiveRecord::Base
   acts_as_url :title, :sync_url=> true
   acts_as_taggable
   
-
+  # playing around with named scopes - http://stackoverflow.com/questions/936947/filtering-activerecord-queries-in-rails
+  #named_scope :published, :conditions => "published = true"
 
   def poster
       # skiper everything of we have a blog_image_id
