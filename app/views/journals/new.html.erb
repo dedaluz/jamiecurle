@@ -1,4 +1,16 @@
-<h1>New journal</h1>
+<% content_for :stylesheets do %>
+	<link rel="stylesheet" href="/stylesheets/jamiecurle.edit.css" media="screen">
+<% end %>
+
+
+
+
+<% if notice %>
+<div class="notice">
+<%=notice %>
+</div>
+<% end %>
+
 
 <%= render 'form' %>
 

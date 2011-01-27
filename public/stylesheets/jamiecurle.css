@@ -154,6 +154,7 @@ footer #social:after,
   }
   #posts.index .content article p{
     font-size: 21px;
+    color: #999;
   }
   /* meta */
   #posts.index .content article p.meta{
