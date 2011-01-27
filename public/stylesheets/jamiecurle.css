@@ -296,8 +296,7 @@ footer #social:after,
 #journals .journals{
   width: 420px;
   padding: 10px;
-  margin: 0 auto;
-  margin-bottom: 50px;
+  margin: 50px auto;
   background-color: rgba(255,255,255,0.7);
   -webkit-box-shadow: 0 0 20px rgba(0,0,0, 0.1);
 }
