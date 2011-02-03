@@ -7,14 +7,14 @@
       <language>en-gb</language>
 <% @posts.each do |post| %>
 	<% if post.published %>
-      <item> 
-         <title><%= post.title %></title> 
-         <link>http://jamiecurle.com/<%= url_for post %></link>
-         <description>
-		<%= raw prettify_post_content post %>
-         </description> 
-         <pubDate><%= post.created_at %></pubDate> 
+      <item>
+         <pubDate><%= post.created_at.strftime("%d %b %Y") %> 06:00:00  GMT </pubDate> 
          <guid>http://jamiecurle.com/<%= url_for post %></guid>
+         <title><![CDATA[<%= post.title %>]]></title> 
+         <link>http://jamiecurle.com/<%= url_for post %></link>
+         <description><![CDATA[
+		<%= raw prettify_post_content post %>
+         ]]></description> 
       </item> 
 	<% end %>
 <% end %> 
