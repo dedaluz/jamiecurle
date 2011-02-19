@@ -1,50 +1,8 @@
-a{
-    text-decoration: none;
-    color: #559F00;
-}
-a:hover{
-    color: #559F00;
-}
-h1,h2,h3,h4{
-    padding: 12px 0;
-    line-height: 24px;
-    color: #fff;
-    font-weight: 400;
-    letter-spacing: -1px;
-}
-h1{font-size: 36px; margin-bottom: 24px;}
-h2{font-size: 30px;}
-h3{font-size: 24px; letter-spacing: 0}
-h4{font-size: 18px; letter-spacing: 0}
-
-time{
-    font-family:georgia;
-    color: #666;
-}
-p{
-    margin-bottom: 24px;
-}
-article p{
-    color: #999;
-    text-align: left;
-}
-article ol, article ul{
-    color: #999;
-    padding-left: 50px;
-    margin-bottom: 24px;
-}
-article ul{
-    list-style-type: square;
-}
-
-blockquote {
-font-family: georgia, serif;
-padding: 24px 14px 12px 14px;
-margin-bottom: 24px;
-background-color: #3e3e3e;
-}
-blockquote p{
-  color: #fff !important;
-  font-size: 24px;
-  line-height: 36px;
+body, label{
+    
+    font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", "Helvetica Neue", Helvetica, Arial;    
+} 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+h1,h2, h3, h4, h5, h6{
+    font-family: "chaparral-pro-1","chaparral-pro-2","Georgia", "Times New Roman", Serif;
 }

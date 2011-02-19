@@ -1,0 +1,31 @@
+
+/* header*/
+body > header h1{
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 55px;
+  position: fixed;
+  z-index: 1000;
+}
+  #posts.index > header h1,
+  #journals.index > header h1{
+    position: relative;
+  }
+  body > header h1 a{
+      display: block;
+      background-color: #E00303;
+      color: #fff;
+      font-weight: 300;
+      text-decoration: none;
+      text-shadow: none;
+      border-bottom: 0 none;
+      -moz-transition: all .1s ease-in-out;
+      -webkit-transition: all .1s ease-in-out;
+  }
+  body > header h1 a:hover{
+    color: #fff;
+    background-color: #BC0000;
+  }

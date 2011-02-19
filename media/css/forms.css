@@ -1,0 +1,99 @@
+/* container */
+form div.container{
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+}
+/* fieldsets */
+form fieldset {
+    position: relative;
+    background-color: rgba(0,0,0,0.075);
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 2px;
+    margin-bottom: 25px;
+}
+/* ul li & inputs textarea */
+form fieldset ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+    li input[type="text"],
+    li input[type="password"],
+    li textarea{
+        border: 1px solid #bbb;
+        padding: 1%;
+        width: 98%;
+        font-size: 14px;
+    }
+    li textarea{
+      height: 300px;
+    }
+
+form ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #fff;
+}
+    form ul li:first-child{
+        border-top: 0 none;
+    }
+    form ul li:last-child{
+        border-bottom: 0 none;
+    }
+/* label s*/
+form ul li label{
+    clear: both;
+    display: block;
+}
+/* collapsables */
+fieldset.collapsable p{
+    margin: 0;
+    padding: 0;
+}
+fieldset.collapsable p a{
+    display: block;
+    color: #7C7C7C;
+    font-style: italic;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+fieldset.collapsable p a:hover{
+    background-color: transparent;
+    color: #000;
+}
+
+fieldset.collapsable ul.errorlist li{
+    display: block !important;
+}
+
+
+fieldset.collapsable li{
+    display: none;
+}
+fieldset.collapsable li[title="errors"]{
+    display: block;
+}
+
+
+
+/* inlines */
+ul.inline{
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #fff;
+}
+ul.inline li{
+    border: 0px none;
+    display: block;
+    float: left;
+    width: auto;
+}
+ul.inline:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}

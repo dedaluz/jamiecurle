@@ -1,0 +1,28 @@
+{% block form_css %}
+	{% for js in form.media.render_css %}
+		{{css|safe}}
+	{% endfor %}
+{% endblock %}
+
+
+{% block form_js %}
+	{% for js in form.media.render_js %}
+		{{js|safe}}
+	{% endfor %}
+{% endblock %}
+
+
+
+{% block errors %}
+{% if form.non_field_errors %}{{ form.non_field_errors }}{% endif %}
+{% endblock %}
+
+{% block fields %}
+<fieldset class="fieldset_main">
+<ul>
+{% with form as fields %}
+{% include "form_utils/fields_as_lis.html" %}
+{% endwith %}
+</ul>
+</fieldset>
+{% endblock %}

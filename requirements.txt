@@ -1,0 +1,7 @@
+Django
+south
+johnny-cache
+django-debug
+django-taggit
+BeautifulSoup
+django-form-utils

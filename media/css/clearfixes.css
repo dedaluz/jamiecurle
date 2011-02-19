@@ -1,0 +1,18 @@
+/* clearfixes */
+#posts.show .content article header:after, 
+div.content:after, 
+footer:after, 
+footer #about-me:after, 
+footer #social:after, 
+#posts.show .content article:after,
+#posts.show .content aside.related div:after,
+#posts.index .posts:after,
+#posts.index .content article:after,
+#posts.index .content article a:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}

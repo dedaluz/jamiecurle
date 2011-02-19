@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title> Jamie Curle : {% block title %}{% endblock %}</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://jamiecurle.com/posts/feed.rss">
+		<link rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+		<link rel="icon" type="image/png" href="{{MEDIA_URL}}favicon.ico" />
+		<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0;">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/core.css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/clearfixes.css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/header.css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/footer.css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/tags.css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/forms.css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/errors.css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/typography.css" media="screen">
+		{% block head %}
+		{% endblock %}
+
+		<script type="text/javascript" src="http://use.typekit.com/rll1nei.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+	</head>
+	<body id="{% block id %}{% endblock %}" class="{% block bodyclass %}{% endblock %}">
+		{% block body %}
+		<header>
+			<h1><a href="/">JC</a></h1>
+		</header>
+		<div class="content">
+			{% block content %}
+			{% endblock %}
+		</div>
+		<footer>
+			<article id="about-me">
+				<img src="{{MEDIA_URL}}images/jamiecurle.jpg" alt="Photograph of Jamie Curle">
+				<p>
+					I'm a <a href="/tags/development/">developer</a> / 
+					<a href="/tags/design/">designer</a> working towards being 
+					a <a href="/tags/education/">creative educator</a>. I play 
+					with the creative process, exploring web technologies and try to harvest 
+					<a href="/tags/joy/">joy</a> from the 
+					<a href="/tags/design/">user experience</a>. In my spare time I 
+					<a href="/tags/botany">grow chillies</a>, play the drums and 
+					<a href="/tags/training">train</a>
+					You can <a href="http://twitter.com/jamiecurle" title="Jamie Curle Twitter">contact me on twitter</a>
+				</p>
+			</article>
+			<div id="social">
+					<a class="tag twitter" href="http://twitter.com/jamiecurle">Twitter</a></li>
+					<a class="tag flickr" href="http://flickr.com/photos/mr_curle/">Flickr</a>
+					<a class="tag lastfm" href="http://www.last.fm/user/jamiecurle">Last.fm</a>
+					<a class="tag tumblr" href="http://tumblr.jamiecurle.com">Tumblr</a>
+					<a class="tag tumblr" href="http://tumblr.jamiecurle.com">About Me</a>
+					<a class="tag tumblr" href="http://tumblr.jamiecurle.com">Github</a>
+					<a class="tag tumblr" href="http://tumblr.jamiecurle.com">Linkedin</a>
+			</div>
+			<div id="creative-commons">
+				<p>
+					<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jamiecurle.com</span> by 
+					<a xmlns:cc="http://creativecommons.org/ns#" href="http://jamiecurle.com" property="cc:attributionName" rel="cc:attributionURL">Jamie Curle</a> 
+					is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+					Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+				</p>
+			</div>
+		</footer>
+		{% endblock %}
+		
+
+{% block js %}{% endblock %}
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18964988-1']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+	</body>
+</html>
