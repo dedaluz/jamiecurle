@@ -7,9 +7,8 @@
 			<p> 
 				{% if 'collapsable' in fieldset.classes %}
 					<a href="#">
-						<span>
-							Show {% if fieldset.errors %} all {% endif %}
-						</span> {{ fieldset.legend }}
+						<span> Show </span> 
+						{% if fieldset.errors %} all {% endif %}{{ fieldset.legend }}
 					</a>
 				{% else %}
 					{{ fieldset.legend }} 

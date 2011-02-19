@@ -10,7 +10,6 @@ class BlogImageForm(BetterModelForm):
         model = BlogImage
     
 
-
 class BlogPostForm(BetterModelForm):
     
     class Meta:
@@ -21,5 +20,3 @@ class BlogPostForm(BetterModelForm):
             ('Optional Info', {'fields' : ['slug', 'created'], 'classes' : ('collapsable', ) }),
         ]
     
-    class Media:
-        js = ['js/forms.collapse.js']

@@ -9,8 +9,8 @@
 		{{form|render}}
 		
 	
-		<fieldset class="collapsable">
-			<p> <a href="#" class="collapser"> <span>Show</span> Images </a> </p>
+		<fieldset class="collapsable-inline">
+			<p> <a href="#"> <span>Show</span> Images </a> </p>
 			<div>
 			{{ blogimage_formset.management_form }}
 			{% for form in blogimage_formset.forms %}
@@ -24,4 +24,9 @@
 		<button type="submit">Go</button>
 	</div>
 </form>
+{% endblock %}
+
+{% block js %}
+<script src="{{MEDIA_URL}}js/forms.collapse.js" type="text/javascript"></script>
+<script src="{{MEDIA_URL}}js/forms.inlinecollapse.js" type="text/javascript"></script>
 {% endblock %}

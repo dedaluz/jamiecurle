@@ -48,28 +48,28 @@ form ul li label{
     display: block;
 }
 /* collapsables */
-fieldset.collapsable p{
+fieldset.collapsable p, fieldset.collapsable-inline p{
     margin: 0;
     padding: 0;
 }
-fieldset.collapsable p a{
+fieldset.collapsable p a, fieldset.collapsable-inline p a{
     display: block;
     color: #7C7C7C;
     font-style: italic;
     font-size: 12px;
     text-transform: uppercase;
 }
-fieldset.collapsable p a:hover{
+fieldset.collapsable p a:hover, fieldset.collapsable-inline p a:hover{
     background-color: transparent;
     color: #000;
 }
 
-fieldset.collapsable ul.errorlist li{
+fieldset.collapsable ul.errorlist li, fieldset.collapsable-inline ul.errorlist ul{
     display: block !important;
 }
 
 
-fieldset.collapsable li{
+fieldset.collapsable li, fieldset.collapsable-inline ul{
     display: none;
 }
 fieldset.collapsable li[title="errors"]{
