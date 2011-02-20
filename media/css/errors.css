@@ -1,12 +1,12 @@
 /*  forms */
 
-ul ul.errorlist{
+.errors ul.errorlist{
     background-color: rgba(255,0,0,0.1);
     border: 0 none;
     width: 100%;
     margin: 0;
 }
-ul ul.errorlist li{
+.errors ul.errorlist li{
     border: 0 none;
     color: #720000;
 }

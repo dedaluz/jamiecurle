@@ -64,7 +64,7 @@ fieldset.collapsable p a:hover, fieldset.collapsable-inline p a:hover{
     color: #000;
 }
 
-fieldset.collapsable ul.errorlist li, fieldset.collapsable-inline ul.errorlist ul{
+fieldset.collapsable ul.errorlist li, fieldset.collapsable-inline ul.errorlist {
     display: block !important;
 }
 
@@ -72,7 +72,7 @@ fieldset.collapsable ul.errorlist li, fieldset.collapsable-inline ul.errorlist u
 fieldset.collapsable li, fieldset.collapsable-inline ul{
     display: none;
 }
-fieldset.collapsable li[title="errors"]{
+fieldset.collapsable li[title="errors"], .collapsable-inline ul.errors{
     display: block;
 }
 

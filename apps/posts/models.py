@@ -40,6 +40,7 @@ class BlogPost(models.Model):
 
 class BlogImage(models.Model):
     src = ImageWithThumbsField('Image', upload_to=upload_path, sizes=settings.IMAGE_SIZES)
+    title = models.CharField(max_length=255, blank=True, null=True)
     blogpost = models.ForeignKey(BlogPost)
     
     rules = [

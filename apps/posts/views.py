@@ -16,7 +16,7 @@ from models import BlogPost, BlogImage
 def create(request):
     
     
-    BlogImageFormSet = inlineformset_factory(BlogPost,BlogImage, form=BlogImageForm, extra=1)
+    BlogImageFormSet = inlineformset_factory(BlogPost,BlogImage, form=BlogImageForm, extra=3)
     
     if request.method == 'POST':
         form = BlogPostForm(request.POST)
