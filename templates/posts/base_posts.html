@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block id %}posts{% endblock %}
+
+{% block content %}
+<div id="adminbar">
+	<ul>
+		<li><a href="{% url posts:create %}">New</a></li>
+		{% if post.pk %}<li><a href="{% url posts:edit post.slug %}">Edit</a></li>{% endif %}
+	</ul>
+</div>
+	{% block content_posts %}
+	
+	{% endblock %}
+{% endblock %}

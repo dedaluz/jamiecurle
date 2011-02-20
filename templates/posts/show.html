@@ -1,0 +1,49 @@
+{% extends 'posts/base_posts.html' %}
+
+
+{% block head %}
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/posts/show.css" media="screen">
+{% endblock %}
+
+{% block bodyclass %}show{% endblock %}
+
+{% block content %}
+
+<article id="jamiecurle_com-post-{{post.pk}}>">
+	<header>
+		<h1>{{post.title}}</h1>
+	</header>
+	<div class="meta">
+		<p class="time">
+			Posted on 
+			<time>{{post.created_on}}</time>
+			and tagged with
+			<% @post.tags.each do |tag| %>
+			<a href="/tags/<%= tag.name %>" class="tag"><%= tag.name %></a>
+			<% end %>
+		</p>
+	</div>
+	<div class="body">
+		<p class="description">{{post.description}}</p>
+		{{post.content_rendered}}
+	</div>
+</article>
+
+<aside class="related">
+	<div>
+		<h2>Possibly Related</h2>
+		<% @post.find_related_tags.each do |rel| %>
+		<article>
+			<a href="<%= url_for(rel) %>"><img src="<%= rel.poster.thumb %>"><%= rel.title %></a>
+		</article>
+		<% end %>
+	</div>
+</aside>
+
+
+<div id="adminbar">
+	<ul>
+		<li><a href="{% url posts:edit post.slug %}">Edit</a></li>
+	</ul>
+</div>
+{% endblock %}
