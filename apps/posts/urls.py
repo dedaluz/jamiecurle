@@ -4,7 +4,7 @@ from views import index, post, create
 
 urlpatterns = patterns('',
     url(r'^create/$', create, name="create"),
-    url(r'^(?P<slug>[\w+])/$', post, name="view"),
+    url(r'^(?P<slug>[\w\-]+)/$', post, name="post"),
     url(r'^$', index, name="index"),
 )
 

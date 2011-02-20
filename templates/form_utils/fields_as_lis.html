@@ -3,9 +3,10 @@
 {{ field }}
 {% else %}
 <li  {{ field.row_attrs }}  {% if field.errors %} title="errors" {% endif %}>
-  {{ field.errors }}
-  {{ field.label_tag }}
-  {{ field }}
+	{{ field.errors }}
+	{{ field.label_tag }}
+	<span class="help_text">{{field.help_text}}</span>
+	{{ field }}
 </li>
 {% endif %}
 {% endfor %}

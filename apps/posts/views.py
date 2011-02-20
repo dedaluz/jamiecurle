@@ -22,14 +22,12 @@ def create(request):
         form = BlogPostForm(request.POST)
         blogimage_formset = BlogImageFormSet(request.POST, request.FILES, prefix="blogimage")
         
-        if form.is_valid():
+        if form.is_valid() and blogimage_formset.is_valid():
             blogpost = form.save()
-            if blogimage_formset.is_valid():
-                blogimages = blogimage_formset.save()
+            # construct the formset again, this time using the instance
+            blogimage_formset = BlogImageFormSet(request.POST, request.FILES, instance=blogpost , prefix="blogimage")
+            blogimages = blogimage_formset.save()
         
-        print form.errors
-        print blogimage_formset.errors
-        #print blogpost, blogimages
     
     if request.method == 'GET':
         form = BlogPostForm()
@@ -44,5 +42,10 @@ def post(request, slug):
     pass
 
 def index(request):
-    return render_to_response('posts/index.html', RequestContext(request,{}))
+    posts = BlogPost.objects.for_user(request.user)
+    
+    
+    return render_to_response('posts/index.html', RequestContext(request,{
+        'posts' : posts,
+    }))
 

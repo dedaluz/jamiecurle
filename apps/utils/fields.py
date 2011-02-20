@@ -1,6 +1,11 @@
-# -*- coding: utf-8 -*-
+# -*- encoding: utf-8 -*-
+from datetime import datetime
+from PIL import Image
+import cStringIO
+from django.conf import settings
 from django.db.models import ImageField
 from django.db.models.fields.files import ImageFieldFile
+from django.core.files.base import ContentFile
 #
 #
 # upload path callable

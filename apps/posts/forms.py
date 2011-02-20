@@ -24,4 +24,4 @@ class BlogPostForm(BetterModelForm):
         ]
     
     class Media:
-        js = ('js/forms.collapse.js',)
+        js = ('js/forms.collapse.js','js/forms.slug.js')

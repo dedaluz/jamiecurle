@@ -1,4 +1,4 @@
-# Django settings for blank project.
+# Django settings for jamiecurle project.
 import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
 path = lambda *a: os.path.join(ROOT, *a)
@@ -15,8 +15,8 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'blank',                      # Or path to database file if using sqlite3.
-        'USER': 'user',                      # Not used with sqlite3.
+        'NAME': 'jamiecurle2',                      # Or path to database file if using sqlite3.
+        'USER': 'jcurle',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
@@ -38,7 +38,7 @@ MEDIA_ROOT = path('media/')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = 'http://blank.jc/'
+MEDIA_URL = 'http://jamiecurle.jc/'
 
 INTERNAL_IPS = ('127.0.0.1',)
 DEBUG_TOOLBAR_CONFIG = {
@@ -74,7 +74,7 @@ MIDDLEWARE_CLASSES = (
     #'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
-ROOT_URLCONF = 'blank.urls'
+ROOT_URLCONF = 'jamiecurle.urls'
 
 TEMPLATE_DIRS = (
     path('templates'),
@@ -93,10 +93,12 @@ INSTALLED_APPS = (
     'debug_toolbar',
     'johnny',
     'taggit',
-    'compressor'
+    'compressor',
+    'form_utils',
+    'apps.posts',
 )
 
-JOHNNY_MIDDLEWARE_KEY_PREFIX='blank'
+JOHNNY_MIDDLEWARE_KEY_PREFIX='jamiecurle'
 """CACHES = {
         'default': {
             'BACKEND': 'johnny.backends.memcached.CacheClass',
@@ -118,4 +120,5 @@ LOGIN_URL = '/authenticate/login.html'
 LOGOUT_URL = '/authenticate/logout.html'
 LOGIN_REDIRECT_URL  = '/'
 
-#COMPRESS = True
+COMPRESS = True
+IMAGE_SIZES = ((850,600), (200,200) )

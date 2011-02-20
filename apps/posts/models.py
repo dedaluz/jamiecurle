@@ -5,6 +5,7 @@ from django.conf import settings
 from taggit.managers import TaggableManager
 from south.modelsinspector import add_introspection_rules
 from apps.utils.fields import upload_path, ImageWithThumbsField
+from managers import BlogPostManager
  
 class BlogPost(models.Model):
 
@@ -20,7 +21,7 @@ class BlogPost(models.Model):
         (PRIVATE, 'Private'),
     )
     title = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=255, unique=True)
+    slug = models.SlugField('URL', help_text="numbers, letters and dashes only.", max_length=255, unique=True)
     description = models.CharField(max_length=255)
     content = models.TextField()
     content_rendered = models.TextField(blank=True, null=True)
@@ -28,13 +29,17 @@ class BlogPost(models.Model):
     modified = models.DateTimeField(auto_now=True)
     status = models.PositiveSmallIntegerField('This post is...', default = 0, choices = STATUS_CHOICES)
     
+    objects = BlogPostManager()
+    
     def __unicode__(self):
         return u'%s' % self.title
     
     
     @models.permalink
     def get_absolute_url(self):
-        return ('posts:post', (self.slug) ) 
+        return ('posts:post', (), {
+            'slug' : self.slug
+        } ) 
     
     
 
