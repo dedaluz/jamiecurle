@@ -4,7 +4,7 @@ body, label{
 } 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 h1,h2, h3, h4, h5, h6{
-    font-family: "chaparral-pro-1","chaparral-pro-2","Georgia", "Times New Roman", Serif;
+    font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", "Times New Roman", Serif;
 }
 
 /* form  - input text */

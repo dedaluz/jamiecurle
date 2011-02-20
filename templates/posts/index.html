@@ -1,8 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'posts/base_posts.html' %}
 
-{% block content %}
+{% block content_posts %}
 
-asd
 {% for post in posts %}
 
 <a href="{{post.get_absolute_url}}">{{post.title}}</a>

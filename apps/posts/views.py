@@ -14,33 +14,55 @@ from models import BlogPost, BlogImage
 
 
 def create(request):
-    
-    
+    return edit(request)
+
+def edit(request, slug=None):
+    # create the obj is we have a slug
+    instance = None
+    if slug is not None:
+        instance = get_object_or_404(BlogPost, slug=slug)
+    # create the formsets
     BlogImageFormSet = inlineformset_factory(BlogPost,BlogImage, form=BlogImageForm, extra=3)
-    
+    #
+    # process post
     if request.method == 'POST':
-        form = BlogPostForm(request.POST)
-        blogimage_formset = BlogImageFormSet(request.POST, request.FILES, prefix="blogimage")
-        
+        form = BlogPostForm(request.POST, instance=instance)
+        blogimage_formset = BlogImageFormSet(request.POST, request.FILES, instance=instance, prefix="blogimage")
+        # if we're all valid then proceed with creation
         if form.is_valid() and blogimage_formset.is_valid():
+            # save the post
             blogpost = form.save()
-            # construct the formset again, this time using the instance
-            blogimage_formset = BlogImageFormSet(request.POST, request.FILES, instance=blogpost , prefix="blogimage")
+            # if we have no instance then remake the formset using the new blogpost
+            if instance is None:
+                blogimage_formset = BlogImageFormSet(request.POST, request.FILES, instance=blogpost , prefix="blogimage")
+            # save the images
             blogimages = blogimage_formset.save()
-        
-    
+            # create the message
+            # return the correct redirect
+            return HttpResponseRedirect(reverse("posts:show", args=[blogpost.slug]))
+    #
+    # process a GET
     if request.method == 'GET':
-        form = BlogPostForm()
-        blogimage_formset = BlogImageFormSet(prefix="blogimage")
+        form = BlogPostForm(instance=instance)
+        blogimage_formset = BlogImageFormSet(instance=instance, prefix="blogimage")
     
-    return render_to_response('posts/create.html', RequestContext(request,{
+    #
+    # all done - return
+    return render_to_response('posts/create_and_edit.html', RequestContext(request,{
         'form' : form,
         'blogimage_formset' : blogimage_formset 
     }))
 
-def post(request, slug):
-    pass
 
+
+
+def show(request, slug):
+    post = get_object_or_404(BlogPost, slug=slug)
+    
+    return render_to_response('posts/show.html', RequestContext(request,{
+        'post' : post,
+    }))
+    
 def index(request):
     posts = BlogPost.objects.for_user(request.user)
     

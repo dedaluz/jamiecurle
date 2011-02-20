@@ -37,7 +37,7 @@ class BlogPost(models.Model):
     
     @models.permalink
     def get_absolute_url(self):
-        return ('posts:post', (), {
+        return ('posts:show', (), {
             'slug' : self.slug
         } ) 
     
