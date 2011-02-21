@@ -46,6 +46,8 @@ def edit(request, slug=None):
         form = BlogPostForm(instance=instance)
         blogimage_formset = BlogImageFormSet(instance=instance, prefix="blogimage")
     
+    #print form.tags.media
+    
     #
     # all done - return
     return render_to_response('posts/create_and_edit.html', RequestContext(request,{

@@ -3,7 +3,10 @@
 
 {% block head %}
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/posts/show.css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/syntax.css" media="screen">
 {% endblock %}
+
+{% block title %} {{post.title}} - {% endblock %}
 
 {% block bodyclass %}show{% endblock %}
 
@@ -25,7 +28,7 @@
 	</div>
 	<div class="body">
 		<p class="description">{{post.description}}</p>
-		{{post.content_rendered}}
+		{{post.content_rendered|safe}}
 	</div>
 </article>
 

@@ -30,6 +30,7 @@ class BlogPost(models.Model):
     status = models.PositiveSmallIntegerField('This post is...', default = 0, choices = STATUS_CHOICES)
     
     objects = BlogPostManager()
+    tags = TaggableManager()
     
     def __unicode__(self):
         return u'%s' % self.title
