@@ -19,7 +19,11 @@ def render(content):
         code_class = match_obj.group(1) 
         code_string = match_obj.group(2) 
         if code_class.find('lang'): 
-            language = re.split(r'"|\'', code_class)[1] 
+            language = re.split(r'"|\'', code_class)[1]
+            # fix some wonky lexers
+            if language == 'conf': language = 'nginx'
+            if language == 'regex': language = 'perl'
+            # all goods
             lexer = lexers.get_lexer_by_name(language) 
         else: 
             try: 

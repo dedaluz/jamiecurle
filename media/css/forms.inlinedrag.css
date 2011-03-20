@@ -1,0 +1,8 @@
+.forms-drop-target{
+    -webkit-box-shadow: 0 0 40px rgba(0,0,0,0.5), 0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0 0 40px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8);
+}
+.ui-draggable-dragging{
+    opacity: 0.5;
+    cursor: move;
+}

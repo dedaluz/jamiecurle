@@ -8,16 +8,18 @@
 		{% csrf_token %}
 		{{form|render}}
 		
-	{{blogimage_formset.media}}
-		<fieldset class="collapsable-inline">
-			<p> <a href="#"> <span>Show</span> Images </a> </p>
-			{{ blogimage_formset.management_form }}
-			{% for form in blogimage_formset.forms %}
-				<ul class="inline {% if form.errors %} errors {% endif %}">
+		{% with blogimage_formset as formset %}
+		{{formset_media}}
+		<fieldset class="collapsable-inline orderable drag">
+			<p> <a href="#"> <span>Show</span> {% if formset.errors %}all {% endif %} Images </a> </p>
+			{{ formset.management_form }}
+			{% for form in formset.forms %}
+				<ul data-markdown="![{{form.instance.title}}]({{form.instance.l}})" class="inline {% if form.errors %} errors {% endif %} {% if form.instance.pk %} forms-no-delete {% endif %}">
 				{{form.as_ul}}
 				</ul>
 			{% endfor %}
 		</fieldset>
+		{% endwith %}
 		
 		<button type="submit">Go</button>
 	</div>

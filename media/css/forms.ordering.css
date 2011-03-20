@@ -1,0 +1,17 @@
+.orderable ul img{
+    width: 80px;
+    height: 80px;
+}
+.orderable ul.ui-sortable-helper{
+    background-color: #000;
+    opacity: 0.35;
+    cursor: move;
+    padding: 0;
+    margin-left: -10px !important;
+}
+ul.ui-state-highlight{
+    height: 76px;
+    display: block !important;
+    background-color: #B3E7E7;
+    margin: 0 !important;
+}

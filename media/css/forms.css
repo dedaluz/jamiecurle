@@ -2,13 +2,13 @@
 form div.container{
     margin: 0 auto;
     padding: 0;
-    width: 90%;
+    width: 80%;
 }
 /* fieldsets */
 form fieldset {
     position: relative;
     background-color: rgba(0,0,0,0.075);
-    border: 2px solid rgba(0,0,0,0.2);
+    border: 1px solid rgba(0,0,0,0.2);
     border-radius: 2px;
     margin-bottom: 25px;
 }
@@ -22,6 +22,7 @@ form fieldset ul{
     li input[type="text"],
     li input[type="password"],
     li textarea{
+        font-family: "Helvetica Neue", Helvetica, Arial, 'Sans Serif';
         border: 1px solid #bbb;
         padding: 1%;
         width: 98%;
@@ -32,6 +33,7 @@ form fieldset ul{
     }
 
 form ul li {
+    list-style-type: none;
     padding: 10px;
     border-bottom: 1px solid #ccc;
     border-top: 1px solid #fff;
@@ -54,8 +56,8 @@ fieldset.collapsable p, fieldset.collapsable-inline p{
 }
 fieldset.collapsable p a, fieldset.collapsable-inline p a{
     display: block;
-    color: #7C7C7C;
-    font-style: italic;
+    color: #ABABAB;
+    font-weight: 800;
     font-size: 12px;
     text-transform: uppercase;
 }
@@ -79,9 +81,13 @@ fieldset.collapsable li[title="errors"], .collapsable-inline ul.errors{
 
 
 /* inlines */
+.collapsable-inline ul.inline:first-child {
+    border-top: 0 none;
+}
 ul.inline{
     border-bottom: 1px solid #ccc;
     border-top: 1px solid #fff;
+    margin: 0 !important;
 }
 ul.inline li{
     border: 0px none;
@@ -96,4 +102,16 @@ ul.inline:after{
     content: " ";
     clear: both;
     height: 0;
+}
+
+/* hidden */
+.forms-hidden{
+    display: none !important;
+}
+
+.forms-delete{
+    float: right !important;
+}
+ul.forms-marked-for-deletion{
+    background-color: #E7DAD5;
 }

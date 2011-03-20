@@ -49,14 +49,37 @@ class BlogImage(models.Model):
     title = models.CharField(max_length=255, blank=True, null=True)
     blogpost = models.ForeignKey(BlogPost)
     
-    rules = [
-        (
-            (ImageWithThumbsField, ),
-            [],
-            {
-                "blank": ["blank", {"default": True}],
-                "max_length": ["max_length", {"default": 100}],
-            },
-        ),
-    ]
-    add_introspection_rules(rules, ["^apps\.utils\.fields",])
+    
+    @property
+    def t(self):
+        try:
+            return self.src.url_200x200
+        except AttributeError:
+            return False
+    
+    @property
+    def l(self):
+        try:
+            return self.src.url_612x612
+        except AttributeError:
+            return False    
+    
+    @property
+    def f(self):
+        try:
+            return self.src.url_850x600
+        except AttributeError:
+            return False
+    
+
+rules = [
+    (
+        (ImageWithThumbsField, ),
+        [],
+        {
+            "blank": ["blank", {"default": True}],
+            "max_length": ["max_length", {"default": 100}],
+        },
+    ),
+]
+add_introspection_rules(rules, ["^apps\.utils\.fields",])
