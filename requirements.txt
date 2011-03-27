@@ -8,3 +8,5 @@ BeautifulSoup
 django-form-utils
 markdown
 pygments
+django-disqus
+-e git+https://github.com/Instagram/python-instagram.git#egg=instagram

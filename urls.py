@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
-from apps.posts.views import index
+from apps.utils.views import index
 admin.autodiscover()
 
 urlpatterns = patterns('',

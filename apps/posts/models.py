@@ -6,9 +6,9 @@ from taggit.managers import TaggableManager
 from south.modelsinspector import add_introspection_rules
 from apps.utils.fields import upload_path, ImageWithThumbsField
 from managers import BlogPostManager
- 
-class BlogPost(models.Model):
 
+class BlogPost(models.Model):
+    _IMG = None
     HIDDEN = 0
     PUBLISHED = 1
     DELETED = 2
@@ -43,12 +43,28 @@ class BlogPost(models.Model):
         } ) 
     
     
+    def img(self):
+        if not self._IMG:
+            try:
+                self._IMG = self.blogimage_set.all()[0]
+            except IndexError:
+                return BlankImg()
+        return self._IMG
+    
+
+class BlankImg(object):
+    t = '%simages/blank.t.png' % settings.MEDIA_URL
+    l = '%simages/blank.l.png' % settings.MEDIA_URL
+    f = '%simages/blank.f.png' % settings.MEDIA_URL
+    title = "Blank Image"
+    
+
 
 class BlogImage(models.Model):
     src = ImageWithThumbsField('Image', upload_to=upload_path, sizes=settings.IMAGE_SIZES)
     title = models.CharField(max_length=255, blank=True, null=True)
     blogpost = models.ForeignKey(BlogPost)
-    
+    order = models.PositiveSmallIntegerField(default=5)
     
     @property
     def t(self):
@@ -60,7 +76,7 @@ class BlogImage(models.Model):
     @property
     def l(self):
         try:
-            return self.src.url_612x612
+            return self.src.url_612x450
         except AttributeError:
             return False    
     

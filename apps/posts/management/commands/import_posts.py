@@ -1,12 +1,15 @@
+# -*- coding: utf-8 -*-
 import MySQLdb
 import re
 import shutil
 import os
+import sys
 from PIL import Image
 import cStringIO
 from datetime import datetime
 from django.core.management.base import BaseCommand, CommandError
 from django.conf import settings
+from django.utils.encoding import smart_unicode
 from apps.posts.models import BlogPost, BlogImage
 from apps.posts.templatetags.posts_tags import render
 
@@ -39,6 +42,8 @@ def generate_thumb(img, thumb_size, format, path):
         
     # get size
     thumb_w, thumb_h = thumb_size
+    
+    
     # If you want to generate a square thumbnail
     if thumb_w == thumb_h:
         # quad
@@ -77,7 +82,7 @@ def upload_path(instance, filename):
 class Command(BaseCommand):
     #args = '<poll_id poll_id ...>'
     help = 'migrates old blog posts'
-
+    
     def handle(self, *args, **options):
         # destroy everything
         for p in BlogPost.objects.all():
@@ -90,7 +95,12 @@ class Command(BaseCommand):
         
         # create the connection and grab the results
         db = MySQLdb.connect(host="localhost",user="designcc",db="jc_rails_import", cursorclass = MySQLdb.cursors.DictCursor)
+        db.set_character_set('utf8')
+        
         c = db.cursor()
+        c.execute('SET NAMES utf8;')
+        c.execute('SET CHARACTER SET utf8;')
+        c.execute('SET character_set_connection=utf8;')
         sql = "select * from posts"
         c.execute(sql)
         results = c.fetchall()
@@ -101,7 +111,9 @@ class Command(BaseCommand):
             obj.title = row['title']
             obj.slug = row['url']
             obj.description = row['description']
-            obj.content = unicode(row['body'], errors='ignore')
+            # do some replacing
+            obj.content.encode('utf-8')
+            obj.content = smart_unicode(row['body'])
             obj.created = row['created_at']
             obj.content_rendered = render(obj.content)
             obj.status = BlogPost.PUBLISHED
@@ -128,7 +140,6 @@ class Command(BaseCommand):
                 blogimage.blogpost = obj
                 # do the title
                 blogimage.title = title
-                blogimage.save()
                 # do the paths
                 # get the filename
                 filename = path.rsplit('/')
@@ -136,6 +147,7 @@ class Command(BaseCommand):
                 filename = filename[0]
                 new_image_upload  = upload_path(blogimage, filename)
                 blogimage.src = new_image_upload
+                blogimage.save()
                 # set the paths
                 original_image_path = ORIGINAL_IMAGE_PATH + path
                 new_image_path = NEW_IMAGE_PATH + new_image_upload
@@ -177,7 +189,6 @@ class Command(BaseCommand):
                 blogimage.blogpost = obj
                 # do the title
                 blogimage.title = title
-                blogimage.save()
                 # do the paths
                 # get the filename
                 filename = path.rsplit('/')
@@ -191,6 +202,7 @@ class Command(BaseCommand):
 
                 new_image_upload  = upload_path(blogimage, filename)
                 blogimage.src = new_image_upload
+                blogimage.save()
                 # set the paths
                 original_image_path = ORIGINAL_IMAGE_PATH + path
                 new_image_path = NEW_IMAGE_PATH + new_image_upload
