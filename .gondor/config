@@ -1,0 +1,9 @@
+[app]
+requirements_file = requirements.txt
+wsgi_entry_point = deploy.wsgi
+migrations = none
+
+[gondor]
+site_key = STVB49JHP7P
+vcs = git
+
