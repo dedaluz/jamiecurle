@@ -73,6 +73,7 @@ body > header{
         text-decoration: none;
         text-align: center;
         background-color:#E70005;
+        background-color: hsla(207, 38%, 47%, .4);
     }
         body > header span{
             display: none;
@@ -81,6 +82,7 @@ body > header{
     div.content{
         float: left;
         width: 612px;
+        margin-bottom: 42px;
     }
     
 footer{

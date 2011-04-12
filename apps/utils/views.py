@@ -9,7 +9,7 @@ from apps.posts.models import BlogPost, BlogImage
 
 
 def index(request):
-    posts = BlogPost.objects.for_user(request.user)[:5]
+    posts = BlogPost.objects.for_user(request.user)[:15]
     
     
     return render_to_response('home/index.html', RequestContext(request,{
