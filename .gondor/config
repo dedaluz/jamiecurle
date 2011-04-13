@@ -1,7 +1,7 @@
 [app]
 requirements_file = requirements.txt
 wsgi_entry_point = deploy.wsgi
-migrations = none
+migrations = south
 
 [gondor]
 site_key = STVB49JHP7P

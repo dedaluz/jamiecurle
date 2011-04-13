@@ -9,4 +9,6 @@ django-form-utils
 markdown
 pygments
 django-disqus
--e git+https://github.com/Instagram/python-instagram.git#egg=instagram
+--extra-index-url=http://dist.gondor.io/dev/
+gondor==1.0a1.dev38
+psycopg2==2.4
