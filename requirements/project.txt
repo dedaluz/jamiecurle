@@ -1,0 +1,14 @@
+Django
+django-compressor
+south
+johnny-cache
+django-debug
+django-taggit
+BeautifulSoup
+django-form-utils
+markdown
+pygments
+django-disqus
+--extra-index-url=http://dist.gondor.io/dev/
+gondor==1.0a1.dev38
+psycopg2==2.4

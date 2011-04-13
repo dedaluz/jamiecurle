@@ -1,5 +1,5 @@
 [app]
-requirements_file = req.txt
+requirements_file = requirements/project.txt
 wsgi_entry_point = deploy.wsgi
 migrations = south
 
