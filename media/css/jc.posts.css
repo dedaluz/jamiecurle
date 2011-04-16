@@ -6,6 +6,9 @@ article header{
     border-bottom: 4px #D7D7D7 solid;
     margin-bottom: 17px;
 }
+article header h1{
+    margin-top: 0px;
+}
 #posts.show article h1{
     font-size: 28px;
 }

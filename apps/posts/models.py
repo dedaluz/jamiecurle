@@ -74,6 +74,13 @@ class BlogImage(models.Model):
             return False
     
     @property
+    def m(self):
+        try:
+            return self.src.url_320x240
+        except AttributeError:
+            return False
+    
+    @property
     def l(self):
         try:
             return self.src.url_612x450

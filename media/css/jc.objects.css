@@ -1,16 +1,24 @@
 div.object{
     display: block;
-    width: 200px;
-    height: 160px;
     float: left;
     margin-right: 21px;
     margin-bottom: 21px;
-    background-color: #000;
     position: relative;
+    background-color: #393939;
+    background-color: rgba(0,0,0,0.6);
 }
+div.object.m{
+    width: 295px;
+    height: 160px;
+}
+    div.object.m:nth-child(odd){
+        margin-right: 0;
+        width: 296px;
+    }
 div.object.l{
-    width: 420px;
+    width: 612px;
     height: 340px;
+    margin-right: 0;
 }
 div.object.l > a{
     background-position: center center;
@@ -28,7 +36,7 @@ div.object p{
     padding: 5px;
     font-size: 11px;
     background-color: #393939;
-    background-color: hsla(207, 38%, 47%, .4);
+    background-color: rgba(0,0,0,0.6);
 }
  div.object p a{
      color: #fff;
@@ -43,10 +51,9 @@ ul.object li{
     clear: both;
     display: block;
     padding: 0;
-    margin-right: 24px;
     font-size: 11px;
     background-color: #393939;
-    background-color: hsla(207, 38%, 47%, .4);
+    background-color: rgba(0,0,0,0.6);
 }
 ul.object li a {
     display: block;

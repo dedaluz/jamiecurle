@@ -10,8 +10,8 @@
 
 {% for post in posts %}
 {% if forloop.counter <= 5 %}
-<div class="object {% if forloop.counter == 1 %} l{% else %} t{% endif %}">
-	<a href="{{post.get_absolute_url}}"  style="background-image: url({% if forloop.counter == 1 %} {{post.img.l}}{% else %} {{post.img.t}}{% endif %})">
+<div class="object {% if forloop.counter == 1 %} l{% else %} m{% endif %}">
+	<a href="{{post.get_absolute_url}}"  style="background-image: url({% if forloop.counter == 1 %} {{post.img.l}}{% else %} {{post.img.m}}{% endif %})">
 	<p><a href="{{post.get_absolute_url}}">{{post.title}}</a></p>
 	</a>
 </div>
