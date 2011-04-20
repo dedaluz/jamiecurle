@@ -47,7 +47,7 @@ form ul li {
 /* label s*/
 form ul li label{
     clear: both;
-    display: block;
+    display: inline-block;
 }
 /* collapsables */
 fieldset.collapsable p, fieldset.collapsable-inline p{

@@ -14,6 +14,7 @@ from django import forms
 #
 # upload path callable
 def upload_path(instance, filename):
+    print "uploads/%s/%s/%s" % ('%s' % datetime.today().strftime("%Y/%m/%d"), instance.__class__.__name__.lower(), filename ) 
     return  "uploads/%s/%s/%s" % ('%s' % datetime.today().strftime("%Y/%m/%d"), instance.__class__.__name__.lower(), filename ) 
 
 #

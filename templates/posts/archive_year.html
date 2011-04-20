@@ -1,0 +1,25 @@
+{% extends 'posts/base_posts.html' %}
+
+
+{% block head %}
+	<link rel="stylesheet" href="{{MEDIA_URL}}/css/jc.objects.css" type="text/css">
+	<link rel="stylesheet" href="{{MEDIA_URL}}/css/jc.posts.css" type="text/css">
+{% endblock %}
+
+{% block meta %}
+<div class="meta">
+	<p>All of my posts in {{year}}</p>
+</div>
+{% endblock %}
+
+{% block content_posts %}
+
+
+
+<ul class="object">
+	{% for month in months %}
+	<li class="invert"><a href="{% url posts:archive_month year month|date:"m" %}">{{month|date:"F"}} {{year}}</a></li>
+	{% endfor %}
+</ul>
+
+{% endblock %}

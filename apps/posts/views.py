@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
+from django.template.response import TemplateResponse
 from django.shortcuts import render_to_response, get_object_or_404
 from django.forms.models import inlineformset_factory
 from taggit.models import Tag
@@ -13,16 +14,18 @@ from forms import BlogPostForm, BlogImageForm
 from models import BlogPost, BlogImage
 
 
+@login_required
 def create(request):
     return edit(request)
 
+@login_required
 def edit(request, slug=None):
     # create the obj is we have a slug
     instance = None
     if slug is not None:
         instance = get_object_or_404(BlogPost, slug=slug)
     # create the formsets
-    BlogImageFormSet = inlineformset_factory(BlogPost,BlogImage, form=BlogImageForm, extra=3)
+    BlogImageFormSet = inlineformset_factory(BlogPost,BlogImage,form=BlogImageForm, extra=3)
     #
     # process post
     if request.method == 'POST':
@@ -50,26 +53,39 @@ def edit(request, slug=None):
     
     #
     # all done - return
-    return render_to_response('posts/create_and_edit.html', RequestContext(request,{
+    return TemplateResponse(request, 'posts/create_and_edit.html',{
         'form' : form,
         'blogimage_formset' : blogimage_formset 
-    }))
-
-
+    })
 
 
 def show(request, slug):
     post = get_object_or_404(BlogPost, slug=slug)
     
-    return render_to_response('posts/show.html', RequestContext(request,{
+    return TemplateResponse(request, 'posts/show.html', {
         'post' : post,
-    }))
+    })
+
+
+
+def archive_month(request, year, month):
+    posts = BlogPost.objects.for_user(request.user).order_by('created').filter(created__year=year, created__month=month)
     
-def index(request):
-    posts = BlogPost.objects.for_user(request.user)
+    year = int(year)
+    month = int(month)
+    month = datetime.date(year=year,month=month,day=1)
     
-    
-    return render_to_response('posts/index.html', RequestContext(request,{
+    return TemplateResponse(request, 'posts/archive_month.html', {
         'posts' : posts,
-    }))
+        'year' : year,
+        'month' : month
+    })
+
+def archive_year(request, year):
+    months = BlogPost.objects.for_user(request.user).order_by('created').filter(created__year=year).dates('created', 'month')
+    months = months.reverse()
+    return TemplateResponse(request, 'posts/archive_year.html', {
+        'months' : months,
+        'year' : year
+    })
 

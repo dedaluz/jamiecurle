@@ -11,6 +11,7 @@ class BlogImageForm(BetterModelForm):
     
     class Meta:
         model = BlogImage
+        fields  = ['title', 'src', 'order']
     
 
 class BlogPostForm(BetterModelForm):

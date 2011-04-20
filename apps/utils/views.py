@@ -1,17 +1,11 @@
 # -*- coding: utf-8 -*-
-import datetime
-from django.core.urlresolvers import reverse
-from django.http import HttpResponse, HttpResponseRedirect
-from django.template import RequestContext
-from django.shortcuts import render_to_response, get_object_or_404
-
-from apps.posts.models import BlogPost, BlogImage
+from django.template.response import TemplateResponse
+from apps.posts.models import BlogPost
 
 
 def index(request):
-    posts = BlogPost.objects.for_user(request.user)[:15]
+    posts = BlogPost.objects.for_user(request.user).order_by('-created')[:15]
     
-    
-    return render_to_response('home/index.html', RequestContext(request,{
+    return TemplateResponse(request, 'home/index.html', {
         'posts' : posts,
-    }))
+    })

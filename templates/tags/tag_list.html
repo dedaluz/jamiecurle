@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{{MEDIA_URL}}/css/jc.objects.css" type="text/css">
+{% endblock %}
+
+
+{% block content %}
+	{% for obj in tagged_objects %}
+	<div class="object m">
+		<a href="{{obj.get_absolute_url}}"  style="background-image: url({{obj.img.m}})">
+		</a>
+		<p><a href="{{obj.get_absolute_url}}">{{obj.title}}</a></p>
+	</div>
+	{% endfor %}
+{% endblock %}
+

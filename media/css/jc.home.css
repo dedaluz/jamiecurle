@@ -2,6 +2,9 @@ body > header{
     width: 100%;
     margin-bottom: 42px;
 }
-div.content{
-
+#home div.m:nth-of-type(odd){
+    margin-right: 0;
+}
+#home div.m:nth-of-type(even){
+    margin-right: 21px;
 }
