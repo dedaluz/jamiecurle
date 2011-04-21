@@ -1,5 +1,5 @@
 {% extends 'posts/base_posts.html' %}
-
+{% load posts_tags %}
 
 {% block head %}
 	<link rel="stylesheet" href="{{MEDIA_URL}}/css/jc.objects.css" type="text/css">
@@ -18,7 +18,7 @@
 
 <ul class="object">
 	{% for month in months %}
-	<li class="invert"><a href="{% url posts:archive_month year month|date:"m" %}">{{month|date:"F"}} {{year}}</a></li>
+	<li class="invert"><a href="{% url posts:archive_month year month.0 %}"> {{month.0|month_name}} {{year}} - {{month.1}} Post{{month.1|pluralize}}</a></li>
 	{% endfor %}
 </ul>
 

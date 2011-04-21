@@ -1,5 +1,6 @@
 import re 
-import pygments 
+import pygments
+import calendar
 from django import template 
 from pygments import lexers 
 from pygments import formatters
@@ -7,6 +8,10 @@ from django.contrib.markup.templatetags.markup import markdown
 from BeautifulSoup import BeautifulSoup
  
 register = template.Library()
+
+@register.filter
+def month_name(month_num):
+    return calendar.month_name[month_num]
 
 @register.filter
 def render(content):

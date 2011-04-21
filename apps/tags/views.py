@@ -18,7 +18,10 @@ def tag_list(request, tag):
             tag=tag, content_type=ContentType.objects.get_for_model(queryset.model)
         ).values_list("object_id", flat=True))
     
-    return TemplateResponse(request, 'tags/tag_list.html', {'tagged_objects' : qs})
+    return TemplateResponse(request, 'tags/tag_list.html', {
+        'tagged_objects' : qs,
+        'tag' : tag,
+    })
 
 
 def tag_search(request):

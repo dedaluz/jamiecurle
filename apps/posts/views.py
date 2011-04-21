@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
+from django.db import connection
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
 from django.template.response import TemplateResponse
@@ -67,7 +68,6 @@ def show(request, slug):
     })
 
 
-
 def archive_month(request, year, month):
     posts = BlogPost.objects.for_user(request.user).order_by('created').filter(created__year=year, created__month=month)
     
@@ -82,8 +82,14 @@ def archive_month(request, year, month):
     })
 
 def archive_year(request, year):
-    months = BlogPost.objects.for_user(request.user).order_by('created').filter(created__year=year).dates('created', 'month')
-    months = months.reverse()
+    # custom sql to get the months and a count
+    cursor = connection.cursor()
+    cursor.execute("""SELECT MONTH(created), COUNT(*)
+            FROM posts_blogpost
+            WHERE `created` BETWEEN '%(year)s-01-01' AND '%(year)s-12-31'
+            GROUP BY MONTH(created);""" % {'year': year} 
+        )
+    months = cursor.fetchall()
     return TemplateResponse(request, 'posts/archive_year.html', {
         'months' : months,
         'year' : year
