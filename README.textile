@@ -1,1 +1,1 @@
-A blank Django project set up with a few nice defaults that are common to me. Your milage may vary
+My personal site. This currently the 3rd evolution once again, running on Django.
