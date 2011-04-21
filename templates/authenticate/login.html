@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load form_utils_tags %}
+{% block head %}
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/forms.css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/forms.buttons.css" media="screen">
+		<style>
+			form div.container{
+				width: 500px;
+			}
+			form div.container input{
+				font-size: 20px;
+			}
+		</style>
+{% endblock %}
+
+
+{% block body %}
+<form action="" method="post">
+	
+	<div class="container">
+		<h1>?</h1>
+		{% csrf_token %}
+		{{form|render}}
+		
+		<button type="submit">Login</button>
+	</div>
+</form>
+{% endblock %}

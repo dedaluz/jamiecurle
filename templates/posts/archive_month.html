@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+	<link rel="stylesheet" href="{{MEDIA_URL}}/css/jc.objects.css" type="text/css">
+	<link rel="stylesheet" href="{{MEDIA_URL}}/css/jc.posts.css" type="text/css">
+{% endblock %}
+
+{% block meta %}
+<div class="meta">
+	<p>I posted {{posts.count}} thing{{posts|pluralize}} in {{month|date:"F"}} {{year}}.</p>
+</div>
+{% endblock %}
+
+{% block content %}
+	{% for obj in posts %}
+	<div class="object m">
+		<a href="{{obj.get_absolute_url}}"  style="background-image: url({{obj.img.m}})">
+		</a>
+		<p><a href="{{obj.get_absolute_url}}">{{obj.title}}</a></p>
+	</div>
+	{% endfor %}
+{% endblock %}
+

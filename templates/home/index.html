@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{MEDIA_URL}}/css/jc.home.css" type="text/css">
+<link rel="stylesheet" href="{{MEDIA_URL}}/css/jc.objects.css" type="text/css">
+{% endblock %}
+
+{% block meta %}
+<div class="meta">
+	<p>
+		Hello, I'm Jamie Curle. 
+	</p>
+	<p>
+		In my spare time you'll probably find me loitering in the greenhouse.
+	</p>
+	<p>
+		Professionally I'm a designer/developer who loves working with
+		Django, jQuery and HTML+CSS to create work for clients or for
+		some of my half baked ideas.
+	</p>
+	<p>
+		You can email &mdash; me at jamiecurle dot com or get me
+		 on <a href="http://twitter.com/jamiecurle">twitter</a>.
+	</p>
+</div>
+{% endblock %}
+
+{% block id %}home{% endblock %}
+
+{% block content %}
+	{% for post in posts %}
+		
+		{% if forloop.counter <= 5 %}
+			<div class="object {% if forloop.counter == 1 %} l {% else %} m {% endif %}">
+				<a href="{{post.get_absolute_url}}"  style="background-image: url({% if forloop.counter == 1 %} {{post.img.f}}{% else %} {{post.img.m}}{% endif %})"></a>
+				<p><a href="{{post.get_absolute_url}}">{{post.title}}</a></p>
+			</div>
+		{% else %}
+			{% if forloop.counter == 6 %}
+			<ul class="object">
+			{% endif %}	
+			<li><a href="{{post.get_absolute_url}}">{{post.title}}</a></li>
+			{% if forloop.last %}
+			<li class="invert"><a href="{% url posts:archive_year 2011 %}">Browse 2011 Archive</a></li>
+			<li class="invert"><a href="{% url posts:archive_year 2010 %}">Browse 2010 Archive</a></li>
+			</ul>
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+{% endblock %}

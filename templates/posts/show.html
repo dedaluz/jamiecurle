@@ -1,0 +1,52 @@
+{% extends 'posts/base_posts.html' %}
+{% load disqus_tags %}
+
+{% block title %} {{post.title}} - {% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{MEDIA_URL}}/css/jc.posts.css" type="text/css">
+{% endblock %}
+
+{% block bodyclass %}show{% endblock %}
+
+{% block meta %}
+<div class="meta">
+	<p class="time">
+		Posted on 
+		<time>{{post.created}}</time>
+	</p>
+	<p class="tags">
+		Tagged with 
+		{% for tag in post.tags.all %}
+		<a href="/tags/{{tag.slug}}" class="tag">{{tag}}</a>{% if not forloop.last %}<span>,</span>{% endif %}
+		{% endfor %}
+		<span>.</span>
+	</p>
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+<article id="jamiecurle_com-post-{{post.pk}}>">
+	<header>
+		<h1>{{post.title}}</h1>
+		<p class="description">{{post.description}}</p>
+	</header>
+
+	<div class="body">
+		{{post.content_rendered|safe}}
+	</div>
+</article>
+
+<div id="comments">
+	{% if DEBUG %}{% disqus_dev %}{% endif %}
+{% disqus_show_comments %}	
+</div>
+
+<div id="adminbar">
+	<ul>
+		<li><a href="{% url posts:edit post.slug %}">Edit</a></li>
+	</ul>
+</div>
+{% endblock %}

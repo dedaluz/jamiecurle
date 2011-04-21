@@ -1,0 +1,13 @@
+Django==1.2.5
+django-compressor
+south
+johnny-cache
+django-debug
+django-taggit
+BeautifulSoup
+django-form-utils
+markdown
+pygments
+django-disqus
+
+

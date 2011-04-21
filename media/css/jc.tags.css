@@ -1,0 +1,17 @@
+/* tags */
+a.tag{
+    background-color:#999;
+    background-color: rgba(0,0,0,0.2);
+    padding: 0 4px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+a.tag:hover{
+    background-color: rgba(0,0,0,0.6);
+}
+.tags span{
+    display: none;
+}

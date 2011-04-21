@@ -1,0 +1,62 @@
+
+
+#form-tag-list{
+    width: 100%;
+    clear: both;
+    min-height: 38px;
+    position: relative;
+}
+#form-tag-list li{
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.1);
+    margin: 4px;
+    line-height: 21px;
+}
+#form-tag-list li a{
+    font-size: 20px;
+    padding: 2px 5px 2px 10px;
+    line-height: 14px;
+    border-top: 0 none !important;
+    cursor: pointer;
+}
+#form-tag-list li{
+    border-top: 0 none !important;
+}
+
+.ui-autocomplete{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: rgba(0,0,0,0.2);
+    width: 300px;
+    padding: 10px;
+}
+
+.ui-menu-item{
+    line-height: 28px;
+}
+.ui-menu-item a{
+    padding: 5px;
+    display: block;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+}
+.ui-menu-item a:hover, #ui-active-menuitem{
+    background-color: #000;
+    color: #f90;
+}
+/*
+<input class="ui-autocomplete-input"/>
+<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all">
+  <li class="ui-menu-item">
+    <a class="ui-corner-all">item 1</a>
+  </li>
+  <li class="ui-menu-item">
+    <a class="ui-corner-all">item 2</a>
+  </li>
+  <li class="ui-menu-item">
+    <a class="ui-corner-all">item 3</a>
+  </li>
+</ul>
+*/
