@@ -1,6 +1,5 @@
 from fabric.api import *
 
-
 env.hosts = ['jamiecurle.com']
 env.user = 'jcurle'
 
