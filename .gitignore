@@ -1,6 +1,1 @@
-.bundle
-db/*.sqlite3
-log/*.log
-tmp/**/*
-public/files/*
-config/database.yml
+local_settings.py

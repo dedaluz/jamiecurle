@@ -5,9 +5,8 @@ path = lambda *a: os.path.join(ROOT, *a)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+     ('Jamie Curle', 'me@jamiecurle.com'),
 )
 
 MANAGERS = ADMINS
@@ -29,16 +28,16 @@ LANGUAGE_CODE = 'en-gb'
 
 SITE_ID = 1
 
-USE_I18N = True
+USE_I18N = False
 
-USE_L10N = True
+USE_L10N = False
 
 MEDIA_ROOT = path('media/')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = 'http://jamiecurle.jc/'
+MEDIA_URL = 'http://media.jamiecurle.com/'
 
 INTERNAL_IPS = ('127.0.0.1',)
 DEBUG_TOOLBAR_CONFIG = {
@@ -70,8 +69,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    #'johnny.middleware.LocalStoreClearMiddleware',
-    #'johnny.middleware.QueryCacheMiddleware',
+    'johnny.middleware.LocalStoreClearMiddleware',
+    'johnny.middleware.QueryCacheMiddleware',
     #'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
@@ -126,8 +125,6 @@ LOGIN_REDIRECT_URL  = '/'
 COMPRESS = True
 IMAGE_SIZES = ((850,600), (612,450), (480,320), (320,240), (200,200) )
 
-DISQUS_API_KEY = 'EfSTlwj9Em4u7gd4uTiNDXjBs6WYG4dLlavHflbgd1xA7sImLmCoCCg3VJj1wS'
-DISQUS_WEBSITE_SHORTNAME = 'jamiecurle'
 try:
     from local_settings import *
 except ImportError:
