@@ -6,6 +6,7 @@
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://jamiecurle.com/posts/feed.rss">
 		<link rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
 		<link rel="icon" type="image/png" href="{{MEDIA_URL}}favicon.ico" />
+		{% compress css %}
 		<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0;">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.base.css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.admin.css" media="screen">
@@ -13,6 +14,7 @@
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.tags.css" media="screen">
 		{% block head %}
 		{% endblock %}
+		{% endcompress %}
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 		<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	</head>
@@ -41,9 +43,9 @@
 		</footer>
 		{% endblock %}
 		
-
+{% compress js %}
 {% block js %}{% endblock %}
-<script src="{{MEDIA_URL}}"></script>
+{% endcompress %}
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-18964988-1']);
