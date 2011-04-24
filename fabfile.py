@@ -12,5 +12,5 @@ def deploy():
     local('git commit -a')
     local('git push origin master')
     run('cd sites/jamiecurle/jamiecurle/; git pull origin master')
-    run('supervisorctl restart jamecurle')
+    run('supervisorctl restart jamiecurle')
 
