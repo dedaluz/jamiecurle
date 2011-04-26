@@ -16,7 +16,7 @@ def tag_list(request, tag):
     
     qs = queryset.filter(pk__in=TaggedItem.objects.filter(
             tag=tag, content_type=ContentType.objects.get_for_model(queryset.model)
-        ).values_list("object_id", flat=True))
+        ).values_list("object_id", flat=True)).order_by('-created')
     
     return TemplateResponse(request, 'tags/tag_list.html', {
         'tagged_objects' : qs,
