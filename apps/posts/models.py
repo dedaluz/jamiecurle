@@ -44,11 +44,10 @@ class BlogPost(models.Model):
     
     
     def img(self):
-        if not self._IMG:
-            try:
-                self._IMG = self.blogimage_set.all()[0]
-            except IndexError:
-                return BlankImg()
+        try:
+            self._IMG = self.blogimage_set.all()[0]
+        except IndexError:
+            return BlankImg()
         return self._IMG
     
 
