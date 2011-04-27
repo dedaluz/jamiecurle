@@ -5,7 +5,7 @@ body{
       radial, 600 50%, 200, 600 50%, 800, from(#fff), to(#dedede)
     );
     background-attachment: fixed;
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue", Helvetica, Arial;
     font-size: 14px;
     line-height: 21px;
     color: #2F2F2F;
