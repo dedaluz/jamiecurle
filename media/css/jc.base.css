@@ -1,3 +1,6 @@
+header, footer, article{
+    display: block;
+}
 body{
     background-color: #EAECE9;
 
