@@ -43,10 +43,11 @@
 	{% if DEBUG %}{% disqus_dev %}{% endif %}
 {% disqus_show_comments %}	
 </div>
-
+{% if request.user.is_authenticated %}
 <div id="adminbar">
 	<ul>
 		<li><a href="{% url posts:edit post.slug %}">Edit</a></li>
 	</ul>
 </div>
+{% endif %}
 {% endblock %}

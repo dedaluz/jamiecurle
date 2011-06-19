@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.db import connection
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.template import RequestContext
 from django.template.response import TemplateResponse
 from django.shortcuts import render_to_response, get_object_or_404
@@ -50,8 +50,6 @@ def edit(request, slug=None):
         form = BlogPostForm(instance=instance)
         blogimage_formset = BlogImageFormSet(instance=instance, prefix="blogimage")
     
-    #print form.tags.media
-    
     #
     # all done - return
     return TemplateResponse(request, 'posts/create_and_edit.html',{
@@ -62,6 +60,10 @@ def edit(request, slug=None):
 
 def show(request, slug):
     post = get_object_or_404(BlogPost, slug=slug)
+    # if user not authed and post not published then 404
+    
+    if not request.user.is_authenticated() and post.status != BlogPost.PUBLISHED:
+        raise Http404('Post is not publiced')
     
     return TemplateResponse(request, 'posts/show.html', {
         'post' : post,
@@ -86,7 +88,7 @@ def archive_year(request, year):
     cursor = connection.cursor()
     cursor.execute("""SELECT MONTH(created), COUNT(*)
             FROM posts_blogpost
-            WHERE `created` BETWEEN '%(year)s-01-01' AND '%(year)s-12-31'
+            WHERE `created` BETWEEN '%(year)s-01-01' AND '%(year)s-12-31' 
             GROUP BY MONTH(created);""" % {'year': year} 
         )
     months = cursor.fetchall()
