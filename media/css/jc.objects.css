@@ -1,4 +1,13 @@
-/* all sizes */
+
+div.object{
+    max-width: 33%;
+    display: inline-block;
+}
+div.object img{
+    width: 100%;
+}
+
+/* all sizes 
 div.object{
     display: inline-block;
     float: left;
@@ -31,7 +40,8 @@ div.object{
      div.object p a{
          color: #fff;
      }
-/* medium stuff */
+*/
+/* medium stuff 
     div.object.m{
         width: 294px;
         height: 160px;
@@ -40,7 +50,7 @@ div.object{
             margin-right: 21px;
         }
         
-/* large stuff */
+/* large stuff 
 div.object.l{
     width: 612px;
     height: 340px;
@@ -49,8 +59,8 @@ div.object.l{
     div.object.l > a{
         background-position: center center;
     }
-
-/* object lists*/
+*/
+/* object lists
 ul.object{
     margin: 21px 0 0 0;
     padding: 0;
@@ -84,4 +94,4 @@ ul.object li.invert a{
     ul.object li.invert a:hover{
         background-color: #fff;
         color: #000;
-}
+}*/

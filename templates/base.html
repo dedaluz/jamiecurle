@@ -4,15 +4,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<title> {% block title %}{% endblock %} Jamie Curle</title>
-		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://jamiecurle.com/posts/feed.rss">
+		<link rel="alternate§" type="application/rss+xml" title="RSS" href="http://jamiecurle.com/posts/feed.rss">
 		<link rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
 		<link rel="icon" type="image/png" href="{{MEDIA_URL}}favicon.ico" />
 		{% compress css %}
 		<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0;">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.base.css" media="screen">
-		<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.admin.css" media="screen">
-		<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.syntax.css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/typography.css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/nav.css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/twitter.css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.tags.css" media="screen">
+		<script type="text/javascript" src="http://use.typekit.com/upd8ahc.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		{% block head %}
 		{% endblock %}
 		{% endcompress %}
@@ -20,14 +23,16 @@
 		<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	</head>
 	<body id="{% block id %}{% endblock %}" class="{% block bodyclass %}{% endblock %}">
+		{% block nav %}
+
+		{% endblock %}
 		{% block body %}
-		<header>
-			<h1><a href="/">J<span>amie </span>C<span>urle</span></a></h1>
-			{% block meta %}
-			
-			
-			{% endblock %}
-		</header>
+		<nav class="global">
+			<a href="/">Home</a>
+			<a href="{% url posts:index %}" id="blog">blog</a>
+			<a href="{% url instagram:index %}" id="instagram">instagram</a>
+		</nav>
+
 		<div class="content">
 			{% block content %}
 			{% endblock %}

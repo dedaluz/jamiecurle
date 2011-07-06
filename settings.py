@@ -3,7 +3,7 @@ import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
 path = lambda *a: os.path.join(ROOT, *a)
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 ADMINS = (
      ('Jamie Curle', 'me@jamiecurle.com'),
@@ -123,7 +123,7 @@ LOGOUT_URL = '/authenticate/logout.html'
 LOGIN_REDIRECT_URL  = '/'
 
 COMPRESS = True
-IMAGE_SIZES = ((850,600), (612,450), (480,320), (320,240), (200,200) )
+IMAGE_SIZES = ((1500,1058), (850,600), (612,450), (480,320), (320,240), (200,200) )
 
 try:
     from local_settings import *
