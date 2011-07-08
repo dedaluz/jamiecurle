@@ -128,36 +128,121 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             
             holder : $('<div>', {'class' : 'instafeed-photos'}),
             
-            loader : $('<img>', {'src' : 'http://jamiecurle.jc/images/loading.gif'}),
-            
             h1 : function(photo){
                 var t = '<h1>#{title}</h1>';
                 return $.tmpl(t, photo);
             },
             
+            lightbox : function(context){
+                var t = '<div>\
+                    		<p>\
+                    			<a href="" class="prev"><img src="{{MEDIA_URL}}images/prev.png"></a>\
+                    			<a href="" class="next"><img src="{{MEDIA_URL}}images/next.png"></a>\
+                    		</p>\
+                    		<img src="#{src}">\
+                    		<h1> #{title} </h1>\
+                    	</div>';
+                    
+                var rendered = $.tmpl(t, context)
+                
+                return $('<div>').addClass('instagram-lightbox').html(rendered);
+            }
         }
         
         // the methods that build everything
         
-        
         _photo = function(photo){
-            context =  {
+            var context =  {
                 'large' : photo['images']['standard_resolution'],
                 'thumb' : photo['images']['thumbnail'],
                 'caption' : photo['caption'],
-                'id' : photo['id']
+                'id' : photo['id'],
+                'long' : photo['longitude']
             }
-            var t = '<div id="instagram_#{id}" class="instagram-photo">         \
-                <img src="#{thumb}" alt="#{caption}" data-large="#{large}">     \
-                <h3>#{caption}</h3>                                             \
-            </div>';
+            //*/
+            var t = '<img src="#{thumb}" alt="#{caption}" data-large="#{large}">';
             return $.tmpl(t, context);
         }
-       
+       /*
+        preload the large images so there available
+       */
        _preload = function(photo){
            new Image().src = photo['images']['standard_resolution'];
        }
+        /*
+        On rollover on the lightbox image, show the navigation controls
+        */
+        _show_nav = function(){
+            $(this).find('p').fadeIn(200);
+        }
+        _hide_nav = function (){
+            $(this).find('p').fadeOut(200);
+        }
+        $('.instagram-lightbox div').bind({'mouseenter' : _show_nav, 'mouseleave' : _hide_nav});
+        /* 
+         Bind the next & prevous buttons & key presses
+        */
+        _previous = function(){
+            console.log('previous');
+        }
+        _next = function(){
+            console.log('next');
+        }
         
+        $('.instagram-lightbox a.prev').bind({'click' : _previous});
+         /*
+           Bind the clicks to the photos
+         */
+         _open = function(){
+             var img = $(this).find('img');
+             // src and title
+             var context = {
+                 src : img.attr('data-large'),
+                 title : img.attr('alt')
+             }
+             // get the lightbox
+             var lightbox = html['lightbox'](context);
+             // hide the img - we'll take care of this after it's loaded
+             $(lightbox).imagesLoaded(function(){
+               
+             });
+             // hide it, append it and then fade it in
+             lightbox.hide()
+             $('div.content').append(lightbox)
+             lightbox.show()
+             
+             /*
+             MORNING _ WORK OUT THE URLS FOR THE MEDIA
+             
+             create an INIT function
+             
+             get rid of div.content - 
+             
+             get previous and next working
+             
+             images display on load
+             
+             */
+         }
+        $('div.instagram-photo').live('click', _open)
+        
+        
+        /* 
+        Close it
+        */
+        _close = function(){
+            $('.instagram-lightbox').fadeOut(200);
+        }
+        //e.keyCode == 27
+        $(document).keyup(function(e){
+            if (e.keyCode == 27) {
+                _close();
+            }
+        })
+        
+        /*
+         The main business
+        */
         return this.each(function(){
             // set up the options
             if ( options ) {
@@ -169,28 +254,43 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             }
             // make $(this) accessible inside the getJSON function
             var $this = $(this);
-            // first things first crack in a loader
-            $('div.content').append(html['loader']);
-            // load the json 
+            // place the holders onto the page
+            for(var i = 0; i < settings.items; i++){
+                $('div.content').append($('<div/>', {'class' : 'instagram-photo loading'}).html('<div>'))
+            }
+            
+            // load the json and build up the photos
             $.getJSON(options.jsonp, function(json) {
                 data['json'] = json;
+                
                 $.each(data['json'], function(index, val ) {
                     if ( index == parseInt(settings.items) ){
                         return false;
                     }
-                    //img = '<h2> ' + val['caption'] + '</h2><img src="' + val['images']['standard_resolution'] + '" alt="' + val['caption'] + '">';
                     
-                    photo = _photo(val)
+                    photo = $('<div/>', {'id' : json['id']}).html(_photo(val))
+                    
                     data['instagrams'].push(photo);
-                    _preload(val)
                 });
-                // remove the loader
-                html['loader'].remove();
-                html['holder'].append(data['instagrams'].join(''));
-                $('div.content').append(html['holder']);
+                // now insert the data
+                $.each(data['instagrams'], function(){
+                    // if the image is loaded
+                    $(this).imagesLoaded(function(){
+                        var img = $(this)
+                        // hide it before insertion
+                        $(this).hide();
+                        // get the first div.instagram photo div that has a loader
+                        // and crack in the img, then go up to the parent and animate 
+                        // the opacity up passing the fade image as the callback. Finally
+                        // remove the loading class
+                        $('div.instagram-photo.loading div')
+                            .first().append(img)
+                            .parent().animate({'opacity' : 1 }, 500, function(){
+                                img.fadeIn(500)
+                            }).removeClass('loading');
+                    })
+                })
             });
-            
-            
         });
     };
 })( jQuery );
