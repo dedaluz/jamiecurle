@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load posts_tags %}
 {% block head %}
 	<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.objects.css" type="text/css">
 	<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.posts.css" type="text/css">
@@ -12,6 +12,7 @@
 {% endblock %}
 
 {% block content %}
+<div class="posts">
 	{% for obj in posts %}
 	<div class="object m">
 		<a href="{{obj.get_absolute_url}}"  style="background-image: url({{obj.img.m}})">
@@ -19,5 +20,6 @@
 		<p><a href="{{obj.get_absolute_url}}">{{obj.title}}</a></p>
 	</div>
 	{% endfor %}
+</div>
 {% endblock %}
 

@@ -1,12 +1,59 @@
 
 div.object{
-    max-width: 33%;
-    display: inline-block;
-}
-div.object img{
+    max-width: 100%;
     width: 100%;
+    display: inline-block;
+
+    position: relative;
 }
 
+
+div.object h1{
+    margin: 2% 0 0 0;
+    padding: 0.5em;
+    font-size: 2em;
+    background-color: #bf3e34;
+    width: auto;
+}
+    div.object a h1 {
+        color: #fff;
+    }
+
+div.object img{
+    border: 1px solid #DADADA;
+    padding: 0.5%;
+    margin-left: 0.8%;
+    background-color: rgba(0,0,0, 0.05);
+    width: 36%;
+    float: left;
+}
+
+div.object  p{
+    display: inline-block;
+    margin: 2% 0 0 1%;
+    font-size: 1em;
+    width: 53.75%;
+    float: right;
+}
+
+div.object a p{
+    color: #3e3e3e;
+}
+div.object p.meta a{
+    color: #BEBEBE;
+}
+div.object p.meta a.tag{
+    color: #fff;
+}
+
+div.object p.preview{
+    font-size: 1em;
+    font-weight: 100;
+    display: none;
+}
+div.object p.meta{
+    font-size: 0.75em;
+}
 /* all sizes 
 div.object{
     display: inline-block;

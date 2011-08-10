@@ -8,12 +8,13 @@
 		<link rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
 		<link rel="icon" type="image/png" href="{{MEDIA_URL}}favicon.ico" />
 		{% compress css %}
-		<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0;">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0 width=device-width">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.base.css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/typography.css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/nav.css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/twitter.css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.tags.css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/mediaqueries.css" media="screen">
 		<script type="text/javascript" src="http://use.typekit.com/upd8ahc.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		{% block head %}
@@ -31,6 +32,7 @@
 			<a href="/">Home</a>
 			<a href="{% url posts:index %}" id="blog">blog</a>
 			<a href="{% url instagram:index %}" id="instagram">instagram</a>
+			<a href="{% url instagram:index %}" id="instagram">About Me</a>
 		</nav>
 
 		<div class="content">

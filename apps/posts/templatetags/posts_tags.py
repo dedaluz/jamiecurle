@@ -6,8 +6,21 @@ from pygments import lexers
 from pygments import formatters
 from django.contrib.markup.templatetags.markup import markdown
 from BeautifulSoup import BeautifulSoup
+from apps.posts.models import BlogPost
  
 register = template.Library()
+
+@register.inclusion_tag('posts/_blog_nav.html', takes_context=True)
+def blog_nav(context):
+    articles = BlogPost.objects.filter(status=BlogPost.PUBLISHED).order_by('created')
+    dates = articles.dates('created', 'month')
+    archive = []
+    
+    for date in dates.reverse():
+        archive.append((date, articles.filter(created__month=date.month, created__year=date.year).count()))
+    
+    return {'archive' : archive}
+
 
 @register.filter
 def month_name(month_num):

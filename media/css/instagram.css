@@ -24,8 +24,8 @@ nav.global a{
         rgb(245,245,245) 17%
     );
     padding: 0.5em;
-    width: 9.375em;
-    height: 9.575em;
+    width: 280px;
+    height: 280px;
     margin: 0 1em 1em 0;
     -webkit-box-shadow: rgba(0,0,0,0.9) 2px 2px 2px;
     -moz-box-shadow: rgba(0,0,0,0.9) 2px 2px 2px;
@@ -37,8 +37,8 @@ nav.global a{
 
 .instagram-photo.loading div{
     background: #fff url(/images/loading.gif) 60px 60px no-repeat;
-    width: 150px;
-    height: 150px;
+    width: 280px;
+    height: 280px;
     
 }
 .instagram-photo.loading{

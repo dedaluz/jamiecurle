@@ -1,17 +1,24 @@
 {% extends 'base.html' %}
-
+{% load posts_tags %}
 {% block id %}blog{% endblock %}
 
 {% block content %}
-{% if request.user.is_authenticated %}
-<div id="adminbar">
-	<ul>
-		<li><a href="{% url posts:create %}">New</a></li>
-		{% if post.pk %}<li><a href="{% url posts:edit post.slug %}">Edit</a></li>{% endif %}
-	</ul>
-</div>
-{% endif %}
-	{% block content_posts %}
 	
+	{% if request.user.is_authenticated %}
+	<div id="adminbar">
+		<ul>
+			<li><a href="{% url posts:create %}">New</a></li>
+			{% if post.pk %}<li><a href="{% url posts:edit post.slug %}">Edit</a></li>{% endif %}
+		</ul>
+	</div>
+	{% endif %}
+	
+	<nav id="local">
+		{% blog_nav %}
+	</nav>
+
+	{% block content_posts %}
+
 	{% endblock %}
+
 {% endblock %}

@@ -154,7 +154,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         _photo = function(photo){
             var context =  {
                 'large' : photo['images']['standard_resolution'],
-                'thumb' : photo['images']['thumbnail'],
+                //'thumb' : photo['images']['thumbnail'],
+                'thumb' : photo['images']['standard_resolution'],
                 'caption' : photo['caption'],
                 'id' : photo['id'],
                 'long' : photo['longitude']
@@ -224,7 +225,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
              
              */
          }
-        $('div.instagram-photo').live('click', _open)
+        //$('div.instagram-photo').live('click', _open)
         
         
         /* 

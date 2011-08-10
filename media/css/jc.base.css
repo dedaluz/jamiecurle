@@ -8,7 +8,7 @@ body{
 }
 
 nav, footer, div.content{
-    width: 88%;
+    width: 92%;
     padding: 1%;
     margin: 0 auto;
 }
@@ -16,6 +16,16 @@ div.content{
     background-color:#fff;
     -webkit-box-shadow: rgba(0,0,0,0.1) 1px 1px 1px;
     -moz-box-shadow: rgba(0,0,0,0.1) 1px 1px 1px;
+    clear: both;
+}
+div.content:before,
+div.content:after {
+    content:"";
+    display:table;
+}
+
+div.content:after {
+    clear:both;
 }
 
 
@@ -28,12 +38,13 @@ img{
 footer{
     background-color: #19191A;
     color: #888;
+    clear: both;
 }
     footer a{
         color: #B7B7B7;
         text-decoration: none;
     }
-/* blog specific */
+/* blog specific - view */
 
 div.content article header{
     margin-left: -1%;
@@ -72,10 +83,24 @@ div.content article header{
         padding-left: 2%;
         padding-right: 2%;
     }
-    
+
+/* blog specific - lists */
+
+div.posts{
+    width: 78.8%;
+    float: right;
+}
+#blog nav#local{
+    width: 18.8%;
+    margin-right: 1%;
+    float: left;
+}
+
 
 /* vimeo videos */  
 article iframe{
     width: 100%;
     min-height: 300px;
 }
+
+

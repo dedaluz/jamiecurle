@@ -1,11 +1,29 @@
 {% extends 'posts/base_posts.html' %}
+{% load posts_tags markup %}
+{% block head %}
+	<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.objects.css" type="text/css">
+	<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.posts.css" type="text/css">
+{% endblock %}
 
 {% block content_posts %}
 
-{% for post in posts %}
 
-<a href="{{post.get_absolute_url}}">{{post.title}}</a>
 
-{% endfor %}
+<div class="posts">
+	{% for obj in posts %}
+	<div class="object">
+		<a href="{{obj.get_absolute_url}}">
+			<h1>{{obj.title}}</h1>
+			<img src="{{obj.img.m}}">
+			<p>{{obj.description}}</p>
+			<p class="preview">{{obj.content_rendered|striptags|truncatewords:100}}</p>
+			<p class="meta">
+				Posted {{obj.created|date}} and tagged with {% for t in obj.tags.all %} <a class="tag" href="{% url tags:tag_list t.slug %}">{{t.name}}</a>{% endfor %}
+			</p>
+		</a>
+	</div>
+	{% endfor %}
+</div>
+
 
 {% endblock %}

@@ -15,6 +15,10 @@ from forms import BlogPostForm, BlogImageForm
 from models import BlogPost, BlogImage
 
 
+
+
+
+
 @login_required
 def create(request):
     return edit(request)
@@ -58,6 +62,11 @@ def edit(request, slug=None):
     })
 
 
+def index(request):
+    posts = BlogPost.objects.for_user(request.user)[:30]
+    return TemplateResponse(request, 'posts/index.html', {
+        'posts' : posts
+    })
 def show(request, slug):
     post = get_object_or_404(BlogPost, slug=slug)
     # if user not authed and post not published then 404
@@ -68,7 +77,6 @@ def show(request, slug):
     return TemplateResponse(request, 'posts/show.html', {
         'post' : post,
     })
-
 
 def archive_month(request, year, month):
     posts = BlogPost.objects.for_user(request.user).order_by('created').filter(created__year=year, created__month=month)
