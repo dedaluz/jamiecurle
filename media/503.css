@@ -1,0 +1,30 @@
+body{
+    background-color: #5d5d5d;
+
+    font-size: 16px;
+    font-family: "Helvetica Neue", Arial, "Sans Serif";
+}
+
+h1{
+    font-size: 5em;
+    margin-bottom: 1em;
+    text-transform : uppercase;
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+}
+
+div{
+    text-align: center;
+    width: 320px;
+    margin : 10em auto;
+}
+div p{
+    color: #fff;
+    background-color: #8ADDEA;
+    background-color: rgba(255,255,255,0.1);
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+    padding: 1em 0.5em;
+    margin: 0;
+    line-height: 1.5em;
+    border-radius: 4px;
+}

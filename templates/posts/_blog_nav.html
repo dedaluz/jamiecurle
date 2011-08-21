@@ -1,0 +1,5 @@
+<ul>
+{% for month in archive %}
+	<li><a href="{% url posts:archive_month month.0.year month.0.month %}">{{month.0|date:"F Y"}} <em>({{month.1}})</em></a></li>
+{% endfor %}
+</ul>

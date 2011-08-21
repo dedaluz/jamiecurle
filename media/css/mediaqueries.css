@@ -1,0 +1,50 @@
+/* large devices*/
+@media screen and (min-width: 1200px){
+    #blog div.object p.preview{
+        display: block;
+    }
+}
+/* grey area */
+@media screen and (max-width: 1000px) and (min-width: 601px){
+
+} 
+
+/* tablet sized */
+
+/* mobile devices */
+@media screen and (max-width: 600px) {
+
+    nav.global a{
+        display: inline-block;
+        padding: 0.5em ;
+        margin-left: 0.25em;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        text-shadow: #fff 1px 1px 1px;
+        font-size: 0.9em;
+        font-weight: 400;
+        color: #7E7E7E;
+    }
+    body{
+    
+    }
+    h1{
+        font-size: 1.75em;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    h3{
+        font-size: 1.25em;
+    }
+    h4{
+        font-size: 1em;
+    }
+    div.content{
+        margin: 3px;
+        padding: 2px;    
+        width: 99%;
+    }
+    /* instagram specific */
+}

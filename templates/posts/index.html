@@ -16,7 +16,7 @@
 			<h1>{{obj.title}}</h1>
 			<img src="{{obj.img.m}}">
 			<p>{{obj.description}}</p>
-			<p class="preview">{{obj.content_rendered|striptags|truncatewords:100}}</p>
+			<p class="preview">{{obj.content_rendered|striptags|safe|truncatewords:60}}</p>
 			<p class="meta">
 				Posted {{obj.created|date}} and tagged with {% for t in obj.tags.all %} <a class="tag" href="{% url tags:tag_list t.slug %}">{{t.name}}</a>{% endfor %}
 			</p>

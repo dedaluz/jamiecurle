@@ -42,8 +42,9 @@ nav#local ul li, nav ul li a{
 nav#local ul li a{
     border-bottom: 1px dotted #ddd;
     font-weight: 600;
-    padding-left: 0;
+    padding: 1em 0;
     margin-left: 0;
+    line-height: 1.3125em;
 }
 nav#local ul li a em{
     font-weight: 100;
