@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import datetime
+import ImageOps
+import os
 from django.db import models
 from django.conf import settings
 from taggit.managers import TaggableManager
@@ -9,6 +11,7 @@ from managers import BlogPostManager
 
 class BlogPost(models.Model):
     _IMG = None
+    _GREYSCALE_PATH = None
     HIDDEN = 0
     PUBLISHED = 1
     DELETED = 2
@@ -41,8 +44,8 @@ class BlogPost(models.Model):
         return ('posts:show', (), {
             'slug' : self.slug
         } ) 
-    
-    
+        
+        
     def img(self):
         try:
             self._IMG = self.blogimage_set.all()[0]

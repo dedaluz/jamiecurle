@@ -5,6 +5,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Example:
+    (r'demo', 'django.views.generic.simple.direct_to_template', {'template' : 'demo.html'}),
     (r'^tags/', include('apps.tags.urls', namespace="tags")),
     (r'^posts/', include('apps.posts.urls', namespace="posts")),
     (r'^instagram/', include('apps.instagram.urls', namespace="instagram")),

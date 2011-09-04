@@ -7,34 +7,37 @@
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://jamiecurle.com/posts/feed.rss">
 		<link rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
 		<link rel="icon" type="image/png" href="{{MEDIA_URL}}favicon.ico" />
-		{% compress css %}
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0 width=device-width">
-		<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.base.css" media="screen">
-		<link rel="stylesheet" href="{{MEDIA_URL}}css/typography.css" media="screen">
+
+		{% compress css %}
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/global.css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/nav.css" media="screen">
-		<link rel="stylesheet" href="{{MEDIA_URL}}css/twitter.css" media="screen">
-		<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.tags.css" media="screen">
-		<link rel="stylesheet" href="{{MEDIA_URL}}css/mediaqueries.css" media="screen">
-		<script type="text/javascript" src="http://use.typekit.com/upd8ahc.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/typography.css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/objects.css" media="screen">
 		{% block head %}
 		{% endblock %}
 		{% endcompress %}
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://use.typekit.com/upd8ahc.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
 		<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	</head>
 	<body id="{% block id %}{% endblock %}" class="{% block bodyclass %}{% endblock %}">
+
 		{% block nav %}
 
 		{% endblock %}
 		{% block body %}
-		<nav class="global">
-			<a href="/">Home</a>
-			<a href="{% url posts:index %}" id="blog">blog</a>
-			<a href="{% url instagram:index %}" id="instagram">instagram</a>
-			<a href="{% url instagram:index %}" id="instagram">About Me</a>
-		</nav>
-
+		<div role="navigation">
+			<nav class="global">
+				<a href="/">Home</a>
+				<a href="{% url posts:index %}" id="blog">blog</a>
+				<a href="{% url instagram:index %}" id="instagram">instagram</a>
+				<a href="{% url instagram:index %}" id="instagram">About Me</a>
+			</nav>
+		</div>
 		<div class="content">
 			{% block content %}
 			{% endblock %}
@@ -49,23 +52,16 @@
 				</p>
 			</div>
 		</footer>
+
 		{% endblock %}
-		
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<!-- <script src="{{MEDIA_URL}}js/modernizr.js"></script>
+<script src="{{MEDIA_URL}}js/masonry.js"></script> -->
+
 {% compress js %}
 {% block js %}{% endblock %}
 {% endcompress %}
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-18964988-1']);
-  _gaq.push(['_setDomainName', 'none']);
-  _gaq.push(['_setAllowLinker', true]);
-  _gaq.push(['_trackPageview']);
-  _gaq.push(['_trackPageLoadTime']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+
 	</body>
 </html>

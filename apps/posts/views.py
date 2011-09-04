@@ -63,7 +63,7 @@ def edit(request, slug=None):
 
 
 def index(request):
-    posts = BlogPost.objects.for_user(request.user)[:30]
+    posts = BlogPost.objects.for_user(request.user)[:19]
     return TemplateResponse(request, 'posts/index.html', {
         'posts' : posts
     })

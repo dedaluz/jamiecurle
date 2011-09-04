@@ -1,0 +1,133 @@
+div[role="navigation"]{
+    padding: 1% 0 0 0;
+    margin-top: 2%;
+    margin-bottom: 3%;
+        border: 1px solid red;
+}
+nav.global{
+    margin: 0 auto;
+    width: 80%;
+    text-align: right;
+    border: 1px solid red;
+}
+nav a{
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin-left: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: #fff 1px 1px 1px;
+    font-size: 0.75em;
+    font-weight: 400;
+    color: #7E7E7E;
+}
+#blog a#blog{
+    color: #000;
+}
+
+
+/* localnav */
+nav#local{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+nav#local ul{
+    margin : 0;
+    padding: 0;
+}
+nav#local ul li{
+    list-style-type: none;
+}
+nav#local ul li, nav ul li a{
+    display: block;
+}
+nav#local ul li a{
+    border-bottom: 1px dotted #ddd;
+    font-weight: 600;
+    padding: 1em 0;
+    margin-left: 0;
+    line-height: 1.3125em;
+}
+nav#local ul li a em{
+    font-weight: 100;
+    color: #ccc;
+}
+nav#local ul li a:hover{
+    background-color: #000;
+    border-bottom: 1px solid #ddd;
+    color: #fff;
+    text-shadow:  none;
+}
+/* #blog a#blog{
+        background-color: rgba(0,0,0,0.12);
+        background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.14, rgb(230,230,230)),
+            color-stop(0.57, rgb(240,240,240))
+        );
+        background-image: -moz-linear-gradient(
+            center bottom,
+            rgb(230,230,230) 14%,
+            rgb(240,240,240) 57%
+        );
+        border: 1px solid #DFDFDF;
+        border-radius: 4px;
+        
+    }
+    nav a:hover{
+        border-color: #cdcdcd;
+        color: #6e6e6e;
+    }
+*/
+/* nav#global{
+
+    padding: 0;
+
+}
+nav#global a{
+    display: inline-block;
+    margin-right: 0.625em;
+    padding: 0.625em;
+    color: #C1BFBF;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 2em;
+}
+nav#global a:hover{
+    color: #5B5B5C
+}
+#blog a#blog{
+    color: #fff;
+    background-color: #E2E2E2;;
+
+}
+
+nav#breadcrumb{
+    background-color: #E2E2E2;
+    margin-bottom: -2px;
+}
+
+ nav#breadcrumb p{
+     display: none;
+     margin: 0;
+     padding: 0;
+     font-size: 0.75em;
+     color: #B1B1B1;
+     text-transform: uppercase;
+ }
+ nav#breadcrumb p a{
+     color: #B1B1B1;
+     text-decoration: none;
+     display: inline-block;
+     padding: 0 1em;
+     
+ }
+ 
+ nav#breadcrumb p a:hover{
+     color: #fff;
+ }
+ */

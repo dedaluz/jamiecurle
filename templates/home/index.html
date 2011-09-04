@@ -1,9 +1,27 @@
 {% extends 'base.html' %}
+{% load posts_tags %}
 
 {% block head %}
-<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.home.css" type="text/css">
-<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.objects.css" type="text/css">
+	<link rel="stylesheet" href="{{MEDIA_URL}}css/home.css" media="screen">
+
+	<style type="text/css" media="screen">
+	{% for post in posts %}
+	#post{{post.pk}}{
+		border-bottom: 4px solid {{post.created|color_for_date}};
+	}
+	#post{{post.pk}}:hover{
+		background-color: {{post.created|color_for_date}};
+	}
+	#post{{post.pk}}:hover h1, #post{{post.pk}}:hover time{
+		color: #fff;
+	} 
+	{% endfor %}
+	</style>
 {% endblock %}
+
+
+{% block id %}home{% endblock %}
+
 
 {% block meta %}
 <div class="meta">
@@ -25,12 +43,28 @@
 </div>
 {% endblock %}
 
-{% block id %}home{% endblock %}
+
+
+
 
 {% block content %}
-	{% for post in posts %}
-		<div class="object">
-			<img src="{{post.img.m}}" title="{{post.title}}">
+
+
+	<div class="blog">
+		{% for post in posts %}
+		<div class="object {{post.created|date:"M"|lower}}" id="post{{post.pk}}">
+			<a href="{{post.get_absolute_url}}">
+				<time>
+					<span class="day">{{post.created|date:"d"}}</span>
+					<span class="month">{{post.created|date:"M"}}</span>
+					<span class="year">{{post.created|date:"Y"}}</span>
+				</time>
+				<h1>{{post.title}} </h1>
+			</a>
 		</div>
-	{% endfor %}
+		{% endfor %}
+	</div>
+	<div class="stream">
+		
+	</div>
 {% endblock %}
