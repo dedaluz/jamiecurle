@@ -97,7 +97,9 @@ INSTALLED_APPS = (
     'compressor',
     'form_utils',
     'apps.posts',
-    'apps.tags'
+    'apps.tags',
+    'apps.instagram',
+    'apps.utils'
 )
 
 JOHNNY_MIDDLEWARE_KEY_PREFIX='jamiecurle'
@@ -126,6 +128,6 @@ COMPRESS = True
 IMAGE_SIZES = ((1500,1058), (850,600), (612,450), (480,320), (320,240), (200,200) )
 
 try:
-    from local_settings import *
+    from settings_local import *
 except ImportError:
     pass

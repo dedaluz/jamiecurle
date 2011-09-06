@@ -9,5 +9,6 @@ django-form-utils
 markdown
 pygments
 django-disqus
+https://github.com/jamiecurle/python-lastfm/tarball/master
 
 

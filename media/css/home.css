@@ -1,4 +1,18 @@
 .blog{
-    width: 60%;
-    float: left;
+    width: 50%;
+    display: inline-block;
+    vertical-align:top;
+}
+
+.stream{
+    width: 16%;
+    padding: 2%;
+    display: inline-block;
+}
+
+
+.stream img{
+    padding: 2%;
+    width: 96%;
+    max-width: 96%;
 }

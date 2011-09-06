@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load posts_tags %}
+{% load utils %}
 
 {% block head %}
 	<link rel="stylesheet" href="{{MEDIA_URL}}css/home.css" media="screen">
@@ -15,6 +15,12 @@
 	#post{{post.pk}}:hover h1, #post{{post.pk}}:hover time{
 		color: #fff;
 	} 
+	{% endfor %}
+	
+	{% for instagram in instagrams %}
+	#instagram{{instagram.pk}}{
+		background-color: {{instagram.created|color_for_date}};
+	}
 	{% endfor %}
 	</style>
 {% endblock %}
@@ -65,6 +71,10 @@
 		{% endfor %}
 	</div>
 	<div class="stream">
-		
+		{% for instagram in instagrams %}
+		<div class="instagram" id="instagram{{instagram.pk}}">
+			<img src="{{instagram.thumbnail}}">
+		{% endfor %}
+		</div>
 	</div>
 {% endblock %}
