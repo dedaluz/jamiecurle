@@ -25,7 +25,6 @@ colours = [
 ]
 @register.filter
 def color_for_date(date):
-    print date
     # get the month
     current = colours[date.month - 1 ]
     days_in_month = calendar.monthrange(date.year, date.month)

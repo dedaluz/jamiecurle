@@ -23,7 +23,7 @@ class InstagramPhoto(models.Model):
         ordering = ['-created']
     
     def __unicode__(self):
-        return '<instagram photo: %s>' % self.pk
+        return '<instagram photo: %s>' % self.caption
 
 
 class InstagramComment(models.Model):

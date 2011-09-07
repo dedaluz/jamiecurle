@@ -5,8 +5,9 @@ from apps.instagram.models import InstagramPhoto
 
 
 def index(request):
-    posts = BlogPost.objects.for_user(request.user).order_by('-created')[:59]
-    instagrams = InstagramPhoto.objects.all()[:59]
+    posts = BlogPost.objects.for_user(request.user).order_by('-created')[:20]
+    print InstagramPhoto.objects.count()
+    instagrams = InstagramPhoto.objects.all()[:20]
     #creates = []
     #for post in posts:
     #    creates.append(post.created)
