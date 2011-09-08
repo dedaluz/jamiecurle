@@ -99,7 +99,8 @@ INSTALLED_APPS = (
     'apps.posts',
     'apps.tags',
     'apps.instagram',
-    'apps.utils'
+    'apps.utils',
+    'apps.pinboard'
 )
 
 JOHNNY_MIDDLEWARE_KEY_PREFIX='jamiecurle'

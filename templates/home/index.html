@@ -70,11 +70,20 @@
 		</div>
 		{% endfor %}
 	</div>
-	<div class="stream">
+	<div class="instagrams">
 		{% for instagram in instagrams %}
 		<div class="instagram" id="instagram{{instagram.pk}}">
 			<img src="{{instagram.thumbnail}}">
-		{% endfor %}
 		</div>
+		{% endfor %}
+		
+	</div>
+	
+	<div class="bookmarks">
+		<ul>
+		{% for bookmark in bookmarks %}
+			<li><a href="{{bookmark.url}}">{{bookmark.description}}</a></li>
+		{% endfor %}
+		</ul>
 	</div>
 {% endblock %}

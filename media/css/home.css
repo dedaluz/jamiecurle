@@ -4,15 +4,32 @@
     vertical-align:top;
 }
 
-.stream{
+.instagrams{
     width: 16%;
     padding: 2%;
     display: inline-block;
 }
 
 
-.stream img{
+.instagram img{
     padding: 2%;
     width: 96%;
     max-width: 96%;
 }
+
+.bookmarks{
+    border-top: 1px solid red;
+    width: 15%;
+    padding: 2%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+ .bookmarks ul{
+     margin: 0;
+     padding: 0;
+ }
+ 
+  .bookmarks ul li{
+      margin-bottom: 0.5em;
+  }
