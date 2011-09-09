@@ -1,5 +1,6 @@
 from django.db import models
 from taggit.managers import TaggableManager
+from apps.utils.fields import upload_path
 
 class InstagramPhoto(models.Model):
     caption = models.CharField(max_length=255, blank=True, null=True)
@@ -15,7 +16,10 @@ class InstagramPhoto(models.Model):
     longitude = models.DecimalField(max_digits=8, decimal_places=6, blank=True, null=True)
     location_id = models.PositiveIntegerField(blank=True, null=True)
     location_name = models.CharField(max_length=255, blank=True, null=True)
-    
+    #
+    # the local image
+    img = models.ImageField(upload_to='%Y/%m/%d/instagram/')
+    thumb = models.ImageField(upload_to='%Y/%m/%d/instagram/')
     
     tags = TaggableManager()
     
@@ -24,6 +28,7 @@ class InstagramPhoto(models.Model):
     
     def __unicode__(self):
         return '<instagram photo: %s>' % self.caption
+    
 
 
 class InstagramComment(models.Model):

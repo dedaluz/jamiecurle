@@ -73,7 +73,7 @@
 	<div class="instagrams">
 		{% for instagram in instagrams %}
 		<div class="instagram" id="instagram{{instagram.pk}}">
-			<img src="{{instagram.thumbnail}}">
+			<img src="{{instagram.img.url}}">
 		</div>
 		{% endfor %}
 		

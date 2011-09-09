@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 import json
 import urllib2
+from datetime import datetime
+from distutils import dir_util
 from django.core.management.base import BaseCommand, CommandError
 from apps.instagram.models import InstagramPhoto, InstagramComment
+from apps.utils.fields import upload_path
 from django.conf import settings
 from johnny.cache import invalidate
 from johnny.middleware import QueryCacheMiddleware
@@ -34,6 +37,14 @@ def to_datetime(d):
 class Command(BaseCommand):
     
     def handle(self, *args, **kwargs):
+        #
+        # delete some while testing
+        #try:
+        #    InstagramPhoto.objects.filter(instagram_id__in=['207995726', '203479101', '201843344']).delete()
+        #    InstagramComment.objects.get(comment='Just a tree.').delete()
+        #except:
+        #    pass
+        
         # get the latest data
         url = 'http://instafeed.me/f/7ac760.json'
         data = urllib2.urlopen(url)
@@ -74,8 +85,38 @@ class Command(BaseCommand):
                     location_name = ig['location']['name']
                 except AttributeError:
                     pass
-                
-                instagram.save()
+                #
+                #
+                # suck the images down so we can avoid
+                # hitting their bandwidth. I wouldn't like that.
+                try:
+                    # sort their paths
+                    filename = instagram.standard_resolution.split('/').pop()
+                    path = '%suploads/%s/instagram' % (settings.MEDIA_ROOT, datetime.today().strftime("%Y/%m/%d") )
+                    img_path = 'uploads/%s/instagram/%s' % (datetime.today().strftime("%Y/%m/%d"), filename)
+                    thumb_path = 'uploads/%s/instagram/t_%s' % (datetime.today().strftime("%Y/%m/%d"), filename)
+                    # get them
+                    img = urllib2.urlopen(instagram.standard_resolution)
+                    thumb = urllib2.urlopen(instagram.thumbnail)
+                    # make the paths
+                    dir_util.mkpath(path,mode=0755)
+                    # process the image
+                    file = open('%s%s' % (settings.MEDIA_ROOT, img_path), 'w')
+                    file.write(img.read())
+                    file.close()
+                    # process the thumb
+                    file = open('%s%s' % (settings.MEDIA_ROOT, thumb_path), 'w')
+                    file.write(thumb.read())
+                    file.close()
+                    #
+                    instagram.img = img_path
+                    instagram.thumb = thumb_path
+                    # now save
+                    instagram.save()
+                except urllib2.HTTPError, e:
+                    # abort if there is no photo - this is all about the photos!
+                    continue
+               
                 
                 for comment in ig['comments']:
                     try:
@@ -88,7 +129,6 @@ class Command(BaseCommand):
                         igc.comment = comment['text']
                         igc.instagramphoto = instagram
                         igc.save()
-                        print 'comment %s' % igc.instagram_id
                 
         # invalidate the cache
         invalidate(InstagramPhoto, InstagramComment)
