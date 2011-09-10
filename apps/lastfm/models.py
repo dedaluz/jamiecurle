@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 
 class Scrobble(models.Model):
@@ -18,5 +19,12 @@ class Scrobble(models.Model):
     
     def __unicode__(self):
         return u'%s' % self.name
+        
+    @property
+    def img(self):
+        try:
+            return self.image.url
+        except ValueError:
+            return '%simages/blank.square.png' % settings.MEDIA_URL
     
 

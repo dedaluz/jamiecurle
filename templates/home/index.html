@@ -86,4 +86,13 @@
 		{% endfor %}
 		</ul>
 	</div>
+	
+	<div class="scrobbles">
+		{% for scrobble in scrobbles %}
+		<div class="scrobble">
+			<p>{{scrobble.artist_name}} - {{scrobble.name}}</p>
+			<img src="{{scrobble.img}}">
+		</div>
+		{% endfor %}
+	</div>
 {% endblock %}

@@ -33,3 +33,26 @@
   .bookmarks ul li{
       margin-bottom: 0.5em;
   }
+
+
+.scrobble{
+    display: inline-block;
+    position: relative;
+    width : 12em;
+    padding: 0.5em;
+    background-color: #efefef;
+    vertical-align: middle;
+    margin: 0 0.5em 0.5em 0;
+}
+.scrobble p{
+    margin: 0;
+    padding: 1%;
+    width: 58%;
+    float: left;
+
+}
+.scrobble img{
+    float: right;
+    width: 4em;
+    height: 4em;
+}

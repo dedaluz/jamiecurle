@@ -101,6 +101,7 @@ INSTALLED_APPS = (
     'apps.instagram',
     'apps.pinboard',
     'apps.lastfm',
+    'apps.utils'
 )
 
 JOHNNY_MIDDLEWARE_KEY_PREFIX='jamiecurle'
