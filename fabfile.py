@@ -5,7 +5,7 @@ env.user = 'jcurle'
 from settings import DATABASES
 
 
-env.production_uploads = 'designcc@backup1.designcc.co.uk:/home/designcc/backups/tass/uploads'
+env.production_uploads = 'designcc@backup1.designcc.co.uk:/home/designcc/backups/jamiecurle/uploads'
 
 env.production_db_name = 'jamiecurle2'
 env.production_db_user = 'root'

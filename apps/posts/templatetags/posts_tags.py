@@ -1,6 +1,5 @@
 import re 
 import pygments
-
 from django import template 
 from pygments import lexers 
 from pygments import formatters
@@ -29,18 +28,15 @@ def month_name(month_num):
 
 @register.filter
 def render(content):
-    regex = re.compile(r'<code(.*?)>(.*?)</code>', re.DOTALL)
-    # split it up into lang chunks
-    last_end = 0 
-    to_return = '' 
-    found = 0
+    regex = re.compile(r'(<code(.*?)</code>)', re.DOTALL)
+    code_blocks = []
     
-    
-    for match_obj in regex.finditer(content):
-        code_class = match_obj.group(1) 
-        code_string = match_obj.group(2)
-        if code_class.find('lang'): 
-            language = re.split(r'"|\'', code_class)[1]
+    for i, m in enumerate(regex.finditer(content)):
+        code = m.group(0)
+        # if there is a lang attribute, use that
+        if code.find('lang'):
+            # get the language
+            language = re.split(r'"|\'', code)[1]
             # fix some wonky lexers
             if language == 'conf': language = 'nginx'
             if language == 'regex': language = 'perl'
@@ -51,13 +47,23 @@ def render(content):
                 lexer = lexers.guess_lexer(str(code))
             except ValueError:
                 lexer = lexers.PythonLexer()
-        pygmented_string = pygments.highlight(code_string, lexer, formatters.HtmlFormatter())
-        to_return = to_return + markdown(content[last_end:match_obj.start(0)]) + pygmented_string
-        last_end = match_obj.end(2) 
-        found = found + 1 
+        # remove the code tags
+        code = code.replace('</code>', '')
+        code = code.replace('<code>', '')
+        code = re.sub('<code(.*?)>', '', code)
+        # create the pygmented code with the lexer
+        pygmented_string = pygments.highlight(code, lexer, formatters.HtmlFormatter())
+        # put the code blocks into the list for processintg later
+        code_blocks.append(pygmented_string)
+        # replace the <code> tags with placeholders that can be used to replace
+        content = content.replace(m.string[m.start():m.end()], '{{CODE%s}}' % i)
     
-    to_return = to_return + markdown(content[last_end:])
-    # now process markdown
-    #print to_return
-    
-    return to_return
+    # now process as markdown
+    content = markdown(content)
+    # replaced placeholders with the actual code
+    for i, code in enumerate(code_blocks):
+        content = content.replace('<p>{{CODE%s}}</p>' % i, code)
+        content = content.replace('{{CODE%s}}' % i, code)
+    # return
+    return mark_safe(content)
+render.is_safe = True

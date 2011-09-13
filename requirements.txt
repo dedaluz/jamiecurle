@@ -9,7 +9,7 @@ django-form-utils
 markdown
 pygments
 django-disqus
-https://github.com/jamiecurle/python-lastfm/tarball/master
+python-twitter
 https://github.com/jamiecurle/python-pinboard/tarball/master
 
 
