@@ -54,8 +54,8 @@
 
 
 {% block content %}
-
-
+{{request.user}}
+<br>
 	<div class="blog">
 		{% for post in posts %}
 		<div class="object {{post.created|date:"M"|lower}}" id="post{{post.pk}}">

@@ -4,7 +4,7 @@ from apps.utils.fields import upload_path
 
 class InstagramPhoto(models.Model):
     caption = models.CharField(max_length=255, blank=True, null=True)
-    instagram_id = models.PositiveIntegerField()
+    instagram_id = models.CharField(max_length=255)
     created = models.DateTimeField()
     like_count = models.PositiveSmallIntegerField(default=0, blank=True, null=True)
     url = models.URLField(verify_exists=False, blank=True, null=True)
@@ -33,7 +33,7 @@ class InstagramPhoto(models.Model):
 
 class InstagramComment(models.Model):
     name = models.CharField(max_length=255)
-    instagram_id = models.PositiveIntegerField()
+    instagram_id = models.CharField(max_length=255)
     created = models.DateTimeField()
     comment = models.TextField()
     instagramphoto = models.ForeignKey(InstagramPhoto)

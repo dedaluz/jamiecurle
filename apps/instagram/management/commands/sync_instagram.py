@@ -51,7 +51,6 @@ class Command(BaseCommand):
         feed = json.load(data)
         #iterate over items and create where necessary
         for ig in feed:
-            
             try:
                 instagram = InstagramPhoto.objects.get(instagram_id=ig['id'])
             except InstagramPhoto.DoesNotExist:
@@ -66,12 +65,14 @@ class Command(BaseCommand):
                 instagram.thumbnail = ig['images']['thumbnail']
                 instagram.standard_resolution = ig['images']['standard_resolution']
                 try:
-                    instagram.latitude = ig['location']['latitude']
+                    lat = ig['location']['latitude']
+                    instagram.latitude = lat if len(lat) > 0 else None
                 except AttributeError:
                     pass
                 #
                 try:
-                    instagram.longitude = ig['location']['longitude']
+                    lng = ig['location']['longitude']
+                    instagram.longitude = lat if len(lng) > 0 else None
                 except AttributeError:
                     pass
                 #
