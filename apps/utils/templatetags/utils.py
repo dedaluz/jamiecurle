@@ -1,8 +1,56 @@
 import calendar
+import re
 from django import template 
 register = template.Library()
 
+MENTION_RE = re.compile('(\@[a-zA-Z0-9]+)')
 
+@register.filter
+def parse_mentions(tweet):
+    return tweet
+
+@register.filter
+def model(obj):
+    return obj._meta.app_label
+
+@register.inclusion_tag('utils/_thing.html')
+def render_thing(thing):
+    return{
+        'thing' : thing
+    }
+
+class CollationNode(template.Node):
+    
+    def __init__(self, date, bookmarks, instagrams, scrobbles, tweets, varname):
+        self.date = template.Variable(date)
+        self.bookmarks = template.Variable(bookmarks)
+        self.instagrams = template.Variable(instagrams)
+        self.scrobbles = template.Variable(scrobbles)
+        self.tweets = template.Variable(tweets)
+        self.varname = varname
+        
+    
+    
+    def render(self, context):
+        date = self.date.resolve(context)
+        # populate today
+        today = []
+        today += self.bookmarks.resolve(context).filter(created__year=date.year, created__month=date.month, created__day=date.day)
+        today += self.instagrams.resolve(context).filter(created__year=date.year, created__month=date.month, created__day=date.day)
+        today += self.scrobbles.resolve(context).filter(created__year=date.year, created__month=date.month, created__day=date.day)
+        today += self.tweets.resolve(context).filter(created__year=date.year, created__month=date.month, created__day=date.day)
+        # nowe sort it by obj.created
+        today = sorted(today, key=lambda obj : obj.created)
+        context[self.varname] = today
+        return ''
+
+
+@register.tag
+def day_as_list(parser, token):
+    bits = token.contents.split()
+    #print bits
+    return CollationNode(bits[1], bits[2], bits[3], bits[4], bits[5], bits[7])
+    
 
 """
 temps and sunlight as hue and saturation calculated

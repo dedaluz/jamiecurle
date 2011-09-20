@@ -14,7 +14,7 @@ class Migration(SchemaMigration):
             ('name', self.gf('django.db.models.fields.CharField')(max_length=255)),
             ('streamable', self.gf('django.db.models.fields.BooleanField')(default=True)),
             ('url', self.gf('django.db.models.fields.URLField')(max_length=200, null=True, blank=True)),
-            ('played_on', self.gf('django.db.models.fields.DateTimeField')()),
+            ('created', self.gf('django.db.models.fields.DateTimeField')()),
             ('artist_name', self.gf('django.db.models.fields.CharField')(max_length=255)),
             ('artist_url', self.gf('django.db.models.fields.URLField')(max_length=200, null=True, blank=True)),
             ('artist_mid', self.gf('django.db.models.fields.CharField')(max_length=255, null=True, blank=True)),
@@ -42,7 +42,7 @@ class Migration(SchemaMigration):
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'image': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
-            'played_on': ('django.db.models.fields.DateTimeField', [], {}),
+            'created': ('django.db.models.fields.DateTimeField', [], {}),
             'streamable': ('django.db.models.fields.BooleanField', [], {'default': 'True'}),
             'url': ('django.db.models.fields.URLField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'})
         }

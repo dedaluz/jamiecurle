@@ -22,6 +22,11 @@
 		background-color: {{instagram.created|color_for_date}};
 	}
 	{% endfor %}
+	{% for day in date_list %}
+	#thing-{{day|date:"Y-M-d"}}{
+		background-color: {{day|color_for_date}};
+	}
+	{% endfor %}
 	</style>
 {% endblock %}
 
@@ -54,7 +59,16 @@
 
 
 {% block content %}
-{{request.user}}
+{% for day in date_list %}
+	<div class="day" id="thing-{{day|date:"Y-M-d"}}">
+	
+	{% day_as_list day bookmarks instagrams scrobbles tweets as today %}
+	<h1>{{day}}</h1>
+	{% for thing in today %}
+	{% render_thing thing %}
+	{% endfor %}
+	</div>
+{% endfor %}
 <br>
 	<div class="blog">
 		{% for post in posts %}

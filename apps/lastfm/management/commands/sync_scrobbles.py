@@ -27,7 +27,7 @@ class Command(BaseCommand):
         #url =' http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=jamiecURLe&limit=%s&api_key=%s&page=%s' % (self.limit, settings.LASTFM_KEY, page)
         # get the last scrobble
         last_scrobble = Scrobble.objects.all()[:1][0]
-        timefrom = mktime(last_scrobble.played_on.timetuple())
+        timefrom = mktime(last_scrobble.created.timetuple())
         print "syncing new scrobbles"
         url =' http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=jamiecURLe&limit=%s&api_key=%s&from=%s' % (self.limit, settings.LASTFM_KEY, timefrom)
         request = urllib2.urlopen(url)
@@ -54,10 +54,10 @@ class Command(BaseCommand):
         if xmldata.get('nowplaying') =='true':
             return
             
-        played_on = datetime.datetime.fromtimestamp( float( xmldata[10].get('uts') ) )
+        created = datetime.datetime.fromtimestamp( float( xmldata[10].get('uts') ) )
         
         try:
-            s = Scrobble.objects.get(played_on=played_on, name=xmldata[1].text)
+            s = Scrobble.objects.get(created=created, name=xmldata[1].text)
         except Scrobble.DoesNotExist:
             s = Scrobble()
             # artist info
@@ -71,7 +71,7 @@ class Command(BaseCommand):
             # track info
             s.streamable = True if xmldata[2].text == '1' else False
             s.name = xmldata[1].text
-            s.played_on = played_on
+            s.created = created
             s.url = xmldata[5].text
     
     
@@ -79,7 +79,7 @@ class Command(BaseCommand):
             img = xmldata[9].text
             try:
                 filename = img.split('/').pop()
-                date = s.played_on.strftime("%Y/%m/%d")
+                date = s.created.strftime("%Y/%m/%d")
                 path = '%suploads/%s/lastfm' % (settings.MEDIA_ROOT, date )
                 img_path = 'uploads/%s/lastfm/%s' % (date, filename)
                 try:
@@ -123,13 +123,13 @@ class Command(BaseCommand):
         tracks = user.get_recent_tracks()
         for track in tracks:
             try:
-                s = Scrobble.objects.get(played_on=track.played_on)
+                s = Scrobble.objects.get(created=track.created)
             except Scrobble.DoesNotExist:
                 s = Scrobble()
                 s.name = track.name
                 s.streamable = track.streamable
                 s.url =  track.url
-                s.played_on = track.played_on
+                s.created = track.created
                 s.artist_name = track.artist.name
                 s.album_name = track.album.name
                 s.album_mid = track.album.mbid
@@ -137,7 +137,7 @@ class Command(BaseCommand):
                 if track.image.get('extralarge', False):
                     img = track.image['extralarge']
                     filename = track.image['extralarge'].split('/').pop()
-                    date = s.played_on.strftime("%Y/%m/%d")
+                    date = s.created.strftime("%Y/%m/%d")
                     path = '%suploads/%s/lastfm' % (settings.MEDIA_ROOT, date )
                     img_path = 'uploads/%s/lastfm/%s' % (date, filename)
                     if not os.path.exists('%s%s' % (settings.MEDIA_ROOT, img_path)):
