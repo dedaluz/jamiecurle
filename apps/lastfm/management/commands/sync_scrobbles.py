@@ -16,7 +16,7 @@ class Command(BaseCommand):
     #processed = 0
     #startpage = 68
     #endpage = 69
-    limit = 50
+    limit = 200
     
     
     def handle(self, *args, **kwargs):

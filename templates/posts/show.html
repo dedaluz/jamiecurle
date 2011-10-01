@@ -4,7 +4,8 @@
 {% block title %} {{post.title}} - {% endblock %}
 
 {% block head %}
-<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.syntax.css" type="text/css">
+<link rel="stylesheet" href="{{MEDIA_URL}}css/posts.css" type="text/css">
+<link rel="stylesheet" href="{{MEDIA_URL}}css/syntax.css" type="text/css">
 {% endblock %}
 
 {% block bodyclass %}show{% endblock %}
@@ -20,22 +21,15 @@
 		<h1>{{post.title}}</h1>
 		<p class="description">{{post.description}}</p>
 	</header>
-	<div class="meta">
-		Posted {{post.created|date}} and tagged with {% for t in post.tags.all %} <a class="tag" href="{% url tags:tag_list t.slug %}">{{t.name}}</a>{% endfor %}
-	</div>
+
 	<div class="body">
 		{{post.content_rendered|safe}}
 	</div>
 </article>
-
-
-{% if request.user.is_authenticated %}
-<div id="adminbar">
-	<ul>
-		<li><a href="{% url posts:edit post.slug %}">Edit</a></li>
-	</ul>
-</div>
-{% endif %}
-
 {% endblock %}
 
+{% block secondary %}
+<aside>
+	Posted {{post.created|date}} and tagged with {% for t in post.tags.all %} <a class="tag" href="{% url tags:tag_list t.slug %}">{{t.name}}</a>{% endfor %}
+</aside>
+{% endblock %}

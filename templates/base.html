@@ -15,49 +15,30 @@
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/nav.css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/typography.css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/objects.css" media="screen">
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/tags.css" media="screen">
 		{% block head %}
 		{% endblock %}
 		{% endcompress %}
-		<script type="text/javascript" src="http://use.typekit.com/upd8ahc.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 
 		<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	</head>
 	<body id="{% block id %}{% endblock %}" class="{% block bodyclass %}{% endblock %}">
-
+		<header class="primary">
+			<h1>
+				<a href="/">J<span>amie</span> C<span>urle</span></a>
+			</h1>
+		</header>
 		{% block nav %}
-
 		{% endblock %}
 		{% block body %}
-		<div role="navigation">
-			<nav class="global">
-				<a href="/">Home</a>
-				<a href="{% url posts:index %}" id="blog">blog</a>
-				<a href="{% url instagram:index %}" id="instagram">instagram</a>
-				<a href="{% url instagram:index %}" id="instagram">About Me</a>
-			</nav>
-		</div>
-		<div class="content">
-			{% block content %}
-			{% endblock %}
-		</div>
-		<footer>
-			<div id="creative-commons">
-				<p>
-					<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jamiecurle.com</span> by 
-					<a xmlns:cc="http://creativecommons.org/ns#" href="http://jamiecurle.com" property="cc:attributionName" rel="cc:attributionURL">Jamie Curle</a> 
-					is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
-					Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
-				</p>
+			<div class="content">
+				{% block content %}
+				{% endblock %}
 			</div>
-		</footer>
-
 		{% endblock %}
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-<!-- <script src="{{MEDIA_URL}}js/modernizr.js"></script>
-<script src="{{MEDIA_URL}}js/masonry.js"></script> -->
+<script src="{{MEDIA_URL}}js/jquery.1.5.1.js"></script>
 
 {% compress js %}
 {% block js %}{% endblock %}

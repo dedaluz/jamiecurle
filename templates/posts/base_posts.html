@@ -2,23 +2,23 @@
 {% load posts_tags %}
 {% block id %}blog{% endblock %}
 
-{% block content %}
-	
-	{% if request.user.is_authenticated %}
-	<div id="adminbar">
-		<ul>
-			<li><a href="{% url posts:create %}">New</a></li>
-			{% if post.pk %}<li><a href="{% url posts:edit post.slug %}">Edit</a></li>{% endif %}
-		</ul>
+
+
+{% block body %}
+	<div class="content">
+		{% block content %}
+		{% endblock %}
 	</div>
-	{% endif %}
-	
+	<div class="secondary">
+	{% block secondary %}
 	<nav id="local">
 		{% blog_nav %}
 	</nav>
-
-	{% block content_posts %}
-
 	{% endblock %}
+	</div>
 
+	
 {% endblock %}
+	
+
+

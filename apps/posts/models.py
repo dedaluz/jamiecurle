@@ -8,6 +8,7 @@ from taggit.managers import TaggableManager
 from south.modelsinspector import add_introspection_rules
 from apps.utils.fields import upload_path, ImageWithThumbsField
 from managers import BlogPostManager
+from listeners import render_content
 
 class BlogPost(models.Model):
     _IMG = None
@@ -108,3 +109,5 @@ rules = [
     ),
 ]
 add_introspection_rules(rules, ["^apps\.utils\.fields",])
+
+models.signals.pre_save.connect(render_content, sender=BlogPost)

@@ -40,7 +40,7 @@ class CollationNode(template.Node):
         today += self.scrobbles.resolve(context).filter(created__year=date.year, created__month=date.month, created__day=date.day)
         today += self.tweets.resolve(context).filter(created__year=date.year, created__month=date.month, created__day=date.day)
         # nowe sort it by obj.created
-        today = sorted(today, key=lambda obj : obj.created)
+        today = sorted(today, key=lambda obj : obj.created, reverse=True)
         context[self.varname] = today
         return ''
 

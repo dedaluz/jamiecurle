@@ -1,112 +1,34 @@
 {% extends 'base.html' %}
 {% load utils %}
 
-{% block head %}
-	<link rel="stylesheet" href="{{MEDIA_URL}}css/home.css" media="screen">
-
-	<style type="text/css" media="screen">
-	{% for post in posts %}
-	#post{{post.pk}}{
-		border-bottom: 4px solid {{post.created|color_for_date}};
-	}
-	#post{{post.pk}}:hover{
-		background-color: {{post.created|color_for_date}};
-	}
-	#post{{post.pk}}:hover h1, #post{{post.pk}}:hover time{
-		color: #fff;
-	} 
-	{% endfor %}
-	
-	{% for instagram in instagrams %}
-	#instagram{{instagram.pk}}{
-		background-color: {{instagram.created|color_for_date}};
-	}
-	{% endfor %}
-	{% for day in date_list %}
-	#thing-{{day|date:"Y-M-d"}}{
-		background-color: {{day|color_for_date}};
-	}
-	{% endfor %}
-	</style>
-{% endblock %}
-
-
 {% block id %}home{% endblock %}
 
 
-{% block meta %}
-<div class="meta">
-	<p>
-		Hello, I'm Jamie Curle. 
-	</p>
-	<p>
-		In my spare time you'll probably find me loitering in the greenhouse.
-	</p>
-	<p>
-		Professionally I'm a designer/developer who loves working with
-		Django, jQuery and HTML+CSS to create work for clients or for
-		some of my half baked ideas.
-	</p>
-	<p>
-		You can email &mdash; me at jamiecurle dot com or get me
-		 on <a href="http://twitter.com/jamiecurle">twitter</a>.
-	</p>
-</div>
+{% block head %}
+<style type="text/css" media="screen">
+	{% for post in posts %}
+		#blog{{post.pk}}{border-left: 0.4em solid {{post.created|color_for_date}}}
+		/*#blog{{post.pk}} .secondary{background: transparent url({{post.img.f}}) center center repeat; sborder: 1px solid {{post.created|color_for_date}}}*/
+	{% endfor %}
+</style>
 {% endblock %}
 
-
-
-
-
 {% block content %}
-{% for day in date_list %}
-	<div class="day" id="thing-{{day|date:"Y-M-d"}}">
-	
-	{% day_as_list day bookmarks instagrams scrobbles tweets as today %}
-	<h1>{{day}}</h1>
-	{% for thing in today %}
-	{% render_thing thing %}
-	{% endfor %}
-	</div>
+
+{% for post in posts %}
+<div id="blog{{post.pk}}"class="object blog">
+	<time datetime="{{post.created|date:"c"}}"> {{post.created|date:"d M Y"}}</time>
+	<h1><a href="{{post.get_absolute_url}}">{{post}}</a></h1>
+	<p>{{post.description}}</p>
+</div>
 {% endfor %}
-<br>
-	<div class="blog">
-		{% for post in posts %}
-		<div class="object {{post.created|date:"M"|lower}}" id="post{{post.pk}}">
-			<a href="{{post.get_absolute_url}}">
-				<time>
-					<span class="day">{{post.created|date:"d"}}</span>
-					<span class="month">{{post.created|date:"M"}}</span>
-					<span class="year">{{post.created|date:"Y"}}</span>
-				</time>
-				<h1>{{post.title}} </h1>
-			</a>
-		</div>
-		{% endfor %}
-	</div>
-	<div class="instagrams">
-		{% for instagram in instagrams %}
-		<div class="instagram" id="instagram{{instagram.pk}}">
-			<img src="{{instagram.img.url}}">
-		</div>
-		{% endfor %}
-		
-	</div>
-	
-	<div class="bookmarks">
-		<ul>
-		{% for bookmark in bookmarks %}
-			<li><a href="{{bookmark.url}}">{{bookmark.description}}</a></li>
-		{% endfor %}
-		</ul>
-	</div>
-	
-	<div class="scrobbles">
-		{% for scrobble in scrobbles %}
-		<div class="scrobble">
-			<p>{{scrobble.artist_name}} - {{scrobble.name}}</p>
-			<img src="{{scrobble.img}}">
-		</div>
-		{% endfor %}
-	</div>
+
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" charset="utf-8">
+	//$('div.blog .primary').each(function(){
+	//	$(this).next().height($(this).height())
+	//})
+</script>
 {% endblock %}

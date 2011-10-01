@@ -4,6 +4,7 @@ from django import template
 from pygments import lexers 
 from pygments import formatters
 from django.contrib.markup.templatetags.markup import markdown
+from django.utils.safestring import mark_safe
 from BeautifulSoup import BeautifulSoup
 from apps.posts.models import BlogPost
  
