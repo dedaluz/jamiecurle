@@ -6,5 +6,6 @@ class BlogImageInline(admin.TabularInline):
 
 class BlogPostAdmin(admin.ModelAdmin):
     inlines = [BlogImageInline]
-    
+    list_display= ['title','views', 'description', ]
+    list_editable = ['views']
 admin.site.register(BlogPost, BlogPostAdmin)
