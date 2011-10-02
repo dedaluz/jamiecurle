@@ -1,6 +1,8 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
+from django.http import HttpResponse
 from apps.utils.views import index
+from apps.blog.feeds import  LatestPostFeed
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -12,5 +14,7 @@ urlpatterns = patterns('',
     (r'^twitter/', include('apps.twitter.urls', namespace="twitter")),
     (r'^authenticate', include('apps.authenticate.urls', namespace="authenticate")),
     (r'^admin/', include(admin.site.urls)),
+    (r'^robots\.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: ", mimetype="text/plain")),
+    
     url(r'^$', index, name="home"),
 )

@@ -16,5 +16,10 @@
 		<h1><a href="{{post.get_absolute_url}}">{{post}}</a></h1>
 		<p>{{post.description}}</p>
 	</div>
+	{% empty %}
+	<h1>Nothing.</h1>
+	<p>
+		Looks like I didn't blog in {{month|date:"F"}} {{year}}.
+	</p>
 	{% endfor %}
 {% endblock %}

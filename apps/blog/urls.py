@@ -5,9 +5,8 @@ from feeds import  LatestPostFeed
 
 urlpatterns = patterns('',
     url(r'feed\.rss', LatestPostFeed(), name="feed"),
-    url(r'^create/$', create, name="create"),
     url(r'^(?P<year>\d{4})/(?P<month>\d{1,2})/$', archive_month, name="archive_month"),
     url(r'^(?P<slug>[\w\-\+]+)/$', show, name="show"),
-    url(r'$', index, name="index")
+    #url(r'\.html$', index, name="index")
 )
 
