@@ -95,6 +95,7 @@ INSTALLED_APPS = (
     'debug_toolbar',
     'johnny',
     'taggit',
+    'gunicorn',
     'compressor',
     'form_utils',
     'apps.blog',
