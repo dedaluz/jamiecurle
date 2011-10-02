@@ -10,6 +10,9 @@ body{
     max-width: 46.5626em;
     padding: 2em;
     background-color: #fff;
+    display: inline-block;
+    width: 58%;
+
 }
 .content:before,
 .content:after {
@@ -19,6 +22,15 @@ body{
 
 .content:after {
     clear:both;
+}
+
+.secondary{
+    width: auto;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 2%;
+    width: 30%;
+    margin-right: 2%;
 }
 
 
@@ -61,8 +73,13 @@ p a:hover{
         header.primary h1 a:hover{
             background-color: #F5000E;
         }
-        
-footer{
+
+
+
+
+
+
+footer.license{
     background-color:#000;
     color:#999;
     margin: 0 0 -3em 0;
@@ -75,7 +92,10 @@ footer a{
     font-weight: 400;
 }
 footer:before,
-.content:after {
+footer:after {
     content:"";
     display:table;
+}
+footer:after{
+    clear: both;
 }

@@ -16,7 +16,7 @@
         position: relative;
         margin-left: -2%;
     }
-    #blog.show footer{
+    #blog.show .content footer{
         display: block;
     }
     .secondary aside{
