@@ -69,6 +69,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'apps.stats.middleware.StatsMiddleware',
     #'johnny.middleware.LocalStoreClearMiddleware',
     #'johnny.middleware.QueryCacheMiddleware',
     #'debug_toolbar.middleware.DebugToolbarMiddleware',
@@ -102,7 +103,9 @@ INSTALLED_APPS = (
     'apps.pinboard',
     'apps.lastfm',
     'apps.twitter',
-    'apps.utils'
+    'apps.utils',
+    'apps.stats',
+    'apps.quotes',
 )
 
 JOHNNY_MIDDLEWARE_KEY_PREFIX='jamiecurle'

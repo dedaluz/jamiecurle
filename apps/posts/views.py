@@ -67,9 +67,11 @@ def index(request):
     return TemplateResponse(request, 'posts/index.html', {
         'posts' : posts
     })
+
 def show(request, slug):
     post = get_object_or_404(BlogPost, slug=slug)
     # if user not authed and post not published then 404
+    print request.session.session_key
     
     if not request.user.is_authenticated() and post.status != BlogPost.PUBLISHED:
         raise Http404('Post is not publiced')

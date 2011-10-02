@@ -24,3 +24,9 @@ nav a:hover{
 #blog a#blog{
     color: #000;
 }
+
+
+nav.local a{
+    display: block;
+    text-align: left;
+}
