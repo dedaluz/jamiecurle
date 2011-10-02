@@ -29,6 +29,11 @@ class InstagramPhoto(models.Model):
     def __unicode__(self):
         return '<instagram photo: %s>' % self.caption
     
+    
+    def thumbnail_img(self):
+        return '<img src="%s" width="50" height="50">' % self.thumb.url
+    thumbnail_img.short_description = 'Thumb'
+    thumbnail_img.allow_tags = True
 
 
 class InstagramComment(models.Model):

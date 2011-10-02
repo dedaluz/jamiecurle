@@ -25,6 +25,13 @@ class Scrobble(models.Model):
         try:
             return self.image.url
         except ValueError:
-            return '%simages/blank.square.png' % settings.MEDIA_URL
+            return '%simg/blank.square.png' % settings.MEDIA_URL
     
 
+    def thumbnail_img(self):
+        try:
+            return '<img src="%s" width="50" height="50">' % self.image.url
+        except:
+            return '<img src="%simg/blank.square.png" width="50" height="50">' % settings.MEDIA_URL
+    thumbnail_img.short_description = 'Thumb'
+    thumbnail_img.allow_tags = True

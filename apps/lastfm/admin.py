@@ -2,6 +2,6 @@ from django.contrib import admin
 from models import Scrobble
 
 class ScrobbleAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['name', 'thumbnail_img', 'artist_name', 'album_name', 'created',]
 
 admin.site.register(Scrobble, ScrobbleAdmin)
