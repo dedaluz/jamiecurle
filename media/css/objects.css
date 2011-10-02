@@ -1,0 +1,49 @@
+.object{
+    margin-bottom: 6em;
+}
+
+.blog.object{
+    margin: 0em;
+    -webkit-border-image:url(/img/borderbg.png) repeat;
+    padding: 3em 0 3em 2em;
+    height: 100%;
+    clear: both;
+}
+.blog.object:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+    .blog.object h1, .blog.object p{
+        float: left;
+        width: 66%;
+    }
+.blog h1{
+    font-size: 3em;
+    line-height: 1.1em !important;
+    margin: 0 0 0.5em;
+}
+.blog h1 a{
+    font-weight: 500;
+}
+.blog p{
+    font-size: 1.25em;
+    font-family: georgia;
+    font-style: italic;
+    color: #999;
+}
+
+
+
+.blog.object time{
+    float: right;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #CCC;
+    font-weight: 200;
+}

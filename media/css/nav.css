@@ -1,0 +1,40 @@
+div[role="navigation"]{
+    padding: 1% 0 0 0;
+    margin-bottom: 2em;
+    background-color: #000;
+}
+nav.global{
+    margin: 0 auto;
+}
+nav a{
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin-left: 1em;
+    line-height: 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.75em;
+    font-weight: 400;
+    color: #7E7E7E;
+}
+nav a:hover{
+    color: #fff;
+}
+#blog a#blog{
+    color: #000;
+}
+
+nav.local{
+    background-color: #fefefe;
+}
+    nav.local a{
+        display: block;
+        text-align: right;
+        border-bottom: 1px solid #FAFAFA;
+        line-height: 1.5em;
+        padding: 1em;
+    }
+        nav.local a:hover{
+            color: #F5000E;
+        }

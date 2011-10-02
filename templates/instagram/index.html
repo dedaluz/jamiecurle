@@ -1,0 +1,61 @@
+{% extends 'instagram/base_instagram.html' %}
+{% load disqus_tags %}
+
+{% block title %} {{post.title}} - {% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/instagram.css">
+
+{% endblock %}
+
+{% block bodyclass %}show{% endblock %}
+
+
+{% block content %}
+<!-- div class="instagram-lightbox">
+	<div>
+		<p>
+			<a href="" class="prev"><img src="{{MEDIA_URL}}images/prev.png"></a>
+			<a href="" class="next"><img src="{{MEDIA_URL}}images/next.png"></a>
+		</p>
+		<img src="http://distillery.s3.amazonaws.com/media/2011/07/04/afed0c188b3f4def9c72078d12d7689e_7.jpg">
+		<h1>Rusty Pipe </h1>
+	</div>
+</div -->
+{% endblock %}
+
+
+{% block js %}
+<script src="{{MEDIA_URL}}js/jquery.instafeed.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+
+
+	$('div.content').instafeed({
+			'jsonp' : 'http://instafeed.me/f/7ac760.jsonp?jsoncallback=?'
+	});
+	/*
+	$('div.instagram-photo').live({ mouseover :  function (){
+
+		h3 = $(this).find('h3')
+		title = h3.text();
+		h3.replaceWith($('<h2>').text(title))
+
+			img = $(this).find('img');
+			img.attr('src', img.attr('data-large'));
+
+
+		}, mouseout : function(){
+			h2 = $(this).find('h2')
+			title = h2.text();
+			h2.replaceWith($('<h3>').text(title))
+	}})
+	
+	$('.instagram-photo').each(function(){
+		console.log('asd')
+		//new Image().src = $(this).attr('data-large');
+	})
+	*/
+</script>
+
+{% endblock %}
+

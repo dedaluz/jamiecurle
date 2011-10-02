@@ -1,25 +1,22 @@
 {% extends 'posts/base_posts.html' %}
-{% load posts_tags %}
+{% load blog_tags %}
+
+{% load utils %}
 
 {% block head %}
-	<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.objects.css" type="text/css">
-	<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.posts.css" type="text/css">
-{% endblock %}
-
-{% block meta %}
-<div class="meta">
-	<p>All of my posts in {{year}}</p>
-</div>
-{% endblock %}
-
-{% block content_posts %}
-
-
-
-<ul class="object">
-	{% for month in months %}
-	<li class="invert"><a href="{% url posts:archive_month year month.0 %}"> {{month.0|month_name}} {{year}} - {{month.1}} Post{{month.1|pluralize}}</a></li>
+<style type="text/css" media="screen">
+	{% for post in posts %}
+		#blog{{post.pk}}{border-left: 0.4em solid {{post.created|color_for_date}}}
 	{% endfor %}
-</ul>
+</style>
+{% endblock %}
 
+{% block content %}
+	{% for post in posts %}
+	<div id="blog{{post.pk}}"class="object blog">
+		<time datetime="{{post.created|date:"c"}}"> {{post.created|date:"d M Y"}}</time>
+		<h1><a href="{{post.get_absolute_url}}">{{post}}</a></h1>
+		<p>{{post.description}}</p>
+	</div>
+	{% endfor %}
 {% endblock %}

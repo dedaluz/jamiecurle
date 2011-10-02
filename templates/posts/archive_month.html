@@ -1,23 +1,20 @@
 {% extends 'base.html' %}
+{% load utils %}
 
 {% block head %}
-	<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.objects.css" type="text/css">
-	<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.posts.css" type="text/css">
-{% endblock %}
-
-{% block meta %}
-<div class="meta">
-	<p>I posted {{posts.count}} thing{{posts|pluralize}} in {{month|date:"F"}} {{year}}.</p>
-</div>
+<style type="text/css" media="screen">
+	{% for post in posts %}
+		#blog{{post.pk}}{border-left: 0.4em solid {{post.created|color_for_date}}}
+	{% endfor %}
+</style>
 {% endblock %}
 
 {% block content %}
-	{% for obj in posts %}
-	<div class="object m">
-		<a href="{{obj.get_absolute_url}}"  style="background-image: url({{obj.img.m}})">
-		</a>
-		<p><a href="{{obj.get_absolute_url}}">{{obj.title}}</a></p>
+	{% for post in posts %}
+	<div id="blog{{post.pk}}"class="object blog">
+		<time datetime="{{post.created|date:"c"}}"> {{post.created|date:"d M Y"}}</time>
+		<h1><a href="{{post.get_absolute_url}}">{{post}}</a></h1>
+		<p>{{post.description}}</p>
 	</div>
 	{% endfor %}
 {% endblock %}
-

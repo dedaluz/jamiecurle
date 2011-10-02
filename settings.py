@@ -3,7 +3,7 @@ import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
 path = lambda *a: os.path.join(ROOT, *a)
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 ADMINS = (
      ('Jamie Curle', 'me@jamiecurle.com'),
@@ -37,7 +37,7 @@ MEDIA_ROOT = path('media/')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = 'http://media.jamiecurle.com/'
+MEDIA_URL = 'http://jamiecurle.d.jmcrl.com'
 
 INTERNAL_IPS = ('127.0.0.1',)
 DEBUG_TOOLBAR_CONFIG = {
@@ -61,7 +61,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.core.context_processors.media',
     'django.contrib.messages.context_processors.messages',
-    'apps.utils.context_processors.debug'
+    'django.core.context_processors.debug',
 )
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -69,8 +69,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'johnny.middleware.LocalStoreClearMiddleware',
-    'johnny.middleware.QueryCacheMiddleware',
+    'apps.stats.middleware.StatsMiddleware',
+    #'johnny.middleware.LocalStoreClearMiddleware',
+    #'johnny.middleware.QueryCacheMiddleware',
     #'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
@@ -96,8 +97,15 @@ INSTALLED_APPS = (
     'taggit',
     'compressor',
     'form_utils',
-    'apps.posts',
-    'apps.tags'
+    'apps.blog',
+    'apps.tags',
+    'apps.instagram',
+    'apps.pinboard',
+    'apps.lastfm',
+    'apps.twitter',
+    'apps.utils',
+    'apps.stats',
+    'apps.quotes',
 )
 
 JOHNNY_MIDDLEWARE_KEY_PREFIX='jamiecurle'
@@ -107,8 +115,6 @@ CACHES = {
             'LOCATION': '127.0.0.1:11211'
         }
 }
-
-#CACHE_BACKEND = 'johnny.backends.memcached://127.0.0.1:11211/'
 
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
@@ -123,9 +129,9 @@ LOGOUT_URL = '/authenticate/logout.html'
 LOGIN_REDIRECT_URL  = '/'
 
 COMPRESS = True
-IMAGE_SIZES = ((850,600), (612,450), (480,320), (320,240), (200,200) )
+IMAGE_SIZES = ((1500,1058), (850,600), (612,450), (480,320), (320,240), (200,200) )
 
 try:
-    from local_settings import *
+    from settings_local import *
 except ImportError:
     pass
