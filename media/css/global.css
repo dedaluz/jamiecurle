@@ -62,3 +62,20 @@ p a:hover{
             background-color: #F5000E;
         }
         
+footer{
+    background-color:#000;
+    color:#999;
+    margin: 0 0 -3em 0;
+    padding: 1em;
+    font-size: 0.7em;
+    text-transform : uppercase;
+}
+footer a{
+    color: #CCC;
+    font-weight: 400;
+}
+footer:before,
+.content:after {
+    content:"";
+    display:table;
+}
