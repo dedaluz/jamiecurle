@@ -37,7 +37,7 @@ MEDIA_ROOT = path('media/')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = 'http://jamiecurle.d.jmcrl.com'
+MEDIA_URL = 'http://media.jamiecurle.com'
 
 INTERNAL_IPS = ('127.0.0.1',)
 DEBUG_TOOLBAR_CONFIG = {
