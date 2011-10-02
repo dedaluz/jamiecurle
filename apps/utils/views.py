@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import datetime
 from django.template.response import TemplateResponse
-from apps.posts.models import BlogPost
+from apps.blog.models import BlogPost
 from apps.instagram.models import InstagramPhoto
 from apps.pinboard.models import PinboardBookmark
 from apps.lastfm.models import Scrobble

@@ -1,6 +1,9 @@
 {% load compress  %}
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 	<head>
 		<meta charset="UTF-8">
 		<title> {% block title %}{% endblock %} Jamie Curle</title>
@@ -16,11 +19,15 @@
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/typography.css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/objects.css" media="screen">
 		<link rel="stylesheet" href="{{MEDIA_URL}}css/tags.css" media="screen">
+		
 		{% block head %}
 		{% endblock %}
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/devices.css" media="screen">
 		{% endcompress %}
 
-
+		<!--[if IE]>
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/ie.css" media="screen">
+		<![endif]-->
 		<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	</head>
 	<body id="{% block id %}{% endblock %}" class="{% block bodyclass %}{% endblock %}">

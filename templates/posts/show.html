@@ -4,7 +4,7 @@
 {% block title %} {{post.title}} - {% endblock %}
 
 {% block head %}
-<link rel="stylesheet" href="{{MEDIA_URL}}css/posts.css" type="text/css">
+<link rel="stylesheet" href="{{MEDIA_URL}}css/blog.css" type="text/css">
 <link rel="stylesheet" href="{{MEDIA_URL}}css/syntax.css" type="text/css">
 {% endblock %}
 
@@ -25,11 +25,31 @@
 	<div class="body">
 		{{post.content_rendered|safe}}
 	</div>
+	
+	<footer>
+		<p class="time">
+			Published <time datetime="{{post.created|date:"c"}}">{{post.created|date:"F d Y"}}</time>
+		</p>
+		<p class="tags">
+		{% for t in post.tags.all %} <a class="tag" href="{% url tags:tag_list t.slug %}">{{t.name}}</a>{% endfor %}
+		</p>
+	</footer>
+	
 </article>
+<div class="comments">
+	<h1> Comments </h1>
+	{% if debug %}{% disqus_dev %}{% endif %}
+{% disqus_show_comments %}	
+</div>
 {% endblock %}
 
 {% block secondary %}
 <aside>
-	Posted {{post.created|date}} and tagged with {% for t in post.tags.all %} <a class="tag" href="{% url tags:tag_list t.slug %}">{{t.name}}</a>{% endfor %}
+	<p class="time">
+		Published <time datetime="{{post.created|date:"c"}}">{{post.created|date:"F d Y"}}</time>
+	</p>
+	<p class="tags">
+	{% for t in post.tags.all %} <a class="tag" href="{% url tags:tag_list t.slug %}">{{t.name}}</a>{% endfor %}
+	</p>
 </aside>
 {% endblock %}

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load posts_tags %}
+{% load blog_tags %}
 {% block id %}blog{% endblock %}
 
 
@@ -13,9 +13,11 @@
 	{% block secondary %}
 
 	{% endblock %}
-	<nav id="local">
-		{% blog_nav %}
-	</nav>
+	
+	{% blog_nav_popular %}
+	
+	
+	{% blog_nav_archive %}
 	</div>
 
 	

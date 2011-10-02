@@ -6,7 +6,7 @@ from django.template import Template, Context
 from django.shortcuts import get_object_or_404
 from django.template.response import TemplateResponse
 from taggit.models import TaggedItem, Tag
-from apps.posts.models import BlogPost
+from apps.blog.models import BlogPost
 
 def tag_list(request, tag):
     

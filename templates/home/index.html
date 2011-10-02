@@ -8,27 +8,17 @@
 <style type="text/css" media="screen">
 	{% for post in posts %}
 		#blog{{post.pk}}{border-left: 0.4em solid {{post.created|color_for_date}}}
-		/*#blog{{post.pk}} .secondary{background: transparent url({{post.img.f}}) center center repeat; sborder: 1px solid {{post.created|color_for_date}}}*/
 	{% endfor %}
 </style>
 {% endblock %}
 
 {% block content %}
-
-{% for post in posts %}
-<div id="blog{{post.pk}}"class="object blog">
-	<time datetime="{{post.created|date:"c"}}"> {{post.created|date:"d M Y"}}</time>
-	<h1><a href="{{post.get_absolute_url}}">{{post}}</a></h1>
-	<p>{{post.description}}</p>
-</div>
-{% endfor %}
-
+	{% for post in posts %}
+	<div id="blog{{post.pk}}"class="object blog">
+		<time datetime="{{post.created|date:"c"}}"> {{post.created|date:"d M Y"}}</time>
+		<h1><a href="{{post.get_absolute_url}}">{{post}}</a></h1>
+		<p>{{post.description}}</p>
+	</div>
+	{% endfor %}
 {% endblock %}
 
-{% block js %}
-<script type="text/javascript" charset="utf-8">
-	//$('div.blog .primary').each(function(){
-	//	$(this).next().height($(this).height())
-	//})
-</script>
-{% endblock %}

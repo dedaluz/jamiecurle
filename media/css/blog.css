@@ -1,0 +1,82 @@
+/* Show */
+
+ #blog.show .content header{
+    border-bottom: 0.6em solid #ccc;
+    margin-bottom: 2em;
+}
+    #blog.show .content header h1{
+        font-weight: 900;
+        margin: 0 0 0.5em 0;
+    }
+
+    #blog.show .content header p{
+        font-size: 2em;
+        line-height: 1.2em;
+        font-weight: 500;
+        margin-bottom: 1em;
+        font-family: georgia;
+        font-style: italic;
+        color: #999;
+    }
+
+#blog.show .content div.body img{
+    width: 100%;
+    max-width: 100%;
+}
+
+#blog.show aside{
+    text-align: right;
+     margin-bottom: 3em;
+}
+#blog.show aside p.time{
+    font-weight: 500;
+    font-size: 1.25em;
+    line-height: 0.8em;
+    color : #BBB;
+    text-transform: uppercase;
+}
+#blog.show footer{
+    display: none;
+    color : #BBB;
+    text-transform: uppercase;
+    border-top: 0.6em solid #ccc;
+    margin-top: 2em;
+    padding-top: 2em;
+    border-bottom: 0.6em solid #ccc;
+    margin-bottom: 2em;
+}
+#blog.show footer p{
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+}
+#blog.show footer p.time{
+    font-weight: 500;
+    font-size: 1.25em;
+    line-height: 0.8em;    
+}
+.secondary h3{
+    text-align: right;
+    color : #BBB;
+}
+
+.comments h1{
+    color : #BBB;
+}
+
+/* all */
+.content{
+    display: inline-block;
+    width: 60%;
+    max-width: 46.5626em;
+}
+.secondary{
+    width: auto;
+    position: fixed;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 2%;
+    width: 30%;
+    margin-right: 2%;
+}
+

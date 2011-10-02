@@ -10,7 +10,6 @@ th
     margin-bottom: 1.5em;
     line-height: 1.75em;
 }
-
 /* headings */
 h1,
 h2,
@@ -32,5 +31,19 @@ h6{
 h1{
     font-size: 4em;
     line-height: 1em;
+}
 
+
+
+
+blockquote{
+    padding-left: 2em;
+    border-left: 0.3em solid #ddd;
+}
+
+blockquote p{
+    font-family: Georgia, 'Times New Roman', times, serif;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
 }

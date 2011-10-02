@@ -7,7 +7,7 @@ body{
 }
 
 .content{
-    width: 46.5626em;
+    max-width: 46.5626em;
     padding: 2em;
     background-color: #fff;
 }

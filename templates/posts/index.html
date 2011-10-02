@@ -1,13 +1,11 @@
 {% extends 'posts/base_posts.html' %}
-{% load posts_tags markup %}
+{% load blog_tags markup %}
 {% block head %}
 	<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.objects.css" type="text/css">
 	<link rel="stylesheet" href="{{MEDIA_URL}}css/jc.posts.css" type="text/css">
 {% endblock %}
 
 {% block content_posts %}
-
-
 
 <div class="posts">
 	{% for obj in posts %}
@@ -24,6 +22,5 @@
 	</div>
 	{% endfor %}
 </div>
-
 
 {% endblock %}

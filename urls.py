@@ -7,7 +7,7 @@ urlpatterns = patterns('',
     # Example:
     (r'demo', 'django.views.generic.simple.direct_to_template', {'template' : 'demo.html'}),
     (r'^tags/', include('apps.tags.urls', namespace="tags")),
-    (r'^posts/', include('apps.posts.urls', namespace="posts")),
+    (r'^posts/', include('apps.blog.urls', namespace="posts")),
     (r'^instagram/', include('apps.instagram.urls', namespace="instagram")),
     (r'^twitter/', include('apps.twitter.urls', namespace="twitter")),
     (r'^authenticate', include('apps.authenticate.urls', namespace="authenticate")),

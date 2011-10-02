@@ -97,7 +97,7 @@ INSTALLED_APPS = (
     'taggit',
     'compressor',
     'form_utils',
-    'apps.posts',
+    'apps.blog',
     'apps.tags',
     'apps.instagram',
     'apps.pinboard',
@@ -115,8 +115,6 @@ CACHES = {
             'LOCATION': '127.0.0.1:11211'
         }
 }
-
-#CACHE_BACKEND = 'johnny.backends.memcached://127.0.0.1:11211/'
 
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'

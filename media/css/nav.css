@@ -25,8 +25,16 @@ nav a:hover{
     color: #000;
 }
 
-
-nav.local a{
-    display: block;
-    text-align: left;
+nav.local{
+    background-color: #fefefe;
 }
+    nav.local a{
+        display: block;
+        text-align: right;
+        border-bottom: 1px solid #FAFAFA;
+        line-height: 1.5em;
+        padding: 1em;
+    }
+        nav.local a:hover{
+            color: #F5000E;
+        }
