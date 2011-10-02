@@ -1,0 +1,6 @@
+<nav class="local">
+	<h3> Popular </h3>
+{% for post in popular %}
+	<a href="{{post.get_absolute_url}}">{{post.title}}</a>
+{% endfor %}
+</nav>
