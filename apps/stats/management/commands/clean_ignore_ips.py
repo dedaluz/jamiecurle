@@ -11,5 +11,5 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         deletables = Visit.objects.filter(remote_addr__in=settings.STATS_IGNORE_IPS)
         for v in deletables:
-            print  v.delete()
+            v.delete()
         
