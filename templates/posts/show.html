@@ -1,11 +1,17 @@
 {% extends 'posts/base_posts.html' %}
-{% load disqus_tags %}
+{% load disqus_tags utils %}
 
 {% block title %} {{post.title}} - {% endblock %}
 
 {% block head %}
 <link rel="stylesheet" href="{{MEDIA_URL}}css/blog.css" type="text/css">
 <link rel="stylesheet" href="{{MEDIA_URL}}css/syntax.css" type="text/css">
+<style type="text/css" media="screen">
+ #blog.show .content header{
+    border-bottom: 0.6em solid {{post.created|color_for_date }};
+    margin-bottom: 2em;
+}
+</style>
 {% endblock %}
 
 {% block bodyclass %}show{% endblock %}

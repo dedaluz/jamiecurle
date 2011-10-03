@@ -8,7 +8,8 @@ a.tag{
     border-radius: 0.0625em;
     display: inline-block;
     margin-bottom: 0.25em;
-    font-size: 0.75em;
+    font-size: 11px;
+    line-height: 28px;
     margin-left: 0.625em;
     text-transform: uppercase;
     text-shadow: rgba(0,0,0,0.1) 1px 1px 1px;

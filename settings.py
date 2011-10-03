@@ -117,6 +117,14 @@ CACHES = {
         }
 }
 
+STATS_IGNORE_IPS = (
+    '188.220.35.125',
+    '127.0.0.1',
+    '192.168.1.65',
+    '192.168.1.64',
+    '192.168.1.70',
+    '192.168.1.67',
+)
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 

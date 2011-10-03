@@ -10,25 +10,30 @@
         padding:2%;
         width: 96%;
     }
-    #blog .secondary{
+    .secondary{
         margin-top: 2%;
-        width: 100%;
+        width: 92%;
         position: relative;
-        margin-left: -2%;
+        margin-left: 2%;
+        
     }
+        .secondary nav{
+            width: 40.9%;
+            padding: 2%;
+            margin: 2%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .secondary p{
+            text-align: left;
+        }
     #blog.show .content footer{
         display: block;
     }
     .secondary aside{
         display: none;
     }
-    #blog .secondary nav{
-        width: 42%;
-        padding: 2%;
-        margin: 2%;
-        display: inline-block;
-        vertical-align: top;
-    }
+
     #blog .secondary nav:nth-of-type(odd) a, #blog .secondary nav:nth-of-type(odd) h3{
         text-align: left;
     }
@@ -90,11 +95,12 @@
         padding:2%;
         width: 96%;
     }
-    #blog .secondary{
+    .secondary{
         margin-top: 2%;
         width: 100%;
         position: relative;
         margin-left: -2%;
+        text-align: left;
     }
     #blog.show footer{
         display: block;
@@ -102,7 +108,7 @@
     .secondary aside{
         display: none;
     }
-    #blog .secondary nav{
+    .secondary nav{
         width: 42%;
         padding: 2%;
         margin: 2%;

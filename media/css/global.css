@@ -23,7 +23,7 @@ body{
 .content:after {
     clear:both;
 }
-
+/* secondary content */
 .secondary{
     width: auto;
     display: inline-block;
@@ -32,8 +32,16 @@ body{
     width: 30%;
     margin-right: 2%;
 }
+    .secondary p{
+        text-align: right;
+    }
+    #home .secondary p{
+        font-size: 1.5em;
+        color: #B2B2B2;
+        
+    }
 
-
+/* links */
 a{
     font-weight: 900;
     color: #000;

@@ -12,7 +12,7 @@ def index(request):
     today = datetime.date.today()
     date_list = [today - datetime.timedelta(days=x) for x in range(0,30) ]
     
-    posts = BlogPost.objects.for_user(request.user).order_by('-created')
+    posts = BlogPost.objects.for_user(request.user).order_by('-created')[:20]
     instagrams = InstagramPhoto.objects.filter(created__gt=date_list[-1])
     bookmarks = PinboardBookmark.objects.filter(created__gt=date_list[-1])
     scrobbles = Scrobble.objects.filter(created__gt=date_list[-1])
