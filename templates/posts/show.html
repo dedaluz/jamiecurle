@@ -1,5 +1,5 @@
 {% extends 'posts/base_posts.html' %}
-{% load disqus_tags utils %}
+{% load disqus_tags utils blog_tags %}
 
 {% block title %} {{post.title}} - {% endblock %}
 
@@ -8,8 +8,8 @@
 <link rel="stylesheet" href="{{MEDIA_URL}}css/syntax.css" type="text/css">
 <style type="text/css" media="screen">
  #blog.show .content header{
+	margin-bottom: 2em;
     border-bottom: 0.6em solid {{post.created|color_for_date }};
-    margin-bottom: 2em;
 }
 </style>
 {% endblock %}
@@ -39,6 +39,18 @@
 		<p class="tags">
 		{% for t in post.tags.all %} <a class="tag" href="{% url tags:tag_list t.slug %}">{{t.name}}</a>{% endfor %}
 		</p>
+		{% if post|has_previous %}
+		<p class="prev">
+			{% previous_post post %}
+		</p>
+		{% endif %}
+		
+		{% if post|has_next %}
+		<p class="next">
+			{% next_post post %}
+		</p>
+		{% endif %}
+
 	</footer>
 	
 </article>
@@ -57,5 +69,15 @@
 	<p class="tags">
 	{% for t in post.tags.all %} <a class="tag" href="{% url tags:tag_list t.slug %}">{{t.name}}</a>{% endfor %}
 	</p>
+	{% if post|has_next %}
+	<p class="next">
+		{% next_post post %}
+	</p>
+	{% endif %}
+	{% if post|has_previous %}
+	<p class="prev">
+		{% previous_post post %}
+	</p>
+	{% endif %}
 </aside>
 {% endblock %}

@@ -60,6 +60,10 @@
     color : #BBB;
 }
 
+.secondary p.next,
+.secondary p.prev{
+    font-size: 0.8em;
+}
 .comments h1{
     color : #BBB;
 }

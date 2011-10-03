@@ -68,7 +68,7 @@ def generate_thumb(img, thumb_size, format):
         format = 'JPEG'
     elif format.upper()=='TIF':
         format = 'TIFF'
-    
+    image2.save(io, format)
     return ContentFile(io.getvalue())
     
 

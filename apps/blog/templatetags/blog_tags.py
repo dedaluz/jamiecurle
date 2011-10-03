@@ -10,6 +10,39 @@ from apps.blog.models import BlogPost
  
 register = template.Library()
 
+@register.inclusion_tag('posts/_next.html')
+def next_post(post):
+    try:
+        post = post.get_next_by_created()
+    except:
+        post = False
+    return {'post' : post}
+
+
+@register.filter
+def has_next(post):
+    try:
+        return post.get_next_by_created()
+    except:
+        return False
+
+@register.inclusion_tag('posts/_previous.html')
+def previous_post(post):
+    try:
+        post = post.get_previous_by_created()
+    except:
+        post = False
+    
+    return {'post' : post}
+
+@register.filter
+def has_previous(post):
+    try:
+        return post.get_previous_by_created()
+    except:
+        return False
+
+
 @register.inclusion_tag('posts/_blog_nav_popular.html', takes_context=True)
 def blog_nav_popular(context):
     popular = BlogPost.objects.order_by('-views')[:5]
@@ -75,4 +108,5 @@ def render(content):
         content = content.replace('{{CODE%s}}' % i, code)
     # return
     return mark_safe(content)
+
 render.is_safe = True
