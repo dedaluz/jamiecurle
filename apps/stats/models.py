@@ -11,4 +11,11 @@ class Visit(models.Model):
     def __unicode__(self):
         return u'%s' % self.created
     
+    def short_referer(self):
+        try:
+            return self.http_referer[:100]
+        except TypeError:
+            return ''
+    
+
     
