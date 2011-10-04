@@ -24,6 +24,13 @@
     max-width: 100%;
 }
 
+#blog.show .content iframe{
+    width: 100%;
+    max-width: 100%;
+    min-height: 400px;
+    height: auto;
+}
+
 #blog.show aside{
     text-align: right;
      margin-bottom: 3em;
