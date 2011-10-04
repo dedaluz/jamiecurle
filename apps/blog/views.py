@@ -11,6 +11,7 @@ from django.template.response import TemplateResponse
 from django.shortcuts import render_to_response, get_object_or_404
 from django.forms.models import inlineformset_factory
 from taggit.models import Tag
+from django.conf import settings
 from forms import BlogPostForm, BlogImageForm
 from models import BlogPost, BlogImage
 
@@ -71,8 +72,9 @@ def index(request):
 def show(request, slug):
     post = get_object_or_404(BlogPost, slug=slug)
     # if user not authed and post not published then 404
-    post.views +=1
-    post.save()
+    if request.META['REMOTE_ADDR'] not in getattr(settings, 'STATS_IGNORE_IPS', []) :
+        post.views +=1
+        post.save()
     
     if not request.user.is_authenticated() and post.status != BlogPost.PUBLISHED:
         raise Http404('Post is not publiced')

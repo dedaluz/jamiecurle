@@ -8,7 +8,7 @@
         font-weight: 900;
         margin: 0 0 0.5em 0;
     }
-
+    
     #blog.show .content header p{
         font-size: 2em;
         line-height: 1.2em;
@@ -29,8 +29,12 @@
     max-width: 100%;
     min-height: 400px;
     height: auto;
+    margin-bottom: 2em;
 }
-
+#blog.show .content div.body p:first-child{
+    font-weight: 800;
+    font-size: 1.25em;
+}
 #blog.show aside{
     text-align: right;
      margin-bottom: 3em;
