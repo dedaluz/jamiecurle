@@ -6,7 +6,9 @@ from apps.instagram.models import InstagramPhoto
 from apps.pinboard.models import PinboardBookmark
 from apps.lastfm.models import Scrobble
 from apps.twitter.models import Tweet
+from django.views.decorators.cache import cache_page
 
+@cache_page(60 * 15)
 def index(request):
     
     today = datetime.date.today()

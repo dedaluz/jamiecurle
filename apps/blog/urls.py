@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.conf.urls.defaults import *
-from views import show, create, edit, archive_year, archive_month, index
+from views import show, archive_month, index
 from feeds import  LatestPostFeed
 
 urlpatterns = patterns('',
