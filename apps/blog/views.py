@@ -28,7 +28,7 @@ def index(request):
     })
 
 
-@cache_page(60 * 15)
+
 def show(request, slug):
     post = get_object_or_404(BlogPost, slug=slug)
     # if user not authed and post not published then 404
@@ -43,7 +43,7 @@ def show(request, slug):
         'post' : post,
     })
 
-@cache_page(60 * 15)
+
 def archive_month(request, year, month):
     posts = BlogPost.objects.for_user(request.user).order_by('created').filter(created__year=year, created__month=month)
     
