@@ -24,7 +24,7 @@
     max-width: 100%;
 }
 
-#blog.show .content iframe{
+#blog.show .content div.body iframe{
     width: 100%;
     max-width: 100%;
     min-height: 400px;
