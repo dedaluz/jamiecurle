@@ -24,11 +24,7 @@
     max-width: 100%;
 }
 
-#blog.show .content div.body iframe{
-    width: 100%;
-    max-width: 100%;
-    min-height: 400px;
-    height: auto;
+div.fluid-width-video-wrapper{
     margin-bottom: 2em;
 }
 #blog.show .content div.body p:first-child{

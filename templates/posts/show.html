@@ -81,3 +81,10 @@
 	{% endif %}
 </aside>
 {% endblock %}
+
+{% block js %}
+<script src="{{MEDIA_URL}}js/jquery.fitvids.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+	$('article').fitVids();
+</script>
+{% endblock %}
