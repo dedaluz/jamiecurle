@@ -75,7 +75,7 @@ def deploy(message=None):
 
     maintenance()
     run('cd sites/jamiecurle/jamiecurle/; git pull origin master')
-    run('cd /home/jcurle/sites/jamiecurle/jamiecurle/; /home/jcurle/.virtualenvs/jamiecurle/bin/python manage.py migrate')
+    run('cd /home/jcurle/sites/jamiecurle/jamiecurle/; /home/jcurle/.virtualenvs/jamiecurle/bin/python manage.py syncdb --migrate')
     run('supervisorctl restart jamiecurle')
     maintenance_end()
 
