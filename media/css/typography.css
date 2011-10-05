@@ -33,7 +33,9 @@ h1{
     line-height: 1em;
 }
 
-
+.content h1:nth-of-type(1){
+    margin-top: 0;
+}
 
 
 blockquote{
@@ -46,4 +48,19 @@ blockquote p{
     font-style: italic;
     color: #666;
     font-size: 0.9em;
+}
+
+span.mute{
+    color: #ccc;
+    font-weight: 300;
+}
+
+img.description{
+    vertical-align: middle;
+}
+
+span.content-type{
+    color: #999;
+    font-weight: 200;
+    font-style: italic;
 }

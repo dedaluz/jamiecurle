@@ -13,6 +13,12 @@ class Tweet(models.Model):
     
     tags = TaggableManager()
     
+    def description(self):
+        return self.body
+    
+    def get_absolute_url(self):
+        return 'https://twitter.com/#!/jamiecurle/status/%s' % self.twitter_id
+    
     class Meta:
         ordering = ['-created']
     

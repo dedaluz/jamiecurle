@@ -1,9 +1,9 @@
 .object{
-    margin-bottom: 6em;
-}
 
+}
+/* blogs */
 .blog.object{
-    margin: 0em;
+    margin: 0 0 6em 0;
     -webkit-border-image:url(/img/borderbg.png) repeat;
     padding: 3em 0 3em 2em;
     height: 100%;
@@ -37,8 +37,6 @@
     color: #999;
 }
 
-
-
 .blog.object time{
     float: right;
     text-align: right;
@@ -46,4 +44,11 @@
     font-size: 0.8em;
     color: #CCC;
     font-weight: 200;
+}
+/* tags */
+
+.object.tagged_object{
+    margin-bottom: 1em;
+    padding: 1em;
+    margin: 1em;
 }

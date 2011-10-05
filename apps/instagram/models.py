@@ -1,6 +1,7 @@
 from django.db import models
 from taggit.managers import TaggableManager
 from apps.utils.fields import upload_path
+from django.utils.safestring import mark_safe
 
 class InstagramPhoto(models.Model):
     caption = models.CharField(max_length=255, blank=True, null=True)
@@ -29,9 +30,18 @@ class InstagramPhoto(models.Model):
     def __unicode__(self):
         return '<instagram photo: %s>' % self.caption
     
+    @models.permalink
+    def get_absolute_url(self):
+        return('instagram:show', (), {
+            'instagram_id' : self.pk 
+        })
     
+    def description(self):
+        return mark_safe("""<img src="%s" width="50" height="50">""" % self.thumb.url )
+    description.allow_tags = True
+        
     def thumbnail_img(self):
-        return '<img src="%s" width="50" height="50">' % self.thumb.url
+        return '<img src="%s" width="50" height="50" class="description">' % self.thumb.url
     thumbnail_img.short_description = 'Thumb'
     thumbnail_img.allow_tags = True
 

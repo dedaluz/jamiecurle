@@ -16,5 +16,8 @@ class PinboardBookmark(models.Model):
     
     def __unicode__(self):
         return u'%s' % self.description
+        
+    def get_absolute_url(self):
+        return u'%s' % self.url
     
     

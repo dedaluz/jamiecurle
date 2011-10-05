@@ -1,0 +1,23 @@
+#quotes div.quote{
+    margin: 0 auto; 
+    width: 60%;   
+}
+    #quotes div.quote blockquote{
+        font-size: 3em;
+        font-family: "Times New Roman";
+
+    }
+    #quotes div.quote blockquote p{
+        line-height: 1.2em;
+    }
+
+    #quotes div.quote img{
+        width: 75px;
+        height: 75px;
+        float: left;
+        margin-right: 3em;
+        margin-left: 2.5em;
+    }
+    #quotes div.quote p.tags{
+        text-align: right;
+    }

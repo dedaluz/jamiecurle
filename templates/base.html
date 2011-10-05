@@ -10,7 +10,6 @@
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://jamiecurle.com/posts/feed.rss">
 		<link rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
 		<link rel="icon" type="image/png" href="{{MEDIA_URL}}favicon.ico" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0 width=device-width">
 
 		{% compress css %}
@@ -44,10 +43,12 @@
 				{% endblock %}
 			</div>
 		{% endblock %}
+		{% block footer %}
 		<footer class="license">
 			Content licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
 			Attribute "Jamie Curle - http://jamiecurle.com"
 		</footer>
+		{% endblock %}
 		
 <script src="{{MEDIA_URL}}js/jquery.1.5.1.js"></script>
 

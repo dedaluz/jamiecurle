@@ -6,17 +6,12 @@ from django.template import Template, Context
 from django.shortcuts import get_object_or_404
 from django.template.response import TemplateResponse
 from taggit.models import TaggedItem, Tag
-from apps.blog.models import BlogPost
+
 
 def tag_list(request, tag):
     
-    queryset = BlogPost.objects.filter(status=BlogPost.PUBLISHED)
-    
     tag = get_object_or_404(Tag, slug=tag)
-    
-    qs = queryset.filter(pk__in=TaggedItem.objects.filter(
-            tag=tag, content_type=ContentType.objects.get_for_model(queryset.model)
-        ).values_list("object_id", flat=True)).order_by('-created')
+    qs = TaggedItem.objects.filter(tag=tag)
     
     return TemplateResponse(request, 'tags/tag_list.html', {
         'tagged_objects' : qs,

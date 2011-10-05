@@ -1,9 +1,29 @@
 import calendar
 import re
 from django import template 
+from django.contrib.contenttypes.models import ContentType
 register = template.Library()
 
 MENTION_RE = re.compile('(\@[a-zA-Z0-9]+)')
+
+
+@register.filter
+def friendly_model_name(obj):
+    ct = ContentType.objects.get_for_model(obj)
+    if ct.name == 'pinboard bookmark':
+        return 'Bookmark'
+    elif ct.name == 'blog post':
+        return 'Blog'
+    elif ct.name == 'instagram photo':
+        return 'Instagram'
+    elif ct.name == 'tweet':
+        return 'Tweet'
+    elif ct.name == 'quote':
+        return 'Quote'
+    else:
+        print ct.name
+        
+
 
 @register.filter
 def parse_mentions(tweet):

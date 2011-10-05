@@ -1,0 +1,32 @@
+{% extends 'quotes/base_quotes.html' %}
+
+{% block title %}Quotes &ndash; {% endblock %}
+
+
+
+
+{% block body %}
+<div class="quote">
+	<blockquote>
+		<p>{{quote.body}}</p>
+	</blockquote>
+	<div class="author">
+		<a href="{{quote.author.url}}"><img src="{{quote.author.photo.url_200x200}}"></a>
+		<h3><a href="{{quote.author.url}}">{{quote.author.author}}</a></h3>
+		<p>
+			{{quote.source|safe}}
+		</p>
+		{% if author.quote_set.count > 2 %}
+		<p>
+			<a href="{% url quotes:author quote.author.slug %}">More  {{quote.author.author}} quotes</a>
+		</p>
+		{% endif %}
+		<p class="tags">
+		{% for t in quote.tags.all %} <a class="tag" href="{% url tags:tag_list t.slug %}">{{t.name}}</a>{% endfor %}
+		</p>
+	</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

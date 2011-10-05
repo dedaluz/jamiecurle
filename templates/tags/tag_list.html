@@ -3,20 +3,32 @@
 {% load utils %}
 
 {% block head %}
+
+<link rel="stylesheet" href="{{MEDIA_URL}}css/tagged.css" media="screen">
+
 <style type="text/css" media="screen">
-	{% for post in tagged_objects %}
-		#blog{{post.pk}}{border-left: 0.4em solid {{post.created|color_for_date}}}
+	{% for thing in tagged_objects %}
+		div.object{border-left: 0.4em solid #DEDEDE}
+		{% if thing.content_object.created %}
+		#thing{{thing.pk}}{border-left: 0.4em solid {{thing.content_object.created|color_for_date}}}
+		{% endif %}
 	{% endfor %}
 </style>
 {% endblock %}
 
 {% block content %}
-<h1>Stuff tagged as &ldquo;{{tag}}&rdquo;</h1>
-	{% for post in tagged_objects %}
-	<div id="blog{{post.pk}}"class="object blog">
-		<time datetime="{{post.created|date:"c"}}"> {{post.created|date:"d M Y"}}</time>
-		<h1><a href="{{post.get_absolute_url}}">{{post}}</a></h1>
-		<p>{{post.description}}</p>
+<h1><span class="mute">Stuff tagged with </span>&ldquo;{{tag}}&rdquo;</h1>
+
+	{% for thing in tagged_objects %}
+	<div class="object tagged_object" id="thing{{thing.pk}}">
+		<a href="{{thing.content_object.get_absolute_url}}" >
+		<span class="content-type">({{thing.content_object|friendly_model_name}})</span>
+		{% if thing.content_object.title and thing.content_object.description %}
+		{{thing.content_object.title}} - <span class="description">{{thing.content_object.description}}</span>
+		{% else %}
+		{{thing.content_object.description}}
+		{% endif %}
+		</a>
 	</div>
 	{% endfor %}
 {% endblock %}
