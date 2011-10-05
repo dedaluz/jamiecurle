@@ -18,7 +18,9 @@ from django.views.decorators.cache import cache_page
 
 
 
-
+def edit(request, slug):
+    post = get_object_or_404(BlogPost, slug=slug)
+    return HttpResponseRedirect('/admin/blog/blogpost/%s' % post.pk )
 
 
 def index(request):
