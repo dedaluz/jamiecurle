@@ -70,8 +70,9 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'apps.stats.middleware.StatsMiddleware',
-    #'johnny.middleware.LocalStoreClearMiddleware',
-    #'johnny.middleware.QueryCacheMiddleware',
+    'django.contrib.redirects.middleware.RedirectFallbackMiddleware'
+    'johnny.middleware.LocalStoreClearMiddleware',
+    'johnny.middleware.QueryCacheMiddleware',
     #'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
