@@ -12,7 +12,11 @@ class Author(models.Model):
     def __unicode__(self):
         return u'%s' % self.author
     
-    
+    @models.permalink
+    def get_absolute_url(self):
+        return('quotes:author', (), {
+            'author_slug' : self.slug,
+        })
 
 class Quote(models.Model):
     body = models.TextField()

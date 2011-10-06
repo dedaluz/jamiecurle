@@ -7,8 +7,8 @@
 <link rel="stylesheet" href="{{MEDIA_URL}}css/tagged.css" media="screen">
 
 <style type="text/css" media="screen">
+	div.object { border-left: 0.4em solid #ccc}
 	{% for thing in tagged_objects %}
-		div.object{border-left: 0.4em solid #DEDEDE}
 		{% if thing.content_object.created %}
 		#thing{{thing.pk}}{border-left: 0.4em solid {{thing.content_object.created|color_for_date}}}
 		{% endif %}

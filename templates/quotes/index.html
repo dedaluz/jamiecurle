@@ -1,12 +1,17 @@
 {% extends 'quotes/base_quotes.html' %}
+
 {% block title %}Quotes &ndash; {% endblock %}
 
+{% block bodyclass %}list{% endblock %}
+
 {% block content %}
+	{% for quote in quotes %}
 
-{% for quote in quotes %}
-
-<div class="object quote">
-	<a href="{{quote.get_absolute_url}}">{{quote.body}}</a>
-</div>
-{% endfor %}
+	<div class="object">
+		<p>
+			<a href="{{quote.get_absolute_url}}">&ldquo;{{quote.body}}&rdquo;</a>
+			&mdash; {{quote.author}}
+		</p>
+	</div>
+	{% endfor %}
 {% endblock %}

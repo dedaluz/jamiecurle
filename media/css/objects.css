@@ -4,7 +4,6 @@
 /* blogs */
 .blog.object{
     margin: 0 0 6em 0;
-    -webkit-border-image:url(/img/borderbg.png) repeat;
     padding: 3em 0 3em 2em;
     height: 100%;
     clear: both;
@@ -51,4 +50,14 @@
     margin-bottom: 1em;
     padding: 1em;
     margin: 1em;
+    border-left: 0.4em solid #999
+}
+
+/* Quotes */
+
+#quotes.list .object{
+    margin-bottom: 1em;
+    width: 100%;
+    padding: 1em 0;
+.quote
 }

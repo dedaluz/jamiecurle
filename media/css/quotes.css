@@ -1,23 +1,39 @@
-#quotes div.quote{
+/* show */
+#quotes.show div.quote{
     margin: 0 auto; 
     width: 60%;   
 }
-    #quotes div.quote blockquote{
+    #quotes.show div.quote blockquote{
         font-size: 3em;
-        font-family: "Times New Roman";
+
 
     }
-    #quotes div.quote blockquote p{
+    #quotes.show div.quote blockquote p{
         line-height: 1.2em;
     }
 
-    #quotes div.quote img{
+    #quotes.show div.quote img{
         width: 75px;
         height: 75px;
         float: left;
         margin-right: 3em;
         margin-left: 2.5em;
     }
-    #quotes div.quote p.tags{
+    #quotes.show div.quote p.tags{
         text-align: right;
     }
+
+/* list */
+#quotes.list div.object{
+    border-left: 0.4em solid #ccc;
+    padding: 1em 0 1em 2em;
+}
+#quotes.list div.object p{
+    padding: 0;
+    margin: 0;
+    font-style : italic;
+}
+#quotes.list div.object a{
+    font-style : normal;
+}
+
