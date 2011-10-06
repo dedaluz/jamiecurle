@@ -6,7 +6,8 @@ from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.db import connection
 from django.http import HttpResponse, HttpResponseRedirect, Http404
-from django.template import RequestContext
+from django.template import RequestContext, Template
+from django.template.loader import render_to_string
 from django.template.response import TemplateResponse
 from django.shortcuts import render_to_response, get_object_or_404
 from django.forms.models import inlineformset_factory
@@ -15,14 +16,14 @@ from django.conf import settings
 from forms import BlogPostForm, BlogImageForm
 from models import BlogPost, BlogImage
 from django.views.decorators.cache import cache_page
+from django.core.cache import cache
 
-
-
+@cache_page(60 * 15)
 def edit(request, slug):
     post = get_object_or_404(BlogPost, slug=slug)
     return HttpResponseRedirect('/admin/blog/blogpost/%s' % post.pk )
 
-
+@cache_page(60 * 15)
 def index(request):
     posts = BlogPost.objects.for_user(request.user)[:19]
     return TemplateResponse(request, 'posts/index.html', {
@@ -30,20 +31,26 @@ def index(request):
     })
 
 
-
 def show(request, slug):
+    # get the post
     post = get_object_or_404(BlogPost, slug=slug)
     # if user not authed and post not published then 404
     if request.META['REMOTE_ADDR'] not in getattr(settings, 'STATS_IGNORE_IPS', []) :
         post.views +=1
         post.save()
-    
+    # if it's not published and user isn't logged in
     if not request.user.is_authenticated() and post.status != BlogPost.PUBLISHED:
         raise Http404('Post is not publiced')
-    
-    return TemplateResponse(request, 'posts/show.html', {
-        'post' : post,
-    })
+    # if there is cached then use that
+    key = 'jc_post_%s' % post.pk
+    response = cache.get(key)
+    if not response:
+        c = RequestContext(request, {
+            'post' : post
+        })
+        response = render_to_string('posts/show.html', c )
+        cache.set(key, response, 60*15)
+    return HttpResponse(response)
 
 
 def archive_month(request, year, month):
