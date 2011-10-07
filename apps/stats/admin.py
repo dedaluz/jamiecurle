@@ -8,7 +8,7 @@ class QuerystringParameterAdmin(admin.ModelAdmin):
 class VisitAdmin(admin.ModelAdmin):
     search_fields = ['sessionid', 'remote_addr']
     date_hierarchy = 'created'
-    list_display = ['path_info', 'is_spider',  'search_queries', 'short_user_agent', 'short_referer']
+    list_display = ['created','path_info', 'is_spider',  'search_queries', 'short_user_agent', 'short_referer']
     list_filter = ['is_spider']
 
 
