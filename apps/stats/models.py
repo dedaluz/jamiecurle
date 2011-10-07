@@ -32,7 +32,7 @@ class Visit(models.Model):
 
 
 class QuerystringParameter(models.Model):
-    v   isit = models.ForeignKey(Visit)
+    visit = models.ForeignKey(Visit)
     key = models.CharField(max_length=255)
     value = models.TextField(blank=True, null=True)
     
