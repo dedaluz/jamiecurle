@@ -12,11 +12,7 @@
 # Bill Hicks sums it up better than I could : http://www.youtube.com/watch?v=gDW_Hj2K0wo
 #
 #
-user-agent: AhrefsBot
+{% for spider in disallowed %}
+user-agent: {{spider.identifier}}
 disallow: /
-
-User-agent: magpie-crawler
-Disallow: /
-
-User-agent: jikespider
-Disallow: /
+{% endfor %}

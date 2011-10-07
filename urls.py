@@ -15,7 +15,7 @@ urlpatterns = patterns('',
     (r'^quotes', include('apps.quotes.urls', namespace="quotes")),
     #(r'^authenticate', include('apps.authenticate.urls', namespace="authenticate")),
     (r'^admin/', include(admin.site.urls)),
-    (r'^robots\.txt$', 'django.views.generic.simple.direct_to_template', {'template': 'robots.txt', 'mimetype' : 'text/plain'}),
+    url(r'^robots\.txt$', 'apps.stats.views.robots', name="robots"),
     
     url(r'^$', index, name="home"),
 )

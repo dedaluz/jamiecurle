@@ -4,7 +4,7 @@ from django.db import models
 
 class Spider(models.Model):
     identifier = models.CharField( max_length=255, unique=True)
-    
+    disallow = models.BooleanField(default=False)
     def __unicode__(self):
         return self.identifier
     
