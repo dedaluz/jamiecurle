@@ -14,6 +14,7 @@ class Command(BaseCommand):
     
     
     def handle(self, *args, **kwargs):
+        return 'disabled'
         se_visits = Visit.objects.filter(http_referer__icontains='&q=')
         
         QuerystringParameter.objects.all().delete()

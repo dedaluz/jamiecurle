@@ -22,9 +22,18 @@ class Visit(models.Model):
     def __unicode__(self):
         return u'%s' % self.created
     
+    def short_user_agent(self):
+        try:
+            return '%s...' % self.user_agent[:50]
+        except TypeError:
+            return ''
+    
+    def search_queries(self):
+        return ''.join( [q.value for q in self.querystringparameter_set.filter(key="q")] )
+    
     def short_referer(self):
         try:
-            return self.http_referer[:100]
+            return self.http_referer[:30]
         except TypeError:
             return ''
     
