@@ -23,7 +23,7 @@ class VisitManager(models.Manager):
     
     def top_content(self, start_date=None, end_date=None):
         start_date, end_date = self.dates(start_date, end_date)
-        visits = super(VisitManager, self).get_query_set().filter(created__range=(start_date, end_date))
+        visits = super(VisitManager, self).get_query_set().filter(created__range=(start_date, end_date)).filter(status=self.model.HUMAN)
         
         #from django.db.models import Count
         #hotels = Hotel.objects.filter(city = "Paris").annotate(review_count = Count(review))
@@ -36,7 +36,7 @@ class VisitManager(models.Manager):
     
     def page_views(self, start_date=None, end_date=None):
         start_date, end_date = self.dates(start_date, end_date)
-        return super(VisitManager, self).get_query_set().filter(created__range=(start_date, end_date))
+        return super(VisitManager, self).get_query_set().filter(created__range=(start_date, end_date), status=self.model.HUMAN)
     
     
     
@@ -44,4 +44,4 @@ class VisitManager(models.Manager):
         
         start_date, end_date = self.dates(start_date, end_date)
         
-        return super(VisitManager, self).get_query_set().filter(created__range=(start_date, end_date)).values('sessionid').distinct()
+        return super(VisitManager, self).get_query_set().filter(created__range=(start_date, end_date), status=self.model.HUMAN).values('sessionid').distinct()
