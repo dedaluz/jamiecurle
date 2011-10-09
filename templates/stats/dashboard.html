@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/stats.css" type="text/css" media="screen" charset="utf-8">
+{% endblock %}
+
+{% block content %}
+
+<h1> Stats </h1>
+<p>From {{start_date}} until  {{end_date}}</p>
+<div>
+{{unique_visits}} unique visits
+</div>
+
+<div>
+{{page_views}} page views	
+</div>
+
+<div>
+	<h2> Top Content </h2>
+	<ul>
+	{% for visit in top_content %}
+		<li> {{visit.visit_count}} &mdash; {{visit.path_info}}</li>
+	{% endfor %}
+	</ul>
+</div>
+{% endblock %}

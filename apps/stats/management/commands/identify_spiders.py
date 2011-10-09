@@ -14,4 +14,7 @@ class Command(BaseCommand):
         
         for spider in spiders:
             visits = Visit.objects.filter(user_agent__icontains=spider.identifier, is_spider=False)
-            print visits.update(is_spider=True)
+            visits.update(is_spider=True)
+        
+    
+

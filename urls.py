@@ -13,9 +13,9 @@ urlpatterns = patterns('',
     (r'^instagram/', include('apps.instagram.urls', namespace="instagram")),
     (r'^twitter/', include('apps.twitter.urls', namespace="twitter")),
     (r'^quotes', include('apps.quotes.urls', namespace="quotes")),
+    (r'^stats', include('apps.stats.urls', namespace="stats")),
     #(r'^authenticate', include('apps.authenticate.urls', namespace="authenticate")),
     (r'^admin/', include(admin.site.urls)),
     url(r'^robots\.txt$', 'apps.stats.views.robots', name="robots"),
-    
     url(r'^$', index, name="home"),
 )

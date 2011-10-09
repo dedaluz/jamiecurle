@@ -1,5 +1,13 @@
 from django.db import models
+from managers import VisitManager
 
+
+class Script(models.Model):
+    path = models.TextField()
+    
+    def __unicode__(self):
+        return u'%s' % self.path
+    
 
 
 class Spider(models.Model):
@@ -11,13 +19,24 @@ class Spider(models.Model):
     
 
 class Visit(models.Model):
+    HUMAN = 1
+    SPIDER = 2
+    SCRIPT = 3
+    STATUS_CHOICES = (
+        (HUMAN, 'Human'),
+        (SPIDER, 'Spider'),
+        (SCRIPT, 'Script'),
+    )
     http_referer = models.TextField( blank=True, null=True )
     path_info = models.TextField( blank=True, null=True )
     remote_addr = models.IPAddressField( blank=True, null=True )
-    is_spider = models.BooleanField(default=False)
+    status = models.PositiveSmallIntegerField(choices=STATUS_CHOICES, default=1)
     sessionid = models.CharField( max_length=255, blank=True, null=True )
     user_agent = models.CharField( max_length=255, blank=True, null=True )
     created = models.DateTimeField( auto_now_add=True)
+    
+    
+    objects = VisitManager()
     
     def __unicode__(self):
         return u'%s' % self.created

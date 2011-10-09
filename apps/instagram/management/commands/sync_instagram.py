@@ -54,8 +54,11 @@ class Command(BaseCommand):
             try:
                 instagram = InstagramPhoto.objects.get(instagram_id=ig['id'])
             except InstagramPhoto.DoesNotExist:
+                
                 instagram = InstagramPhoto()
-                instagram.caption = ig['caption']
+                #instagram.caption = ig['caption']
+                print instagram
+                return
                 instagram.instagram_id = ig['id']
                 instagram.created = to_datetime(ig['created_time'])
                 instagram.like_count = ig['like_count']
