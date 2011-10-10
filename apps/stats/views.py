@@ -18,7 +18,6 @@ def dashboard(request):
         'top_content' : top_content,
         'start_date' : start_date, 
         'end_date' : end_date
-        
     })
 
 def robots(request):

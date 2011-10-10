@@ -21,15 +21,11 @@ class VisitManager(models.Manager):
     
     
     
+    
+    
     def top_content(self, start_date=None, end_date=None):
         start_date, end_date = self.dates(start_date, end_date)
         visits = super(VisitManager, self).get_query_set().filter(created__range=(start_date, end_date)).filter(status=self.model.HUMAN)
-        
-        #from django.db.models import Count
-        #hotels = Hotel.objects.filter(city = "Paris").annotate(review_count = Count(review))
-        
-        #visits = visits.annotate(visit_count = models.Count('path_info'))
-        #visits = visits.annotate(visit_count=models.Count('path_info'))
         visits = visits.values('path_info').annotate(visit_count=models.Count('path_info')).order_by('-visit_count')
         return visits
         
@@ -41,7 +37,12 @@ class VisitManager(models.Manager):
     
     
     def unique_visits(self, start_date=None, end_date=None):
-        
         start_date, end_date = self.dates(start_date, end_date)
         
         return super(VisitManager, self).get_query_set().filter(created__range=(start_date, end_date), status=self.model.HUMAN).values('sessionid').distinct()
+    
+    
+    def views_for_path(self, path, start_date=None, end_date=None):
+        start_date, end_date = self.dates(start_date, end_date)
+        visits = self.page_views(start_date, end_date).filter(path_info=path)
+        return visits

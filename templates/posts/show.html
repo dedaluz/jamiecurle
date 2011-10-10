@@ -1,5 +1,5 @@
 {% extends 'posts/base_posts.html' %}
-{% load disqus_tags utils blog_tags %}
+{% load disqus_tags utils blog_tags stat_tags %}
 
 {% block title %} {{post.title}} - {% endblock %}
 
@@ -36,6 +36,7 @@
 		<p class="time">
 			Published <time datetime="{{post.created|date:"c"}}">{{post.created|date:"F d Y"}}</time>
 		</p>
+
 		<p class="tags">
 		{% for t in post.tags.all %} <a class="tag" href="{% url tags:tag_list t.slug %}">{{t.name}}</a>{% endfor %}
 		</p>

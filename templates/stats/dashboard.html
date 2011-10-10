@@ -19,7 +19,7 @@
 	<h2> Top Content </h2>
 	<ul>
 	{% for visit in top_content %}
-		<li> {{visit.visit_count}} &mdash; {{visit.path_info}}</li>
+		<li> <a href="{{visit.path_info}}">{{visit.visit_count}} &mdash; {{visit.path_info}}</a></li>
 	{% endfor %}
 	</ul>
 </div>

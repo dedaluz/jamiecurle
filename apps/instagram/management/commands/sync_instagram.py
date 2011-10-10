@@ -57,8 +57,6 @@ class Command(BaseCommand):
                 
                 instagram = InstagramPhoto()
                 #instagram.caption = ig['caption']
-                print instagram
-                return
                 instagram.instagram_id = ig['id']
                 instagram.created = to_datetime(ig['created_time'])
                 instagram.like_count = ig['like_count']

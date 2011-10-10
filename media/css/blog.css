@@ -62,6 +62,10 @@ div.fluid-width-video-wrapper{
     font-size: 1.25em;
     line-height: 0.8em;    
 }
+
+.comments{
+    clear: both;
+}
 .secondary h3{
     text-align: right;
     color : #BBB;

@@ -13,7 +13,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.forms.models import inlineformset_factory
 from taggit.models import Tag
 from django.conf import settings
-from forms import BlogPostForm, BlogImageForm
+from apps.stats.models import Visit
 from models import BlogPost, BlogImage
 from django.views.decorators.cache import cache_page
 from django.core.cache import cache
@@ -44,7 +44,7 @@ def show(request, slug):
     # if there is cached then use that
     key = 'jc_post_%s' % post.pk
     response = cache.get(key)
-    if not response:
+    if not response or 'force' in request.GET.keys():
         c = RequestContext(request, {
             'post' : post
         })
