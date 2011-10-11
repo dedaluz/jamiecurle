@@ -113,10 +113,11 @@ INSTALLED_APPS = (
 
 JOHNNY_MIDDLEWARE_KEY_PREFIX='jamiecurle'
 CACHES = {
-        'default': {
-            'BACKEND': 'johnny.backends.memcached.CacheClass',
-            'LOCATION': '127.0.0.1:11211'
-        }
+    'default' : dict(
+        BACKEND = 'johnny.backends.memcached.MemcachedCache',
+        LOCATION = ['127.0.0.1:11211'],
+        JOHNNY_CACHE = True,
+    )
 }
 
 STATS_IGNORE_IPS = (
