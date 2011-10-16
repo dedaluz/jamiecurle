@@ -12,7 +12,7 @@
 #stats div.totals p span{
     font-size: 8em;
     line-height: 1.1em;
-    letter-spacing: -0.1em;
+    letter-spacing: -0.01em;
     font-weight: 900;
     display: block;
 }
