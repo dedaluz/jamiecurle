@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'stats/stats_base.html' %}
 {% block head %}
 <link rel="stylesheet" href="{{MEDIA_URL}}css/stats.css" type="text/css" media="screen" charset="utf-8">
 {% endblock %}
@@ -7,12 +7,14 @@
 
 <h1> Stats </h1>
 <p>From {{start_date}} until  {{end_date}}</p>
-<div>
-{{unique_visits}} unique visits
-</div>
 
-<div>
-{{page_views}} page views	
+<div class="totals">
+	<p>	
+		<span>{{unique_visits}}</span> unique visits
+	</p>
+	<p>	
+		<span>{{page_views}}</span> page views
+	</p>
 </div>
 
 <div>

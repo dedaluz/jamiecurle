@@ -9,8 +9,12 @@ class StatsMiddleware(object):
     
     def process_request(self, request):
         try:
+            # respect DNT
+            if 'HTTP_DNT' in request.META and request.META['HTTP_DNT'] == '1':
+                return
             path = request.META['PATH_INFO']
             ip = request.META['REMOTE_ADDR']
+            
             if  (settings.DEBUG and '/admin/' not in path) or ('/admin/' not in path and ip not in getattr(settings, 'STATS_IGNORE_IPS', []) ):
                 v = Visit()
                 v.http_referer = request.META.get('HTTP_REFERER', None)

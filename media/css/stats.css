@@ -1,0 +1,18 @@
+
+
+#stats div.totals p{
+    width: 49.5%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+#stats div.totals p span{
+    font-size: 8em;
+    line-height: 1.1em;
+    letter-spacing: -0.1em;
+    font-weight: 900;
+    display: block;
+}
