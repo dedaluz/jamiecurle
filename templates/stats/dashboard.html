@@ -1,6 +1,12 @@
-{% extends 'stats/stats_base.html' %}
+{% extends 'stats/base_stats.html' %}
+{% load utils%}
 {% block head %}
 <link rel="stylesheet" href="{{MEDIA_URL}}css/stats.css" type="text/css" media="screen" charset="utf-8">
+<style type="text/css" media="screen">
+	.totals span{
+		color: {{start_date|color_for_date}};
+	}
+</style>
 {% endblock %}
 
 {% block content %}
