@@ -52,7 +52,7 @@ div.fluid-width-video-wrapper{
     border-bottom: 0.6em solid #ccc;
     margin-bottom: 2em;
 }
-#blog.show li p{
+#blog.show .content div.body li p:first-child{
     font-weight: 500;
 }
 #blog.show footer p{
