@@ -73,7 +73,6 @@ def deploy(message=None):
     if message is not None:
         local('git add -A')
         local('git commit -a -m "%s"' % message)
-
         local('git push origin master')
 
     maintenance()

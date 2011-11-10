@@ -17,6 +17,8 @@ class Command(BaseCommand):
             visits.update(status=Visit.SPIDER)
         
         scripts = Script.objects.all()
+        
+        
         for script in scripts:
             visits = Visit.objects.filter(path_info__icontains=script.path, status=Visit.HUMAN)
             visits.update(status=Visit.SCRIPT)

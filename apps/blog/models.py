@@ -4,11 +4,16 @@ import ImageOps
 import os
 from django.db import models
 from django.conf import settings
+from django.contrib.contenttypes.models import ContentType
+from django.contrib.contenttypes import generic
 from taggit.managers import TaggableManager
 from south.modelsinspector import add_introspection_rules
 from apps.utils.fields import upload_path, ImageWithThumbsField
 from managers import BlogPostManager
 from listeners import render_content
+
+
+
 
 class BlogPost(models.Model):
     _IMG = None
@@ -54,6 +59,20 @@ class BlogPost(models.Model):
         except IndexError:
             return BlankImg()
         return self._IMG
+    
+
+
+
+
+class BlogRelation(models.Model):
+    blogpost = models.ForeignKey(BlogPost)
+    content_type = models.ForeignKey(ContentType)
+    object_id = models.PositiveIntegerField()
+    content_object = generic.GenericForeignKey('content_type', 'object_id')
+    
+    def __unicode__(self):
+        return 'blog related thing %s %s' % (self.blogpost, self.content_object)
+    
     
 
 class BlankImg(object):
