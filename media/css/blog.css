@@ -54,7 +54,7 @@ div.fluid-width-video-wrapper{
 }
 #blog.show .content div.body li p:first-child{
     font-weight: 500;
-    font-size: 14px;
+    font-size: 1em;
 }
 #blog.show footer p{
     display: inline-block;
