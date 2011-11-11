@@ -43,7 +43,7 @@ blockquote{
     border-left: 0.3em solid #ddd;
 }
 
-blockquote p{
+blockquote p, blockquote p:first-child{
     font-family: 'Times New Roman', times, serif;
     font-weight: 400;
     color: #666;
