@@ -20,17 +20,52 @@
 	outline:none;
 	border: 1px solid #141414;
 }
+div#ajax_save{
+	width: 100px;
+	height: 100px;
+	background-color: rgba(0,0,0,0.9);
+	background-image: url(htp://media.jamiecurle.com/img/progress.gif);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	color: #fff;
+	position: absolute;
+	top:38%;
+	left: 48%;
+	text-align: center;
+	padding: 10px;
+	border-radius: 3px;
+	z-index: 4001;
+}
 </style>
 <script src="http://code.jquery.com/jquery-1.7.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
 	$(function(){
+		// add the saving div
+		$('body').append('<div id="ajax_save">Saving</div>')
+		//url
+		url = window.location.href
+		
+		function submit(){
+			data = $('#content-main form').serialize()
+			$.ajax({
+			  type: 'POST',
+			  url: url,
+			  data: data
+			});
+		}
+		
 		$('#id_content').click(function(){
 			$(this).addClass('fullscreen');
-			$(this).height($(document).height())
+			$(this).height($(document).height());
 		});
 		$(document).keyup(function(e) { 
-		    if (e.which == 13) { $('#id_content').removeClass('fullscreen'); $('#id_content').height(200)}    // enter (works as expected)
-		    if (e.which == 27) { $('#id_content').removeClass('fullscreen'); $('#id_content').height(200)}  // esc   (does not work)
+		    if (e.which == 27) { $('#id_content').removeClass('fullscreen'); $('#id_content').height(200)} ;
+		});
+		$(window).keypress(function(event) {
+		    if (!(event.which == 115 && event.metaKey) && !(event.which == 19)) return true;
+			submit()
+		    event.preventDefault();
+		    return false;
 		});
 	});
 </script>
