@@ -50,7 +50,7 @@ a{
     -webkit-transition: all 0.1s ease-in;
 }
 
-p a{
+p a, li a{
     color: #F5000E;
 }
 a:hover{
