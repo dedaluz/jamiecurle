@@ -64,3 +64,9 @@ span.content-type{
     font-weight: 200;
     font-style: italic;
 }
+
+em{
+    font-family: georgia;
+    color: #ccc;
+    font-style: italic;
+}
