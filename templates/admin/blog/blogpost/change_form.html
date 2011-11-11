@@ -21,13 +21,16 @@
 	border: 1px solid #141414;
 }
 div#ajax_save{
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 	background-color: rgba(0,0,0,0.9);
 	background-image: url(http://media.jamiecurle.com/img/progress.gif);
-	background-position: 0 0;
+	background-position: 32px 40px;
 	background-repeat: no-repeat;
 	color: #fff;
+	font-size: 18px;
+	text-transform : uppercase;
+	font-family: 'Helvetica Neue';
 	position: absolute;
 	top:38%;
 	left: 48%;
@@ -35,6 +38,7 @@ div#ajax_save{
 	padding: 10px;
 	border-radius: 3px;
 	z-index: 4001;
+	display: none;
 }
 </style>
 <script src="http://code.jquery.com/jquery-1.7.min.js" type="text/javascript" charset="utf-8"></script>
@@ -46,11 +50,15 @@ div#ajax_save{
 		url = window.location.href
 		
 		function submit(){
+			$('#ajax_save').show()
 			data = $('#content-main form').serialize()
 			$.ajax({
 			  type: 'POST',
 			  url: url,
-			  data: data
+			  data: data,
+				success : function(){
+					$('#ajax_save').fadeOut(200)
+				}
 			});
 		}
 		
