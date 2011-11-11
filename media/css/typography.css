@@ -44,10 +44,10 @@ blockquote{
 }
 
 blockquote p, blockquote p:first-child{
-    font-family: Georgia, serif;
+    font-family: Georgia, serif !important;
     font-weight: 400 !important;
-    color: #666;
-    font-size: 0.9em;
+    color: #666 !important;
+    font-size: 0.9em !important;
 }
 
 span.mute{
