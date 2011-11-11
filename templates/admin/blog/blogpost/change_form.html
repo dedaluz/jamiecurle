@@ -4,16 +4,34 @@
 {% block extrastyle %}
 {{block.super}}
 <style>
-#id_content{
-	width: 98%;
+#id_content.fullscreen{
+	width: 96%;
 	height: 600px;
-	padding: 1%;
-	font-size: 16px;
+	padding: 2%;
+	font-size: 18px;
 	font-family: Inconsolata;
 	line-height: 28px;
-	color: #B19773;
-	background-color: #141414;
+	color: #2E2E2E;
+	background-color: #fff;
+	position: absolute;
+	top: -5px;
+	left : 0;
+	z-index: 4000;
+	outline:none;
+	border: 1px solid #141414;
 }
 </style>
-
+<script src="http://code.jquery.com/jquery-1.7.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+	$(function(){
+		$('#id_content').click(function(){
+			$(this).addClass('fullscreen');
+			$(this).height($(document).height())
+		});
+		$(document).keyup(function(e) { 
+		    if (e.which == 13) { $('#id_content').removeClass('fullscreen'); $('#id_content').height(200)}    // enter (works as expected)
+		    if (e.which == 27) { $('#id_content').removeClass('fullscreen'); $('#id_content').height(200)}  // esc   (does not work)
+		});
+	});
+</script>
 {% endblock %}
