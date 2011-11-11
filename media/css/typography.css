@@ -44,8 +44,8 @@ blockquote{
 }
 
 blockquote p, blockquote p:first-child{
-    font-family: 'Times New Roman', times, serif;
-    font-weight: 400;
+    font-family: Georgia, serif;
+    font-weight: 400 !important;
     color: #666;
     font-size: 0.9em;
 }
