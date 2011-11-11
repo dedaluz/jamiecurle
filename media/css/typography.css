@@ -44,7 +44,7 @@ blockquote{
 }
 
 blockquote p{
-    font-family: Georgia, 'Times New Roman', times, serif;
+    font-family: 'Times New Roman', times, serif;
     font-style: italic;
     color: #666;
     font-size: 0.9em;
