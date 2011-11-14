@@ -9,7 +9,7 @@
 
 	<div class="object">
 		<p>
-			<a href="{{quote.get_absolute_url}}">&ldquo;{{quote.body}}&rdquo;</a>
+			<a href="{{quote.get_absolute_url}}">&ldquo;{{quote.body|safe}}&rdquo;</a>
 			&mdash; {{quote.author}}
 		</p>
 	</div>

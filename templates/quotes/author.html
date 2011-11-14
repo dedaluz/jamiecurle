@@ -7,7 +7,7 @@
 {% for quote in author.quote_set.all %}
 
 <div class="object quote">
-	<a href="{{quote.get_absolute_url}}">{{quote.body}}</a>
+	<a href="{{quote.get_absolute_url}}">{{quote.body|safe}}</a>
 </div>
 {% endfor %}
 {% endblock %}

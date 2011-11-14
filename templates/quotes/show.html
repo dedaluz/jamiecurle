@@ -7,7 +7,7 @@
 {% block body %}
 <div class="quote">
 	<blockquote>
-		<p>{{quote.body}}</p>
+		<p>{{quote.body|safe}}</p>
 	</blockquote>
 	<div class="author">
 		<a href="{{quote.author.url}}"><img src="{{quote.author.photo.url_200x200}}"></a>

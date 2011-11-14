@@ -24,9 +24,9 @@
 		<a href="{{thing.content_object.get_absolute_url}}" >
 		<span class="content-type">({{thing.content_object|friendly_model_name}})</span>
 		{% if thing.content_object.title and thing.content_object.description %}
-		{{thing.content_object.title}} - <span class="description">{{thing.content_object.description}}</span>
+		{{thing.content_object.title}} - <span class="description">{{thing.content_object.description|safe}}</span>
 		{% else %}
-		{{thing.content_object.description}}
+		{{thing.content_object.description|safe}}
 		{% endif %}
 		</a>
 	</div>
