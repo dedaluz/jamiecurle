@@ -9,11 +9,12 @@
 }
 td.linenos{
 	color: #999;
-	padding: 0 6px;
+	padding: 0 10px 0 6px;
 	background-color: #3e3e3e;
 	width: 15px;
 	text-align: center;
 	text-shadow: -1px -1px 1px #000;
+	border-right: 1px solid #4c4c4c;
 }
 td.code{
 	padding-left: 25px;
