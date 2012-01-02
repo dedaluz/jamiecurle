@@ -72,7 +72,7 @@ def month_name(month_num):
 def render(content):
     regex = re.compile(r'(<code(.*?)</code>)', re.DOTALL)
     code_blocks = []
-    
+
     for i, m in enumerate(regex.finditer(content)):
         code = m.group(0)
         # if there is a lang attribute, use that
@@ -94,7 +94,7 @@ def render(content):
         code = code.replace('<code>', '')
         code = re.sub('<code(.*?)>', '', code)
         # create the pygmented code with the lexer
-        pygmented_string = pygments.highlight(code, lexer, formatters.HtmlFormatter())
+        pygmented_string = pygments.highlight(code, lexer, formatters.HtmlFormatter(linenos=True))
         # put the code blocks into the list for processintg later
         code_blocks.append(pygmented_string)
         # replace the <code> tags with placeholders that can be used to replace

@@ -6,11 +6,12 @@
 {% block head %}
 <link rel="stylesheet" href="{{MEDIA_URL}}css/blog.css" type="text/css">
 <link rel="stylesheet" href="{{MEDIA_URL}}css/syntax.css" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 <style type="text/css" media="screen">
- #blog.show .content header{
-	margin-bottom: 2em;
-    border-bottom: 0.6em solid {{post.created|color_for_date }};
-}
+	#blog.show .content header{
+		margin-bottom: 2em;
+		border-bottom: 0.6em solid {{post.created|color_for_date }};
+	}
 </style>
 {% endblock %}
 

@@ -11,6 +11,7 @@ class BlogImageInline(admin.TabularInline):
 class BlogPostAdmin(admin.ModelAdmin):
     inlines = [BlogImageInline, BlogRelationInline]
     list_display= ['title','views', 'description', ]
+    search_fields = ['title', 'slug']
     list_editable = ['views']
     date_hierarchy = 'created'
     
