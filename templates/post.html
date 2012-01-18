@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block body_id %}blog{% endblock %}
+{% block body_class %}show{% endblock%}
+
+{% block content %}
+<article>
+<header style="border-bottom-color: {{post.created|colour_for_date}}">
+	<h1>{{post.title}}</h1>
+	<p class="description">{{post.description}}</p>
+</header>
+
+
+{{post.content|render|safe}}
+
+</article>
+<div id="disqus_thread"></div>
+{% endblock %}
+
+
+{% block extra_js %}
+<script src="http://code.jquery.com/jquery-1.7.1.min.js" charset="utf-8"></script>
+<script src="/media/js/jquery.fitvids.js" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+	$('article').fitVids();
+</script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'jamiecurle';
+    var disqus_developer = 1;
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+{% endblock %}

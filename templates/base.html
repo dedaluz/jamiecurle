@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="/static/css/global.css" media="screen">
+		<link rel="stylesheet" href="/static/css/syntax.css" media="screen">
+		<link rel="stylesheet" href="/static/css/devices.css" media="screen">
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+	</head>
+	<body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
+		<header class="primary">
+			<h1>
+				<a href="/">J<span>amie</span> C<span>urle</span></a>
+			</h1>
+		</header>
+
+		<div class="content">
+			{% block content %}
+			<article>
+			{{content}}
+			</article>
+			{% endblock %}
+
+		</div>
+		
+		<footer class="license">
+			<p>
+				Content licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+				Attribute "Jamie Curle - http://jamiecurle.com"
+			</p>
+		</footer>
+{% block extra_js %}
+{% endblock %}
+	</body>
+</html>

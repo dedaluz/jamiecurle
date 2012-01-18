@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Blog Archive {% endblock %}
+
+{% block content %}
+	{% for post in posts %}
+		<div id="blog" class="object blog" style="border-left-color:{{post.created|colour_for_date}}">
+			
+			<h1><a href="{{post.url}}">{{post.title}}</a></h1>
+			<p>{{post.description}}</p>
+			<p class="meta">{{post.created|datetimeformat}}</p>
+		</div>
+	{% endfor %}
+{% endblock %}

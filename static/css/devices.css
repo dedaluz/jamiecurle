@@ -1,0 +1,6 @@
+@media screen and (max-width: 600px) {
+	.content, footer.license{
+		width: 96%;
+		padding: 1.9%;
+	}
+}
