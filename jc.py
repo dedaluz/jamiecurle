@@ -113,7 +113,7 @@ def get_post(slug, postdir="/Users/jcurle/Sites/jamiecurle/posts/"):
     try:
         tags = header['tags']
     except KeyError:
-        tags = None
+        tags = []
     # now append a dict wit the info to posts
     post = {
         'url': '/posts/%s/' % item.split('/').pop().split('.')[0],
@@ -155,10 +155,13 @@ def get_posts(postdir="/Users/jcurle/Sites/jamiecurle/posts/"):
 #
 #
 # views
+@app.route('/about.html')
+def about():
+    return render_template('about.html')
+
 @app.route("/")
 def index():
     posts = get_posts()
-    # get the list of all *.md files
     return render_template('index.html', posts=posts)
 
 
@@ -167,7 +170,12 @@ def post(slug):
     post = get_post('%s.md' % slug )
     return render_template('post.html', post=post)
 
-
+@app.route("/tags/<tag>/")
+def tags(tag):
+    tagged_posts = [post for post in get_posts() if tag in post['tags']]
+    return render_template('tags.html',
+        tagged_posts=tagged_posts,
+        tag=tag)
 
 if __name__ == '__main__':
     app.run(debug=True)

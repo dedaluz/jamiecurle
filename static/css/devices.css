@@ -1,6 +1,13 @@
-@media screen and (max-width: 600px) {
-	.content, footer.license{
-		width: 96%;
-		padding: 1.9%;
+@media screen and (min-width: 740px){
+	header.primary nav a:last-child{
+		padding-right: 0;
 	}
+	header.primary{
+		max-width: 52em;
+	}
+	.content,
+	footer.license{
+		max-width: 52em;
+	}
+
 }

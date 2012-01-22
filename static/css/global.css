@@ -1,6 +1,209 @@
+body{
+	background-color: #fafafa;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	text-transform: uppercase;
+	font-weight: 400;
+	line-height: 1.25em;
+}
+h1{
+	font-size: 2.5em;
+}
+h2{
+	font-size: 2em;
+}
+h3{
+	font-size: 1.75em;
+}
+h4{
+	font-size: 1.5em;
+}
+h5{
+	font-size: 1.25em;
+}
+h6{
+	font-size: 1.15em;
+}
+a{
+	text-decoration: none;
+	color: #F5000E;
+}
+p{
+	line-height: 1.5em;
+}
+p, ul, ol, div{
+	margin-bottom: 2em;
+}
+li{
+	margin-bottom: 1.25em;
+}
+/* header */
+	header.primary{
+		padding: 0 4%;
+	}
+	header.primary:after{
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+	header.primary h1{
+		letter-spacing: -0.15em;
+		margin: 0.5em 0;
+		font-size: 1.75em;
+		float: left;
+	}
+	header.primary h1 span{
+	  display: none;
+	}
+
+	header.primary h1 a{
+		border-radius: 0.09em;
+		background-color: #000;
+		color: #fff;
+		padding: 0.2em 0.3em 0.2em 0.2em;
+		display: inline-block;
+		width: 1.2em;
+		text-align: center;
+		font-weight: 200;
+	}
+	header.primary h1 a:hover{
+		background-color: #F5000E;
+	}
+	header.primary nav{
+		text-align: right;
+		padding-top: 1.75em;
+		float: right;
+		margin-right: 0;
+	}
+		header.primary nav a{
+			font-size: 0.8em;
+			font-weight: 500;
+			color: #3e3e3e;
+			text-transform: uppercase;
+			padding-right: 2em;
+		}
+
+		header.primary nav a:hover{
+			color: #000;
+		}
+
+/* content */
+div.content{
+	padding: 1em 4%;
+	width: 92%;
+	margin: 0;
+	background-color: #fff;
+}
+/* blog list */
+.list div.blog{
+	margin: 0 1em 0 1em;
+	border-left: 0.25em solid #000;
+	padding-left: 1em;
+}
+	.list div.blog h1{
+		padding: 0;
+		margin: 0;
+		font-size: 1.5em;
+	}
+		.list div.blog h1 a{
+			color: #3e3e3e;
+		}
+	.list div.blog p{
+		color: #999;
+		font-size: 1em;
+	}
+	.list div.blog p.meta{
+		color: #ccc;
+		font-weight: 200;
+		font-style: italic;
+		font-size: 0.8em;
+	}
+/* blog show */
+#blog article{
+
+}
+	#blog article img{
+		width: 100%;
+		max-width: 100%;
+	}
+		#blog article header{
+			border-bottom: 0.75em solid #ccc;
+		}
+			#blog article header h1{
+				margin-bottom: 0.25em;
+				padding: 0;
+			}
+			#blog article header p{
+				font-size: 1.5em;
+				font-family: Georgia;
+				font-style: italic;
+				color: #b3b3b3;
+				padding: 0;
+				margin: 0 0 0.75em 0;
+			}
+		#blog article footer{
+			padding: 1em 0.5em;
+		}	
+		#blog article p.meta{
+			margin: 0;
+			padding: 0;
+			font-family: "Helvetiva Neue", Helvetica, sans-serif;
+			font-size: 0.8em;
+			display: inline-block;
+			width: 49%;
+			color: #fff;
+		}
+		#blog article p.meta.tags{
+			text-align: right;
+			width: 50%;
+		}
+/* tags */
+a.tag{
+	background-color: rgba(255,255,255, 0.1);
+	display: inline-block;
+	padding: 0.2em 1em;
+	margin-right: 0.6em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	font-style: normal;
+}
+	a.tag:hover{
+		color: #fff;
+		background-color: rgba(255,255,255, 0.4);
+	}
+/* footer */
+footer.license{
+	background-color: #000;
+	color: #999;
+	padding: 0.5em 4% ;
+	width: 92%;
+}
+	footer.license p{
+		font-size: 0.6em;
+		text-transform: uppercase;
+	}
+	footer.license a{
+		color: #ccc;
+	}
+
+/* blogs list */
+
 /* 
 	START LAYOUT 
-*/
+
 body{
     margin: 0;
     padding: 0;
@@ -15,7 +218,6 @@ body{
     background-color: #fff;
     display: block;
     width: 58%;
-
 }
 .content:before,
 .content:after {
@@ -43,11 +245,11 @@ footer.license p {
 footer.license p a{
 	color:#fff;
 }
-/* nav */
+/* nav 
 nav a{
 	display: inline-block;
 }
-/* links */
+/* links 
 a{
     font-weight: 900;
     color: #000;
@@ -66,7 +268,7 @@ p a:hover{
     background-color: #F9F8F5;
 }
 
-/* jc logo thing */
+/* jc logo thing 
 	header.primary h1{
 		letter-spacing: -0.15em;
 		margin: 0.5em;
@@ -110,12 +312,12 @@ p a:hover{
 		}
 /*
 	END LAYOUT
-*/
+
 
 
 /* 
 	START TYPOGRAPHY 
-*/
+
 body,
 p,
 li,
@@ -128,7 +330,7 @@ th
     margin-bottom: 1.5em;
     line-height: 1.75em;
 }
-/* headings */
+/* headings 
 h1,
 h2,
 h3,
@@ -191,11 +393,9 @@ em{
 }
 /*
 	 END TYPOGRAPHY
-*/
-/*
+
 	START OBJECTS
-*/
-/* blogs */
+
 .blog.object{
 	margin: 0 0 2em 0;
 	padding: 1em 0 1em 2em;
@@ -248,7 +448,7 @@ em{
     color: #CCC;
     font-weight: 200;
 }
-/* tags */
+/* tags 
 
 .object.tagged_object{
     margin-bottom: 1em;
@@ -260,10 +460,10 @@ em{
 
 /*
 	END OBJECTS
-*/
+
 /*
 	START BLOGS
-*/
+
 #blog.show .content header{
     margin-bottom: 2em;
 	border-bottom: 1em solid;
@@ -361,3 +561,4 @@ p.meta{
 	text-transform: uppercase;
 	font-style: none;
 }
+*/

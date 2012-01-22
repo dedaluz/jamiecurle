@@ -2,9 +2,11 @@
 
 {% block title %} Blog Archive {% endblock %}
 
+{% block body_class %}list{% endblock %}
+
 {% block content %}
 	{% for post in posts %}
-		<div id="blog" class="object blog" style="border-left-color:{{post.created|colour_for_date}}; color: border-left-color:{{post.created|colour_for_date}}">
+		<div class="blog" style="border-left-color:{{post.created|colour_for_date}};">
 			<h1><a href="{{post.url}}">{{post.title}}</a></h1>
 			<p>{{post.description}}</p>
 			<p class="meta">{{post.created|datetimeformat}}</p>

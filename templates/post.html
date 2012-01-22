@@ -6,6 +6,7 @@
 {% block content %}
 <article>
 <header style="border-bottom-color: {{post.created|colour_for_date}}">
+
 	<h1>{{post.title}}</h1>
 	<p class="description">{{post.description}}</p>
 </header>
@@ -13,6 +14,14 @@
 
 {{post.content|render|safe}}
 
+	<footer style="background-color: {{post.created|colour_for_date}}">
+		<p class="meta">
+			Published on: {{post.created|datetimeformat}}
+		</p>
+		<p class="meta tags">
+			Tagged with: {% for tag in post.tags %}<a class="tag" href="/tags/{{tag}}/">{{tag}}</a>{% endfor %}
+		</p>
+	</footer>
 </article>
 <div id="disqus_thread"></div>
 {% endblock %}
