@@ -4,6 +4,8 @@ import re
 import markdown
 import pygments
 import calendar
+import codecs
+from operator import itemgetter
 from pygments import lexers, formatters
 from BeautifulSoup import BeautifulSoup
 from flask import Flask, render_template
@@ -50,7 +52,7 @@ def colour_for_date(date):
     return 'hsla(%s,%s%%,50%%, 1)' % (hue, sat)
 
 @app.template_filter('datetimeformat')
-def datetimeformat(value, format='%d %B %Y @%H:%M'):
+def datetimeformat(value, format='%d %B %Y'):
     return value.strftime(format)
 
 @app.template_filter('render')
@@ -63,12 +65,15 @@ def render(content):
         # if there is a lang attribute, use that
         if code.find('lang'):
             # get the language
-            language = re.split(r'"|\'', code)[1]
-            # fix some wonky lexers
-            if language == 'conf': language = 'nginx'
-            if language == 'regex': language = 'perl'
-            # all goods
-            lexer = pygments.lexers.get_lexer_by_name(language)
+            try:
+                language = re.split(r'"|\'', code)[1]
+                # fix some wonky lexers
+                if language == 'conf': language = 'nginx'
+                if language == 'regex': language = 'perl'
+                # all goods
+                lexer = pygments.lexers.get_lexer_by_name(language)
+            except IndexError:
+                lexer = pygments.lexers.guess_lexer(str(code))
         else:
             try: 
                 lexer = pygments.lexers.guess_lexer(str(code))
@@ -99,19 +104,23 @@ def render(content):
 #
 def get_post(slug, postdir="/Users/jcurle/Sites/jamiecurle/posts/"):
     item = '%s%s' % (postdir, slug)
-    with open(item) as md_file:
+    with codecs.open(item, encoding='UTF-8') as md_file:
         contents = md_file.read()
     # split into yaml and markdown
     parts = contents.split('---')
     header = yaml.load(parts[0])
     content = markdown.markdown(parts[1])
+    try:
+        tags = header['tags']
+    except KeyError:
+        tags = None
     # now append a dict wit the info to posts
     post = {
         'url': '/posts/%s/' % item.split('/').pop().split('.')[0],
         'title': header['title'],
         'description': header['description'],
         'created': header['created'],
-        'tags': header['tags'],
+        'tags': tags,
         'content': content
     }
     return post
@@ -137,7 +146,9 @@ def get_posts(postdir="/Users/jcurle/Sites/jamiecurle/posts/"):
     for md in md_files:
         post = get_post(md)
         posts.append(post)
-    return posts
+    # sort them by date
+    sorted_posts = sorted(posts, key=itemgetter('created'), reverse=True) 
+    return sorted_posts
 
 
 

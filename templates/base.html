@@ -6,13 +6,17 @@
 		<link rel="stylesheet" href="/static/css/global.css" media="screen">
 		<link rel="stylesheet" href="/static/css/syntax.css" media="screen">
 		<link rel="stylesheet" href="/static/css/devices.css" media="screen">
-		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
 	</head>
 	<body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
 		<header class="primary">
 			<h1>
 				<a href="/">J<span>amie</span> C<span>urle</span></a>
 			</h1>
+			<nav>
+				<a href="">About</a>
+				<a href="">Blog</a>
+			</nav>
 		</header>
 
 		<div class="content">
@@ -30,7 +34,7 @@
 				Attribute "Jamie Curle - http://jamiecurle.com"
 			</p>
 		</footer>
-{% block extra_js %}
+{% block js %}
 {% endblock %}
 	</body>
 </html>

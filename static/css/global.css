@@ -43,7 +43,10 @@ footer.license p {
 footer.license p a{
 	color:#fff;
 }
-
+/* nav */
+nav a{
+	display: inline-block;
+}
 /* links */
 a{
     font-weight: 900;
@@ -64,28 +67,47 @@ p a:hover{
 }
 
 /* jc logo thing */
-    header.primary h1{
-        letter-spacing: -0.15em;
-        margin: 0.5em;
-        font-size: 3em;
-    }
-        header.primary h1 span{
-            display: none;
-        }
-        
-        header.primary h1 a{
-            background-color: #000;
-            color: #fff;
-            padding: 0.4em 0.4em 0.4em 0.25em;
-            display: inline-block;
-            width: auto;
-            text-align: center;
-            font-weight: 500;
-        }
-        header.primary h1 a:hover{
-            background-color: #F5000E;
-        }
+	header.primary h1{
+		letter-spacing: -0.15em;
+		margin: 0.5em;
+		font-size: 3em;
+		float: left;
+	}
+	header.primary h1 span{
+	  display: none;
+	}
 
+	header.primary h1 a{
+		border-radius: 3px;
+		background-color: #000;
+		border-radius:;
+		color: #fff;
+		padding: 0.4em 0.4em 0.4em 0.25em;
+		display: inline-block;
+		width: auto;
+		text-align: center;
+		font-weight: 400;
+	}
+	header.primary h1 a:hover{
+		background-color: #F5000E;
+	}
+
+
+		header.primary nav{
+			vertical-align: top;
+			margin-top: 20px;
+			width: auto;
+			border-top: 1px solid;
+			text-align: right;
+			float: right;
+		}
+		header.primary nav a{
+			font-weight: 500;
+			text-transform: uppercase;
+			font-size: 0.8em;
+			text-shadow: 1px 1px 1px #fff;
+
+		}
 /*
 	END LAYOUT
 */
@@ -142,7 +164,7 @@ blockquote{
 blockquote p, blockquote p:first-child{
     font-family: Georgia, serif !important;
     font-weight: 400 !important;
-    color: #666 !important;
+    color: #999 !important;
     font-size: 1em !important;
 }
 
@@ -162,8 +184,8 @@ span.content-type{
 }
 
 em{
-    font-family: georgia;
-    color: #999;
+    font-family: Georgia, serif;
+    color: #ccc;
     font-style: italic;
     padding: 0 0.5em;
 }
@@ -212,9 +234,9 @@ em{
 }
 .blog p{
     font-size: 1em;
-    font-family: georgia;
+    font-family: Georgia, serif;
     font-style: italic;
-    color: #999;
+    color: #aaa;
 	margin: 0;
 }
 
@@ -331,6 +353,11 @@ div.fluid-width-video-wrapper{
 .comments h1{
     color : #BBB;
 }
-/*
-	END BLOGS
-*/
+
+
+p.meta{
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-size: 0.7em;
+	text-transform: uppercase;
+	font-style: none;
+}
