@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %} About {% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="/static/css/about.css" media="screen" type="text/css">
+{% endblock %}
+
+{% block body_id %}about{% endblock %}
+
+{% block content %}
+
+{% filter markdown %}
+
+## About Me 
+
+![Jamie Curle Headshot](/static/img/jamiecurle.jpg)
+
+0. I have an [amazing wife][6] and a [fantastic cat][7].
+1. I design and develop things for myself and other people with [Django][0].
+2. I run a business ([c&c][5]) where I get do to the above.
+3. I play drums.
+4. I'm teetotal and don't smoke.
+5. I train hard using a combination of running, swimming and weights.
+6. I'm taking part in [tough mudder][0] and raising money 
+for [help for heroes][3], you should [sponsor me][4].
+7. I love cooking and eating.
+
+
+[0]: http://djangoproject.com
+[1]: http://en.wikipedia.org/wiki/Mark_Rippetoe
+[2]: http://toughmudder.co.uk/events/scotland/
+[3]: http://helpforheroes.org.uk/
+[4]: https://www.raceit.com/fundraising/donate.aspx?event=6569&fundraiser=r1837913
+[5]: http://designcc.co.uk
+[6]: http://jocurle.com
+[7]: https://twitter.com/#!/djangocurle
+{% endfilter %}
+
+
+
+
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

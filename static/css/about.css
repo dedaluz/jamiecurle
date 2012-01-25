@@ -1,0 +1,14 @@
+#about .content img{
+	float: right;
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 1em;
+}
+
+@media screen and (min-width: 480px){
+	#about .content img{
+		max-width: 40%;
+		margin: 0 0 1em 1em;
+	}
+
+}

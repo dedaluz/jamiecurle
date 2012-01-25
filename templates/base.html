@@ -8,15 +8,17 @@
 		<link rel="stylesheet" href="/static/css/syntax.css" media="screen">
 		<link rel="stylesheet" href="/static/css/devices.css" media="screen">
 		<link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+		{% block css %}
+		{% endblock %}
 	</head>
 	<body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
 		<header class="primary">
-			<h1>
+			<h6>
 				<a href="/">J<span>amie</span> C<span>urle</span></a>
-			</h1>
+			</h6>
 			<nav>
 				<a href="/about.html">About Me</a>
-				<a href="">Blog</a>
+				<a href="/blog.html">Blog</a>
 			</nav>
 		</header>
 

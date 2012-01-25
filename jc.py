@@ -9,13 +9,18 @@ from operator import itemgetter
 from pygments import lexers, formatters
 from BeautifulSoup import BeautifulSoup
 from flask import Flask, render_template
+from flaskext.markdown import Markdown
 
 app = Flask(__name__)
+Markdown(app)
 
 
 #
 #
 # filters
+
+
+
 
 @app.template_filter('colour_for_date')
 def colour_for_date(date):
@@ -50,6 +55,11 @@ def colour_for_date(date):
     sat = current[1] + (date.day * sat_per_day)
     
     return 'hsla(%s,%s%%,50%%, 1)' % (hue, sat)
+
+
+@app.template_filter('archivedateformat')
+def archivedateformat(value, format='%B %Y'):
+    return value.strftime(format)
 
 @app.template_filter('datetimeformat')
 def datetimeformat(value, format='%d %B %Y'):
@@ -135,8 +145,9 @@ def get_md_files(postdir="/Users/jcurle/Sites/jamiecurle/posts/"):
                 ls.append(thing)
         except IndexError:
             pass
-    
+
     return ls
+
 def get_posts(postdir="/Users/jcurle/Sites/jamiecurle/posts/"):
     #
     md_files = get_md_files()
@@ -147,10 +158,27 @@ def get_posts(postdir="/Users/jcurle/Sites/jamiecurle/posts/"):
         post = get_post(md)
         posts.append(post)
     # sort them by date
-    sorted_posts = sorted(posts, key=itemgetter('created'), reverse=True) 
+    sorted_posts = sorted(posts, key=itemgetter('created'), reverse=True)
     return sorted_posts
 
+def get_tags():
+    posts = get_posts()
+    tags = {}
+    for post in posts:
+        for tag in post['tags']:
+            tags[tag] = tags.get(tag, 0 ) + 1
+    return tags
 
+def get_dates():
+    posts = get_posts()
+    dates = {}
+    for post in posts:
+        key = post['created'].strftime('%Y_%d')
+        try:
+            dates[key][1] = dates[key][1] + 1
+        except KeyError:
+            dates[key] = [post['created'], 1]
+    return dates
 
 #
 #
@@ -158,6 +186,13 @@ def get_posts(postdir="/Users/jcurle/Sites/jamiecurle/posts/"):
 @app.route('/about.html')
 def about():
     return render_template('about.html')
+
+
+@app.route("/blog.html")
+def blog_index():
+    posts = get_posts()
+    return render_template('blog_index.html', posts=posts)
+
 
 @app.route("/")
 def index():
@@ -168,12 +203,19 @@ def index():
 @app.route("/posts/<slug>/")
 def post(slug):
     post = get_post('%s.md' % slug )
-    return render_template('post.html', post=post)
+    tags = get_tags()
+    dates = get_dates()
+    return render_template('post.html', post=post, tags=tags, dates=dates)
+
+@app.route("/tags.html")
+def tags():
+    tags = get_tags()
+    return render_template('tags.html',tags=tags)
 
 @app.route("/tags/<tag>/")
-def tags(tag):
+def tag(tag):
     tagged_posts = [post for post in get_posts() if tag in post['tags']]
-    return render_template('tags.html',
+    return render_template('tag.html',
         tagged_posts=tagged_posts,
         tag=tag)
 
