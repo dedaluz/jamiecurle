@@ -4,7 +4,7 @@ from distutils.dir_util import copy_tree
 from markdown import markdown
 from jinja2 import Environment, FileSystemLoader
 from jc import app, get_posts, get_post, colour_for_date, datetimeformat,\
-                render, get_md_files
+                render, get_md_files, archivedateformat, get_dates
 
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -14,6 +14,7 @@ env.filters['colour_for_date'] = colour_for_date
 env.filters['datetimeformat'] = datetimeformat
 env.filters['render'] = render
 env.filters['markdown'] = markdown
+env.filters['archivedateformat'] = archivedateformat
 
 
 def deploy():

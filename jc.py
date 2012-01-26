@@ -5,15 +5,17 @@ import markdown
 import pygments
 import calendar
 import codecs
+import memcache
 from operator import itemgetter
 from pygments import lexers, formatters
 from BeautifulSoup import BeautifulSoup
 from flask import Flask, render_template
 from flaskext.markdown import Markdown
 
+
 app = Flask(__name__)
 Markdown(app)
-
+mc = memcache.Client(['127.0.0.1:11211'], debug=0)
 
 #
 #
@@ -113,6 +115,11 @@ def render(content):
 # get post stuff
 #
 def get_post(slug, postdir="/Users/jcurle/Sites/jamiecurle/posts/"):
+    key = str('get_post_%s' % slug.replace('.md', ''))
+    print key
+    cache = mc.get(key)
+    if cache:
+        return cache
     item = '%s%s' % (postdir, slug)
     with codecs.open(item, encoding='UTF-8') as md_file:
         contents = md_file.read()
@@ -133,10 +140,14 @@ def get_post(slug, postdir="/Users/jcurle/Sites/jamiecurle/posts/"):
         'tags': tags,
         'content': content
     }
+    mc.set(key, post)
     return post
 
 
 def get_md_files(postdir="/Users/jcurle/Sites/jamiecurle/posts/"):
+    cache = mc.get('get_md_files')
+    if cache:
+        return cache
     ls = [] # list of all markdown files
     for thing in os.listdir(postdir):
         try:
@@ -145,10 +156,14 @@ def get_md_files(postdir="/Users/jcurle/Sites/jamiecurle/posts/"):
                 ls.append(thing)
         except IndexError:
             pass
-
+    mc.set('get_md_files', ls)
     return ls
 
 def get_posts(postdir="/Users/jcurle/Sites/jamiecurle/posts/"):
+    cache = mc.get('get_posts')
+    if cache:
+        print 'cache'
+        return cache
     #
     md_files = get_md_files()
     posts = [] # list of posts
@@ -159,17 +174,26 @@ def get_posts(postdir="/Users/jcurle/Sites/jamiecurle/posts/"):
         posts.append(post)
     # sort them by date
     sorted_posts = sorted(posts, key=itemgetter('created'), reverse=True)
+    mc.set('get_posts', sorted_posts)
     return sorted_posts
 
 def get_tags():
+    cache = mc.get('get_tags')
+    if cache:
+        return cache
     posts = get_posts()
     tags = {}
     for post in posts:
         for tag in post['tags']:
             tags[tag] = tags.get(tag, 0 ) + 1
+    
+    mc.set('get_tags', tags)
     return tags
 
 def get_dates():
+    cache = mc.get('get_dates')
+    if cache:
+        return cache
     posts = get_posts()
     dates = {}
     for post in posts:
@@ -178,6 +202,7 @@ def get_dates():
             dates[key][1] = dates[key][1] + 1
         except KeyError:
             dates[key] = [post['created'], 1]
+    mc.set('get_dates', dates)
     return dates
 
 #
@@ -185,14 +210,22 @@ def get_dates():
 # views
 @app.route('/about.html')
 def about():
-    return render_template('about.html')
-
+    cache = mc.get('about')
+    if cache:
+        return cache
+    about = render_template('about.html')
+    mc.set('about', about)
+    return about
 
 @app.route("/blog.html")
 def blog_index():
+    cache = mc.get('blog_index')
+    if cache:
+        return cache
     posts = get_posts()
-    return render_template('blog_index.html', posts=posts)
-
+    html  = render_template('blog_index.html', posts=posts)
+    mc.set('blog_index', html)
+    return html
 
 @app.route("/")
 def index():
@@ -202,10 +235,16 @@ def index():
 
 @app.route("/posts/<slug>/")
 def post(slug):
+    key = str('post_%s' % slug)
+    cache = mc.get('key')
+    if cache:
+        return cache
     post = get_post('%s.md' % slug )
     tags = get_tags()
     dates = get_dates()
-    return render_template('post.html', post=post, tags=tags, dates=dates)
+    html = render_template('post.html', post=post, tags=tags, dates=dates)
+    mc.set(key, html)
+    return html
 
 @app.route("/tags.html")
 def tags():

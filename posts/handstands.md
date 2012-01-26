@@ -4,6 +4,8 @@ created: 2012-01-04 14:58:37
 tags:
   - training
   - bodyweight
+  - training
+  - handstands
 ---
 
 I'm not very good at handstands. Even as a child I was never been able to stay up for long before my balance failed me. This year however, I plan to change that.

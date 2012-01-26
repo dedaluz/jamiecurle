@@ -1,6 +1,16 @@
 from fabric.api import *
 import datetime
 import os
+import memcache
+
+
+
+def clear_cache(key=None):
+    mc = memcache.Client(['127.0.0.1:11211'], debug=0)
+    if key is None:
+        mc.flush_all()
+    else:
+        mc.delete(key)
 
 def output():
     with settings(warn_only=True):
