@@ -1,5 +1,9 @@
-Flask
-python-memcached
 markdown
+pygments
+BeautifulSoup
+Flask
 Flask-Markdown
+python-memcached
+
+
 
