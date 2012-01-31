@@ -1,0 +1,230 @@
+body{
+	background-color: #fafafa;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-weight: 400;
+	line-height: 1.25em;
+}
+h1{
+	font-size: 2.5em;
+}
+h2{
+	font-size: 2em;
+}
+h3{
+	font-size: 1.75em;
+}
+h4{
+	font-size: 1.5em;
+}
+h5{
+	font-size: 1.25em;
+}
+h6{
+	font-size: 1.15em;
+}
+a{
+	text-decoration: none;
+	color: #F5000E;
+}
+p, li{
+	line-height: 1.5em;
+}
+p, ul, ol, div{
+	margin-bottom: 2em;
+}
+li{
+	margin-bottom: 1.25em;
+}
+/* header */
+	header.primary{
+		padding: 0 4%;
+	}
+	header.primary:after{
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+	header.primary h6{
+		letter-spacing: -0.15em;
+		margin: 0.5em 0;
+		font-size: 1.75em;
+		float: left;
+	}
+	header.primary h6 span{
+	  display: none;
+	}
+
+	header.primary h6 a{
+		border-radius: 0.09em;
+		background-color: #000;
+		color: #fff;
+		padding: 0.2em 0.3em 0.2em 0.2em;
+		display: inline-block;
+		width: 1.2em;
+		text-align: center;
+		font-weight: 200;
+	}
+	header.primary h6 a:hover{
+		background-color: #F5000E;
+	}
+	header.primary nav{
+		text-align: right;
+		padding-top: 1.75em;
+		float: right;
+		margin-right: 0;
+	}
+		header.primary nav a{
+			font-size: 0.8em;
+			font-weight: 500;
+			color: #3e3e3e;
+			text-transform: uppercase;
+			padding-right: 2em;
+		}
+
+		header.primary nav a:hover{
+			color: #000;
+		}
+
+/* content */
+div.content{
+	padding: 1em 4%;
+	width: 92%;
+	margin: 0;
+	background-color: #fff;
+}
+/* blog list */
+.list div.blog{
+	margin: 0 1em 2em 1em;
+	border-left: 0.25em solid #000;
+	padding-left: 1em;
+}
+	.list div.blog h1{
+		padding: 0;
+		margin: 0;
+		font-size: 1.5em;
+	}
+		.list div.blog h1 a{
+			color: #3e3e3e;
+		}
+	.list div.blog p{
+		color: #999;
+		font-size: 1em;
+		margin-bottom: 1em;
+	}
+	.list div.blog p.meta{
+		color: #ccc;
+		font-weight: 200;
+		font-style: italic;
+		font-size: 0.8em;
+	}
+/* blog show */
+#blog article{
+
+}
+	#blog article img{
+		border: 1px solid #dcdcdc;
+		background-color:#ededed;
+		width: 98%;
+		padding: 1%;
+		max-width: 100%;
+	}
+		#blog article header{
+			border-bottom: 0.5em solid #ccc;
+		}
+			#blog article header h1{
+				margin-bottom: 0;
+				padding: 0;
+			}
+		#blog article footer{
+			padding: 1em 0.5em;
+		}
+		#blog article p.description{
+			font-weight: 900;
+			font-size: 1.25em;
+		}
+
+		#blog article p.meta{
+			margin: 0 0 1em 0;
+			padding: 0;
+			font-size: 0.8em;
+			color: #bbb;
+		}
+			#blog article p.meta a{
+				color: #fff;
+				font-style: italic;
+				background-color: #cecece;
+				padding: 0.1em 0.4em;
+				margin-left: 0.6em;
+			}
+			#blog article p.meta a:first-child{
+				margin-left: 0;
+			}
+			#blog article p.meta span{
+				display: none;
+			}
+
+/* navigation */
+div.secondary{
+	background-color: #fefefe;
+}
+	div.secondary nav{
+		display: inline-block;
+		width: 48%;
+		vertical-align: top;
+	}
+	div.secondary h4{
+		margin: 0;
+		font-size: 1em;
+	}
+	div.secondary a{
+		color: #888;
+		display: block;
+		font-size: 0.7em;
+		font-style: italic;
+		border-bottom: 1px solid #ececec;
+		line-height: 1.5em;
+		padding: 1em 0.5em;
+		width: 90%;
+		text-transform: uppercase;
+	}
+		div.secondary a span{
+			color: #aaa;
+		}
+		div.secondary a:hover{
+			color:#000;
+			background-color: #ededed;
+		}
+/* footer */
+footer.license{
+	background-color: #ededed;
+	color: #999;
+	padding: 0.5em 4% ;
+	width: 92%;
+}
+	footer.license p{
+		font-size: 0.6em;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+	footer.license a{
+		color: #666;
+	}
+
+/* archive and nav hiding */
+.secondary .old,
+.secondary .unpopular{
+	display: none;
+}

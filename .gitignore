@@ -1,3 +1,2 @@
-local_settings.py
+config_local.py
 *.gz
-output

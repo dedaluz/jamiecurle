@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %} Blog Archive {% endblock %}
+
+{% block body_id %}blog{% endblock %}
+{% block body_class %}list{% endblock %}
+
+{% block content %}
+	<h1>Archive for {{posts[0].created|archivedateformat}}</h1>
+	{% for post in posts %}
+		<div class="blog" style="border-left-color:{{post.created|colour_for_date}};">
+			<h1><a href="{{post.url}}">{{post.title}}</a></h1>
+			<p>{{post.description}}</p>
+			<p class="meta">{{post.created|datetimeformat}}</p>
+		</div>
+	{% endfor %}
+	<div class="secondary">
+		<h3> Archives </h3>
+		<nav>
+			<h4>By Date</h4>
+			{% for key, date in dates.items() %}
+			<a href="/blog/{{date[0].year}}/{{date[0].month}}/" {% if loop.index > 12 %}class="old"{% endif %}>{{date[0]|archivedateformat}} <span>({{date[1]}})</span></a>
+			{% endfor %}
+		</nav>
+		<nav>
+			<h4>By Tag</h4>
+			{% for tag, count in tags %}
+			<a href="/tags/{{tag}}/" {% if loop.index > 12 %}class="unpopular"{% endif %}>{{tag|title}} <span>({{count}})</span></a>
+			{% endfor %}
+		</nav>
+	</div>
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}
