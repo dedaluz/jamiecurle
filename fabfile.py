@@ -12,11 +12,6 @@ def clear_cache(key=None):
     else:
         mc.delete(key)
 
-def output():
-    with settings(warn_only=True):
-        local('wget -mk http://127.0.0.1:5000  --no-parent --directory-prefix=/Users/jcurle/Sites/jc_static')
-    #local('mv /Users/jcurle/Sites/127.0.0.1/5000  /Users/jcurle/Sites/jc_static')
-
 
 def deploy(message=None):
     if message is not None:

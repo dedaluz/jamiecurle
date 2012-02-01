@@ -224,7 +224,14 @@ footer.license{
 	}
 
 /* archive and nav hiding */
-.secondary .old,
-.secondary .unpopular{
+.secondary .stale{
+	display: none;
+}
+.secondary .more,
+.secondary .less{
+	color: #f90;
+	cursor: pointer;
+}
+.secondary .less{
 	display: none;
 }
