@@ -4,10 +4,13 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0 width=device-width">
 		<title>{% block title %}{% endblock %}</title>
-		<link rel="stylesheet" href="/static/css/global.css" media="screen">
-		<link rel="stylesheet" href="/static/css/syntax.css" media="screen">
-		<link rel="stylesheet" href="/static/css/devices.css" media="screen">
-		<link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+		{% if DEBUG == True %}
+		<link rel="stylesheet" href="/static/css/global.css" media="screen" type="text/css">
+		<link rel="stylesheet" href="/static/css/syntax.css" media="screen" type="text/css">
+		<link rel="stylesheet" href="/static/css/devices.css" media="screen" type="text/css">
+		{% else %}
+		<link rel="stylesheet" href="/static/css/production.css" media="screen" type="text/css">
+		{% endif %}
 		{% block css %}
 		{% endblock %}
 	</head>

@@ -5,7 +5,7 @@ created: 2011-11-11 13:15:41
 
 Following on from a post that I wrote about [Serving Django As a Nginx & Supervisord Sandwich With a Gunicorn Filling][0] I wanted to expand a little more on the contents of the filling - The Django Project.
 
-Django isn't Rails (_GADZOOKS!_).  In the Django world configuration trumps convention. Pragmatically this has the effect that projects can vary from one to the other. The way that I'll explain in this post may not be the way that everyone does it. But it's how I do and it and it certainly plays very nice with the surrounding technologies and keeps everything nice and neat.  You can find the sample ['myproject'][2] project that I'll be referring to on [my github space][3].
+In the Django world configuration trumps convention. Pragmatically this has the effect that projects can vary from one to the other. The way that I'll explain in this post may not be the way that everyone does it. But it's how I do and it and it certainly plays very nice with the surrounding technologies and keeps everything nice and neat.  You can find the sample ['myproject'][2] project that I'll be referring to on [my github space][3].
 
 Before we look at the individual files and folders in a typical django project however, I want to talk about the virtual environment because it is super important.
 

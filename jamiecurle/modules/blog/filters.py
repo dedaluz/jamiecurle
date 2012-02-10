@@ -2,6 +2,7 @@
 import calendar
 import re
 import pygments
+from pygments import lexers, formatters
 import markdown
 
 
@@ -20,20 +21,20 @@ def render(content):
                 if language == 'conf': language = 'nginx'
                 if language == 'regex': language = 'perl'
                 # all goods
-                lexer = pygments.lexers.get_lexer_by_name(language)
+                lexer = lexers.get_lexer_by_name(language)
             except IndexError:
-                lexer = pygments.lexers.guess_lexer(str(code))
+                lexer = lexers.guess_lexer(str(code))
         else:
             try: 
-                lexer = pygments.lexers.guess_lexer(str(code))
+                lexer = lexers.guess_lexer(str(code))
             except ValueError:
-                lexer = pygments.lexers.PythonLexer()
+                lexer = lexers.PythonLexer()
         # remove the code tags
         code = code.replace('</code>', '')
         code = code.replace('<code>', '')
         code = re.sub('<code(.*?)>', '', code)
         # create the pygmented code with the lexer
-        pygmented_string = pygments.highlight(code, lexer, pygments.formatters.HtmlFormatter(linenos=True))
+        pygmented_string = pygments.highlight(code, lexer, formatters.HtmlFormatter(linenos=True))
         # put the code blocks into the list for processintg later
         code_blocks.append(pygmented_string)
         # replace the <code> tags with placeholders that can be used to replace

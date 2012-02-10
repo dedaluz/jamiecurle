@@ -42,7 +42,7 @@ pre{
 .highlight .cm { color: #999999; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #cd2828;  } /* Comment.Preproc */
 .highlight .c1 { color: #999999; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #e50808; ; background-color: #520000 } /* Comment.Special */
+.highlight .cs { color: #e50808; background-color: #520000 } /* Comment.Special */
 .highlight .gd { color: #d22323 } /* Generic.Deleted */
 .highlight .ge { color: #d0d0d0; font-style: italic } /* Generic.Emph */
 .highlight .gr { color: #d22323 } /* Generic.Error */

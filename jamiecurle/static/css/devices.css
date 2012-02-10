@@ -21,10 +21,9 @@
 		max-width: 600px;
 	}
 	.secondary .stale{
-		display: block;
+		display: block !important;
 	}
-	.secondary .more,
-	.secondary .less{
+	.secondary a.toggler{
 		display: none !important;
 	}
 }

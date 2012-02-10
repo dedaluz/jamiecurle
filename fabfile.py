@@ -13,6 +13,10 @@ def clear_cache(key=None):
         mc.delete(key)
 
 
+def compress_css():
+    with lcd('jamiecurle/static/css/'):
+        local('cssprefixer about.css devices.css global.css syntax.css --minify > production.css')
+
 def deploy(message=None):
     if message is not None:
         local('git add -A')

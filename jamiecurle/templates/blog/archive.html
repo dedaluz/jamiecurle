@@ -6,13 +6,13 @@
 {% block body_class %}list{% endblock %}
 
 {% block content %}
-	<h1>Archive for {{posts[0].created|archivedateformat}}</h1>
+<h1>Archive for {{posts[0].created|archivedateformat}}</h1>
 	{% for post in posts %}
 		<div class="blog" style="border-left-color:{{post.created|colour_for_date}};">
 			<h1><a href="{{post.url}}">{{post.title}}</a></h1>
 			<p>{{post.description}}</p>
 			<p class="meta">{{post.created|datetimeformat}}</p>
-		</div>
+			</div>
 	{% endfor %}
 	<div class="secondary">
 		<h3> Archives </h3>
@@ -32,35 +32,5 @@
 {% endblock %}
 
 {% block js %}
-<script type="text/javascript">
-	$('div.secondary nav').each(function(){
-		var nav = $(this);
-		var more = $('<a>')
-					.addClass('more')
-					.css({display: 'block'})
-					.bind('click', function(){
-						nav.find('a.stale').each(function(){
-							$(this).css({display: 'block'}).show()
-						})
-						more.hide();
-						less.show();
-					})
-					.text('show more')
-		var less = $('<a>')
-					.addClass('less')
-					.css({display: 'block'})
-					.bind('click', function(){
-						nav.find('a.stale').each(function(){
-							$(this).css({display: 'block'}).hide()
-						})
-						more.show();
-						less.hide();
-					})
-					.text('show less')
-					.hide()
-		$(this).find('a.stale:first').after(more)
-		$(this).find('a.stale:last').after(less)
-	});
-	console.log()
-</script>
+<script type="text/javascript" src="/static/js/blog.archive.js"></script>
 {% endblock %}

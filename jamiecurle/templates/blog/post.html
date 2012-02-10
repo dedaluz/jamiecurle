@@ -23,13 +23,13 @@
 	<nav>
 		<h4>By Date</h4>
 		{% for key, date in dates.items() %}
-		<a href="/blog/{{date[0].year}}/{{date[0].month}}/" {% if loop.index > 12 %}class="old"{% endif %}>{{date[0]|archivedateformat}} <span>({{date[1]}})</span></a>
+		<a href="/blog/{{date[0].year}}/{{date[0].month}}/" {% if loop.index > 12 %}class="stale"{% endif %}>{{date[0]|archivedateformat}} <span>({{date[1]}})</span></a>
 		{% endfor %}
 	</nav>
 	<nav>
 		<h4>By Tag</h4>
 		{% for tag, count in tags %}
-		<a href="/tags/{{tag}}/" {% if loop.index > 12 %}class="unpopular"{% endif %}>{{tag|title}} <span>({{count}})</span></a>
+		<a href="/tags/{{tag}}/" {% if loop.index > 12 %}class="stale"{% endif %}>{{tag|title}} <span>({{count}})</span></a>
 		{% endfor %}
 	</nav>
 </div>
@@ -40,6 +40,7 @@
 {% block js %}
 <script src="http://code.jquery.com/jquery-1.7.1.min.js" charset="utf-8"></script>
 <script src="/static/js/fitvids.js" charset="utf-8"></script>
+<script type="text/javascript" src="/static/js/blog.archive.js"></script>
 <script type="text/javascript" charset="utf-8">
 	$('article').fitVids();
 </script>

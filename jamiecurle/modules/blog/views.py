@@ -12,11 +12,15 @@ def blog_redirect(**kwargs):
 
 def blog_tags():
     tags = get_tags()
-    return render_template('blog/tags.html',tags=tags)
+    dates = get_dates()
+    return render_template('blog/tags.html',tags=tags, dates=dates)
 
 def blog_tagged(tag):
+    tags = get_tags()
+    dates = get_dates()
     tagged_posts = [post for post in get_posts() if tag in post['tags']]
-    return render_template('blog/tagged.html', tagged_posts=tagged_posts, tag=tag)
+    return render_template('blog/tagged.html', tagged_posts=tagged_posts,
+        tag=tag, tags=tags, dates=dates)
 
 def blog_post(slug):
     key = str('post_%s' % slug)
