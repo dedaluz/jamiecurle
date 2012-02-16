@@ -12,7 +12,7 @@ This site is now running on Flask and hosted with [webfaction][0] on one of thei
 
 ## Why Change?
 
-I was really geared up to make this site a static site. I wanted to get away from having a stack dynamically processing content that hardly ever changed. I wanted to have a fast site. I wanted to be able to write in writing application, not a textarea.
+I was really geared up to make this site a static site. I wanted to get away from having a stack dynamically processing content that hardly ever changed. I wanted to have a fast site. I wanted to be able to write in a writing application, not a textarea.
 
 A statically generated site seemed like the right choices. I tried [Hyde][1], [Jeckyl][2] and [Nanoc][3]; none hit the sweet spot. Hyde (python) is still in development, so the docs where a little thin, so eventually I gave up on it. Jeckyl and Nanoc (both ruby) are both fine pieces of software, but they just didn't do it for me. 
 
