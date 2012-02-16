@@ -8,7 +8,7 @@ tags:
 ---
 
 
-If you're looking at all of this and thinking <q>Er, this all looks a little bit complicated</q> don't worry. It's quite straight forward and in practice we're only doing a few things
+If you're looking at all of this and thinking <q>Er, this all looks a little bit complicated</q> don't worry. It's quite straight forward and in practice we're only doing a few things. There could be a much easier way to do this if you weren't going to be hosting anything else on your webfaction account, however I am and this is how I do it :)
 
 1. Setting up the environment and installing some stuff.
 2. Getting the flask app up and running with supervisor
@@ -137,7 +137,7 @@ This will create the virtualenv and automatically put your shell into it. Anythi
 
 ### Install the dependancies
 
-Now that we have our virtualenvironment set up we can install the requirements for the project. My flask app has a few and they're all stored in a requirements.txt file.
+Now that we have our virtualenvironment set up we can install the requirements for the project. My flask app has a few and they're all stored in a requirements.txt file. This will take a few minutes.
 
 <code lang="bash">
 cd ~/sites/jamiecurle/jamiecurle
@@ -146,14 +146,49 @@ pip install -r requirements.txt
 
 ### Load the config for the app into Supervisorctl
 
-To make working with multiple sites easy, my supervisor config has this line in it &hellip; 
+To make working with multiple sites easy, my supervisord config has this line in it &hellip; 
 
 <code lang="ini">
 [include]
 files = /home/you/conf/supervisor/*.ini
 </code>
 
-I'm going to symlink
+I'm going to create symlink from my app to the `/home/you/conf/supervisor/` directory so that supervisor can read my config. I'm symlinking it and not copying it incase I do an update that changes the config file.
+
+<code lang="bash">
+ln -s /home/you/sites/jamiecurle/jamiecurle/supervisor.ini /home/you/conf/supervisor/jamiecurle.ini
+</code>
+
+Here's the config, I'll talk about the specifics a little later &hellip;
+
+<code lang="ini">
+[program:jc_flask]
+command=uwsgi --socket 127.0.0.1:26331 --file runserver.py --callable app --processes 2 --venv /home/curle/.virtualenvs/jamiecurle/ 
+directory=/home/curle/sites/jamiecurle/jamiecurle
+user=jcurle
+autostart=true
+autorestart=true
+redirect_stderr=true
+stopsignal=QUIT
+</code>
+
+
+Now let's jump into supervisorctl and load up the config &hellip;
+
+<code lang="bash">
+supervisor
+reread
+add your_app
+status
+your_app      BACKOFF    can't find command 'uwsgi'
+</code>
+
+Partial su, 
+
+
+
+
+
 
 
 [0]: http://pypi.python.org/pypi/pip
