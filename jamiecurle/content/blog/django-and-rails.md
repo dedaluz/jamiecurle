@@ -3,7 +3,7 @@ description: "I've been working with Django exclusively for four years. I'm feel
 created: 2010-12-18 00:00:00
 ---
 
-![Django &amp; Rails](http://media.jamiecurle.com/uploads/2010/12/18/blogimage/Django___Rails.850x600.jpg)
+![Django &amp; Rails](/media/2010/12/18/blogimage/Django___Rails.850x600.jpg)
 
 I do a lot of development, but I'm not a language Junkie. I've tended only to use one language, whatever gets the Job done. When I started tinkering back in 1999, I started with perl, then in 2001 I picked up php4 which was fine, until I came to write my own framework ( called Angry Fish - shudders ). I then realised that writing my own framework was silly. It was a great lesson, and one that I think everyone should endure, but In the end however, you realise that frameworks are meant to save you time, not swallow it. 
 

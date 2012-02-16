@@ -3,7 +3,7 @@ description: "Deploying bottle using supervisor is surprisingly painless."
 created: 2010-10-06 08:02:09
 ---
 
-![Bottle](http://media.jamiecurle.com/uploads/2010/10/06/blogimage/Bottle.850x600.jpg)
+![Bottle](/media/2010/10/06/blogimage/Bottle.850x600.jpg)
 
 I made a [url shortner using bottle](http://github.com/jamiecurle/bottle-shorturl/ "url shortner using bottle") for my own personal amusement and I wanted to put it into use. I'm not expecting a lot of traffic to it so I've opted to use the server that ships with bottle. I may change that to use [Gunicorn](http://gunicorn.org/ "gunicorn") at some point though.
 

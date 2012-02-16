@@ -3,7 +3,7 @@ description: "Getting VLC to play dvdmedia files in OSX"
 created: 2010-10-23 00:00:00
 ---
 
-![VLC](http://media.jamiecurle.com/uploads/2010/10/23/blogimage/VLC.850x600.jpg)
+![VLC](/media/2010/10/23/blogimage/VLC.850x600.jpg)
 
 Credit has to go to a user called 'raindancing' from [this thread in the videoLAN forums](http://forum.videolan.org/viewtopic.php?f=7&t=62834) for the plist correction and [Jason Clarke"](http://www.tuaw.com/bloggers/jason-clarke/ ) from the [terminal tips post on TUAW](http://www.tuaw.com/2009/06/11/terminal-tips-rebuild-your-launch-services-database-to-clean-up). 
 

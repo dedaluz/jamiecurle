@@ -3,7 +3,7 @@ description: " 7 Weeks in and I'm making some adjustments"
 created: 2011-02-20 10:06:14
 ---
 
-![Barbell](http://media.jamiecurle.com/uploads/2011/02/20/blogimage/Barbell.850x600.jpg)
+![Barbell](/media/2011/02/20/blogimage/Barbell.850x600.jpg)
 
 This blog post follows on from initial post about my [six month training schedule][initial], so it'll give you a little bit of context to [read it first][initial].
 

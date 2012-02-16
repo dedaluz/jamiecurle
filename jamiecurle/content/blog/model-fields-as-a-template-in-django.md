@@ -104,7 +104,7 @@ The tag is used like this
 
 and it should result in something like this
 
-![Screenshot](http://media.jamiecurle.com/uploads/2010/10/23/blogimage/Screenshot.850x600.jpg)
+![Screenshot](/media/2010/10/23/blogimage/Screenshot.850x600.jpg)
 
 ## Conclusion
 

@@ -7,7 +7,7 @@ __I edited the title, I was angry when I posted this, I've since calmed down and
 
 I've had nothing but trouble with BT, in every way the experience of using them has been a catastrophic disappointment.
 
-![Deceptive Corporate Theives](http://media.jamiecurle.com/uploads/2011/03/15/blogimage/Deceptive_Corporate_Theives.850x600.jpg)
+![Deceptive Corporate Theives](/media/2011/03/15/blogimage/Deceptive_Corporate_Theives.850x600.jpg)
 ## History
 
 In December 2008, I took out a landline and a 12 month broadband contract. Three weeks into the contract the broadband speeds were hideous. It was impossible to watch iPlayer and speeds were sometimes as low as 4k per second. The service was supposed to be 8meg.  I live about 1/2  a mile from the exchange, which is in an urban area, there is no excuse for this.  Despite claims to the contrary the service was heavily traffic shaped and at 'peak times' it was unfit for purpose.   I called to cancel, but I was informed that the 14 days had passed. Great.

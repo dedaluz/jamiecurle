@@ -10,7 +10,7 @@ Paragraph was an easy choice -  I love taking photographs of [The Elements of Ty
 
 View [p.html][p].
 
-![p](http://media.jamiecurle.com/uploads/2011/06/13/blogimage/p.850x600.JPG)
+![p](/media/2011/06/13/blogimage/p.850x600.JPG)
 
 
 ## &lt;div&gt;
@@ -20,7 +20,7 @@ Div had me puzzled for a bit but I decided on bricks because div's really are ju
 
 View [div.html][div].
 
-![div](http://media.jamiecurle.com/uploads/2011/06/13/blogimage/div.850x600.JPG)
+![div](/media/2011/06/13/blogimage/div.850x600.JPG)
 
 ## &lt;article&gt;
 
@@ -28,7 +28,7 @@ I had an old Times Educational Supplement at hand and I snapped an article from 
 
 View [article.html][article].
 
-![article](http://media.jamiecurle.com/uploads/2011/06/13/blogimage/article.850x600.JPG)
+![article](/media/2011/06/13/blogimage/article.850x600.JPG)
 
 ## &lt;header&gt;
 
@@ -36,7 +36,7 @@ I just took delivery a new Noam Chomsky book last week, thought I'd use this as 
 
 View [header.html][header].
 
-![header](http://media.jamiecurle.com/uploads/2011/06/13/blogimage/header.850x600.JPG)
+![header](/media/2011/06/13/blogimage/header.850x600.JPG)
 
 ## &lt;nav&gt;
 
@@ -44,7 +44,7 @@ Nav did have me puzzled for a few mins and then I though aha - Motorway signs! E
 
 View [nav.html][nav].
 
-![nav](http://media.jamiecurle.com/uploads/2011/06/13/blogimage/nav.850x600.jpg)
+![nav](/media/2011/06/13/blogimage/nav.850x600.jpg)
 
 Thanks to [Gary D][gd] for the photo
 
@@ -54,7 +54,7 @@ The bottom sole of a shoe makes for a good example of a footer I think.
 
 View [footer.html][footer].
 
-![footer](http://media.jamiecurle.com/uploads/2011/06/13/blogimage/footer.850x600.JPG)
+![footer](/media/2011/06/13/blogimage/footer.850x600.JPG)
 
 
 ## &lt;blockquote&gt;
@@ -63,7 +63,7 @@ So I took a bit of artistic license in this one. I drew a speech bubble coming f
 
 View [blockquote.html][blockquote].
 
-![blockquote](http://media.jamiecurle.com/uploads/2011/06/13/blogimage/blockquote.850x600.jpg)
+![blockquote](/media/2011/06/13/blogimage/blockquote.850x600.jpg)
 
 ## &lt;ol&gt;
 
@@ -71,7 +71,7 @@ Ordered lists, my old friend. Last time I used  a sketch of a bus stop, and ther
 
 View [orderedlist.html][ol].
 
-![ol](http://media.jamiecurle.com/uploads/2011/06/13/blogimage/ol.850x600.jpg)
+![ol](/media/2011/06/13/blogimage/ol.850x600.jpg)
 
 ## &lt;ul&gt;
 
@@ -79,7 +79,7 @@ Just a random selection of DVD's from my collection.
 
 View [unorderedlist.html][ul].
 
-![ul](http://media.jamiecurle.com/uploads/2011/06/13/blogimage/ul.850x600.JPG)
+![ul](/media/2011/06/13/blogimage/ul.850x600.JPG)
 
 ## &lt;dl&gt;
 
@@ -87,7 +87,7 @@ Definition lists are tricky, I very rarely use them because I end up either brea
 
 View [definitionlist.html][dl].
 
-![dl](http://media.jamiecurle.com/uploads/2011/06/13/blogimage/dl.850x600.JPG)
+![dl](/media/2011/06/13/blogimage/dl.850x600.JPG)
 
 
 ## &lt;span&gt;
@@ -96,7 +96,7 @@ Span's are really tricky because they're the inline equivalent of a div - totall
 
 View [span.html][span].
 
-![span](http://media.jamiecurle.com/uploads/2011/06/13/blogimage/span.850x600.JPG)
+![span](/media/2011/06/13/blogimage/span.850x600.JPG)
 
 ## &lt;time&gt;
 
@@ -105,7 +105,7 @@ I think I should have tried a little bit harder with this one, but it's just too
 View [time.html][time].
 
 
-![time](http://media.jamiecurle.com/uploads/2011/06/13/blogimage/time.850x600.JPG)
+![time](/media/2011/06/13/blogimage/time.850x600.JPG)
 
 [p]: http://dl.dropbox.com/u/4948426/p2pu/htmlcss/4/p.html
 [div]:  http://dl.dropbox.com/u/4948426/p2pu/htmlcss/4/div.html

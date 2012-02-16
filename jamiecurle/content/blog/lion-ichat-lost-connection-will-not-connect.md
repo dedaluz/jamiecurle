@@ -23,7 +23,7 @@ killall imagent
 
 As Joe Clark pointed out in the comments you can also open up the Activity Monitor application (Applications > Utilities > Activity Monitor), do search for "imagent" and quit the process. 
 
-![Activity Monitor](http://media.jamiecurle.com/uploads/2011/10/24/blogimage/m2.850x600.png)
+![Activity Monitor](/media/2011/10/24/blogimage/m2.850x600.png)
 
 
 Good times.

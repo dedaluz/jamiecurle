@@ -3,7 +3,7 @@ description: "Looking at the world as tags was fun. Let's do it again."
 created: 2011-05-25 17:58:41
 ---
 
-![](http://media.jamiecurle.com/uploads/2011/05/25/blogimage/logo.850x600.png)
+![](/media/2011/05/25/blogimage/logo.850x600.png)
 
 This weeks class is all about attributes, values and branching out into more tags.  The attributes and values in question are specifically class and id.  In the past when I've taught this class I think I've focused too much on the technical side of things and neglected the practical so this week I'm continuing the theme of last weeks class - [applying-html-tags-world-around-us][1].
 

@@ -3,7 +3,7 @@ description: "Anatomy of tags - opening and closing, names of tags and their usa
 created: 2011-05-16 08:14:38
 ---
 
-![HTML & CSS From the Beginning](http://media.jamiecurle.com/uploads/2011/05/16/blogimage/logo.850x600.png)
+![HTML & CSS From the Beginning](/media/2011/05/16/blogimage/logo.850x600.png)
 
 I should be more organised than this, because I've been late in posting this weeks tasks, so if you're a student and you're reading this, I apologise. Still, better late than never.
 

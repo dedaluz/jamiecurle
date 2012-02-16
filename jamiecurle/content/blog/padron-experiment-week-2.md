@@ -10,16 +10,16 @@ I realised as I was taking the measurements that I had made a silly decision to 
 There's a few signs of new growth nodes coming through but they're too early to count so for this week it's just height.
 
 
-![Growth](http://media.jamiecurle.com/uploads/2011/05/27/blogimage/graph.850x600.png)
+![Growth](/media/2011/05/27/blogimage/graph.850x600.png)
 
 They've all been given the same amount of feed this week - 170ml.  Here's a group picture.
 
-![Padrons at the end of week 2](http://media.jamiecurle.com/uploads/2011/05/27/blogimage/Week2end.850x600.jpg)
+![Padrons at the end of week 2](/media/2011/05/27/blogimage/Week2end.850x600.jpg)
 
 They've grown quite nicely since the start.
 
 
-![Week 0](http://media.jamiecurle.com/uploads/2011/05/27/blogimage/week1.850x600.jpg)
+![Week 0](/media/2011/05/27/blogimage/week1.850x600.jpg)
 
 
 

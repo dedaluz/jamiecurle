@@ -12,8 +12,12 @@ def render(content):
 
     for i, m in enumerate(regex.finditer(content)):
         code = m.group(0)
+        # if code is inline leave it alone
+        #print code.find('inline')
+        #if code.find('inline') > 0:
+        #    continue
         # if there is a lang attribute, use that
-        if code.find('lang'):
+        if code.find('lang') > 0:
             # get the language
             try:
                 language = re.split(r'"|\'', code)[1]
@@ -24,28 +28,26 @@ def render(content):
                 lexer = lexers.get_lexer_by_name(language)
             except IndexError:
                 lexer = lexers.guess_lexer(str(code))
-        else:
-            try: 
-                lexer = lexers.guess_lexer(str(code))
             except ValueError:
                 lexer = lexers.PythonLexer()
-        # remove the code tags
-        code = code.replace('</code>', '')
-        code = code.replace('<code>', '')
-        code = re.sub('<code(.*?)>', '', code)
-        # create the pygmented code with the lexer
-        pygmented_string = pygments.highlight(code, lexer, formatters.HtmlFormatter(linenos=True))
-        # put the code blocks into the list for processintg later
-        code_blocks.append(pygmented_string)
-        # replace the <code> tags with placeholders that can be used to replace
+            # remove the code tags
+            code = code.replace('</code>', '')
+            code = code.replace('<code>', '')
+            code = re.sub('<code(.*?)>', '', code)
+            # create the pygmented code with the lexer
+            pygmented_string = pygments.highlight(code, lexer, formatters.HtmlFormatter(linenos=True))
+            # put the code blocks into the list for processintg later
+            code_blocks.append(pygmented_string)
+        else:
+            code_blocks.append(code)
+            # replace the <code> tags with placeholders that can be used to replace
         content = content.replace(m.string[m.start():m.end()], '{{CODE%s}}' % i)
-    
-    # now process as markdown
-    content = markdown.markdown(content)
-    # replaced placeholders with the actual code
-    for i, code in enumerate(code_blocks):
-        content = content.replace('<p>{{CODE%s}}</p>' % i, code)
-        content = content.replace('{{CODE%s}}' % i, code)
+        # now process as markdown
+        
+        # replaced placeholders with the actual code
+        for i, code in enumerate(code_blocks):
+            content = content.replace('<p>{{CODE%s}}</p>' % i, code)
+            content = content.replace('{{CODE%s}}' % i, code)
     # return
     return content
 

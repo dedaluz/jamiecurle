@@ -5,7 +5,7 @@ created: 2010-10-20 12:45:44
 
 Recently I moved to using [things][1] on my desktop and iPhone.  When I was doing my pre-purchase dance of checking out the website, forums etc, I stumbled across a curious section of the cultured code website, their [arrivals](http://culturedcode.com/status/page)
 
-<a href="http://culturedcode.com/status/">![Cultured Code : Arrivals](http://media.jamiecurle.com/uploads/2010/10/20/blogimage/Cultured_Code___Arrivals.850x600.jpg)</a>
+<a href="http://culturedcode.com/status/">![Cultured Code : Arrivals](/media/2010/10/20/blogimage/Cultured_Code___Arrivals.850x600.jpg)</a>
 
 The page states the features and bug fixes that  they are currently working on. They do this using the metaphor of an arrivals board that you would see in a port or station. 
 

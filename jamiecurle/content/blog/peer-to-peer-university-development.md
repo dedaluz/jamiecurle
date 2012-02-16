@@ -3,7 +3,7 @@ description: "Even though I'm short on time I can't resist."
 created: 2011-01-28 09:29:12
 ---
 
-![P2PU - University](http://media.jamiecurle.com/uploads/2011/01/28/blogimage/P2PU___University.850x600.jpg)
+![P2PU - University](/media/2011/01/28/blogimage/P2PU___University.850x600.jpg)
 
 Time isn't something I have a lot of at the moment, but when I found out that the codebase for P2PU is being ported from Drupal to Django, I had to check it out.  
 

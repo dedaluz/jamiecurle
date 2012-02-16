@@ -1,27 +1,31 @@
+
+
 .highlighttable{
 	background-color: #2e2e2e;
 	color: #999;
 	border-radius: 2px;
-	font-size: 16px;
+	font-size: 12px;
 	width: 100%;
 	word-wrap: break-word  !important;
-	line-height: 24px;
-	margin-bottom: 24px;
+	line-height: 16px;
+	margin-bottom: 16px;
 }
-div.highlight{
-	margin-bottom: 0;
-}
+
 td.linenos{
 	color: #999;
-	padding: 0 10px 0 6px;
+	padding: 0 5px 0 6px;
 	background-color: #3e3e3e;
-	width: 15px;
+	width: 12px;
 	text-align: center;
 	text-shadow: -1px -1px 1px #000;
 	border-right: 1px solid #4c4c4c;
 }
+table.highlighttable td{
+	margin-top: 0;
+	padding-top: 0;
+}
 td.code{
-	padding-left: 25px;
+	padding-left: 5px;
 	text-shadow: -1px -1px 1px #111;
 }
 pre{

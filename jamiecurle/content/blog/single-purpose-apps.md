@@ -3,7 +3,7 @@ description: "Apps seem to be getting focused on doing very particular tasks."
 created: 2011-02-13 08:42:36
 ---
 
-![Single Purpose](http://media.jamiecurle.com/uploads/2011/02/13/blogimage/Single_Purpose.850x600.jpg)
+![Single Purpose](/media/2011/02/13/blogimage/Single_Purpose.850x600.jpg)
 
 I was reading a blog post by [Lee Simpson][lee] a few days ago on the subject of [simpler UI design][lee:ui] and it got me thinking.  Recently I've been really impressed with some of the new apps ( mobile  & web ) that are coming into usage and there seems to be a trend. The trend seems to focus around doing a very particular task. Here's four examples that spring to mind ( If you can think of anymore, I'd love to know about them in comments ) 
 

@@ -3,7 +3,7 @@ description: "Last week I marked some of the things that I found around me. This
 created: 2011-05-25 18:00:27
 ---
 
-![Plants](http://media.jamiecurle.com/uploads/2011/05/25/blogimage/div.850x600.jpg)
+![Plants](/media/2011/05/25/blogimage/div.850x600.jpg)
 
 This week I've asked the [HTML & CSS from the Beginning class][1] to expand on the [exercise from last week][2] and to repeat the idea, but this week getting an example for a range of tags and also to apply id and class names where they see fit.
 

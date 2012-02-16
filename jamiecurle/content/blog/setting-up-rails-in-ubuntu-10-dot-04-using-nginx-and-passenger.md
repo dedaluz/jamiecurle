@@ -3,7 +3,7 @@ description: "My VPS has been set up for Django, here's what I had to do to get 
 created: 2010-12-19 00:00:00
 ---
 
-![Rails on Ubuntu](http://media.jamiecurle.com/uploads/2010/12/19/blogimage/Rails_on_Ubuntu.850x600.jpg)
+![Rails on Ubuntu](/media/2010/12/19/blogimage/Rails_on_Ubuntu.850x600.jpg)
 
 I blogged yesterday about [switching this site from Django to Rails](/blog/2010/12/django-rails.html) because I think it's time that I got to know Rails. I've been ignoring it too long and I'm sick of being a one trick pony (pun intended). So when I woke up at 6:40am ( benefits of going to bed very early ) I though it would be a good idea to deploy a 'hello world' rails app onto my VPS.  Aside from an experience with rails back in 2005 (apache & cgi, very very slow), this is my first attempt at deploying a rails app.
 
@@ -166,7 +166,7 @@ server{
 
 Restart nginx,  [create a little rails app](//hello.jamiecurle.com/), set the root in config/routes.rb, restart my rails app ( touch tmp/restart.txt) and I'm done.
 
-![A little basic app](http://media.jamiecurle.com/uploads/2010/12/19/blogimage/A_little_basic_app.850x600.jpg)
+![A little basic app](/media/2010/12/19/blogimage/A_little_basic_app.850x600.jpg)
 
 This was my first experience of deploying a rails app. I know I'm bringing in a lot of experience from my time working with Django, so it would be unfair to say that rails installs easier, but on the whole there was only a little pain. Once everything is up and running I have to say that passenger makes deployment a joy, actually more joyful than using supervisord and gunicorn. 
 

@@ -7,7 +7,7 @@ I've been using dabs for a while and despite it's "clunkyness" I've became famil
 
 Recently I needed a new backup drive and because work was paying, I was using the 'business' version of dabs. Here's what I was presented with.
 
-![View Product](http://media.jamiecurle.com/uploads/2010/09/27/blogimage/View_Product.850x600.jpg)
+![View Product](/media/2010/09/27/blogimage/View_Product.850x600.jpg)
 
 ##  I'm dumb
 
@@ -25,7 +25,7 @@ This also brought to my attention figure 3, which does beg the question -- are y
 
 So I spent a few moments making a few tweaks and below you can see my suggestions.
 
-![Jamie's Version](http://media.jamiecurle.com/uploads/2010/09/27/blogimage/Jamie_s_Version.850x600.jpg)
+![Jamie's Version](/media/2010/09/27/blogimage/Jamie_s_Version.850x600.jpg)
 
 Here's what I've done
 
@@ -44,15 +44,15 @@ I love before and afters. One day I might treat you all to a before and after of
 
 ## Designs
 
-![Theirs](http://media.jamiecurle.com/uploads/2010/09/27/blogimage/Theirs.850x600.jpg)
+![Theirs](/media/2010/09/27/blogimage/Theirs.850x600.jpg)
 
-![Jamie's Design](http://media.jamiecurle.com/uploads/2010/09/27/blogimage/Jamie_s_Design.850x600.jpg)
+![Jamie's Design](/media/2010/09/27/blogimage/Jamie_s_Design.850x600.jpg)
 
 ## Greys
 
-![Original Grey](http://media.jamiecurle.com/uploads/2010/09/27/blogimage/Original_Grey.850x600.jpg)
+![Original Grey](/media/2010/09/27/blogimage/Original_Grey.850x600.jpg)
 
-![Jamie's Grey](http://media.jamiecurle.com/uploads/2010/09/27/blogimage/Jamie_s_Grey.850x600.jpg)
+![Jamie's Grey](/media/2010/09/27/blogimage/Jamie_s_Grey.850x600.jpg)
 
 ##  Conclusion
 

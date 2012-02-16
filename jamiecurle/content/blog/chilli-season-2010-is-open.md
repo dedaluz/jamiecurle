@@ -15,15 +15,15 @@ I was a little worried when I germinated these plants this year. I had about thi
 
 I'm taking a gamble with the seeds that I'm growing from purchased pods, but I'm ok with that.  Here's the little seedlings.
 
-![Propagator &amp; Open Tray](http://media.jamiecurle.com/uploads/2010/03/02/blogimage/Propagator___Open_Tray.850x600.jpg)
+![Propagator &amp; Open Tray](/media/2010/03/02/blogimage/Propagator___Open_Tray.850x600.jpg)
 
-![Little Seedlings](http://media.jamiecurle.com/uploads/2010/03/02/blogimage/Little_Seedlings.850x600.jpg)
+![Little Seedlings](/media/2010/03/02/blogimage/Little_Seedlings.850x600.jpg)
 
-![The Propagator](http://media.jamiecurle.com/uploads/2010/03/02/blogimage/The_Propagator.850x600.jpg)
+![The Propagator](/media/2010/03/02/blogimage/The_Propagator.850x600.jpg)
 
 Finally after sitting in the garage for a month,  managed to get some time to put the greenhouse up. I'm really excited about this because it means a more stable environment for my little beauties.
 
-![The Greenhouse](http://media.jamiecurle.com/uploads/2010/03/02/blogimage/The_Greenhouse.850x600.jpg)
+![The Greenhouse](/media/2010/03/02/blogimage/The_Greenhouse.850x600.jpg)
 
 
 

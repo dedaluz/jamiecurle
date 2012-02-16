@@ -3,7 +3,7 @@ description: "Here's how I got a copy of Lernanta installed on my OS X dev machi
 created: 2011-06-19 12:50:48
 ---
 
-![P2PU](http://media.jamiecurle.com/uploads/2011/06/19/blogimage/P2PU___University.850x600.jpg)
+![P2PU](/media/2011/06/19/blogimage/P2PU___University.850x600.jpg)
 
 
 Back in January I blogged about [getting involved in the development of the new P2PU platform - Lernanta](http://jamiecurle.com/blog/peer-to-peer-university-development/), but time was against me.  Technically speaking it still is but the desire to get involved has not gone away and now that I'm running a class there I'm spotting bits and bobs that I'd love to implement.

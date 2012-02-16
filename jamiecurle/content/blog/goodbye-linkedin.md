@@ -3,7 +3,7 @@ description: "In 2007 I deleted my Facebook account when they introduced 'beacon
 created: 2011-08-11 13:43:20
 ---
 
-![Deleted](http://media.jamiecurle.com/uploads/2011/08/11/blogimage/linkedin-deleted.850x600.png)
+![Deleted](/media/2011/08/11/blogimage/linkedin-deleted.850x600.png)
 
 
 This morning I was alerted to the fact that Linkedin had enabled 'social advertising' on my profile without asking my permission.  This was the last straw for me as it's becoming a source of pain for me to keep and update that profile.

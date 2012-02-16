@@ -3,7 +3,7 @@ description: "Truth, problems, perspective and being wrong."
 created: 2011-01-29 07:48:31
 ---
 
-![Sunrise.](http://media.jamiecurle.com/uploads/2011/01/29/blogimage/Sunrise.850x600.jpg)
+![Sunrise.](/media/2011/01/29/blogimage/Sunrise.850x600.jpg)
 
 ## Setting The Scene
 

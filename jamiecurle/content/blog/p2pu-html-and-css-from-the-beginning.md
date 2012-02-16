@@ -3,7 +3,7 @@ description: "I could have sworn that there was a beginners HTML & CSS course on
 created: 2011-01-12 07:34:58
 ---
 
-![HTML &amp; CSS from the beginning](http://media.jamiecurle.com/uploads/2011/01/12/blogimage/HTML___CSS_from_the_beginning.850x600.jpg)
+![HTML &amp; CSS from the beginning](/media/2011/01/12/blogimage/HTML___CSS_from_the_beginning.850x600.jpg)
 
 A perceptive  person may have noticed that I've slipped in the "working towards being a creative educator" into the footer in my new design. This is intentional because that's exactly what I'm doing at this point in my life. I'm still going to be designing and developing sites, but I'm really (and I mean really, really, really) enjoying the teaching of the creative process and web design & development.
 

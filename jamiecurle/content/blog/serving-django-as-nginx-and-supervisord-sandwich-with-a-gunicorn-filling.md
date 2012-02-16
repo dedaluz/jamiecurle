@@ -7,7 +7,7 @@ When serving Django it's easy to feel like there are too many technologies invol
 
 At the heart of this setup there are three technologies and they're organised like a sandwich.
 
-![Django App Sandwich](http://media.jamiecurle.com/uploads/2011/11/10/blogimage/django.sandwich.png)
+![Django App Sandwich](/media/2011/11/10/blogimage/django.sandwich.png)
 
 ### Nginx
 

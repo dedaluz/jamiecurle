@@ -3,7 +3,7 @@ description: "A bullet proof method for determining if your chilli plant is unde
 created: 2011-04-26 06:36:04
 ---
 
-![Bulletproof Troubleshooting](http://media.jamiecurle.com/uploads/2011/04/26/blogimage/bulletprooftroubleshoot.850x600.jpg)
+![Bulletproof Troubleshooting](/media/2011/04/26/blogimage/bulletprooftroubleshoot.850x600.jpg)
 
 Wilting leaves are a symptom of three things  - disease, under-watering or over-watering. But how can you tell which one of those three applies to your plants?
 

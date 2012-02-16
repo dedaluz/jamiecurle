@@ -3,7 +3,7 @@ description: "I spent half an hour wondering why .bash_login wasn't being loaded
 created: 2010-10-06 00:00:00
 ---
 
-![Trouble Shooting](http://media.jamiecurle.com/uploads/2010/10/06/blogimage/Trouble_Shooting.850x600.jpg)
+![Trouble Shooting](/media/2010/10/06/blogimage/Trouble_Shooting.850x600.jpg)
 
 I opened up a terminal for my days work and I dutifully went to type
 

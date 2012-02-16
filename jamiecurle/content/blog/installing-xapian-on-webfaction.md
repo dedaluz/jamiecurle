@@ -3,7 +3,7 @@ description: "It's about time I documented how to install xapian on webfaction."
 created: 2010-12-01 00:00:00
 ---
 
-![Xapian Logo](http://media.jamiecurle.com/uploads/2010/12/01/blogimage/Xapian_Logo.850x600.jpg)
+![Xapian Logo](/media/2010/12/01/blogimage/Xapian_Logo.850x600.jpg)
 
 Haystack is a great search engine for django and it supports three backends
 

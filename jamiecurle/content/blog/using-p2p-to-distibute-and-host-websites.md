@@ -3,7 +3,7 @@ description: "Amazon just ended it's hosting agreement with wikileaks and it got
 created: 2010-12-02 00:00:00
 ---
 
-![Meraki ](http://media.jamiecurle.com/uploads/2010/12/02/blogimage/Meraki_.850x600.jpg)
+![Meraki ](/media/2010/12/02/blogimage/Meraki_.850x600.jpg)
 
 We could at some point reach a stage where all of the hosting providers are handcuffed by their bandwidth providers as to what they can and cannot host. It might not happen next year, but it may very well happen.   
 

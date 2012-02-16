@@ -5,7 +5,7 @@ created: 2010-12-04 00:00:00
 
 I'm not a christian. To me, Christmas is not about Jesus, though I'm all for it being about a Donkey, because "Donkey" is a great word. I realise the name of the event descends from the idea of Jesus' birthday, but the name has stuck and for almost all of the capitalist world, the meaning has been superceeded by this&ndash; 
 
-![Buy, eat and consume like a fucking pig this christmas](http://media.jamiecurle.com/uploads/2010/12/04/blogimage/Buy__eat_and_consume_like_a_fucking_pig_this_christmas.850x600.jpg)
+![Buy, eat and consume like a fucking pig this christmas](/media/2010/12/04/blogimage/Buy__eat_and_consume_like_a_fucking_pig_this_christmas.850x600.jpg)
 
 In many ways this reflects the dual message that we're being given by media channels - especially TV, which is why we don't own a TV. Another post for another time. I digress...
 

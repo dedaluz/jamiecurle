@@ -3,7 +3,7 @@ description: "What I've been working on at P2PU in the past few weeks."
 created: 2011-08-24 10:22:53
 ---
 
-![](http://media.jamiecurle.com/uploads/2011/08/24/blogimage/sow.850x600.png)
+![](/media/2011/08/24/blogimage/sow.850x600.png)
 
 I posted over on the P2PU blog about [what I've been working on at P2PU during my first few (super) weeks][2] -  [Webmaking 101][1]. If you liked HTML&CSS from the beginning, you're going to love it. : ) 
 

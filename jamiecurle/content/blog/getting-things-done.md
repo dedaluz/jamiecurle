@@ -3,7 +3,7 @@ description: "After reading the book, I now understand I was wrong about things 
 created: 2011-02-25 16:34:39
 ---
 
-![Things is back](http://media.jamiecurle.com/uploads/2011/02/25/blogimage/Things_is_back.850x600.jpg)
+![Things is back](/media/2011/02/25/blogimage/Things_is_back.850x600.jpg)
 
 Since starting my Masters Degree, I keep a reflective journal* that I use to identify issues in my practice and to help integrate [action research][ar] into my practice. One the of the issues that I identified early on was with focus. Anyone who works from home will tell you that maintaining focus is easy when you're in the zone, but very difficult when you're not.  As part of my action research I've been looking into productivity methodologies and I had to start with [Getting Things Done][gtd] (GTD). 
 
@@ -13,15 +13,15 @@ I'm not suggesting that using subtasks is wrong, because there are plenty of pro
 
 With that in mind my task lists have evolved from a copy of  the timeline.
 
-![The Hit List Tasks](http://media.jamiecurle.com/uploads/2011/02/25/blogimage/The_Hit_List_Tasks.850x600.jpg)
+![The Hit List Tasks](/media/2011/02/25/blogimage/The_Hit_List_Tasks.850x600.jpg)
 
 To an actual list of the outcomes being it's own project.
 
-![Things Projects](http://media.jamiecurle.com/uploads/2011/02/25/blogimage/Things_Projects.850x600.jpg)
+![Things Projects](/media/2011/02/25/blogimage/Things_Projects.850x600.jpg)
 
 With each physical step required to achieve the outcome clearly defined.
 
-![List of action steps required to complete project](http://media.jamiecurle.com/uploads/2011/02/25/blogimage/List_of_action_steps_required_to_complete_project.850x600.jpg)
+![List of action steps required to complete project](/media/2011/02/25/blogimage/List_of_action_steps_required_to_complete_project.850x600.jpg)
 
 You'll notice that in the above list isn't every single step need to complete the project, because at this point, I don't know what they are yet. I will know what they are by the time I've got to the end of the ones in there.  This idea is new to me, but not surprising. How many times have you planned something, done the first few items, went off target and then felt guilt at the fact you didn't stick to the plan?
 

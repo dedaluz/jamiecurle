@@ -5,8 +5,10 @@ import markdown
 import codecs
 from collections import OrderedDict, Counter
 from operator import itemgetter
+from jamiecurle import config
 from jamiecurle.helpers import get_cached, set_cached
 from jamiecurle.config import BLOG_CONTENT_PATH
+
 
 
 
@@ -22,6 +24,7 @@ def get_post(slug):
     parts = contents.split('---')
     header = yaml.load(parts[0])
     content = markdown.markdown(parts[1])
+    # if we have a draft then throw a 404
     try:
         tags = header['tags']
     except KeyError:
@@ -48,7 +51,11 @@ def get_md_files():
         try:
             ext = thing.split('.').pop()
             if ext == 'md':
-                ls.append(thing)
+                if thing.startswith('draft'):
+                    if config.SHOW_DRAFTS:
+                        ls.append(thing)
+                else:
+                    ls.append(thing)
         except IndexError:
             pass
     set_cached('get_md_files', ls)

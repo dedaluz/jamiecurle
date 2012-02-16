@@ -3,13 +3,13 @@ description: "Things is a fine todo application, but it lacks one crucial, deal 
 created: 2011-02-03 06:54:24
 ---
 
-![The Hit List &amp; Thing](http://media.jamiecurle.com/uploads/2011/02/03/blogimage/The_Hit_List___Thing.850x600.jpg)
+![The Hit List &amp; Thing](/media/2011/02/03/blogimage/The_Hit_List___Thing.850x600.jpg)
 
 I knew my work world had forever changed when I was introduced to [The Hit List][1] (THL) as part of a MacHeist bundle in 2009. After a few false starts with using productivity apps in 2010 they've now embedded themselves so deeply into my workflow that I can't do without them.
 
 ## No iPhone App
 
-![iPhone app coming soon](http://media.jamiecurle.com/uploads/2011/02/03/blogimage/iPhone_app_coming_soon.850x600.jpg)
+![iPhone app coming soon](/media/2011/02/03/blogimage/iPhone_app_coming_soon.850x600.jpg)
 
 THL had always promised their app was coming soon, but it never did and the developer went dark. I assumed all life had gone from the project. This was september 2010 and it was about this time my workload when batshit crazy. I needed iPhone app and THL was no where to been seen.
 

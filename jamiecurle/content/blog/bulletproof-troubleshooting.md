@@ -3,7 +3,7 @@ description: "I do a lot of trouble shooting and I've developed a technique that
 created: 2010-07-02 06:34:53
 ---
 
-![Bulletproof Trouble Shooting](http://media.jamiecurle.com/uploads/2010/07/02/blogimage/Bulletproof_Trouble_Shooting.850x600.jpg)
+![Bulletproof Trouble Shooting](/media/2010/07/02/blogimage/Bulletproof_Trouble_Shooting.850x600.jpg)
 
 
 Using 4 steps I have never failed to solve any problem. You may have to do some abstract thinking in a situation to get the steps to fit, but I guarantee they’ll work.

@@ -3,7 +3,7 @@ description: "I am now officially a Web Challenge Designer for the P2PU's Mozill
 created: 2011-08-09 17:12:20
 ---
 
-![](http://media.jamiecurle.com/uploads/2011/08/09/blogimage/p2pusow.850x600.png)
+![](/media/2011/08/09/blogimage/p2pusow.850x600.png)
 
 
 I've been sitting on this news for a few days and now I can't keep it in any longer – the excitment is building up too much.

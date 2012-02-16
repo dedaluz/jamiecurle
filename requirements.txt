@@ -4,6 +4,7 @@ BeautifulSoup
 Flask
 Flask-Markdown
 python-memcached
+uwsgi
 
 
 

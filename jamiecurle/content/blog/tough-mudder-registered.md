@@ -5,7 +5,7 @@ created: 2011-10-04 20:31:04
 
 Tough Mudder is a not a race, it is a challenge consisting of 28 obstacles spaced over an 11 mile cross country run. Next year they are bringing it to the UK and I'm entered for July 14th in Scotland.
 
-![Toughmudder](http://media.jamiecurle.com/uploads/2011/10/04/blogimage/toughmudder.logo.850x600.png)
+![Toughmudder](/media/2011/10/04/blogimage/toughmudder.logo.850x600.png)
 
 My first introduction to Tough Mudder was through the below video in early 2011.
 

@@ -7,7 +7,7 @@ created: 2011-05-12 07:04:22
 
 This year I attempted to grow a lot of Pimientos de Padróns in an attempt to satiate a huge desire for their delicious pods. I began with 12 in total, but I've lost a few to over watering, left a four to 'fend for themselves' (_after initially incorrectly diagnosing them with a disease, when I had simply overwatered them_) and given four away. This has left me with all but two decent specimens — one in the NFT and one in large pot (_a 12L builders bucket_) in the greenhouse.
 
-![The last two remaining quality padrons](http://media.jamiecurle.com/uploads/2011/05/12/blogimage/remainingpadrons.850x600.jpg)
+![The last two remaining quality padrons](/media/2011/05/12/blogimage/remainingpadrons.850x600.jpg)
 
 At the end of March I sowed more Padron seeds and this has yielded me four seedlings.  At the same time I also ordered five plug plants from [Potters Plants][1]. The plug plants arrived yesterday and they were roughly the same size as my home grown seedlings. Obviously I want to get them to grow a healthy root system and plenty of foliage as fast as possible so they prepare themselves for ( hopefully ) a huge harvest.  This is where the idea for this DIY experiment came to me based on the anecdotal (and contradictory ) accounts given to me by a range of people. Some people swear by one fertiliser, others another and some none. 
 
@@ -94,8 +94,8 @@ Also the plug plants have all had a dosage of a high nitrogen based feed when th
 
 </table>
 
-![Group 1 - My padrons](http://media.jamiecurle.com/uploads/2011/05/12/blogimage/IMG_1449.850x600.JPG)
+![Group 1 - My padrons](/media/2011/05/12/blogimage/IMG_1449.850x600.JPG)
 
-![Group 2 - Potters Padrons](http://media.jamiecurle.com/uploads/2011/05/12/blogimage/IMG_1451.850x600.JPG)
+![Group 2 - Potters Padrons](/media/2011/05/12/blogimage/IMG_1451.850x600.JPG)
 
 [1]: http://www.pottersplants.co.uk/products/Pimientos-de-Padron-Chilli-Plants%2C-mild-chilli-pepper%2C-Box-of-5-Plug-Plants.html

@@ -11,7 +11,7 @@ I wasn't blogging this time last year, but I did post a lot of photos of chillie
 
 I was lucky enough to receive a [vitopod propagator][1a1] this christmas. This changes everything for me this year, because now the plants can live in a 27 degree climate from January onwards.  Don't let the photo deceive you, this is a monster!  These propagators are brilliant, they keep the heat evenly distributed and are controlled by an external device ( though in this picture I've got it inside ) 
 
-![My Vitopod](http://media.jamiecurle.com/uploads/2011/02/11/blogimage/My_Vitopod.850x600.jpg)
+![My Vitopod](/media/2011/02/11/blogimage/My_Vitopod.850x600.jpg)
 
 ### 250w Maxibright CFL ( Blue ) 
 
@@ -21,11 +21,11 @@ For the record, I didn't want to buy from Greens Horticulture because they've de
 
 Here's a rather crap photo of the light in action with the propagator open and the reflective sheeting pinned back. Health and safety officers look away now. It's being help up with washing line, suspended on part of an old weights bench and the light is wedged into a bit of wood that I had lying around. How lo-fi is that?  I saved about £30 on buying a reflector and just buying reflective sheeting instead.
 
-![CFL - Not endorsed by the health and safety office](http://media.jamiecurle.com/uploads/2011/02/11/blogimage/CFL___Not_endorsed_by_the_health_and_safety_office.850x600.jpg)
+![CFL - Not endorsed by the health and safety office](/media/2011/02/11/blogimage/CFL___Not_endorsed_by_the_health_and_safety_office.850x600.jpg)
 
 I lined the inside of the propagator with reflective sheeting to make the most of the light that I'm pumping into it
 
-![Grow my lovelies grow](http://media.jamiecurle.com/uploads/2011/02/11/blogimage/Grow_my_lovelies_grow.850x600.jpg)
+![Grow my lovelies grow](/media/2011/02/11/blogimage/Grow_my_lovelies_grow.850x600.jpg)
 
 
 
@@ -48,7 +48,7 @@ This year here's what I'm growing &mdash;
 
 These have very little heat, but they make the best accompaniment to a meal. Any visitors to tapas bars will be able to vouch for me on this. Sear them off in a pan will olive oil until the skin blisters and then sprinkle with rock salt -  delicious. Needless to say I'm growing a boat load of these so I've got them on tap for the summer.
 
-![Pimento de Padron by metrovampire](http://media.jamiecurle.com/uploads/2011/02/11/blogimage/Pimento_de_Padron_by_metrovampire.850x600.jpg)
+![Pimento de Padron by metrovampire](/media/2011/02/11/blogimage/Pimento_de_Padron_by_metrovampire.850x600.jpg)
 
 Photo by [Cafrizel][11]
 
@@ -74,9 +74,9 @@ I'm growing more Dorset Naga's because last year, they were my absolute favourit
 
 I always love to see photos of chillies growing so here's the photos of mine so far. 
 
-![January 13th](http://media.jamiecurle.com/uploads/2011/02/11/blogimage/January_13th.850x600.jpg)
+![January 13th](/media/2011/02/11/blogimage/January_13th.850x600.jpg)
 
-![Grow my lovelies grow](http://media.jamiecurle.com/uploads/2011/02/11/blogimage/Grow_my_lovelies_grow.850x600.jpg)
+![Grow my lovelies grow](/media/2011/02/11/blogimage/Grow_my_lovelies_grow.850x600.jpg)
 
 ## What's Next
 

@@ -3,7 +3,7 @@ description: "Do you make bets with yourself?"
 created: 2011-04-21 08:04:05
 ---
 
-![Photo courtesy of Doug Wheller](http://media.jamiecurle.com/uploads/2011/04/21/blogimage/Dice.850x600.jpg)
+![Photo courtesy of Doug Wheller](/media/2011/04/21/blogimage/Dice.850x600.jpg)
 
 Back in 2009 when I was still travelling to [the office][1] each day, I would get a lift back from Jo.  She'd meet me at [Callerton Park Metro Station][2]. She was travelling from Matfen Hall, now given the distance we were both travelling there'd often be times when one of us was left waiting for the other.
 

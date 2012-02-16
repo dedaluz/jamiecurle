@@ -13,13 +13,13 @@ I've also taken the change to implement a more 'responsive' design to the site. 
 
 It's also been a chance to play with media queries. It's a new challenge using media queries to adjust the design to respond to changes in the browser. It's real balancing act of style rules but when it all comes together it's really nice.  Here's some screenshots of the various sizes all the way to iPhone. If you're reading this in a browser, give it a whirl for yourself.
 
-![Nice &amp; Big](http://media.jamiecurle.com/uploads/2011/01/07/blogimage/Nice___Big.850x600.jpg)
+![Nice &amp; Big](/media/2011/01/07/blogimage/Nice___Big.850x600.jpg)
 
-![Average Size](http://media.jamiecurle.com/uploads/2011/01/07/blogimage/Average_Size.850x600.jpg)
+![Average Size](/media/2011/01/07/blogimage/Average_Size.850x600.jpg)
 
-![Weeny](http://media.jamiecurle.com/uploads/2011/01/07/blogimage/Weeny.850x600.jpg)
+![Weeny](/media/2011/01/07/blogimage/Weeny.850x600.jpg)
 
-![Mobile](http://media.jamiecurle.com/uploads/2011/01/07/blogimage/Mobile.850x600.jpg)
+![Mobile](/media/2011/01/07/blogimage/Mobile.850x600.jpg)
 
 ## What's Next
 

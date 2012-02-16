@@ -22,7 +22,7 @@ So when you look back at the diagram in the [Serving Django As a Nginx & Supervi
 Now that we've cleared this up, I'll now break down, file by file and folder by folder what the parts of a typical django project look, smell and feel like.
 
 ## myproject - The Top Level Directory
-![Top Level Directories](http://media.jamiecurle.com/uploads/2011/11/11/blogimage/toplevel.850x600.png)
+![Top Level Directories](/media/2011/11/11/blogimage/toplevel.850x600.png)
 
 This folder contains a number of items &mdash;
 
@@ -92,7 +92,7 @@ pip install -U -r /path/to/requirements.txt
 
 ## myproject
 
-![The Actual Django Project Layout](http://media.jamiecurle.com/uploads/2011/11/11/blogimage/myproject.myproject.850x600.png)
+![The Actual Django Project Layout](/media/2011/11/11/blogimage/myproject.myproject.850x600.png)
 
 This is the motherload and where all of your hard work lives. For the sake of this blog post the myproject django project has only one application, a blog app.  But let's go over the contents one by by one.
 
@@ -143,7 +143,7 @@ If you're including other url patterns then it would be great idea to [use a nam
 
 ## Blog - A Sample App
 
-![The Blog App](http://media.jamiecurle.com/uploads/2011/11/11/blogimage/blogapp_1.850x600.png)
+![The Blog App](/media/2011/11/11/blogimage/blogapp_1.850x600.png)
 
 I've really went to town on everything that I could think of in this app with the exception of migrations for [south][16] and search_indexes for [haystack][17].  This is an app on steroids and in most cases you won't normally have as many files as this in an app.  Here's what they all do
 

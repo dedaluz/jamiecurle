@@ -3,7 +3,7 @@ description: "The plan for week 1 of my P2PU course."
 created: 2011-05-09 07:57:41
 ---
 
-![HTML & CSS From the Beginning](http://media.jamiecurle.com/uploads/2011/05/09/blogimage/logo.850x600.png)
+![HTML & CSS From the Beginning](/media/2011/05/09/blogimage/logo.850x600.png)
 
 
 The theme of the week is "Hello World" (and each other) and it's  the introductory week on the course.

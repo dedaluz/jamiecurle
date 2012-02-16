@@ -25,7 +25,7 @@ The above rendered fine in Safari, Opera, Firefox, Chrome and even IE7 and 8 got
 
 
 
-![IE9 red cross](http://media.jamiecurle.com/uploads/2011/07/18/blogimage/ie9before.850x600.jpg)
+![IE9 red cross](/media/2011/07/18/blogimage/ie9before.850x600.jpg)
 
 
 Do you see the madness - what is that red cross? My mime types are correct, the video plays in windows media player, but apparently not IE - curses.
@@ -43,7 +43,7 @@ Internet Explorer 9 always uses software rendering in a VMWare virtual machine. 
 That's simple, but not that obvious. First you have to power off ( not suspend ) your virtual machine and then disable 3D acceleration.  When you've done this open up the vmware settings for your virtual machine and click on display.  You want to disable ( uncheck ) the acceleration of 3D graphics.
 
 
-![Uncheck Accelerate 3D graphics](http://media.jamiecurle.com/uploads/2011/07/18/blogimage/checkbox.850x600.jpg)
+![Uncheck Accelerate 3D graphics](/media/2011/07/18/blogimage/checkbox.850x600.jpg)
 
 
 When you've done that restart your virtual machine and you should be met with working video.

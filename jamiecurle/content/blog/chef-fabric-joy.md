@@ -3,7 +3,7 @@ description: "I'm late the to the chef party, but it's a great party."
 created: 2011-07-27 09:50:37
 ---
 
-![Chef Logo](http://media.jamiecurle.com/uploads/2011/08/03/blogimage/OC_Chef_Logo.850x600.png)
+![Chef Logo](/media/2011/08/03/blogimage/OC_Chef_Logo.850x600.png)
 
 
 

@@ -3,7 +3,7 @@ description: "Thoughts on working from home one year in."
 created: 2010-11-25 14:28:50
 ---
 
-![Happy Fruit Grass](http://media.jamiecurle.com/uploads/2010/11/25/blogimage/Happy_Fruit_Grass.850x600.jpg)
+![Happy Fruit Grass](/media/2010/11/25/blogimage/Happy_Fruit_Grass.850x600.jpg)
 
 I had trouble working from home originally.  I needed the office because I couldn't control my impulse not to open up iPlayer or work on a personal project. It wasn't surprising that this was the case because it was during the first two years of starting my company and I worked every hour of every day. I was over worked.  The need to switch off wasn't lack of self discipline, it was my subconscious telling me to take some downtime.
 

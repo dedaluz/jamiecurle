@@ -33,6 +33,12 @@ h5{
 h6{
 	font-size: 1.15em;
 }
+code{
+	background-color: #ececec;
+	padding: 0.2em 0.5em;
+	text-shadow: 1px 1px 1px #fff;
+	font-style: italic;
+}
 a{
 	text-decoration: none;
 	color: #F5000E;

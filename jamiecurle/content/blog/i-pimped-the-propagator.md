@@ -11,31 +11,31 @@ I've got my (increasingly not so little) plants in the [Vitopod][1] and is a gre
 
 This rig is the same on both ends and is suspended from an overhead rack that I built into my greenhouse staging. The rig was built using left over wood that I have lying around.
 
-![Hanging the lights](http://media.jamiecurle.com/uploads/2011/03/14/blogimage/Hanging_the_lights.850x600.jpg)
+![Hanging the lights](/media/2011/03/14/blogimage/Hanging_the_lights.850x600.jpg)
 
 Using nothing more than twine I  lashed the light fitting to the rig. Since taking the picture I've added wire to the lashing as the twine was stretching.
 
-![Light is lashed on](http://media.jamiecurle.com/uploads/2011/03/14/blogimage/Light_is_lashed_on.850x600.jpg)
+![Light is lashed on](/media/2011/03/14/blogimage/Light_is_lashed_on.850x600.jpg)
 
 ## Airflow
 
 Originally I stripped two fans from an old pc, chopped the connectors off and taped each to a 9V battery. This lasted for about 14 hours and then died.  My backup plan was to take an old 12V DC converter that I had lying around, chop the end off and wire the fans to the converter.  It worked a treat, but it doesn't move much air. I think I'll try ebay for a 240v axial fan or pillage an old server to see if I can find one. I suspect a 240v will do the trick. For now however this is fine.
 
-![Airflow](http://media.jamiecurle.com/uploads/2011/03/14/blogimage/Airflow.850x600.jpg)
+![Airflow](/media/2011/03/14/blogimage/Airflow.850x600.jpg)
 
 ## Reflectors
 
 I had already bought a load of reflective sheeting and I wasn't using it to it's full ability. Even when I was running a single CFL I was letting a lot of light escape.  Using galvanised wire I made three [omega shapes][3] and using the bottoms to connect onto a length of cane.  I then fitted this over the top of the propagator.
 
-![The cage](http://media.jamiecurle.com/uploads/2011/03/14/blogimage/The_cage.850x600.jpg)
+![The cage](/media/2011/03/14/blogimage/The_cage.850x600.jpg)
 
 I then cut a nice length of reflective sheeting and hemmed in a length of cane using parcel tape, this was to give [Mean Ol' Mr Gravity][4] something to pull on to make a nice shaped reflector. 
 
-![Cover](http://media.jamiecurle.com/uploads/2011/03/14/blogimage/Cover.850x600.jpg)
+![Cover](/media/2011/03/14/blogimage/Cover.850x600.jpg)
 
 As you can see from an external shot, the shape of the reflector is near perfect and for the cost of the reflective sheeting I'm very happy with it
 
-![External Shot](http://media.jamiecurle.com/uploads/2011/03/14/blogimage/External_Shot.850x600.jpg)
+![External Shot](/media/2011/03/14/blogimage/External_Shot.850x600.jpg)
 
 ## Conclusion
 
@@ -45,7 +45,7 @@ If you've never been to an allotment you should go and look around.  Things that
 
 Finally, here's some chilli porn
 
-![Inside the vitopod](http://media.jamiecurle.com/uploads/2011/03/14/blogimage/Inside_the_vitopod.850x600.jpg)
+![Inside the vitopod](/media/2011/03/14/blogimage/Inside_the_vitopod.850x600.jpg)
 
 
 

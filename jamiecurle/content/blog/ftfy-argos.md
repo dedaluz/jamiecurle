@@ -3,13 +3,13 @@ description: "Being sneaky with opt-in/out and \"trixsy\" with your mailing list
 created: 2010-10-12 09:02:18
 ---
 
-![Argos](http://media.jamiecurle.com/uploads/2010/10/12/blogimage/Argos.850x600.jpg)
+![Argos](/media/2010/10/12/blogimage/Argos.850x600.jpg)
 
 Argos might not purvey [deliciously crafted goods like made.com](http://made.com), but it's great at pinch when you need a new set of rechargeable batteries. I do like their service, especially the self serve kiosks, but there is one thing I can't stand - their crafty strategy when reserving an item.
 
 So to continue my FTFY (fixed that for you) style blog posts I'm going to look at the screen that bugs me and see if I can make it more suitable to me.  There's two things that bug me about this screen - 
 
-![Argos Screen - Pet Peeves](http://media.jamiecurle.com/uploads/2010/10/12/blogimage/Argos_Screen___Pet_Peeves.850x600.jpg)
+![Argos Screen - Pet Peeves](/media/2010/10/12/blogimage/Argos_Screen___Pet_Peeves.850x600.jpg)
 
 ##  1 - I Agree, That's What I'm Doing.
 
@@ -23,7 +23,7 @@ In the original version this bit of the screen also contains the privacy policy 
 
 ##  My Fixes
 
-![My fixes](http://media.jamiecurle.com/uploads/2010/10/12/blogimage/My_fixes.850x600.jpg)
+![My fixes](/media/2010/10/12/blogimage/My_fixes.850x600.jpg)
 
 ##  1 - Goodbye Useless Graphic
 
@@ -49,14 +49,14 @@ The proof is in the pudding, what do you think of the changes that I've made?  L
 
 ### Before & After
 
-![Argos Screen](http://media.jamiecurle.com/uploads/2010/10/12/blogimage/Argos_Screen.850x600.jpg)
-![My Version](http://media.jamiecurle.com/uploads/2010/10/12/blogimage/My_Version.850x600.jpg)
+![Argos Screen](/media/2010/10/12/blogimage/Argos_Screen.850x600.jpg)
+![My Version](/media/2010/10/12/blogimage/My_Version.850x600.jpg)
 
 ### The Greys
 
-![Original Grey](http://media.jamiecurle.com/uploads/2010/10/12/blogimage/Original_Grey.850x600.jpg)
+![Original Grey](/media/2010/10/12/blogimage/Original_Grey.850x600.jpg)
 
-![Jamie Grey](http://media.jamiecurle.com/uploads/2010/10/12/blogimage/Jamie_Grey.850x600.jpg)
+![Jamie Grey](/media/2010/10/12/blogimage/Jamie_Grey.850x600.jpg)
 
 ##  Conclusion
 

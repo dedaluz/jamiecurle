@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from jamiecurle import config
 from flask import render_template, redirect, request
 from data import get_dates, get_posts, get_post, get_tags
 
@@ -23,6 +24,8 @@ def blog_tagged(tag):
         tag=tag, tags=tags, dates=dates)
 
 def blog_post(slug):
+    if slug.startswith('draft') and config.SHOW_DRAFTS == False:
+        return render_template('404.html'), 404
     key = str('post_%s' % slug)
     post = get_post('%s.md' % slug )
     tags = get_tags()

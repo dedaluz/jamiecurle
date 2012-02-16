@@ -3,7 +3,7 @@ description: "Branching is great idea to develop additional functionality, but w
 created: 2011-06-21 06:37:27
 ---
 
-![GIT](http://media.jamiecurle.com/uploads/2011/06/21/blogimage/git.850x600.png)
+![GIT](/media/2011/06/21/blogimage/git.850x600.png)
 
 Branching confused me for a while and I shyed away from it. Now it's my bestest friend in the world, we laugh and play together all day. You didn't come here to read about that though, because you're busy and important and you want to get stuff done. So let's crack on.
 
@@ -14,7 +14,7 @@ Branching confused me for a while and I shyed away from it. Now it's my bestest 
 
 ## Cats & Kittens
 
-![Original Project](http://media.jamiecurle.com/uploads/2011/06/21/blogimage/original_2.850x600.jpg)
+![Original Project](/media/2011/06/21/blogimage/original_2.850x600.jpg)
 
 
 As you can see, the original project is all about Cats & Kittens, but our client is about to change their mind and decide that they want dogs in on the project  as well.  Let's get busy and bust some "mad branch skillz"
@@ -67,7 +67,7 @@ Git will feedback to you telling you that you've switched to the plusdogs branch
 
 So now let's assume that we've been able to complete the work and that our project now looks like this.
 
-![New Project](http://media.jamiecurle.com/uploads/2011/06/21/blogimage/new.850x600.jpg)
+![New Project](/media/2011/06/21/blogimage/new.850x600.jpg)
 
 We need to add the new files and  commit our changes. 
 <code lang="bash">
