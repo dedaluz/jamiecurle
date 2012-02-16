@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 DEBUG = False
 CACHE_ENABLED = True
-BLOG_CONTENT_PATH = '/your/path/here'
+BLOG_CONTENT_PATH = '/home/curle/sites/jamiecurle/jamiecurle/jamiecurle/content/blog'
 MEMCACHE_CONNECTION = 'unix:/home/curle/tmp/memcached.sock'
 SHOW_DRAFTS = False
 

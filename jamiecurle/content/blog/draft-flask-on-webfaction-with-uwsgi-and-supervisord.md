@@ -161,6 +161,8 @@ ln -s /home/you/sites/jamiecurle/jamiecurle/supervisor.ini /home/you/conf/superv
 
 Here's the config, I'll talk about the specifics a little later &hellip;
 
+HAD TROUBLE WITH THE COMMAND
+
 <code lang="ini">
 [program:jc_flask]
 command=uwsgi --socket 127.0.0.1:26331 --file runserver.py --callable app --processes 2 --venv /home/curle/.virtualenvs/jamiecurle/ 
