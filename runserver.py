@@ -37,5 +37,5 @@ filter(app, 'datetimeformat', 'modules.blog.filters.datetimeformat')
 filter(app, 'render', 'modules.blog.filters.render')
 
 
-
-app.run(port=26331)
+if __name__ == '__main__':
+    app.run(port=26331)
