@@ -31,6 +31,6 @@ def deploy(message=None):
 
     #maintenance()
     run('cd sites/jamiecurle/jamiecurle/; git pull origin master')
-    run('supervisorctl restart jc_flask')
+    #run('c; 
     #maintenance_end()
 
