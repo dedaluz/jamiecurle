@@ -3,6 +3,9 @@ import datetime
 import os
 import memcache
 
+env.hosts = ['curle.webfactional.com']
+env.user = 'curle'
+
 
 
 def clear_cache(key=None):
@@ -14,18 +17,20 @@ def clear_cache(key=None):
 
 
 def compress_css():
-    with lcd('jamiecurle/static/css/'):
+    with lcd('/Users/jcurle/Sites/jamiecurle/jamiecurle/static/css/'):
         local('cssprefixer about.css devices.css global.css syntax.css --minify > production.css')
 
 def deploy(message=None):
+    
+    compress_css()
+    
     if message is not None:
         local('git add -A')
         local('git commit -a -m "%s"' % message)
         local('git push origin master')
 
-    maintenance()
+    #maintenance()
     run('cd sites/jamiecurle/jamiecurle/; git pull origin master')
-    run('cd /home/jcurle/sites/jamiecurle/jamiecurle/; /home/jcurle/.virtualenvs/jamiecurle/bin/python manage.py syncdb --migrate')
-    run('supervisorctl restart jamiecurle')
-    maintenance_end()
+    run('supervisorctl restart jc_flask')
+    #maintenance_end()
 

@@ -165,7 +165,7 @@ HAD TROUBLE WITH THE COMMAND
 
 <code lang="ini">
 [program:jc_flask]
-command=uwsgi --socket 127.0.0.1:26331 --file runserver.py --callable app --processes 2 --venv /home/curle/.virtualenvs/jamiecurle/ 
+command=uwsgi --http 127.0.0.1:26331 --file runserver.py --callable app --processes 1 --venv /home/curle/.virtualenvs/jamiecurle/ 
 directory=/home/curle/sites/jamiecurle/jamiecurle
 user=jcurle
 autostart=true
