@@ -22,7 +22,7 @@ def compress_css():
 
 def deploy(message=None):
     
-    compress_css()
+    #compress_css()
     
     if message is not None:
         local('git add -A')
