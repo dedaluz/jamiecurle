@@ -1,0 +1,15 @@
+CACHE MANIFEST
+/static/css/global.css
+/static/css/syntax.css
+/static/css/devices.css
+/static/css/fonts.css
+/static/css/production.css
+/static/fonts/inconsolata.woff
+/static/js/jquery.js
+/static/js/fitvids.js
+/static/js/blog.archive.js
+/static/img/tag-bg.png
+
+
+NETWORK:
+*
