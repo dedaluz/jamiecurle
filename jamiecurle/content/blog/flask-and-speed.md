@@ -7,7 +7,7 @@ tags:
   - flask
 ---
 
-This site is now running on Flask and hosted with [webfaction][0] on one of their Amsterdam machines. This is departure from the previous version which was running on Django and hosted on a [Zerigo VPS][1].
+This site is now running on [Flask][5] and hosted with [webfaction][0] on one of their Amsterdam machines. This is departure from the previous version which was running on Django and hosted on a [Zerigo VPS][1].
 
 
 ## Why Change?
@@ -28,5 +28,6 @@ I thought about it, I was really after speed. Static was just the means of getti
 [2]: http://ringce.com/hyde
 [3]: https://github.com/mojombo/jekyll
 [4]: http://nanoc.stoneship.org/
+[5]: http://flask.pocoo.org/
 
 

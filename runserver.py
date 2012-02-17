@@ -38,4 +38,4 @@ filter(app, 'render', 'modules.blog.filters.render')
 
 
 if __name__ == '__main__':
-    app.run(port=26331)
+    app.run()

@@ -1,6 +1,9 @@
 title: "Tough Mudder - Registered"
 description: "It's official - I'm registerered for Tough Mudder in Edinburgh 2012"
 created: 2011-10-04 20:31:04
+tags:
+  - toughmudder
+  - training
 ---
 
 Tough Mudder is a not a race, it is a challenge consisting of 28 obstacles spaced over an 11 mile cross country run. Next year they are bringing it to the UK and I'm entered for July 14th in Scotland.
