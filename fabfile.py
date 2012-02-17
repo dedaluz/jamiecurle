@@ -31,6 +31,8 @@ def deploy(message=None):
 
     #maintenance()
     run('cd sites/jamiecurle/jamiecurle/; git pull origin master')
+    # restart the app
+    run('touch /home/curle/sites/jamiecurle/uwsgi')
     #run('c; 
     #maintenance_end()
 
