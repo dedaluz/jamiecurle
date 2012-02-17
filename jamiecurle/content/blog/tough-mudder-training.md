@@ -51,8 +51,8 @@ I'll be following a training programme that designed to cut my bodyweight and bu
 * **Wednesday AM** - circuit
 * **Wednesday PM** - Presses, chinups and jerks.
 * **Thursday AM** - running and various obstacles
-* **Wednesday AM** - circuit
-* **Wednesday PM** - Overhead squats, cleans and front squats.
+* **Friday AM** - circuit
+* **Friday PM** - cleans and front squats.
 * **Saturday AM** - 13 mile run / walk
 
 ## Food
