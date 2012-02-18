@@ -19,7 +19,7 @@ def compress_css():
     with lcd('/Users/jcurle/Sites/jamiecurle/jamiecurle/static/css/'):
         local('cssprefixer about.css devices.css global.css syntax.css --minify > production.css')
 
-def memory_usage():
+def mem():
     run('ps -u curle -o pid,rss,command')
 
 def restart_nginx():

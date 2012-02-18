@@ -33,5 +33,5 @@ $(function(){
 		}
 		$(this).find('a.stale:last').after(toggler);
 	});
-	
+	$('article').fitVids();
 })
