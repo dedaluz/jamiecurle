@@ -18,7 +18,7 @@ A statically generated site seemed like the right choices. I tried [Hyde][1], [J
 
 ## Enter Flask
 
-I thought about it, I was really after speed. Static was just the means of getting there. I came to the conclusion that I didn't care about how I got speed, as long as I got it. So I set about building a flask application that didn't use a database - it just reads markdown files.  That application is what you see before you and it's cached up to the hilt using memcache.
+I thought about it, I was really after speed. Static was just the means of getting there. I came to the conclusion that I didn't care about how I got speed, as long as I got it. So I set about building a flask application that didn't use a database - it just reads markdown files.  That application is what you see before you and it's cached up to the hilt using memcache. You can [peruse the source code on github][6]
 
 
 
@@ -29,5 +29,6 @@ I thought about it, I was really after speed. Static was just the means of getti
 [3]: https://github.com/mojombo/jekyll
 [4]: http://nanoc.stoneship.org/
 [5]: http://flask.pocoo.org/
+[6]: https://github.com/jamiecurle/jamiecurle
 
 
