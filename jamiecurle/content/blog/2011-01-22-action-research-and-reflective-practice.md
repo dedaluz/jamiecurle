@@ -1,6 +1,9 @@
 title: "Action Research & Reflective Practice"
 description: "I was introduced to Action Research in my PGCE, I was delighted to see that it features alongside reflective practice as the focus of one of my modules in my MA. "
 created: 2011-01-22 17:38:04
+tags:
+  - masters
+  - action research
 ---
 
 Today is the second week of lectures ( _or rather the content is great but they're hideously implemented java chat sessions_ ) in my MA.  Two of the modules are quite closely related to each other, Reflective Practice and Project Proposition. 

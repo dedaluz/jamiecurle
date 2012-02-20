@@ -29,9 +29,16 @@ def get_post(slug):
         tags = header['tags']
     except KeyError:
         tags = []
+    # strip dates out of the filename
+    slug = item.split('/').pop().split('.')[0]
+    # if it starts with 201 it's a date remove the first 11 chars (2010-01-011)
+    if slug.startswith('201'):
+        slug = slug[11:]
+    url = '/blog/%s/' % slug
+
     # now append a dict wit the info to posts
     post = {
-        'url': '/blog/%s/' % item.split('/').pop().split('.')[0],
+        'url': url,
         'title': header['title'],
         'description': header['description'],
         'created': header['created'],
