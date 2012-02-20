@@ -34,7 +34,11 @@ In the crude mockup below the domains are listed below each other making it much
 
 ## Publish Faster
 
-I'm likely getting into fantasy world here, but it would be terrific if kits published a *lot* faster. I suspect the delay is likely caused by having to publish onto a CDN and/or cache invalidation, but it would make experimenting with different faces more joyful.Ideally I'd want to be able to hit the publish button, dump my browser cache and immediately be able to reload the new kit.
+I'm probably getting into fantasy world here, but it would be terrific if kits published a *lot* faster. I suspect the delay is likely caused by having to publish onto a CDN and/or cache invalidation, but it would make experimenting with different faces more joyful.Ideally I'd want to be able to hit the publish button, dump my browser cache and immediately be able to reload the new kit.
+
+![One does not simply](/static/blog/2012/02/19/typekit/one-does-not-simply.png)
+
+Or can you &hellip;
 
 
 
