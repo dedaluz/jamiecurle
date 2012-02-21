@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import yaml
 import os
+import re
 import markdown
 import codecs
 from collections import OrderedDict, Counter
@@ -18,9 +19,20 @@ def get_post(slug):
     if cache:
         return cache
     item = '%s%s' % (BLOG_CONTENT_PATH, slug)
-    with codecs.open(item, encoding='UTF-8') as md_file:
-        contents = md_file.read()
-    # split into yaml and markdown
+    # try for the straight slug
+    try:
+        with codecs.open(item, encoding='UTF-8') as md_file:
+            contents = md_file.read()
+    except IOError:
+        # ok, do it the long way
+        md_files  = get_md_files()
+        for md in md_files:
+            r = re.compile('\d{4}\-\d{2}\-\d{2}-%s' % slug)
+            if r.search(md):
+                item = '%s%s' % (BLOG_CONTENT_PATH, md)
+                with codecs.open(item, encoding='UTF-8') as md_file:
+                    contents = md_file.read()
+                break
     parts = contents.split('---')
     header = yaml.load(parts[0])
     content = markdown.markdown(parts[1])
