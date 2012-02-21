@@ -1,6 +1,9 @@
 title: "Bag of Lovely - Skate Video from 1991."
 description: "When I was 14 years old I was in a home made skate movie. Today thanks to the help of some friends, I found it."
 created: 2011-05-16 09:45:14
+tags:
+    - skateboarding
+    - bagoflovely
 ---
 
 I was really young when we made this and I had a real blast doing it.  I want to thank "dead mike" for uploading this.

@@ -1,6 +1,10 @@
 title: "Bottle & Supervisord"
 description: "Deploying bottle using supervisor is surprisingly painless."
 created: 2010-10-06 08:02:09
+tags:
+    - devops
+    - bottle
+    - supervisor
 ---
 
 ![Bottle](/media/2010/10/06/blogimage/Bottle.850x600.jpg)
