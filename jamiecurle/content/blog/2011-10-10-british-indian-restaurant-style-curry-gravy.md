@@ -1,6 +1,10 @@
 title: "British Indian Restaurant Style Curry Gravy"
 description: "How to make an authentic British Indian Restaurant (BIR) gravy in your own kitchen."
 created: 2011-10-10 07:46:30
+tags:
+  - food
+  - curry
+  - recipes
 ---
 
 Curry is a magical food. No other food tingles my senses like a good curry and for a few years I've tried as faithfully as possible to master it, but most of my efforts haven't been anywhere near correct in terms of texture, aroma and taste. Until now. The below picture was last nights chicken madras and it tasted every bit as good as it looks!

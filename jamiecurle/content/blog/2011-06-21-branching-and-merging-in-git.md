@@ -1,6 +1,10 @@
 title: "Quick Guide to branching & merging in GIT"
 description: "Branching is great idea to develop additional functionality, but whilst still maintaining a stable master branch."
 created: 2011-06-21 06:37:27
+tags:
+  - development
+  - git
+  - p2pu
 ---
 
 ![GIT](/media/2011/06/21/blogimage/git.850x600.png)
