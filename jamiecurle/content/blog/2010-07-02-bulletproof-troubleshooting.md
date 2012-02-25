@@ -1,6 +1,8 @@
 title: "Bulletproof Troubleshooting"
 description: "I do a lot of trouble shooting and I've developed a technique that always provides results."
 created: 2010-07-02 06:34:53
+tags:
+  - troubleshooting
 ---
 
 ![Bulletproof Trouble Shooting](/media/2010/07/02/blogimage/Bulletproof_Trouble_Shooting.850x600.jpg)

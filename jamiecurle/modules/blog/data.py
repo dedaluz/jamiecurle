@@ -95,6 +95,9 @@ def get_posts():
     # sort them by date
     sorted_posts = sorted(posts, key=itemgetter('created'), reverse=True)
     set_cached('get_posts', sorted_posts)
+    for post in sorted_posts:
+        print 'http://jamiecurle.com/%s,http://jamiecurle.com/%s' % (post['url'].replace('/blog/', '/posts/'), post['url'])
+    print '--------------'
     return sorted_posts
 
 def get_tags():
