@@ -21,7 +21,7 @@ You have no idea how happy this makes me. Running first thing on a morning is a 
 
 ## Body Fat
 
-I love food. I like cooking it, I like growing and I especially like eating it. I have a hugh appetite and I don't do *diets*. Which is why I'm a big fan of the [lean gains][5] approach to training nutrition. I get to eat big. 
+I love food. I like cooking it, I like growing and I especially like eating it. I have a huge appetite and I don't do *diets*. Which is why I'm a big fan of the [lean gains][5] approach to training nutrition. I get to eat big. 
 
 When I started I was at 16.7% bodyfat and as of Monday the 27th of Feb I was 12.6% body fat. I'm measuring my body fat using a 3 site [skinfold method][6] with a pair of inexpensive (though still overpriced for what they are) body fat calipers. Here's the obligatory graph, and it's heading in the right direction.  I should be at around the 7% mark round about the sime time I'm hitting half marathons - May.
 
