@@ -12,7 +12,7 @@ On the 14th of July this year I'm doing [Tough Mudder in Scotland][0]. It's not 
 ## Running
 
 I blogged about this last week, but I'm well on my way to recovering from [ITBS][3]. The secret for me has been in learning how to run (semi) barefoot in my [vibrams][4] and keeping a daily stretching & foam rolling regime. 
-I'm up to running about 11 miles per week totally pain free and in a few days I'll be tackling my first 10k since september 2011. If all goes according to plan, I'll be at the 13 mile mark in mid may.
+I'm up to running about 11 miles per week totally pain free and in a few days I'll be tackling my first 10k since september 2011. If all goes according to plan, I'll be at the 13 mile mark in mid May.
 
 
 You have no idea how happy this makes me. Running first thing on a morning is a privilege, you get an empty world and scenery like this. I snapped this at the halfway point at about 6:45am.
@@ -78,7 +78,7 @@ Having said that, it's going in the right direction. The top graph is January an
 
 Tough mudder is going to take me about three hours to complete. It will require me to sustain running and be able to do short bursts of very intense activities. I really don't have much to say this at this stage because I've just started to focus on improving my conditioning. My biggest focus until this point has been on learning to run again.
 
-However, I love kettlebells for conditioning myself. They allow you to perform some brutual full body workouts that leave you begging for mercy in a matter of minutes.  I have a kattlebell workout that last under 10 mins that I'm using to gauge the improvement of my conditioning.  It's quite simple
+However, I love kettlebells for conditioning myself. They allow you to perform some brutual full body workouts that leave you begging for mercy in a matter of minutes.  I have a kettlebell workout that lasts under 10 mins that I'm using to gauge the improvement of my conditioning.  It's quite simple:
 
 1. 30 Swings &ndash; 20kg
 2. 15 Presses &ndash; 16kg/12Kg
@@ -86,7 +86,7 @@ However, I love kettlebells for conditioning myself. They allow you to perform s
 
 The goal is to get five rounds of that done as quickly as possible. I've got a logged workout of me peforming this back in January 2010. I managed 5 rounds in 10:28 and I was using 2 &times; 12kg for the presses.  On Monday when I last performed this workout I got 5 rounds in 8:26.  By the time tough mudder comes around I want to be able to 10 rounds in less that 17mins.
 
-My workout schedule looks like this
+My workout schedule looks like this:
 
 
 #### Monday
