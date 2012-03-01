@@ -118,6 +118,6 @@ If you're even the slightest bit interested I would urge that you buy "[Undercov
 
 Best book ever.
 
-[2]: http://www.amazon.co.uk/gp/product/0956525709/?tag=jamiecurle-21
-[3]: http://www.amazon.co.uk/Undercover-Curry-Insiders-British-Restaurant/dp/0956525709/
+[2]: http://www.amazon.co.uk/dp/0716021919/?tag=jamiecurle-21
+[3]: http://www.amazon.co.uk/gp/product/0956525709/?tag=jamiecurle-21
 
