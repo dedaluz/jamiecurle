@@ -46,7 +46,7 @@ a{
 p, li{
 	line-height: 1.75em;
 }
-p, ul, ol, div{
+p, ul, ol, div, table{
 	margin-bottom: 2em;
 }
 li{
@@ -103,6 +103,35 @@ li{
 		header.primary nav a:hover{
 			color: #000;
 		}
+/* tables */
+table{
+	width: 100%;
+}
+th, td{
+	padding: 1%;
+}
+td{
+	color: #333;
+}
+th{
+	color: #bbb;
+	text-transform: uppercase;
+	font-size: 0.75em;
+	text-align: left;
+	margin: 0;
+}
+thead th{
+	border-bottom: 1px solid #999;
+}
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th{
+	background-color: #efefef;
+}
+tfoot th{
+	font-style: italic;
+	font-size: 1.1em;
+	color: #000;
+}
 
 /* content */
 div.content{

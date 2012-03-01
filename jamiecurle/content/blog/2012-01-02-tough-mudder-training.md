@@ -33,7 +33,7 @@ Tough Mudder isn't a race and I'm not treating like one, but by all accounts it 
 21. **Walk The Plank** - A 15ft leap into an icy lake, then swim to the other side.
 22. **Nettles to Nipples** - A crawl through a patch of fresh juicy stinging nettles. This is the one I'm looking forward to the least.
 23. **Turds Nest** - Trying my best not to fall as a crawl over a fragile cargo net.
-24. **Funky Munky** - A long series of monkey bars, some of which has been greased.
+24. **Funky Munky** - A long series of monkey bars, some of which have been greased.
 25. **Greased Lightening** - A man sized slide down a hill on slippy plastic. 
 26. **Cliff Hanger** - A scramble up muddy, slippy very high hills.
 27. **Chernobyl Jacuzzi** - Jump into a pool of slime.
