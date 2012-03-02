@@ -29,7 +29,7 @@ When I started back in Jan I was at 16.7% bodyfat and as of Monday the 27th of F
 
 Here's how my food intake looks.
 
-<table>
+<table class="data">
   <thead>
     <tr>
       <th>Nutrient</th>

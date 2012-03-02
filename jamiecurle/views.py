@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from flask import render_template, make_response
 from jamiecurle import create_app
-from jamiecurle.modules.blog.data import get_posts
+from jamiecurle.modules.blog.views import blog_index
 
 
 app = create_app()
@@ -11,8 +11,7 @@ def page_not_found(error, *args):
     return render_template('404.html')
 
 def home():
-    post = get_posts()[0]
-    return render_template('home.html', post=post)
+    return blog_index()
 
 def about():
     return render_template('about.html')

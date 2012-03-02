@@ -104,30 +104,31 @@ li{
 			color: #000;
 		}
 /* tables */
-table{
+table.data{
 	width: 100%;
+	border-spacing: 0;
 }
-th, td{
+table.data th, table.data td{
 	padding: 1%;
 }
-td{
+table.data td{
 	color: #333;
 }
-th{
+table.data th{
 	color: #bbb;
 	text-transform: uppercase;
 	font-size: 0.75em;
 	text-align: left;
 	margin: 0;
 }
-thead th{
+table.data thead th{
 	border-bottom: 1px solid #999;
 }
-tbody tr:nth-child(odd) td,
-tbody tr:nth-child(odd) th{
+table.data tbody tr:nth-child(odd) td,
+table.data tbody tr:nth-child(odd) th{
 	background-color: #efefef;
 }
-tfoot th{
+table.data tfoot th{
 	font-style: italic;
 	font-size: 1.1em;
 	color: #000;
