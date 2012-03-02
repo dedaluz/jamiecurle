@@ -21,9 +21,9 @@ You have no idea how happy this makes me. Running first thing on a morning is a 
 
 ## Body Fat
 
-I love food. I like cooking it, I like growing and I especially like eating it. I have a huge appetite and I don't do *diets*. Which is why I'm a big fan of the [lean gains][5] approach to training nutrition. I get to eat big. 
+I love food. I like cooking it, I like growing it and I especially like eating it. I have a huge appetite and I don't do *diets*. Which is why I'm a big fan of the [lean gains][5] approach to training nutrition. I get to eat big. 
 
-When I started I was at 16.7% bodyfat and as of Monday the 27th of Feb I was 12.6% body fat. I'm measuring my body fat using a 3 site [skinfold method][6] with a pair of inexpensive (though still overpriced for what they are) body fat calipers. Here's the obligatory graph, and it's heading in the right direction.  I should be at around the 7% mark round about the sime time I'm hitting half marathons - May.
+When I started back in Jan I was at 16.7% bodyfat and as of Monday the 27th of Feb I was 12.6% body fat. I'm measuring my body fat using a 3 site [skinfold method][6] with a pair of inexpensive (though still overpriced for what they are) body fat calipers. Here's the obligatory graph, and it's heading in the right direction.  I should be at around the 7% mark round about the sime time I'm hitting half marathons - May.
 
 ![Body fat percentage graph](/static/blog/2012/03/01/bodyfat.png)
 
@@ -63,7 +63,7 @@ Here's how my food intake looks.
 
 You may think that the calorific deficit is too much there, but so far I'm not losing any strength and all my performance data is pointing in the right direction. However, if I notice that I'm losing strength I'll be upping the training day intake. Currently it's not inline with the leangains protocol of maintanance +20%. So from that point of view I can't claim I'm "doing lean gains".
 
-On the flip side I do fast for 16-18 of the day and when I eat on none training days my meals are split so that the first one (lunch) is the biggest, whereas on training days, the biggest meal is directly after I've worked out.
+On the flip side I do fast for 16-18 hours of the day and when I eat on none training days my meals are split so that the first one (lunch) is the biggest, whereas on training days, the biggest meal is directly after I've worked out.
 
 I weight myself daily when I wake up, but I'm not that interested in the day to day weight, it's the overall trend that I'm interesting in.
 
