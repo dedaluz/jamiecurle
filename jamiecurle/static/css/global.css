@@ -124,9 +124,16 @@ table.data th{
 table.data thead th{
 	border-bottom: 1px solid #999;
 }
-table.data tbody tr:nth-child(odd) td,
-table.data tbody tr:nth-child(odd) th{
-	background-color: #efefef;
+table.data tbody th,
+table.data tbody td.border{
+	border-bottom: 1px solid #999;
+}
+table.data tbody th{
+	background-color: #f1f1f1;
+}
+
+table.data tbody tr:nth-child(odd) td{
+	background-color: #fafafa;
 }
 table.data tfoot th{
 	font-style: italic;
@@ -170,11 +177,16 @@ div.content{
 #blog article{
 	border-bottom: 1px solid #ececec;
 }
-	#blog article img{
+	#blog article img,
+	#blog article video,
+	#blog article iframe{
 		border: 1px solid #dcdcdc;
 		background-color:#ededed;
-		width: 98%;
 		padding: 1%;
+	}
+	#blog article img,
+	#blog article video{
+		width: 98%;
 		max-width: 100%;
 	}
 		#blog article header{

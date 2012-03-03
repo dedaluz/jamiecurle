@@ -5,6 +5,7 @@ tags:
   - training
   - running
   - illiotibial band
+  - video
 ---
 
 
@@ -18,9 +19,101 @@ However, going straight to running with no shoes in an urban environment is aski
 
 I'm not saying that simply running barefoot has solved my problem, but I do think that developing a proper technique that excluded heal striking has significantly contributed to being able to run again. Call me a convert, but it's not all down to running barefoot &hellip;
 
+## Squat Cleans
+
+I don't just run, I also lift weights and although I'm not about to compete for my country any time soon, it's something that aim to constantly excel at.  I suspect that my hip flexors were contributing to my ITBS so as part of my recovery I've been really focusing on squat cleans for a 45 minute session once per week because they really strength the hip flexors and they're much more fun that a back squat.
+
+Here's a short video of me knocking out a 90kg clean &ndash;
+
+<video controls poster="/static/blog/2012/02/19/itbs/clean.poster.jpg">
+			<source src="http://jcurle-video.s3.amazonaws.com/training/2012.02.24.90kg.squatclean.mp4" type='video/mp4; codecs="avc1.42E01E,mp4a.40.2"'>
+			<source src="http://jcurle-video.s3.amazonaws.com/training/2012.02.24.90kg.squatclean.webm"  type='video/webm; codecs="vp8, vorbis"'>
+			<object id="flashvideo" width="720" height="540" data="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" type="application/x-shockwave-flash">
+				<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" >
+				<param name="allowfullscreen" value="true" />
+				<param name="allowscriptaccess" value="always" />
+				<param name="flashvars" value='config={"clip":{"url":"http://jcurle-video.s3.amazonaws.com/training/2012.02.24.90kg.squatclean.mp4"}}'>
+			</object>
+</video>
+
+My workout looks like this. I'm yet to hit 100kg in this lift, but it's included because I aim for it every week.
+
+<table class="data">
+  <thead>
+      <tr>
+        <th width="20%">&nbsp</th>
+        <th>Load</th>
+        <th>Reps</th>
+    </tr>  
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="8">Squat Cleans</th>
+    </tr>
+    <tr>
+        <td>70kg</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>75kg</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>80kg</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>85kg</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>90kg</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>95kg</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td class="border">100kg</td>
+        <td class="border">1</td>
+    </tr>
+    <tr>
+      <th rowspan="7">Front Squats (Cleaned)</th>
+    </tr>
+    <tr>
+        <td>95kg</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>90kg</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>85kg</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>80kg</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>75kg</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td class="border">70kg</td>
+        <td class="border">6</td>
+    </tr>
+
+  </tbody>
+</table>
+
+If you don't have access to a proper olympic weights set, then don't fret - bodyweight squats **done correctly** and going **as low** ( &ldquo;ass to grass - ATG as&ldquo; as some Americans would say) as possible may give you the same results. I just happen to love lifting weights.
+
 ## Yoga, stretches & foam rolling.
 
-The problem with my ITBS (I suspect) was coming from my hip flexors. I've never been particularly flexible. Round about the time I developed the ITBS I noticed that when I performed a deep body weight squat (aka the "[third world squat][3]") I had a twisting sensation deep inside my hips. At first I thought this was unrelated, but then I began to unearth more and more anecdotal accounts of how a yoga based stretch routine combined with foam rolling with had helped many people overcome ITBS.
+As mentioned above my ITBS (I suspect) was coming from my hip flexors. I've never been particularly flexible. Round about the time I developed the ITBS I noticed that when I performed a deep body weight squat (aka the "[third world squat][3]") I had a twisting sensation deep inside my hips. At first I thought this was unrelated, but then I began to unearth more and more anecdotal accounts of how a yoga based stretch routine combined with foam rolling with had helped many people overcome ITBS.
 
 I've been doing a half hour routine combining yoga, stretching and rolling 6 days per week now for a month. The difference is outstanding and the weird twisting sensation in my hip flexors has vanished.
 
