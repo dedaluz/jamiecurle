@@ -9,9 +9,9 @@ tags:
 
 
 
-Two weeks ago I wrote a blog post about [dealing with illiotibial band syndrome][0] and how I was managing to get it under control. Since then I've went on to run my first 10k since August 2011 and I'm delighted to say that there was no sign of the ITBS at any stage in the run.
+Two weeks ago I wrote a blog post about [dealing with illiotibial band syndrome][0] and how I was managing to get it under control. Since then I went on to run my first 10k since August 2011 and I'm delighted to say that there was no sign of the ITBS at any stage in the run.
 
-I based my rehabilitation on information that I'd managed to piece together from my own research. The full details are in my [previous blog post][0] but in short my recovery protocal around &ndash;
+I based my rehabilitation on information that I'd managed to piece together from my own research. The full details are in my [previous blog post][0] but in short my recovery protocol was based around &ndash;
 
 * Barefoot running
 * Squat cleans
