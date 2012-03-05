@@ -21,7 +21,7 @@ I'm not saying that simply running barefoot has solved my problem, but I do thin
 
 ## Squat Cleans
 
-I don't just run, I also lift weights and although I'm not about to compete for my country any time soon, it's something that aim to constantly excel at.  I suspect that my hip flexors were contributing to my ITBS so as part of my recovery I've been really focusing on squat cleans for a 45 minute session once per week because they really strength the hip flexors and they're much more fun that a back squat.
+I don't just run, I also lift weights and although I'm not about to compete for my country any time soon, it's something that aim to constantly excel at.  I suspect that my hip flexors were contributing to my ITBS so as part of my recovery I've been really focusing on squat cleans for a 45 minute session once per week because they really hit the hip flexors when you go deep and they're much more fun that a back squat (__[though you still have to do your squats][13]__).
 
 Here's a short video of me knocking out a 90kg clean &ndash;
 
@@ -158,3 +158,4 @@ I've been performing the stretches and barefoot running for little over a month,
 [10]: http://runningtimes.com/rt/images/200405/IT%20Band%20photos%20stretch%203.jpg
 [11]: http://runningtimes.com/rt/images/200405/IT%20Band%20stretch%202.jpg
 [12]: http://toughmudder.co.uk/events/scotland/
+[13]: http://www.youtube.com/watch?v=_i60dzS84n8#t=1m29s
