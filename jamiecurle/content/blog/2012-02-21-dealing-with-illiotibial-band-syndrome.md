@@ -141,6 +141,8 @@ I've been performing the stretches and barefoot running for little over a month,
 
 **Double bonus:** I've also came out of this running barefoot and although I have to run the streets in my vibrams, I can run fully barefoot on the beach. I can tell you first hand that there is no sensation like it. You should definitely try it.
 
+** Update 3rd March 2012 : [I've just ran my first 10K in six months - pain free][14] **
+
 
 
 
@@ -159,3 +161,4 @@ I've been performing the stretches and barefoot running for little over a month,
 [11]: http://runningtimes.com/rt/images/200405/IT%20Band%20stretch%202.jpg
 [12]: http://toughmudder.co.uk/events/scotland/
 [13]: http://www.youtube.com/watch?v=_i60dzS84n8#t=1m29s
+[14]: /blog/recovering-from-itbs/
