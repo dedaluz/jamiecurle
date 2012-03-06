@@ -69,7 +69,7 @@ pre{
 .highlight .kt { color: #6ab825;  } /* Keyword.Type */
 .highlight .ld { color: #d0d0d0 } /* Literal.Date */
 .highlight .m { color: #3677a9 } /* Literal.Number */
-.highlight .s { color: #ed9d13 } /* Literal.String */
+.highlight .s { color: #efefef} /* Literal.String */
 .highlight .na { color: #bbbbbb } /* Name.Attribute */
 .highlight .nb { color: #24909d } /* Name.Builtin */
 .highlight .nc { color: #447fcf; text-decoration: underline } /* Name.Class */

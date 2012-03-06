@@ -10,21 +10,38 @@ If you're one the students looking at this then remember to pay attention to the
 ### My version of "Hello World"
 
 
-<code lang="html">
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Hello World</title>
-	</head>
-	<body>
-		<h1>Hello World</h1>
-		<p>
-			Jamie was here.
-		</p>
-	</body>
-</html>
-</code>
+<table class="highlighttable">
+    <tbody>
+      <tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre>
+</div></td>
+  <td class="code">
+    <div class="highlight"><pre><span class="nt">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Hello World<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;h1&gt;</span>Hello World<span class="nt">&lt;/h1&gt;</span>
+        <span class="nt">&lt;p&gt;</span>
+            Jamie was here.
+        <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</td></tr></tbody></table>
 
 
 Over the coming weeks of the course we'll break this down so that the students can understand what it is they've committed to memory. 

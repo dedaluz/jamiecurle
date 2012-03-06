@@ -17,7 +17,7 @@ def clear_cache_dev(key=None):
 
 def compress_css():
     with lcd('/Users/jcurle/Sites/jamiecurle/jamiecurle/static/css/'):
-        local('cssprefixer about.css devices.css global.css syntax.css --minify > production.css')
+        local('cssprefixer global.css about.css syntax.css devices.css  --minify > production.css')
 
 def mem():
     run('ps -u curle -o pid,rss,command')
