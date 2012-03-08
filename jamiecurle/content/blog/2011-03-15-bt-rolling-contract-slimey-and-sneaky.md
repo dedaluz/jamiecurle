@@ -1,6 +1,10 @@
 title: "BT Rolling Contract - Slimey & Sneaky."
 description: "BT are practitioners of deception and corporate greed."
 created: 2011-03-15 09:20:50
+tags:
+  - bt
+  - greed
+  - big business
 ---
 
 __I edited the title, I was angry when I posted this, I've since calmed down and renamed the post__

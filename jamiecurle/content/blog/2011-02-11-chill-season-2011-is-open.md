@@ -1,6 +1,9 @@
 title: "Chill Season 2011 is open"
 description: "The seedlings have sprouted, they're in the propagator and under the light."
 created: 2011-02-11 16:44:52
+tags:
+  - garden
+  - chillies
 ---
 
 I wasn't blogging this time last year, but I did post a lot of photos of chillies to tumblr. This year I am blogging, but I'm going to keep the chilli posts to one a month. I promise.
