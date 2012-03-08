@@ -4,6 +4,7 @@ import os
 import re
 import markdown
 import codecs
+import datetime
 from collections import OrderedDict, Counter
 from operator import itemgetter
 from jamiecurle import config
@@ -29,9 +30,17 @@ def get_post(slug):
         for md in md_files:
             r = re.compile('\d{4}\-\d{2}\-\d{2}-%s' % slug)
             if r.search(md):
+                # also use the filename for the date
+                parts = md.split('-')
+                year = int(parts[0])
+                month = int(parts[1])
+                day = int(parts[2])
+                created = datetime.date(year=year, month=month, day=day)
+                # now read the filename
                 item = '%s%s' % (BLOG_CONTENT_PATH, md)
                 with codecs.open(item, encoding='UTF-8') as md_file:
                     contents = md_file.read()
+                # stop at the first match
                 break
     parts = contents.split('---')
     header = yaml.load(parts[0])
@@ -47,13 +56,19 @@ def get_post(slug):
     if slug.startswith('201'):
         slug = slug[11:]
     url = '/blog/%s/' % slug
-
+    # create might be in the header
+    try:
+        created = header['created']
+    except KeyError, e:
+        print slug
+        print created
+        
     # now append a dict wit the info to posts
     post = {
         'url': url,
         'title': header['title'],
         'description': header['description'],
-        'created': header['created'],
+        'created': created,
         'tags': tags,
         'content': content
     }

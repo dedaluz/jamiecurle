@@ -27,6 +27,7 @@ url(app, '/blog/<string:slug>/', 'modules.blog.views.blog_post')
 url(app, '/tags.html', 'modules.blog.views.blog_tags')
 url(app, '/tags/<string:tag>/', 'modules.blog.views.blog_tagged')
 url(app, '/projects.html', 'modules.projects.views.project_index')
+url(app, '/microblogs.html', 'modules.microblogs.views.index')
 url(app, '/', 'views.home')
 #
 #
