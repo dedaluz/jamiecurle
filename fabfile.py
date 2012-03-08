@@ -32,8 +32,6 @@ def clear_cache():
 
 
 def deploy(message=None):
-    print 'not until you do an rsync on the media'
-    return
     # compress css
     compress_css()
     # commit and push to github
@@ -42,6 +40,8 @@ def deploy(message=None):
         local('git commit -a -m "%s"' % message)
         local('git push origin master')
     # rsync the media
+    with lcd('/Users/jcurle/Sites/jamiecurle/jamiecurle/media'):
+        local('rsync -avz -e ssh . curle@curle.webfactional.com:/home/curle/sites/jamiecurle/media')
     #maintenance()
     run('cd sites/jamiecurle/jamiecurle/; git pull origin master')
     # restart the app
