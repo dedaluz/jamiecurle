@@ -25,7 +25,7 @@ I don't just run, I also lift weights and although I'm not about to compete for 
 
 Here's a short video of me knocking out a 90kg clean &ndash;
 
-<video controls poster="/static/blog/2012/02/19/itbs/clean.poster.jpg">
+<video controls poster="/media/2012/02/19/itbs/clean.poster.jpg">
 			<source src="http://dq17qkif1nb90.cloudfront.net/training/2012.02.24.90kg.squatclean.mp4" type='video/mp4; codecs="avc1.42E01E,mp4a.40.2"'>
 			<source src="http://dq17qkif1nb90.cloudfront.net/training/2012.02.24.90kg.squatclean.webm"  type='video/webm; codecs="vp8, vorbis"'>
 			<object id="flashvideo" width="720" height="540" data="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" type="application/x-shockwave-flash">

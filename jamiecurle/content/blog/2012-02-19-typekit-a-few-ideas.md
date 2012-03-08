@@ -26,17 +26,17 @@ When working with digital tools, it's faster (and better imho) to ask ["forgiven
 
 The current UI for adding domains is not great. Once you've entered more than one domain then you quickly have to click into the input box and key through the values to see what domains are registered. Here's an example &hellip;
 
-![The Current Typekit UI for adding domains](/static/blog/2012/02/19/typekit/ui1.png)
+![The Current Typekit UI for adding domains](/media/2012/02/19/typekit/ui1.png)
 
 In the crude mockup below the domains are listed below each other making it much easier to see what domains are registered to a kit &hellip; 
 
-![An example of a better UI for adding domains](/static/blog/2012/02/19/typekit/ui2.png)
+![An example of a better UI for adding domains](/media/2012/02/19/typekit/ui2.png)
 
 ## Publish Faster
 
 I'm probably getting into fantasy world here, but it would be terrific if kits published a *lot* faster. I suspect the delay is likely caused by having to publish onto a CDN and/or cache invalidation, but it would make experimenting with different faces more joyful. Ideally I'd want to be able to hit the publish button, dump my browser cache and immediately be able to reload the new kit.
 
-![One does not simply](/static/blog/2012/02/19/typekit/one-does-not-simply.png)
+![One does not simply](/media/2012/02/19/typekit/one-does-not-simply.png)
 
 Or can you &hellip;
 
