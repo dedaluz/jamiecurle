@@ -36,9 +36,10 @@ def deploy(message=None):
     compress_css()
     # commit and push to github
     if message is not None:
-        local('git add -A')
-        local('git commit -a -m "%s"' % message)
-        local('git push origin master')
+        with settings(warn_only=True):
+            local('git add -A')
+            local('git commit -a -m "%s"' % message)
+            local('git push origin master')
     # rsync the media
     with lcd('/Users/jcurle/Sites/jamiecurle/jamiecurle/media'):
         local('rsync -avz -e ssh . curle@curle.webfactional.com:/home/curle/sites/jamiecurle/media')
