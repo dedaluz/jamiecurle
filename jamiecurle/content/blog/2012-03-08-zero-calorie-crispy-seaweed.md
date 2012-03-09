@@ -42,7 +42,7 @@ When you've done this, you'll see that you're starting to get something that loo
 
 Remember the boiling pan of you started at the start, you're now going to use it.
 
-Dump all of the shredded leaves into the boiling water to give them a blanch to that will soften the leaves and bring then out in a lovely dark green colour. You want to dump them in for no more than two minutes. 
+Dump all of the shredded leaves into the boiling water to give them a blanch to that will soften the leaves and bring then out in a lovely dark green colour. __Blanch them for no more than two minutes__. 
 
 ![Blanch](/media/2012/03/08/seaweed/crispy-seaweed05.jpg)
 
