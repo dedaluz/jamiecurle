@@ -8,7 +8,7 @@ tags:
 ---
 ![Nom](/media/2012/03/08/seaweed/crispy-seaweed10.jpg)
 
-Fat get's a really bad deal in the world today, it's a vital part of any diet and if you eat fat in the correct quantities you'll see no negative effects from it. But it is very moreish, especially fried food and one of the more moreish foods for me is crispy seaweed. It is delicious, which is surprising considering that it really is just fried [spring greens][0] or [cabbage][1]. Eat a bowl of it and the calorific impact can be quite immense - which is hardly what you want when you're following a nutritional plan.
+Fat gets a really bad deal in the world today, it's a vital part of any diet. if you eat fat in the correct quantities you'll see no negative effects from it. But it is very moreish, especially fried food and one of the more moreish foods for me is crispy seaweed. It is delicious, which is surprising considering that it really is just fried [seaweed][4] (_if you're lucky enough to be able to get it_), [spring greens][0] or [cabbage][1]. Eat a bowl of it and the calorific impact can be quite immense - which is hardly what you want when you're following a nutritional plan.
 
 However if you have a [dehydrator][2] ( which you should because they're awesome) then you can make your own crispy seaweed without any frying at all.
 
@@ -71,10 +71,14 @@ You'll know when its done because it will all have a lovely rustily sound and fe
 			</object>
 </video>
 
-I guarantee you'll eat loads of it.
+## Is it exactly the same as the fried version?
+
+No, because it's not fried.
+
+However, it's close enough in texture and taste. I'll guarantee you'll eat loads of it - remember to take it easy on the salt.
 
 [0]: http://en.wikipedia.org/wiki/Spring_greens
 [1]: http://en.wikipedia.org/wiki/Cabbage
 [2]: http://www.amazon.co.uk/Stockli-Dehydrator-With-Timer/dp/B000LR0GTC?tag=jamiecurle-21
 [3]: http://www.amazon.co.uk/Tribest-Sedona-Dehydrator-Nine-Digital/dp/B006GQFO4O/?tag=jamiecurle-21
-[3]:
+[4]: http://en.wikipedia.org/wiki/Edible_seaweed
