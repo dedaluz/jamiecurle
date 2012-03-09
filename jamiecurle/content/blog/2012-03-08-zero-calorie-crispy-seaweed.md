@@ -10,7 +10,7 @@ tags:
 
 Fat gets a really bad deal in the world today, it's a vital part of any diet. if you eat fat in the correct quantities you'll see no negative effects from it. But it is very moreish, especially fried food and one of the more moreish foods for me is crispy seaweed. It is delicious, which is surprising considering that it really is just fried [seaweed][4] (_if you're lucky enough to be able to get it_), [spring greens][0] or [cabbage][1]. Eat a bowl of it and the calorific impact can be quite immense - which is hardly what you want when you're following a nutritional plan.
 
-However if you have a [dehydrator][2] ( which you should because they're awesome) then you can make your own crispy seaweed without any frying at all.
+However if you have a [dehydrator][2] (_which you should because they're awesome_) then you can make your own crispy seaweed without any frying at all.
 
 ## Boil a pan of water
 
