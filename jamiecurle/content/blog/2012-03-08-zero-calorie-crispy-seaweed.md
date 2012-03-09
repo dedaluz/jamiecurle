@@ -12,6 +12,8 @@ Fat gets a really bad deal in the world today, it's a vital part of any diet. if
 
 However if you have a [dehydrator][2] (_which you should because they're awesome_) then you can make your own crispy seaweed without any frying at all.
 
+Note that in this recipe I'm using spring greens. You could use cabbage if that's all you have, but I have not tested this with real seaweed. If you have, let me know if it works in the comments.
+
 ## Boil a pan of water
 
 You're going to need a big pan of boiling water to quickly blanch the shredded leaves in, so start that off now and it'll be ready when you need it.
