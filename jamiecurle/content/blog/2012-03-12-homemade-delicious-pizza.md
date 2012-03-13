@@ -1,5 +1,5 @@
 title: "Homemade Delicious Pizza "
-description: "With a little bit of planning you have (almost) restaurant style pizza at home for a fraction of the price. It also makes a pretty good post-workout meal if you're careful."
+description: "With a little bit of planning you can have (almost) restaurant style pizza at home for a fraction of the price. It also makes a pretty good post-workout meal if you're careful."
 created: 2012-03-13 06:34:53
 tags:
   - recipes
@@ -12,7 +12,7 @@ tags:
 
 Great pizza needs to be cooked at a very high temperature for as little time as possible. This crisps and chars the dough, without drying it out into a biscuit. Your home oven is not capable (by default) of the high temperatures required to do this, however it's still possible to make great pizza that's compatible with the high carb, low fat, medium protein requirements of a post-workout meal.
 
-Before I go any further, if you're interested in making your own pizza you have to read [Jeff Varasano's incredible NY pizza recipe][0]. My own efforts are highly inspired by it, though admittedly my results are not on the same level. I've only just began on the journey of the perfect pizza and whilst the results are delicious, I have a lot to learn. However, the great thing about making pizza is that it tastes great from the very first time you do it.
+Before I go any further, if you're interested in making your own pizza you have to read [Jeff Varasano's incredible NY pizza recipe][0]. My own efforts are highly inspired by it, though admittedly my results are not on the same level. I've only just begun on the journey of the perfect pizza and whilst the results are delicious, I have a lot to learn. However, the great thing about making pizza is that it tastes great from the very first time you do it.
 
 ## Making the dough
 
