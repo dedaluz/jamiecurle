@@ -1,6 +1,10 @@
 title: "Ultimate Bacon Sandwich"
 description: "On a Saturday & Sunday I enjoy one of these beauties."
 created: 2010-10-01 07:45:16
+tags:
+  - food
+  - bacon
+  - sandwich
 ---
 
 ###  The Foundation.

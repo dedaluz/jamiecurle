@@ -1,6 +1,11 @@
 title: "Thai Red Curry"
 description: "I really love thai curries, especially red. Here's how we make ours."
 created: 2010-10-24 00:00:00
+tags:
+  - recipes
+  - food
+  - thai
+  - curry
 ---
 
 Me & Jo love Thai curries.  We love them so much that we have them on Christmas Day rather than the "traditional" roast dinner. We have at least one per week and I normally have a sneaky one whilst Jo's teaching on a Tuesday night because without rice it's a great balance of protein and fat, which is ideal for a non-training day meal. 
