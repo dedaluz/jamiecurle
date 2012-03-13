@@ -36,6 +36,7 @@ filter(app, 'colour_for_date', 'modules.blog.filters.colour_for_date')
 filter(app, 'archivedateformat', 'modules.blog.filters.archivedateformat')
 filter(app, 'datetimeformat', 'modules.blog.filters.datetimeformat')
 filter(app, 'render', 'modules.blog.filters.render')
+filter(app, 'video', 'modules.blog.filters.video')
 
 
 if __name__ == '__main__':

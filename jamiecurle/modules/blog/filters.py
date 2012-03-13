@@ -6,11 +6,15 @@ from pygments import lexers, formatters
 import markdown
 
 
+def video(mp4):
+    webm = mp4.replace('.mp4', '.webm')
+    print webm
+
 def render(content):
-    regex = re.compile(r'(<code(.*?)</code>)', re.DOTALL)
+    code_regex = re.compile(r'(<code(.*?)</code>)', re.DOTALL)
     code_blocks = []
 
-    for i, m in enumerate(regex.finditer(content)):
+    for i, m in enumerate(code_regex.finditer(content)):
         code = m.group(0)
         # if code is inline leave it alone
         #print code.find('inline')
@@ -48,6 +52,7 @@ def render(content):
         for i, code in enumerate(code_blocks):
             content = content.replace('<p>{{CODE%s}}</p>' % i, code)
             content = content.replace('{{CODE%s}}' % i, code)
+    
     # return
     return content
 
