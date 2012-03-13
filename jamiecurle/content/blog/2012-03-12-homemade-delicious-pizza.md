@@ -226,14 +226,20 @@ You want to cook your pizza in as hot as temperature as you can get for as short
 
 ![Cooked pizza ready for serving](/media/2012/03/11/pizza/pizza_35.jpg)
 
+Don't keep opening the oven door and letting the heat out. You will likely have to turn the pizzas once, but do it as quickly as possible to retain the high heat.
+
+### Eating it
+
 It tasted delicious.
+
+![The final pizza](/media/2012/03/11/pizza/slice.jpg)
 
 ## Other Stuff
 
 
 ### 00 Flour
 
-Some folks are adamant that you should use 00 (double zero) flour for pizza, as this is how it's done in Italy. I have tried 00 and whilst it is better, it's not worth the extra expense to me. The only place I can get 00 is a [speciality food store in Newcastle][2]. It costs &pound;3(ish) whereas I can 1.5kg of generic brand strong white flour for &pound;0.59p at the local supermarket. So whilst I may break out the 00 on special occasions, for the most part I just use strong white flour.
+Some folks are adamant that you should use 00 (double zero) flour for pizza, as this is how it's done in Italy. I have tried 00 and whilst it is better, it's not worth the extra expense to me. The only place I can get 00 is a [speciality food store in Newcastle][2]. It costs &pound;3(ish) whereas I can get 1.5kg of generic brand strong white flour for &pound;0.59p at the local supermarket. So whilst I may break out the 00 on special occasions, for the most meals I use strong white flour.
 
 ### Total cost of this pizza
 
