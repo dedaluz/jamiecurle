@@ -279,7 +279,7 @@ I haven't counted the onion, garlic and carrot in this because we've always got 
 
 ### Pizza as post workout food.
 
-If you're cool white flour as part of a post workout meal then this recipe yes. Here's the nutritional breakdown for one plain cheese and tomato pizza as made above.
+If you're with cool white flour as part of a post workout meal then this recipe does make ideal post workout when your topping is a lean meat. Here's the nutritional breakdown for one plain cheese and tomato pizza as made above.
 
 <table class="data">
   <thead>
@@ -340,9 +340,9 @@ If you're cool white flour as part of a post workout meal then this recipe yes. 
 
 If we're talking about clean food, then I'd argue this qualifies. It's all made from raw ingredients and there are no additives or preservatives. I haven't used copious amounts of sugar to boost flavour and one pizza has no more than 5g of salt in it. If you were conscious of that level of salt you can always drop it down - you're in control which is the beauty of making food for yourself. You don't even have to eat the full pizza, save half for your next post workout meal.
 
-If you find the protein in the above is a little low, top it with 100g of shredded chicken breast.Either way this is an ideal post-workout meal for a [Lean Gains][4] approach.
+If you find the protein in the above is a little low, top it with 100g of shredded chicken breast. Either way this is an ideal post-workout meal for a [Lean Gains][4] approach.
 
-So this delicious homemade pizza post workout &ndash; yes. Other mass produced made additive laced frozen pizza &ndash; no. I wouldn't thank you for one.
+So is this delicious homemade pizza suitable for post workout? I say yes. Is other mass produced made additive laced frozen pizza? I say no &ndash; I wouldn't thank you for one.
 
 ### Practice makes perfect
 
