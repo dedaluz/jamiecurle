@@ -56,13 +56,13 @@ Dump the flour out onto a clean bench and get to work kneading it. This is messy
 Kneading bread is quite straight forward, you add some flour, push it, turn it and press it. If the dough is sticky, add more flour and if not keep pushing, turning and pressing. Here's a video of how I knead my dough. Riveting stuff.
 
 <video controls poster="/media/2012/03/11/pizza/knead.poster.jpg">
-			<source src="http://dq17qkif1nb90.cloudfront.net/food/pizza.knead.mp4" type='video/mp4; codecs="avc1.42E01E,mp4a.40.2"'>
-			<source src="http://dq17qkif1nb90.cloudfront.net/foodpizza.knead.webm"  type='video/webm; codecs="vp8, vorbis"'>
+			<source src="http://video.jamiecurle.co.uk/food/pizza.knead.mp4" type='video/mp4; codecs="avc1.42E01E,mp4a.40.2"'>
+			<source src="http://video.jamiecurle.co.uk/foodpizza.knead.webm"  type='video/webm; codecs="vp8, vorbis"'>
 			<object id="flashvideo" width="720" height="540" data="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" type="application/x-shockwave-flash">
 				<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" >
 				<param name="allowfullscreen" value="true" />
 				<param name="allowscriptaccess" value="always" />
-				<param name="flashvars" value='config={"clip":{"url":"http://dq17qkif1nb90.cloudfront.net/food/pizza.knead.mp4"}}'>
+				<param name="flashvars" value='config={"clip":{"url":"http://video.jamiecurle.co.uk/food/pizza.knead.mp4"}}'>
 			</object>
 </video>
 
@@ -139,13 +139,13 @@ If there is any excess moisture allow it to sit on the heat without a lid to get
 
 
 <video controls poster="/media/2012/03/11/pizza/sauce.poster.jpg">
-			<source src="http://dq17qkif1nb90.cloudfront.net/food/pizza.sauce.mp4" type='video/mp4; codecs="avc1.42E01E,mp4a.40.2"'>
-			<source src="http://dq17qkif1nb90.cloudfront.net/foodpizza.sauce.webm"  type='video/webm; codecs="vp8, vorbis"'>
+			<source src="http://video.jamiecurle.co.uk/food/pizza.sauce.mp4" type='video/mp4; codecs="avc1.42E01E,mp4a.40.2"'>
+			<source src="http://video.jamiecurle.co.uk/foodpizza.sauce.webm"  type='video/webm; codecs="vp8, vorbis"'>
 			<object id="flashvideo" width="720" height="540" data="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" type="application/x-shockwave-flash">
 				<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" >
 				<param name="allowfullscreen" value="true" />
 				<param name="allowscriptaccess" value="always" />
-				<param name="flashvars" value='config={"clip":{"url":"http://dq17qkif1nb90.cloudfront.net/food/pizza.sauce.mp4"}}'>
+				<param name="flashvars" value='config={"clip":{"url":"http://video.jamiecurle.co.uk/food/pizza.sauce.mp4"}}'>
 			</object>
 </video>
 
@@ -170,13 +170,13 @@ Pizza is meant to be round, however my baking trays are squareish, so I make squ
 You want to shape the dough by pushing (not pressing) it into place, gently stretching it and forming it into the shape you want. This helps preserve the air pockets inside which add to your pizza's character. Here's a quick video of my technique at dough shaping. Unfortunately there is no elaborate dough spinning.
 
 <video controls poster="/media/2012/03/11/pizza/base.poster.jpg">
-			<source src="http://dq17qkif1nb90.cloudfront.net/food/pizza.base.mp4" type='video/mp4; codecs="avc1.42E01E,mp4a.40.2"'>
-			<source src="http://dq17qkif1nb90.cloudfront.net/foodpizza.base.webm"  type='video/webm; codecs="vp8, vorbis"'>
+			<source src="http://video.jamiecurle.co.uk/food/pizza.base.mp4" type='video/mp4; codecs="avc1.42E01E,mp4a.40.2"'>
+			<source src="http://video.jamiecurle.co.uk/foodpizza.base.webm"  type='video/webm; codecs="vp8, vorbis"'>
 			<object id="flashvideo" width="720" height="540" data="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" type="application/x-shockwave-flash">
 				<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" >
 				<param name="allowfullscreen" value="true" />
 				<param name="allowscriptaccess" value="always" />
-				<param name="flashvars" value='config={"clip":{"url":"http://dq17qkif1nb90.cloudfront.net/food/pizza.base.mp4"}}'>
+				<param name="flashvars" value='config={"clip":{"url":"http://video.jamiecurle.co.uk/food/pizza.base.mp4"}}'>
 			</object>
 </video>
 
@@ -267,7 +267,7 @@ If you don't count the toppings, for two pizzas the cost is &hellip;
     </tr>
     <tr>
       <td>Mozzarella</td>
-      <td>200g</td>
+      <td>200</td>
       <td>0.99</td>
     </tr>
   </tbody>
