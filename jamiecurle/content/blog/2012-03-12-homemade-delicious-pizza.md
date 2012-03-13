@@ -228,6 +228,8 @@ You want to cook your pizza in as hot as temperature as you can get for as short
 
 Don't keep opening the oven door and letting the heat out. You will likely have to turn the pizzas once, but do it as quickly as possible to retain the high heat.
 
+I'm seriously considering building a [brick oven][6] in the garden for pizza and other bread baking escapades. This would undoubtedly take my baking to the next level.
+
 ### Eating it
 
 It tasted delicious.
@@ -359,4 +361,5 @@ I've only been making pizza for a year and I've got a long way to go before I ca
 [2]: http://www.mmm-food.co.uk/
 [3]: http://jocurle.com
 [4]: http://www.leangains.com/
-[5]:http://www.urbandictionary.com/define.php?term=mank#tools_2973474
+[5]: http://www.urbandictionary.com/define.php?term=mank#tools_2973474
+[6]: http://mcgrathbrickoven.blogspot.com/
