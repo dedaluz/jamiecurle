@@ -354,7 +354,7 @@ So is this delicious homemade pizza suitable for post workout? I say yes. Is oth
 
 ### Practice makes perfect
 
-I've only been making pizza for a year and I've got a long way to go before I can reach the standard of [Jeff Verasano][0], but it's one of the tastiest journeys I'm currently on. You should almost certainly embark on the journey to perfect pizza yourself.
+I've only been making pizza for a year and I've got a long way to go before I can reach the standard of [Jeff Varasano][0], but it's one of the tastiest journeys I'm currently on. You should almost certainly embark on the journey to perfect pizza yourself.
 
 [0]: http://www.varasanos.com/PizzaRecipe.htm
 [1]: http://deathrowradio.bandcamp.com/album/leaves
