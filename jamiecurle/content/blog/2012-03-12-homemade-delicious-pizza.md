@@ -235,6 +235,48 @@ It tasted delicious.
 
 Some folks are adamant that you should use 00 (double zero) flour for pizza, as this is how it's done in Italy. I have tried 00 and whilst it is better, it's not worth the extra expense to me. The only place I can get 00 is a [speciality food store in Newcastle][2]. It costs &pound;3(ish) whereas I can 1.5kg of generic brand strong white flour for &pound;0.59p at the local supermarket. So whilst I may break out the 00 on special occasions, for the most part I just use strong white flour.
 
+### Total cost of this pizza.
+
+If you don't count the toppings, for two pizzas the cost is &hellip;
+
+<table class="data">
+  <thead>
+    <tr>
+      <th>Ingredient</th>
+      <th>Amount (g)</th>
+      <th>Cost (&pound;)</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>&nbsp;</td>
+      <th>&nbsp;</th>
+      <th>&pound;2.19</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>White Flour</td>
+      <td>500</td>
+      <td>0.20</td>
+    </tr>
+    <tr>
+      <td>Tomatoes</td>
+      <td>600</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <td>Mozzarella</td>
+      <td>200g</td>
+      <td>0.99</td>
+    </tr>
+  </tbody>
+</table>
+
+I haven't counted the onion, garlic and carrot in this because we've always got them, so for two large delicious pizzas we're paying &pound;2.19p, that's
+ less than &pound;1.10p per pizza. Not bad. Try getting two pizzas for that price in a restaurant.
+
+
 ### Pizza as post workout food.
 
 If you're cool white flour as part of a post workout meal then this recipe yes. Here's the nutritional breakdown for one plain cheese and tomato pizza as made above.
