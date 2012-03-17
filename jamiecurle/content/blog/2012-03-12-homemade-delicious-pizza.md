@@ -57,7 +57,7 @@ Kneading bread is quite straight forward, you add some flour, push it, turn it a
 
 <video controls poster="/media/2012/03/11/pizza/knead.poster.jpg">
 			<source src="http://video.jamiecurle.co.uk/food/pizza.knead.mp4" type='video/mp4; codecs="avc1.42E01E,mp4a.40.2"'>
-			<source src="http://video.jamiecurle.co.uk/foodpizza.knead.webm"  type='video/webm; codecs="vp8, vorbis"'>
+			<source src="http://video.jamiecurle.co.uk/food/pizza.knead.webm"  type='video/webm; codecs="vp8, vorbis"'>
 			<object id="flashvideo" width="720" height="540" data="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" type="application/x-shockwave-flash">
 				<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" >
 				<param name="allowfullscreen" value="true" />
@@ -140,7 +140,7 @@ If there is any excess moisture allow it to sit on the heat without a lid to get
 
 <video controls poster="/media/2012/03/11/pizza/sauce.poster.jpg">
 			<source src="http://video.jamiecurle.co.uk/food/pizza.sauce.mp4" type='video/mp4; codecs="avc1.42E01E,mp4a.40.2"'>
-			<source src="http://video.jamiecurle.co.uk/foodpizza.sauce.webm"  type='video/webm; codecs="vp8, vorbis"'>
+			<source src="http://video.jamiecurle.co.uk/food/pizza.sauce.webm"  type='video/webm; codecs="vp8, vorbis"'>
 			<object id="flashvideo" width="720" height="540" data="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" type="application/x-shockwave-flash">
 				<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" >
 				<param name="allowfullscreen" value="true" />
@@ -171,7 +171,7 @@ You want to shape the dough by pushing (not pressing) it into place, gently stre
 
 <video controls poster="/media/2012/03/11/pizza/base.poster.jpg">
 			<source src="http://video.jamiecurle.co.uk/food/pizza.base.mp4" type='video/mp4; codecs="avc1.42E01E,mp4a.40.2"'>
-			<source src="http://video.jamiecurle.co.uk/foodpizza.base.webm"  type='video/webm; codecs="vp8, vorbis"'>
+			<source src="http://video.jamiecurle.co.uk/food/pizza.base.webm"  type='video/webm; codecs="vp8, vorbis"'>
 			<object id="flashvideo" width="720" height="540" data="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" type="application/x-shockwave-flash">
 				<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" >
 				<param name="allowfullscreen" value="true" />
