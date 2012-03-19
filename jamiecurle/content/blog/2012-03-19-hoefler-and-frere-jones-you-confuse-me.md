@@ -11,7 +11,7 @@ tags:
 
 Apparently there is something on the way; but I want to use [Archer][2] on the web in a manner that's inline with html standards and a valid license.
 
-So sponsor web conferences, don't allow @font face. Hoefler & Frere-Jones you're confusing me.
+So they sponsor web conferences but don't allow @font face. Hoefler & Frere-Jones &mdash; you're confusing.
 
 
 
