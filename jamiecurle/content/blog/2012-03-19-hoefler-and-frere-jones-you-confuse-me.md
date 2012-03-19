@@ -1,6 +1,6 @@
 title: "Hoefler & Frere-Jones - Web Font Confusion"
 description: "H&FJ sponsor web conferences, but don't offer webfonts"
-created: 2010-10-24 00:00:00
+created: 2012-03-12 00:00:00
 tags:
   - typography
   - design
